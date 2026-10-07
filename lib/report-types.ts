@@ -6,7 +6,7 @@ export type Report = {
   sections: {page:number;text:string;form_fields:{name:string;value:string;label?:string|null;rect?:number[]}[]}[];
   warnings:string[];
 };
-export type Summary = Omit<Report,'sections'>;
+export type Summary = Omit<Report,'sections'> & {available_years?:number};
 export const labels: Record<string,string> = {
   applicants:'Applications',admitted:'Students admitted',enrolled:'Students enrolled',admit_rate:'Admission rate',yield_rate:'Enrollment yield',
   waitlist_offered:'Waitlist offers',waitlist_accepted:'Accepted waitlist places',waitlist_admitted:'Admitted from waitlist',waitlist_rate:'Waitlist admission rate',

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Admissions Atlas | College Counseling Research",
+  title: "College Admissions | Common Data Set Library",
   description: "Search and compare first-year admissions data from official Common Data Set reports.",
   icons: {
     icon: "/favicon.svg",

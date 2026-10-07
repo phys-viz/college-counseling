@@ -1,14 +1,14 @@
-# Admissions Atlas
+# College Admissions Library
 
 A private college-counseling research app containing Cornell's 27 Common Data Set fall cohorts, 1999–2025. Includes source-linked Section C text and PDF form answers, normalized admissions counts and rates, waitlists, test percentiles, rank, factor ratings, fees, and historical deadlines where extraction is reliable.
 
 ## Use
 
-Search across Section C, filter by institution or cohort, open a report, select up to four records to compare, or export the visible results/selection to CSV. Full record downloads preserve evidence and source notes. "Not reported" means no normalized value is available; consult the source. Zero remains zero. Policies may refer to a later admissions cycle than the fall enrollment cohort.
+The Schools view shows one latest matching profile per institution, with direct links from its headline figures to supporting source pages. Explore a school's reporting years in the Yearly reports view, switch years inside a profile, select up to four records to compare, or export the visible results/selection to CSV. Search includes all preserved Section C text. Full record downloads preserve evidence and source notes. "Not reported" means no normalized value is available; consult the source. Zero remains zero. Policies may refer to a later admissions cycle than the fall enrollment cohort.
 
 ## Data and expansion
 
-Hosted persistence uses Cloudflare D1 SQLite. Reports have a unique institution/year key and indexed institution/year and year lookups. An FTS5 index, maintained by triggers, searches the record content. Lists are paginated to 100 reports; full source records load on demand. A validated JSON importer adds arbitrary institutions and replaces an existing school/year only when explicitly imported. It does not automatically extract an arbitrary institution's PDF.
+Hosted persistence uses Cloudflare D1 SQLite. Reports have a unique institution/year key and indexed institution/year and year lookups. An FTS5 index, maintained by triggers, searches the record content. Both school profiles and yearly reports paginate in the database to 100 results; school grouping uses window functions before pagination. Full source records load on demand. A validated JSON importer adds arbitrary institutions and replaces an existing school/year only when explicitly imported. It does not automatically extract an arbitrary institution's PDF.
 
 Download `public/import-template.json` or a complete record in the app to see the import format. Replace all illustrative values before importing. Counts must be nonnegative integers; percentages must be 0–100; each record requires an HTTPS source and source text. Admission, yield, ED, and waitlist rates are recomputed from counts. The template's source URLs are illustrative and must be replaced with official sources. Private site access is enforced by Sites; preserve owner-private access until an appropriate sharing policy is configured. The importer is a shared-library write operation behind that access boundary.
 
@@ -39,4 +39,4 @@ npm run dev
 node scripts/check-import.mjs
 ```
 
-Apply pending local migrations once in order; do not replay already applied migrations. Sites applies production migrations during publication. The first request seeds the initial records idempotently; seeds never overwrite imported edits. Browser UI QA and WebMCP validation need a supported browser context; API, import, database, data consistency, TypeScript, and production build checks are available locally.
+Apply pending local migrations once in order; do not replay already applied migrations. Sites applies production migrations during publication. The first request seeds the initial records idempotently; seeds never overwrite imported edits. Browser checks in `scripts/check-ui.mjs` cover UTF-8 rendering, school browsing, all 27 years, source links, year switching, comparisons, CSV downloads, search states, and mobile overflow. They use Playwright installed under ignored `.sites-runtime/browser` and the local Windows Chrome executable. WebMCP validation still needs a supported browser context.

@@ -12,13 +12,17 @@ export async function GET(request:Request) {
     if(terms.length){clauses.push('id IN (SELECT id FROM report_search WHERE report_search MATCH ?)');args.push(terms.map(t=>'"'+t+'"*').join(' AND '));}
     if(school){clauses.push('school_id=?');args.push(school);}if(year){clauses.push('year=?');args.push(Number(year));}
     const where=clauses.length?' WHERE '+clauses.join(' AND '):'';
+    const schoolView=u.searchParams.get('view')==='schools';
+    const query=schoolView
+      ? 'SELECT payload,matching_years FROM (SELECT payload,school,year,COUNT(*) OVER(PARTITION BY school_id) AS matching_years,ROW_NUMBER() OVER(PARTITION BY school_id ORDER BY year DESC) AS rank FROM reports'+where+') WHERE rank=1 ORDER BY school ASC LIMIT ? OFFSET ?'
+      : 'SELECT payload FROM reports'+where+' ORDER BY year DESC,school ASC LIMIT ? OFFSET ?';
     const [result,count,schools,years]=await Promise.all([
-      database().prepare('SELECT payload FROM reports'+where+' ORDER BY year DESC,school ASC LIMIT ? OFFSET ?').bind(...args,limit,offset).all<{payload:string}>(),
-      database().prepare('SELECT COUNT(*) AS count FROM reports'+where).bind(...args).first<{count:number}>(),
+      database().prepare(query).bind(...args,limit,offset).all<{payload:string;matching_years?:number}>(),
+      database().prepare('SELECT COUNT(*) AS report_count,COUNT(DISTINCT school_id) AS school_count FROM reports'+where).bind(...args).first<{report_count:number;school_count:number}>(),
       database().prepare('SELECT DISTINCT school_id,school FROM reports ORDER BY school').all(),
-      database().prepare('SELECT DISTINCT year FROM reports ORDER BY year DESC').all(),
+      (school?database().prepare('SELECT DISTINCT year FROM reports WHERE school_id=? ORDER BY year DESC').bind(school):database().prepare('SELECT DISTINCT year FROM reports ORDER BY year DESC')).all(),
     ]);
-    return Response.json({reports:result.results.map(row=>{const {sections,...summary}=JSON.parse(row.payload) as Report;return summary;}),total:count?.count??0,schools:schools.results,years:years.results,offset,limit});
+    return Response.json({reports:result.results.map(row=>{const {sections,...summary}=JSON.parse(row.payload) as Report;return {...summary,available_years:row.matching_years};}),total:schoolView?count?.school_count??0:count?.report_count??0,report_count:count?.report_count??0,schools:schools.results,years:years.results,offset,limit});
   }catch(e){console.error('Report load failed',e);return Response.json({error:'The admissions database is unavailable. Please retry.'},{status:503});}
 }
 export async function POST(request:Request) {
