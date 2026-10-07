@@ -1,0 +1,47 @@
+[
+  {
+    "school_id": "example-university",
+    "school": "Example University",
+    "year": 2025,
+    "report_label": "2025\u201326",
+    "source_url": "https://example.edu/common-data-set.pdf",
+    "index_url": "https://example.edu/common-data-set",
+    "sha256": "",
+    "source_type": "pdf",
+    "metrics": {
+      "applicants": 10000,
+      "admitted": 2000,
+      "enrolled": 500
+    },
+    "evidence": {
+      "applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "reported"
+      },
+      "admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "reported"
+      },
+      "enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "reported"
+      }
+    },
+    "factors": [],
+    "sections": [
+      {
+        "page": 5,
+        "text": "REPLACE with the original Section C source text. Example counts are illustrative.",
+        "form_fields": []
+      }
+    ],
+    "warnings": [
+      "Template only: replace all example values before importing."
+    ],
+    "extracted_at": "2026-10-07",
+    "review_status": "Replace with your review status"
+  }
+]
