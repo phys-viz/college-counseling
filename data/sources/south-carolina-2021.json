@@ -1,0 +1,309 @@
+{
+  "school_id": "south-carolina",
+  "school": "University of South Carolina (Columbia)",
+  "year": 2021,
+  "report_label": "2021–22",
+  "source_url": "http://oiraa.dw.sc.edu/cds/cds2021/cds_2021-2022.pdf",
+  "index_url": "https://sc.edu/about/offices_and_divisions/institutional_research_assessment_and_analytics/institutional_effectiveness/common_data_set/",
+  "source_type": "pdf",
+  "sha256": "ce81cb9854d841e1a55ea31809d7a772d86d185a8006fd4cd619469a9833b193",
+  "extracted_at": "2026-10-07T21:32:24.883244+00:00",
+  "review_status": "Source extracted; not manually audited",
+  "metrics": {
+    "waitlist_offered": 8023.0,
+    "waitlist_accepted": 399.0,
+    "waitlist_admitted": 243.0,
+    "sat_25": 1150.0,
+    "sat_75": 1340.0,
+    "reading_25": 580.0,
+    "reading_75": 680.0,
+    "math_25": 570.0,
+    "math_75": 680.0,
+    "act_25": 26.0,
+    "act_75": 31.0,
+    "sat_submitted": 38.0,
+    "sat_submitted_count": 2345.0,
+    "act_submitted": 26.0,
+    "act_submitted_count": 1632.0,
+    "top_tenth": 30.0,
+    "top_quarter": 63.0,
+    "top_half": 93.0,
+    "fee": 65.0,
+    "rd_deadline": "12/1",
+    "applicants": 42045.0,
+    "admitted": 25884.0,
+    "enrolled": 6174.0,
+    "admit_rate": 61.563,
+    "yield_rate": 23.853,
+    "waitlist_rate": 60.902
+  },
+  "evidence": {
+    "waitlist_offered": {
+      "section": "C2",
+      "page": 7,
+      "method": "reported"
+    },
+    "waitlist_accepted": {
+      "section": "C2",
+      "page": 7,
+      "method": "reported"
+    },
+    "waitlist_admitted": {
+      "section": "C2",
+      "page": 7,
+      "method": "reported"
+    },
+    "sat_25": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "sat_75": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "reading_25": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "reading_75": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "math_25": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "math_75": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "act_25": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "act_75": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "sat_submitted": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "sat_submitted_count": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "act_submitted": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "act_submitted_count": {
+      "section": "C9",
+      "page": 10,
+      "method": "reported"
+    },
+    "top_tenth": {
+      "section": "C10",
+      "page": 11,
+      "method": "reported"
+    },
+    "top_quarter": {
+      "section": "C10",
+      "page": 11,
+      "method": "reported"
+    },
+    "top_half": {
+      "section": "C10",
+      "page": 11,
+      "method": "reported"
+    },
+    "fee": {
+      "section": "C13",
+      "page": 12,
+      "method": "reported"
+    },
+    "rd_deadline": {
+      "section": "C14",
+      "page": 12,
+      "method": "reported"
+    },
+    "applicants": {
+      "section": "C1",
+      "page": 7,
+      "method": "sum of gender/status counts in PDF text"
+    },
+    "admitted": {
+      "section": "C1",
+      "page": 7,
+      "method": "sum of gender/status counts in PDF text"
+    },
+    "enrolled": {
+      "section": "C1",
+      "page": 7,
+      "method": "sum of gender/status counts in PDF text"
+    },
+    "admit_rate": {
+      "section": "C1",
+      "page": 7,
+      "method": "calculated"
+    },
+    "yield_rate": {
+      "section": "C1",
+      "page": 7,
+      "method": "calculated"
+    },
+    "waitlist_rate": {
+      "section": "C2",
+      "page": 7,
+      "method": "calculated"
+    }
+  },
+  "factors": [
+    {
+      "label": "Rigor of secondary school record",
+      "rating": "Very important",
+      "page": 8
+    },
+    {
+      "label": "Class rank",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Academic GPA",
+      "rating": "Very important",
+      "page": 8
+    },
+    {
+      "label": "Standardized test scores",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Application essay",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Recommendations",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Interview",
+      "rating": "Not considered",
+      "page": 8
+    },
+    {
+      "label": "Extracurricular activities",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Talent/ability",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Character/personal qualities",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "First generation",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Alumni/ae relation",
+      "rating": "Not considered",
+      "page": 8
+    },
+    {
+      "label": "Geographical residence",
+      "rating": "Not considered",
+      "page": 8
+    },
+    {
+      "label": "State residency",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Religious affiliation/commitment",
+      "rating": "Not considered",
+      "page": 8
+    },
+    {
+      "label": "Racial/ethnic status",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Volunteer work",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Work experience",
+      "rating": "Considered",
+      "page": 8
+    },
+    {
+      "label": "Level of applicant’s interest",
+      "rating": "Not considered",
+      "page": 8
+    }
+  ],
+  "sections": [
+    {
+      "page": 7,
+      "text": "Common Data Set 2021-2022\n\n          C. FIRST-TIME, FIRST-YEAR (FRESHMAN) ADMISSION\n    C1-C2: Applications\nC1   First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\n      students who applied, were admitted, and enrolled (full- or part-time) in Fall 2021.\n       •   Include early decision, early action, and students who began studies during summer in this cohort.\n       •   Applicants should include only those students who fulfilled the requirements for consideration for\n         admission (i.e., who completed actionable applications) and who have been notified of one of the\n          following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\n          applicant or institution).\n\n       •   Since the total may include students who did not provide gender data, the detail need not sum to the total.\n      Total first-time, first-year (freshman) men who applied                    16363\n      Total first-time, first-year (freshman) women who applied                  25682\n\n      Total first-time, first-year (freshman) men who were admitted               9853\n      Total first-time, first-year (freshman) women who were admitted             16031\n\n      Total full-time, first-time, first-year (freshman) men who enrolled             2469\n      Total part-time, first-time, first-year (freshman) men who enrolled              8\n\n      Total full-time, first-time, first-year (freshman) women who enrolled           3696\n      Total part-time, first-time, first-year (freshman) women who enrolled           1\n\n      Total first-time, first-year (degree-seeking) who applied                    42045\n      Total first-time, first-year (degree-seeking) who were admitted              25884\n      Total first-time, first-year (degree-seeking) who enrolled                   6174\n\nC2  Freshman wait-listed students\n     Students who met admission requirements but whose final admission was contingent on space availability\n\n                                                     Yes          No\n    Do you have a policy of placing students on a waiting list?        X\n\n         If yes, please answer the questions below for Fall 2021 admissions:\n\n                         WAITING LIST                       TOTAL\n    Number of qualified applicants offered a place on waiting list:               8023\n    Number accepting a place on the waiting list:                            399\n    Number of wait-listed students admitted:                                243\n\n       Is your waiting list ranked?                           Yes          No\n              If yes, do you release that information to students?                       X\n      Do you release that information to school counselors?                     X\n\n\n    C3-C5: Admission Requirements\n\nC3  High school completion requirement\n      Check the appropriate box to identify your high school completion requirement for degree-seeking entering students:\n\n X    High school diploma is required and GED is accepted\n       High school diploma is required and GED is not accepted\n       High school diploma or equivalent is not required\n\nC4  Does your institution require or recommend a general college-preparatory program for degree-seeking students?\n X    Require\n      Recommend\n        Neither require nor recommend\n\n\n\nCDS-C                                                                                             Page 7",
+      "form_fields": []
+    },
+    {
+      "page": 8,
+      "text": "Common Data Set 2021-2022\n\nC5  Distribution of high school units required and/or recommended. Specify the distribution of academic high\n     school course units required and/or recommended of all or most degree-seeking students using Carnegie\n      units (one unit equals one year of study or its equivalent). If you use a different system for calculating units,\n     please convert.\n\n                                                Units             Units\n                                           Required     Recommended\n      Total academic units                   20\n      English                              4\n     Mathematics                         4\n      Science                             3\n       Of these, units that must be                                        3         lab\n      Foreign language                      2\n      Social studies                        2\n      History                              1\n     Academic electives                    2\n     Computer Science\n\n                                        1\n      Visual/Performing Arts\n      Other (specify)                      1 PE\n\n    C6-C7: Basis for Selection\nC6  Do you have an open admission policy, under which virtually all secondary school graduates or students with\n    GED equivalency diplomas are admitted without regard to academic record, test scores, or other qualifications?\n\n         If so, check which applies:\n     Open admission policy as described above for all students\n     Open admission policy as described above for most students, but--\n          selective admission for out-of-state students\n          selective admission to some programs\n\n         other (explain):\n\nC7   Relative importance of each of the following academic and nonacademic factors in your first-time, first-year,\n     degree-seeking (freshman) admission decisions.\n\n                                   Very Important     Important      Considered   Not Considered\n    Academic\n                                            x       Rigor of secondary school record\n       Class rank                                                             x\n      Academic GPA                        x\n       Standardized test scores                                                x\n        Application Essay                                                      x\n       Recommendation(s)                                                    x\n    Nonacademic\n        Interview                                                                              x\n        Extracurricular activities                                                 x\n         Talent/ability                                                           x\n       Character/personal qualities                                             x\n         First generation                                                        x\n       Alumni/ae relation                                                                      x\n       Geographical residence                                                                 x\n        State residency                                                        x\n        Religious affiliation/commitment                                                          x\n        Racial/ethnic status                                                     x\n       Volunteer work                                                         x\n      Work experience                                                       x\n       Level of applicant’s interest                                                              x\n\n\nCDS-C                                                                                             Page 8",
+      "form_fields": []
+    },
+    {
+      "page": 9,
+      "text": "Common Data Set 2021-2022\n\n    C8: SAT and ACT Policies\n\nC8A Entrance exams\n                                                                   Yes          No\n    Does your institution make use of SAT, ACT, or SAT Subject Test                                                                             x     scores in admission decisions for first-time, first-year, degree-seeking\n      applicants:\n         If yes, place check marks in the appropriate boxes below to reflect your institution’s policies for use in admission for Fall 2023.\n                                                       ADMISSION\n                                            Require      Recommend    Require for Some   Consider if     Not\n                                                                                  Submitted     Used\n    SAT or ACT                                                                             x\n    ACT Only\n\n\n    SAT Only\n    SAT and SAT Subject Tests or\n    SAT Subject Tests\nC8B  If your institution will make use of the ACT in admission decisions for first-time, first-year, degree-seeking applicants for\n      Fall 2023 please indicate which ONE of the following applies (regardless of whether the writing score will be used in\n     the admissions process):\n     ACT with writing required\n     ACT with writing recommended\n  x   ACT with or without writing accepted\n\nC8B  If your institution will make use of the SAT in admission decisions for first-time, first-year, degree-seeking applicants for\n      Fall 2023 please indicate which ONE of the following applies (regardless of whether the Essay score will be used in the\n     admissions process):\n\n      SAT with Essay component required\n      SAT with Essay component recommended\n  x   SAT with or without Essay component accepted\n\nC8C Please indicate how your institution will use the SAT or ACT essay component; check all that apply.\n\n                              SAT essay     ACT essay\n     For admission\n                                             x               x\n     For placement\n     For advising\n      In place of an application essay\n    As a validity check on the\n      application process\n    No college policy as of now\n     Not using essay component\n\nC8D In addition, does your institution use applicants' test scores for academic advising?\n\n      Yes\n      No\n  x\n\nC8E Latest date by which SAT or ACT scores must be received for fall-term admission:              1-Feb\n      Latest date by which SAT Subject Test scores must be received for fall-term admission:\n\nC8F  If necessary, use this space to clarify your test\n      policies (e.g., if tests are recommended for some\n      students, or if tests are not required of some students\n\n\n\n\n\nCDS-C                                                                                             Page 9",
+      "form_fields": []
+    },
+    {
+      "page": 10,
+      "text": "Common Data Set 2021-2022\n\n\nC8G Please indicate which tests your institution uses for placement (e.g., state tests):\n\n     SAT\n     ACT\n     SAT Subject Tests\nx    AP\nx    CLEP\nx       Institutional Exam\n        State Exam (specify):             International Baccalaureate, Locally Developed Tests\n\n\n    C9-C12: Freshman Profile\n     Provide information for ALL enrolled, degree-seeking, full-time and part-time, first-time, first-year\n     (freshman) students enrolled in Fall 2021, including students who began studies during summer, international\n     students/nonresident aliens, and students admitted under special arrangements.\nC9  Percent and number of first-time, first-year (freshman) students enrolled in Fall 2021 who\n     submitted national standardized (SAT/ACT) test scores.\n       •   Include information for ALL enrolled, degree-seeking, first-time, first-year (freshman) students who submitted\n         test scores.\n       •  Do not include partial test scores (e.g., mathematics scores but not critical reading for a category of students)\n         or combine other standardized test results (such as TOEFL) in this item.\n       •  Do not convert SAT scores to ACT scores and vice versa.\n       •     If a student submitted multiple sets of scores for a single test, report this information according to how you use\n         the data. For example:\n             •     If you consider the highest scores from either submission, use the highest combination of scores\n                 (e.g., verbal from one submission, math from the other).\n             •     If you average the scores, use the average to report the scores.\n\n                                          Percent        Number\n              Submitting SAT Scores       38%           2345\n              Submitting ACT Scores       26%           1632\n\n\n\n     For each assessment listed below, report the score that represents the 25th percentile (the score that 25\n     percent of the freshman population scored at or below) and the 75th percentile score (the score that 25 percent\n     scored at or above).\n\n             Assessment           25th Percentile  75th Percentile\n    SAT Composite                      1150           1340\n    SAT Evidence-Based Reading and                                       580            680      Writing\n    SAT Math                           570            680\n    ACT Composite                      26             31\n    ACT Math                           24             29\n    ACT English                         24             33\n    ACT Writing\n\n\n\n\n\nCDS-C                                                                                             Page 10",
+      "form_fields": []
+    },
+    {
+      "page": 11,
+      "text": "Common Data Set 2021-2022\n\n     Percent of first-time, first-year (freshman) students with scores in each range:\n\n                             SAT Evidence-\n             Score Range         Based Reading   SAT Math\n                                  and Writing\n                 700-800                   17.91%         18.04%\n                 600-699                   50.32%         43.54%\n                 500-599                   28.44%         33.82%\n                 400-499                    3.24%         4.31%\n                 300-399                    0.09%         0.30%\n                 200-299                    0.00%          0.00%\n             Totals should = 100%              100%         100%\n\n             Score Range        SAT Composite\n               1400-1600                  15.01%\n               1200-1399                  50.32%\n               1000-1199                  31.73%\n                 800-999                    2.77%\n                 600-799                    0.17%\n                 400-599                    0.00%\n             Totals should = 100%             100%\n\n\n\n\n\nC10 Percent of all degree-seeking, first-time, first-year (freshman) students who had high school class\n     rank within each of the following ranges (report information for those students from whom you\n     collected high school rank information)\n                           Assessment                              Percent\n     Percent in top tenth of high school graduating class                       30%\n     Percent in top quarter of high school graduating class\n                                                             63%\n     Percent in top half of high school graduating class\n                                                             93%\n     Percent in bottom half of high school graduating class\n                                                                           Top half +\n                                                         7% bottom half = 100%\n     Percent in bottom quarter of high school graduating class                   1%\n     Percent of total first-time, first-year (freshmen) students who submitted           67%\n\nC11 Percentage of all enrolled, degree-seeking, first-time, first-year (freshman) students who had high school grade-point averages\n      within each of the following ranges (using 4.0 scale).\n                    Score Range                      Percent\n     Percent who had GPA of 4.0                            14.12%\n     Percent who had GPA between 3.75 and 3.99               31.10%\n     Percent who had GPA between 3.50 and 3.74               27.14%\n     Percent who had GPA between 3.25 and 3.49               17.06%\n     Percent who had GPA between 3.00 and 3.24                7.64%\n     Percent who had GPA between 2.50 and 2.99                2.80%\n     Percent who had GPA between 2.0 and 2.49               0%\n     Percent who had GPA between 1.0 and 1.99\n     Percent who had GPA below 1.0\n\n      Totals should = 100%                               100%\n\n\nCDS-C                                                                                             Page 11",
+      "form_fields": []
+    },
+    {
+      "page": 12,
+      "text": "Common Data Set 2021-2022\n\nC12 Average high school GPA of all degree-seeking, first-time, first-year (freshman) students who submitted GPA:  3.65\n     Percent of total first-time, first-year (freshman) students who submitted high school GPA:  97.83%\n\n\n\nC13-C20: Admission Policies\n\nC13 Application Fee\n            If your institution has waived its application fee for the Fall 2022 admission cycle please select no.\n\n                                                     Yes          No\n    Does your institution have an application fee?                x\n\n                          Amount of application fee:  $        65.00\n\n\n                                                     Yes          No\n    Can it be waived for applicants with financial need?           x\n\n         If you have an application fee and an on-line application option, please indicate policy for students who apply online:\n\n      Same fee\n  x\n       Free\n      Reduced\n                                                     Yes          No\n    Can online application fee be waived for                                                             x\n     applicants with financial need?\n\nC14 Application closing date\n                                                     Yes          No\n    Does your institution have an application closing date?        x\n\n                                        Date\n      Application closing date (fall)             12/1\n       Priority Date                            12/1\n\n\n                                                                        Yes          No\nC15 Are first-time, first-year students accepted for terms other than fall?              x\n\nC16 Notification to applicants of admission decision sent (fill in one only)\n\n     On a rolling basis beginning\n         (date):\n  x    By (date):                         3rd week of March\n        Other:\n\nC17 Reply policy for admitted applicants (fill in one only)\n\n  x    Must reply by (date):                  1-May\n      No set date\n  x    Must reply by May 1st or within                   weeks if notified thereafter\n        Other:\n\n     Deadline for housing deposit (MMDD    1-May\n     Amount of housing deposit:        $       100.00\n\n     Refundable if student does not enroll?\n             Yes, in full\n       x    Yes, in part\n          No\n\nCDS-C                                                                                            Page 12",
+      "form_fields": []
+    },
+    {
+      "page": 13,
+      "text": "Common Data Set 2021-2022\n\n\n\n\nC18 Deferred admission\n\n                                                                   Yes          No\nDoes your institution allow students to postpone enrollment after admission?          x\n                               If yes, maximum period of postponement:\n\n\n\nC19 Early admission of high school students\n                                                                           Yes          NoDoes your institution allow high school students to enroll as full-time, first-time,                                                                                                       xfirst-year (freshman) students one year or more before high school\ngraduation?\n\n\n\n\nC20 Common Application: Question removed from CDS. (Initiated during 2006-2007 cycle)\n\nC21-C22: Early Decision and Early Action Plans\nC21 Early Decision\n\n     Does your institution offer an early decision plan (an admission plan that\n      permits students to apply and be notified of an admission decision well        Yes          No\n       in advance of the regular notification date and that asks students to                              x\n     commit to attending if accepted) for first-time, first-year (freshman)\n      applicants for fall enrollment?\n\n           If “yes,” please complete the following:\n                            First or only early decision plan closing date:\n                            First or only early decision plan notification date:\n                     Other early decision plan closing date:\n                     Other early decision plan notification date:\n\n     For the Fall 2021 entering class:\n    Number of early decision applications received by your institution:\n    Number of applicants admitted under early decision plan:\n     Please provide significant details about your early decision plan:\n\n\n\n\nC22 Early action\n\n    Do you have a nonbinding early action plan whereby students are            Yes          No\n      notified of an admission decision well in advance of the regular\n      notification date but do not have to commit to attending your                    x\n     college?\n\n\n                   If “yes,” please complete the following:\n\n                           Early action closing date       3rd week of Dec\n\n                           Early action notification date\n                                                                  Yes          No\n      Is your early action plan a “restrictive” plan under which you limit                                x\n     students from applying to other early plans?\n\n\nCDS-C                                                                                             Page 13",
+      "form_fields": []
+    }
+  ],
+  "warnings": [
+    "Admissions policies and deadlines may refer to a later application cycle than the reported fall cohort; consult the source before advising."
+  ]
+}

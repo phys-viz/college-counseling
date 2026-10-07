@@ -1,0 +1,256 @@
+{
+  "school_id": "south-carolina",
+  "school": "University of South Carolina (Columbia)",
+  "year": 2019,
+  "report_label": "2019–20",
+  "source_url": "http://oiraa.dw.sc.edu/cds/cds2019/cdsc2019.htm",
+  "index_url": "https://sc.edu/about/offices_and_divisions/institutional_research_assessment_and_analytics/institutional_effectiveness/common_data_set/",
+  "source_type": "html",
+  "sha256": "85767677a7b4f5800a86c0ae205c09bff15787555987daa3fc532f6df4723f14",
+  "extracted_at": "2026-10-07T21:32:27.692457+00:00",
+  "review_status": "Source extracted; not manually audited",
+  "metrics": {
+    "waitlist_offered": 2588.0,
+    "waitlist_accepted": 11.0,
+    "waitlist_admitted": 8.0,
+    "reading_25": 600.0,
+    "reading_75": 680.0,
+    "math_25": 580.0,
+    "math_75": 690.0,
+    "act_25": 25.0,
+    "act_75": 31.0,
+    "top_tenth": 28.0,
+    "top_quarter": 59.0,
+    "top_half": 90.0,
+    "rank_submitted": 69.0,
+    "fee": 65.0,
+    "rd_deadline": "12/01",
+    "applicants": 31268.0,
+    "admitted": 21464.0,
+    "enrolled": 6286.0,
+    "test_policy": "Required",
+    "admit_rate": 68.645,
+    "yield_rate": 29.286,
+    "waitlist_rate": 72.727
+  },
+  "evidence": {
+    "waitlist_offered": {
+      "section": "C2",
+      "page": null,
+      "method": "reported"
+    },
+    "waitlist_accepted": {
+      "section": "C2",
+      "page": null,
+      "method": "reported"
+    },
+    "waitlist_admitted": {
+      "section": "C2",
+      "page": null,
+      "method": "reported"
+    },
+    "reading_25": {
+      "section": "C9",
+      "page": null,
+      "method": "reported"
+    },
+    "reading_75": {
+      "section": "C9",
+      "page": null,
+      "method": "reported"
+    },
+    "math_25": {
+      "section": "C9",
+      "page": null,
+      "method": "reported"
+    },
+    "math_75": {
+      "section": "C9",
+      "page": null,
+      "method": "reported"
+    },
+    "act_25": {
+      "section": "C9",
+      "page": null,
+      "method": "reported"
+    },
+    "act_75": {
+      "section": "C9",
+      "page": null,
+      "method": "reported"
+    },
+    "top_tenth": {
+      "section": "C10",
+      "page": null,
+      "method": "reported"
+    },
+    "top_quarter": {
+      "section": "C10",
+      "page": null,
+      "method": "reported"
+    },
+    "top_half": {
+      "section": "C10",
+      "page": null,
+      "method": "reported"
+    },
+    "rank_submitted": {
+      "section": "C10",
+      "page": null,
+      "method": "reported"
+    },
+    "fee": {
+      "section": "C13",
+      "page": null,
+      "method": "reported"
+    },
+    "rd_deadline": {
+      "section": "C14",
+      "page": null,
+      "method": "reported"
+    },
+    "applicants": {
+      "section": "C1",
+      "page": null,
+      "method": "sum of reported gender/status counts"
+    },
+    "admitted": {
+      "section": "C1",
+      "page": null,
+      "method": "sum of reported gender/status counts"
+    },
+    "enrolled": {
+      "section": "C1",
+      "page": null,
+      "method": "sum of reported gender/status counts"
+    },
+    "test_policy": {
+      "section": "C8",
+      "page": null,
+      "method": "selected HTML policy column"
+    },
+    "admit_rate": {
+      "section": "C1",
+      "page": null,
+      "method": "calculated"
+    },
+    "yield_rate": {
+      "section": "C1",
+      "page": null,
+      "method": "calculated"
+    },
+    "waitlist_rate": {
+      "section": "C2",
+      "page": null,
+      "method": "calculated"
+    }
+  },
+  "factors": [
+    {
+      "label": "Rigor of secondary school record",
+      "rating": "Very important",
+      "page": 1
+    },
+    {
+      "label": "Class rank",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Academic GPA",
+      "rating": "Very important",
+      "page": 1
+    },
+    {
+      "label": "Standardized test scores",
+      "rating": "Very important",
+      "page": 1
+    },
+    {
+      "label": "Application Essay",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Recommendations",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Interview",
+      "rating": "Not considered",
+      "page": 1
+    },
+    {
+      "label": "Extracurricular activities",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Talent/ability",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Character/personal qualities",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "First generation",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Alumni/ae relation",
+      "rating": "Not considered",
+      "page": 1
+    },
+    {
+      "label": "Geographical residence",
+      "rating": "Not considered",
+      "page": 1
+    },
+    {
+      "label": "State residency",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Religious affiliation/commitment",
+      "rating": "Not considered",
+      "page": 1
+    },
+    {
+      "label": "Racial/ethnic status",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Volunteer work",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Work experience",
+      "rating": "Considered",
+      "page": 1
+    },
+    {
+      "label": "Level of applicant's interest",
+      "rating": "Not considered",
+      "page": 1
+    }
+  ],
+  "sections": [
+    {
+      "page": 1,
+      "text": "Common Data Set - Office of Institutional Research, Assessment, and Analytics | University of South Carolina\nOIRAA\nCommon Data Set C: First-Time, First-Year (Freshman) Admission (2019-2020)\nApplications\nC1. First-time, first-year (freshmen) students:\nProvide the number of degree-seeking first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2019.  Include early decision, early action, and students who began studies during summer in this cohort.  Applicants include all students who fulfilled the requirements for consideration for admission (including payment or waiving of the application fee, if any) and who have been notified of one of the following actions: admission, no admission, placement on waiting list, or application withdrawn (by applicant or institution).  Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who    applied\n12,938\nTotal first-time, first-year (freshman) women who applied\n18,330\nTotal first-time, first-year (freshman) men who were admitted\n9,015\nTotal first-time, first-year (freshman) women who were    admitted\n12,449\nTotal full-time, first-time, first-year (freshman) men who    enrolled\n2,809\nTotal part-time, first-time, first-year (freshman) men who    enrolled\n4\nTotal full-time, first-time, first-year (freshman) women who    enrolled\n3,470\nTotal part-time, first-time, first-year (freshman) women who    enrolled\n3\nC2. Freshman wait-listed students\n(students who met admission requirements but whose final admission was contingent on space availability)\nDo you have a policy of placing students on a waiting list?\n[Selected: Y]\nYes\nNo\nIf yes, please answer the questions below for Fall 2019 admissions:\nNumber of qualified applicants offered a place on waiting list\n2,588\nNumber accepting a place on the waiting list\n11\nNumber of wait-listed students admitted\n8\nIs your waiting list ranked?\nYes\n[Selected: N]\nNo\nIf yes, do you release that information to students?\nYes\n[Selected: N]\nNo\nDo you release that information to school counselors?\nYes\n[Selected: N]\nNo\nAdmission Requirements\nC3.  High school completion requirement\nHigh school completion requirement(s) for degree-seeking entering students:\n[Selected: Y]\nHigh school diploma is required and GED is accepted\nHigh school diploma is required and GED is not accepted\nHigh school diploma or equivalent is not required\nC4.  Does your institution require or recommend a general college preparatory program for degree-seeking students?\n[Selected: 1]\nRequire\nRecommend\nNeither require nor recommend\nC5.  Distribution of high school units required and/or recommended.\nSpecify the distribution of academic high school course units required and/or recommended of all\r\n          or most degree-seeking students using Carnegie units (one unit equals one year of study or its equivalent).\r\n          If you use a different system for calculating units, please convert.\nUnits\nRequired\nUnits\nRecommended\nTotal    academic units\n20\nEnglish\n4\nMathematics\n4\nScience\n3\nĀĀĀ Of these, units that    must be \r\n              lab\n3\nForeign    language\n2\nSocial    studies\n2\nHistory\n1\nAcademic    electives\n2\nComputer Science\nVisual/Performing    Arts\n1\nOther (specify)\n1 PE/ROTC\nBasis for Selection\nC6. Do you have an open admission policy, under which virtually\r\n          all secondary school graduates or students with GED equivalency diplomas are admitted without regard to academic record, test scores, or other qualifications? If so, check which applies:\nOpen admission policy as described above for all students\nOpen admission policy as described above for most students, but\nselective admission for out-of-state students\nselective admission to some programs\nOther (explain)\nC7.  Relative importance of each of the following academic and nonacademic factors in  first-time, first-year, degree-seeking (freshman) admission decisions.\nVery important\nImportant\nConsidered\nNot considered\nAcademic\nRigor of secondary school record\n[Selected: V]\nClass rank\n[Selected: C]\nAcademic GPA\n[Selected: V]\nStandardized test scores\n[Selected: V]\nApplication Essay\n[Selected: C]\nRecommendations\n[Selected: C]\nNon-Academic\nInterview\n[Selected: N]\nExtracurricular activities\n[Selected: C]\nTalent/ability\n[Selected: C]\nCharacter/personal qualities\n[Selected: C]\nFirst generation\n[Selected: C]\nAlumni/ae relation\n[Selected: N]\nGeographical residence\n[Selected: N]\nState residency\n[Selected: C]\nReligious affiliation/commitment\n[Selected: N]\nRacial/ethnic status\n[Selected: C]\nVolunteer work\n[Selected: C]\nWork experience\n[Selected: C]\nLevel of applicant's interest\n[Selected: N]\nSAT and ACT Policies\nC8.  Entrance exams\nA. Does your institution make use of SAT, ACT, or SAT Subject Test scores in admission decisions for first-time, first-year degree-seeking applicants?\n[Selected: Y]\nYes\nNo\nIf yes, place check marks in the appropriate boxes below to reflect your institution's policies for use in admission for\nFall 2021\n.\nADMISSIONS\nRequire\nRecommend\nRequire for some\nConsider if submitted\nNot used\nSAT  or ACT\n[Selected: Q]\nACT only\nSAT only\nSAT  and SAT Subject Tests or ACT\nSAT Subject Tests only\n[Selected: N]\nB. If your institution will make use of the ACT in admission decisions for first-time, first-year, degree-seeking applicants for\nFall 2021\n, please indicate which ONE of the following applies (regardless of whether the writing score will be used in the admissions process):\nACT with Writing  required\nACT with Writing recommended\n[Selected: All]\nACT with or without Writing  accepted\nIf your institution will make use of the SAT in admission decisions for first-time, first-year, degree-seeking applicants for\nFall 2021\n, please indicate which ONE of the following applies (regardless of whether the Essay score will be used in the admissions process):\nSAT with Essay component required\nSAT with Essay component recommended\n[Selected: All]\nSAT with or without Essay component  accepted\nC. Please indicate how your institution will use the SAT  or ACT\nessay\ncomponent; check all that apply:\nSAT Essay\nACT Essay\nFor admission\n[Selected: Y]\n[Selected: Y]\nFor placement\nFor advising\nIn place of an application essay\nAs a validity check on the application essay\nNo college policy as of now\nNot using essay component\nD.\nIn addition\n, does your institution use applicants' test scores for academic advising?\nYes\n[Selected: N]\nNo\nE. Latest date by which SAT or ACT scores must be received\r\n              for fall-term admission:\n02/01\nLatest date by which SAT Subject Tests scores must be received\r\n              for fall-term admission:\nF. If necessary, use this space to clarify your test policies\r\n              (e.g., if tests are recommended for some students, or if tests are not required of some students):\nG. Please indicate which tests your institution uses for\nplacement (e.g., state tests)\n:\nSAT\nACT\nSAT Subject Tests\nAP\n[Selected: Q]\nCLEP\n[Selected: Q]\nInstitutional Exam\n[Selected: Q]\nState Exam (specify):\nFreshman Profile\nProvide percentages for\nALL enrolled, degree-seeking, full-time and part-time, first-time, first-year (freshman) students\nenrolled in Fall\r\n          2019, including students who began studies during summer, international students/nonresident aliens, and students admitted under special arrangements.\nC9. Percent and number of first-time, first-year (freshman) students enrolled in Fall 2019 who submitted national\r\n            standardized (SAT/ACT) test scores.\nInclude information for\nALL enrolled, first-time, first-year (freshman) degree-seeking students who submitted test scores\n. Do not include partial test scores (e.g.\r\n              mathematics scores but not critical reading for a category of students) or combine other standardized\r\n          test results (such as TOEFL) in this item. Do not convert SAT scores to ACT scores and vice versa.\nIf a student submitted multiple sets of scores for a  single test, report this information according to how you use the data. For  example:\nIf you consider  the highest scores from either submission, use the highest combination of  scores (e.g., verbal from one submission, math from the other).\nIf you average  the scores, use the average to report the scores.\nPercent submitting SAT scores\n65%\nPercent submitting ACT scores\n35%\nNumber submitting SAT scores\n4,062\nNumber submitting ACT scores\n2,182\n25th Percentile\n75th Percentile\nSAT Composite\nSAT Evidence-Based Reading and Writing\n600\n680\nSAT Math\n580\n690\nACT Composite\n25\n31\nACT Math\n22\n28\nACT English\n22\n31\nACT Writing\nPercent of first-time, first-year (freshman) students with scores in each range:\nSAT Composite\n1400-1600\n14%\n1200-1399\n56%\n1000-1199\n29%\n800-999\n1%\n600-799\n400-599\nTotals should    = 100%\n100%\nSAT    Evidence-Based Reading and Writing\nSAT Math\n700-800\n16%\n22%\n600-699\n59%\n47%\n500-599\n24%\n30%\n400-499\n1%\n1%\n300-399\n200-299\nTotals should    = 100%\n100%\n100%\nACT Composite\nACT English\nACT Math\n30-36\n37%\n47%\n22%\n24-29\n50%\n35%\n56%\n18-23\n13%\n17%\n20%\n12-17\n0%\n1%\n2%\n6-11\nBelow 6\nTotals should = 100%\n100%\n100%\n100%\nC10. Percent of all degree-seeking, first-time, first-year (freshman) students who had high school class rank within each of the following ranges (report information for those students from whom you collected high school rank information)\n.\nPercent in top 10th of high school graduating class\n28%\nPercent in top quarter of high school graduating class\n59%\nPercent in top half of high school graduating class\n90%\nPercent in bottom half of high school graduating class\n10%\nPercent in bottom quarter of high school graduating class\n2%\nPercent of total first-time, first-year (freshman) students who submitted high school class rank:\n69%\nC11. Percentage of all enrolled, degree-seeking, first-time, first-year (freshman) students who had high school grade-point averages within each of the following ranges (using 4.0 scale). Report information only for those students from whom you collected high school GPA.\nPercent who had a GPA of 4.0\n64%\nPercent who had a GPA between 3.75 and 3.99\n16%\nPercent who had a GPA between 3.50 and 3.74\n12%\nPercent who had a GPA between 3.25 and 3.49\n5%\nPercent who had a GPA between 3.00 and 3.24\n2%\nPercent who had a GPA between 2.50 and 2.99\n1%\nPercent who had a GPA between 2.0 and 2.49\nPercent who had a GPA between 1.0 and 1.99\nPercent who had a GPA below 1.0\nTotal should = 100%\n100%\nC12.\nAverage high school GPA of all degree-seeking, first-time, first year (freshman) students who submitted GPA:\n4\nPercent of total first-time, first-year (freshman) students who submitted high school GPA:\n92%\nAdmission Policies\nC13. Application Fee\nDoes your institution have an application fee?\n[Selected: Y]\nYes\nNo\nAmount of application fee\n$65\nCan it be waived for applicants with financial need?\n[Selected: Y]\nYes\nNo\nIf you have an application fee and an online application option,   please indicate policy for students who apply online:\n[Selected: Same fee]\nSame fee\nFree\nReduced\nCan online application fee be waived for applicants with financial   need?\n[Selected: Yes]\nYes\nNo\nC14. Application Closing Date\nDoes your institution have an application closing date?\n[Selected: Y]\nYes\nNo\nApplication closing date (Fall)\n12/01\nPriority date\n12/01\nC15.\nAre first-time, first-year students accepted for terms other\r\n              than the fall?\n[Selected: Y]\nYes\nNo\nC16.  Notification to applicants of admission decision sent (fill in one only)\nOn a rolling basis beginning (date)\nBy (date)\n3rd week of March\nOther\nC17. Reply policy for admitted applicants (fill in one only)\nMust reply by (date)\n05/01\nNo set date\nMust reply by May 1 or within\n2 weeks if notified thereafter\nOther\nDeadline for housing deposit (MM/DD):\n05/01\nAmount of housing deposit:\n$100\nRefundable if student does not enroll?\nYes, in full\n[Selected: YP]\nYes, in part\nNo\nC18. Deferred admission:\nDoes your institution allow students\r\n              to postpone enrollment after admission?\n[Selected: Y]\nYes\nNo\nIf yes, maximum period of postponement:\n1 year\nC19. Early admission of high school students:\nDoes your institution allow high school students to enroll as full-time,\r\n              first-time, first-year (freshman) students one year or more before high school graduation?\nYes\n[Selected: N]\nNo\nC20. Common application\n: Question removed from CDS.\r\n            \r\n            (Initiated during 2006-2007 cycle)\nEarly Decision and Early Action Plans\nC21.  Early decision\nDoes your institution offer an early decision plan (an admission plan that permits students to apply and be notified\r\n                    of an admission decision well in advance of the regular notification date and that asks students to commit to attending if accepted) for first-time,\r\n                  first-year (freshman) applicants for Fall enrollment?\nYes\n[Selected: N]\nNo\nIf \"yes,\" please complete the following:\nFirst or only early decision plan closing date\nFirst or only early decision plan notification date\nOther early decision plan closing date\nOther early decision plan notification date\nNumber of early decision applicants received by your institution for the Fall 2019 entering class:\nNumber of applicants admitted under early decision plan for the Fall 2019 entering class:\nPlease provide significant details about your early decision plan.\nC22. Early action:\nDo you have a nonbinding early action plan whereby students are\r\n              notified of an admission decision well in advance of the regular notification date but do not have to commit to attending your college?\n[Selected: Y]\nYes\nNo\nIf \"yes,\" please complete the following:\nEarly action closing date\n3rd week of December\nEarly action notification date\nIs your early action plan a \"restrictive\" plan under which you   limit students from applying to other early plans?\nYes\n[Selected: N]\nNo\n<< B. Enrollment and Persistence\n|\nD. Transfer Admission >>",
+      "form_fields": []
+    }
+  ],
+  "warnings": [
+    "Historical HTML source: source links open the official Section C webpage; no PDF page numbers are available.",
+    "Admissions policies and deadlines may refer to a later application cycle than the reported fall cohort; consult the source before advising."
+  ]
+}

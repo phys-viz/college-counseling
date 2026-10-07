@@ -1,0 +1,2637 @@
+{
+  "school_id": "south-carolina",
+  "school": "University of South Carolina (Columbia)",
+  "year": 2025,
+  "report_label": "2025–26",
+  "source_url": "http://oiraa.dw.sc.edu/cds/cds2025/cds_2025-2026.pdf",
+  "index_url": "https://sc.edu/about/offices_and_divisions/institutional_research_assessment_and_analytics/institutional_effectiveness/common_data_set/",
+  "source_type": "pdf",
+  "sha256": "045e2290e44f2093390bbed85539bba6adb38715c9a6d93fd6c831e66fd2fd29",
+  "extracted_at": "2026-10-07T21:32:24.883093+00:00",
+  "review_status": "Source extracted; not manually audited",
+  "metrics": {
+    "applicants": 59630.0,
+    "admitted": 33695.0,
+    "enrolled": 7818.0,
+    "waitlist_offered": 8805.0,
+    "waitlist_accepted": 3395.0,
+    "waitlist_admitted": 293.0,
+    "top_tenth": 31.26,
+    "top_quarter": 64.82,
+    "top_half": 92.43,
+    "rank_submitted": 63.09,
+    "sat_submitted": 32.0,
+    "act_submitted": 15.0,
+    "sat_submitted_count": 2487.0,
+    "act_submitted_count": 1139.0,
+    "fee": 65.0,
+    "sat_25": 1200.0,
+    "sat_50": 1280.0,
+    "sat_75": 1360.0,
+    "reading_25": 610.0,
+    "reading_50": 650.0,
+    "reading_75": 690.0,
+    "math_25": 580.0,
+    "math_50": 630.0,
+    "math_75": 680.0,
+    "act_25": 26.0,
+    "act_50": 29.0,
+    "act_75": 32.0,
+    "rd_deadline": "12/01",
+    "test_policy": "Not required; considered if submitted",
+    "admit_rate": 56.507,
+    "yield_rate": 23.202,
+    "waitlist_rate": 8.63
+  },
+  "evidence": {
+    "applicants": {
+      "section": "C1",
+      "page": 11,
+      "method": "sum of gender counts"
+    },
+    "admitted": {
+      "section": "C1",
+      "page": 11,
+      "method": "sum of gender counts"
+    },
+    "enrolled": {
+      "section": "C1",
+      "page": 11,
+      "method": "sum of gender counts"
+    },
+    "waitlist_offered": {
+      "section": "C2",
+      "page": 12,
+      "method": "PDF form field"
+    },
+    "waitlist_accepted": {
+      "section": "C2",
+      "page": 12,
+      "method": "PDF form field"
+    },
+    "waitlist_admitted": {
+      "section": "C2",
+      "page": 12,
+      "method": "PDF form field"
+    },
+    "top_tenth": {
+      "section": "C10",
+      "page": 19,
+      "method": "PDF form field"
+    },
+    "top_quarter": {
+      "section": "C10",
+      "page": 19,
+      "method": "PDF form field"
+    },
+    "top_half": {
+      "section": "C10",
+      "page": 19,
+      "method": "PDF form field"
+    },
+    "rank_submitted": {
+      "section": "C10",
+      "page": 19,
+      "method": "PDF form field"
+    },
+    "sat_submitted": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "act_submitted": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "sat_submitted_count": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "act_submitted_count": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "fee": {
+      "section": "C13",
+      "page": 20,
+      "method": "PDF form field"
+    },
+    "sat_25": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "sat_50": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "sat_75": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "reading_25": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "reading_50": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "reading_75": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "math_25": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "math_50": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "math_75": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "act_25": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "act_50": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "act_75": {
+      "section": "C9",
+      "page": 17,
+      "method": "PDF form field"
+    },
+    "rd_deadline": {
+      "section": "C14",
+      "page": 20,
+      "method": "reported"
+    },
+    "test_policy": {
+      "section": "C8",
+      "page": 15,
+      "method": "reported"
+    },
+    "admit_rate": {
+      "section": "C1",
+      "page": 11,
+      "method": "calculated"
+    },
+    "yield_rate": {
+      "section": "C1",
+      "page": 11,
+      "method": "calculated"
+    },
+    "waitlist_rate": {
+      "section": "C2",
+      "page": 12,
+      "method": "calculated"
+    }
+  },
+  "factors": [
+    {
+      "label": "Rigor of secondary school record",
+      "rating": "Important",
+      "page": 14
+    },
+    {
+      "label": "Class rank",
+      "rating": "Important",
+      "page": 14
+    },
+    {
+      "label": "Academic GPA",
+      "rating": "Very important",
+      "page": 14
+    },
+    {
+      "label": "Standardized test scores",
+      "rating": "Important",
+      "page": 14
+    },
+    {
+      "label": "Application essay",
+      "rating": "Considered",
+      "page": 14
+    },
+    {
+      "label": "Recommendations",
+      "rating": "Considered",
+      "page": 14
+    },
+    {
+      "label": "Interview",
+      "rating": "Not considered",
+      "page": 14
+    },
+    {
+      "label": "Extracurricular activities",
+      "rating": "Considered",
+      "page": 14
+    },
+    {
+      "label": "Talent/ability",
+      "rating": "Considered",
+      "page": 14
+    },
+    {
+      "label": "Character/personal qualities",
+      "rating": "Not considered",
+      "page": 14
+    },
+    {
+      "label": "First generation",
+      "rating": "Not considered",
+      "page": 14
+    },
+    {
+      "label": "Alumni/ae relation",
+      "rating": "Not considered",
+      "page": 14
+    },
+    {
+      "label": "Geographical residence",
+      "rating": "Not considered",
+      "page": 14
+    },
+    {
+      "label": "State residency",
+      "rating": "Considered",
+      "page": 14
+    },
+    {
+      "label": "Religious affiliation/commitment",
+      "rating": "Not considered",
+      "page": 14
+    },
+    {
+      "label": "Volunteer work",
+      "rating": "Considered",
+      "page": 14
+    },
+    {
+      "label": "Work experience",
+      "rating": "Considered",
+      "page": 14
+    },
+    {
+      "label": "Level of applicant’s interest",
+      "rating": "Not considered",
+      "page": 14
+    }
+  ],
+  "sections": [
+    {
+      "page": 11,
+      "text": "                               Common Data Set 2025-2026\n\n                            C. FIRST-TIME, FIRST-YEAR ADMISSION\nC1-C2: Applications\nC1. First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students\nwho applied, were admitted, and enrolled (full- or part-time) in Fall 2025.\n\n  •  Include early decision, early action, and students who began studies during summer in this cohort.\n\n    Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who\n      completed actionable applications) and who have been notified of one of the following actions: admission, non- admission,\n      placement on waiting list, or application withdrawn (by applicant or institution).\n\n  •  Admitted applicants should include wait-listed students who were subsequently offered admission.\n\n  •  Since the total may include students who did not provide gender data, the detail need not sum to the total.\n\n  •  In cases where gender information is not provided, IPEDS recommends distributing across the two-binary categories.\n      However, the \"Other\" category can be used to report non-binary or missing data.\n\n  • Note that recent high school graduates and other students without prior postsecondary experience will still be considered\n        “first-time students” for fall enrollment reporting purposes even if they enrolled in the summer prior to fall enrollment.\n      Provide numbers of students for each of the following categories as of the institution’s official fall reporting date or as of\n      October 15, 2025.\n\n                    FIRST-TIME, FIRST-YEAR STUDENT APPLICANTS          TOTAL\n             Total first-time, first-year men who applied                              22438\n             Total first-time, first-year women who applied                            37192\n             Total first-time, first-year unknown sex who applied                         0\n\n                    FIRST-TIME, FIRST-YEAR STUDENT ADMITS              TOTAL\n             Total first-time, first-year men who were admitted                         11657\n             Total first-time, first-year women who were admitted                      22038\n             Total first-time, first-year unknown sex who were admitted                    0\n\n                    FIRST-TIME, FIRST-YEAR STUDENT ENROLLEES           TOTAL\n             Total first-time, first-year men who enrolled                              2862\n             Total first-time, first-year women who enrolled                            4956\n             Total first-time, first-year unknown sex who enrolled                         0\n\n              FIRST-TIME, FIRST-YEAR STUDENT ENROLLEES BY STATUS      TOTAL\n             Total full-time, first-time, first-year men who enrolled                       2857\n             Total part-time, first-time, first-year men who enrolled                        5\n             Total full-time, first-time, first-year women who enrolled                     4951\n             Total part-time, first-time, first-year women who enrolled                     5\n             Total full-time, first-time, first-year unknown sex who enrolled                  0\n             Total part-time, first-time, first-year unknown sex who enrolled                 0",
+      "form_fields": [
+        {
+          "name": "AP_RECD_1ST_MEN_N",
+          "value": "22438",
+          "label": null,
+          "rect": [
+            448.7850036621094,
+            401.114990234375,
+            510.6610107421875,
+            418.83099365234375
+          ]
+        },
+        {
+          "name": "AP_RECD_1ST_WMN_N",
+          "value": "37192",
+          "label": null,
+          "rect": [
+            448.7850036621094,
+            419.2330017089844,
+            510.6610107421875,
+            436.9490051269531
+          ]
+        },
+        {
+          "name": "AP_RECD_1ST_UNK_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            448.7850036621094,
+            437.57501220703125,
+            510.6610107421875,
+            455.2909851074219
+          ]
+        },
+        {
+          "name": "AP_ADMT_1ST_MEN_N",
+          "value": "11657",
+          "label": null,
+          "rect": [
+            449.54998779296875,
+            481.43701171875,
+            511.4259948730469,
+            499.15301513671875
+          ]
+        },
+        {
+          "name": "AP_ADMT_1ST_WMN_N",
+          "value": "22038",
+          "label": null,
+          "rect": [
+            449.07501220703125,
+            499.5570068359375,
+            510.95098876953125,
+            517.2730102539062
+          ]
+        },
+        {
+          "name": "AP_ADMT_1ST_UNK_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            449.31201171875,
+            518.677978515625,
+            511.18798828125,
+            536.3939819335938
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_UNK_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            449.3110046386719,
+            600.5260009765625,
+            510.7510070800781,
+            617.8060302734375
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_MEN_N",
+          "value": "2862",
+          "label": null,
+          "rect": [
+            449.3110046386719,
+            562.8699951171875,
+            510.7510070800781,
+            580.1500244140625
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_WMN_N",
+          "value": "4956",
+          "label": null,
+          "rect": [
+            449.3110046386719,
+            581.4749755859375,
+            510.7510070800781,
+            598.7550048828125
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_FT_MEN_N",
+          "value": "2857",
+          "label": null,
+          "rect": [
+            448.8949890136719,
+            645.60498046875,
+            510.3349914550781,
+            662.885009765625
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_PT_MEN_N",
+          "value": "5",
+          "label": null,
+          "rect": [
+            448.8949890136719,
+            664.5369873046875,
+            510.3349914550781,
+            681.8170166015625
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_FT_WMN_N",
+          "value": "4951",
+          "label": null,
+          "rect": [
+            448.8949890136719,
+            682.468994140625,
+            510.3349914550781,
+            699.749267578125
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_PT_WMN_N",
+          "value": "5",
+          "label": null,
+          "rect": [
+            448.8949890136719,
+            700.4013061523438,
+            510.3349914550781,
+            717.6812744140625
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_FT_UNK_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            448.8949890136719,
+            719.3333129882812,
+            510.3349914550781,
+            736.61328125
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_PT_UNK_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            448.8949890136719,
+            738.2651977539062,
+            510.3349914550781,
+            758.3482055664062
+          ]
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "text": "                                  Common Data Set 2025-2026\n\nIf available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2025\n\n FIRST-TIME, FIRST-YEAR STUDENT APPLICANTS                OUT-OF­                                                 IN-STATE          INTERNATIONAL UNKNOWN  TOTAL\n                                                    STATE\n Total first-time, first-year (degree-seeking) who applied       14102    44911       617          0       59630\n Total first-time, first-year (degree-seeking) who were admitted  10065    23200       430          0       33695\n Total first-time, first-year (degree-seeking) enrolled          4121     3634        63           0        7818\n\n\n     C2. First time, first-year wait-listed students\n      •  Students who met admission requirements but whose final admission was contingent on space\n\n                 availability) Do you have a policy of placing students on a waiting list?   Yes  No     N/A                                        ☐  ☐\n\n\n                 If yes, please answer the questions below for Fall 2025 admissions:\n\n                                   WAITING LIST                      TOTAL\n              Number of qualified applicants offered a place on waiting list:               8805\n              Number accepting a place on the waiting list:                           3395\n              Number of wait-listed students admitted:                               293\n\n\n\n            Is your waiting list ranked?    Yes   No    N/A                    ☐    ☐\n\n        ⇒   If yes, do you release that information to students?        Yes   No ☐ N/A                                          ☐   ☐\n\n        ⇒ Do you release that information to school counselors?   Yes   No ☐ N/A                                        ☐   ☐",
+      "form_fields": [
+        {
+          "name": "AP_RECD_STATE_1ST_N",
+          "value": "14102",
+          "label": null,
+          "rect": [
+            284.70599365234375,
+            121.56500244140625,
+            331.7460021972656,
+            136.31201171875
+          ]
+        },
+        {
+          "name": "AP_RECD_NRES_1ST_N",
+          "value": "44911",
+          "label": null,
+          "rect": [
+            333.10198974609375,
+            121.99798583984375,
+            381.45098876953125,
+            136.88201904296875
+          ]
+        },
+        {
+          "name": "AP_RECD_INTL_1ST_N",
+          "value": "617",
+          "label": null,
+          "rect": [
+            380.92401123046875,
+            120.85601806640625,
+            459.8179931640625,
+            135.56097412109375
+          ]
+        },
+        {
+          "name": "AP_RECD_UNK_1ST_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            459.9599914550781,
+            120.5469970703125,
+            517.0360107421875,
+            135.25201416015625
+          ]
+        },
+        {
+          "name": "AP_RECD_1ST_N",
+          "value": "59630",
+          "label": null,
+          "rect": [
+            518.4509887695312,
+            122.16302490234375,
+            569.85498046875,
+            135.9959716796875
+          ]
+        },
+        {
+          "name": "AP_ADMT_STATE_1ST_N",
+          "value": "10065",
+          "label": null,
+          "rect": [
+            284.70599365234375,
+            137.24102783203125,
+            331.7460021972656,
+            153.56402587890625
+          ]
+        },
+        {
+          "name": "AP_ADMT_NRES_1ST_N",
+          "value": "23200",
+          "label": null,
+          "rect": [
+            333.10198974609375,
+            137.864013671875,
+            381.45098876953125,
+            153.79901123046875
+          ]
+        },
+        {
+          "name": "AP_ADMT_INTL_1ST_N",
+          "value": "430",
+          "label": null,
+          "rect": [
+            380.92401123046875,
+            136.10797119140625,
+            459.8179931640625,
+            153.2139892578125
+          ]
+        },
+        {
+          "name": "AP_ADMT_UNK_1ST_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            459.9599914550781,
+            135.79901123046875,
+            517.0360107421875,
+            153.77801513671875
+          ]
+        },
+        {
+          "name": "AP_ADMT_1ST_N",
+          "value": "33695",
+          "label": null,
+          "rect": [
+            518.4509887695312,
+            137.41497802734375,
+            569.85498046875,
+            154.52099609375
+          ]
+        },
+        {
+          "name": "EN_TOT_STATE_1ST_N",
+          "value": "4121",
+          "label": null,
+          "rect": [
+            284.70599365234375,
+            155.76800537109375,
+            331.7460021972656,
+            171.03997802734375
+          ]
+        },
+        {
+          "name": "EN_TOT_NRES_1ST_N",
+          "value": "3634",
+          "label": null,
+          "rect": [
+            333.10198974609375,
+            154.67498779296875,
+            381.45098876953125,
+            170.6099853515625
+          ]
+        },
+        {
+          "name": "EN_TOT_INTL_1ST_N",
+          "value": "63",
+          "label": null,
+          "rect": [
+            380.92401123046875,
+            154.14801025390625,
+            459.8179931640625,
+            169.85601806640625
+          ]
+        },
+        {
+          "name": "EN_TOT_UNK_1ST_N",
+          "value": "0",
+          "label": null,
+          "rect": [
+            459.9599914550781,
+            153.8389892578125,
+            517.0360107421875,
+            170.41998291015625
+          ]
+        },
+        {
+          "name": "EN_TOT_1ST_N",
+          "value": "7818",
+          "label": null,
+          "rect": [
+            518.4509887695312,
+            155.45501708984375,
+            570.2919921875,
+            170.72698974609375
+          ]
+        },
+        {
+          "name": "AD_WAIT",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            376.760009765625,
+            236.35400390625,
+            386.15301513671875,
+            245.780029296875
+          ]
+        },
+        {
+          "name": "AP_RECD_WAIT_N",
+          "value": "8805",
+          "label": null,
+          "rect": [
+            454.1400146484375,
+            313.197998046875,
+            502.8370056152344,
+            330.7359924316406
+          ]
+        },
+        {
+          "name": "AP_ACPT_WAIT_N",
+          "value": "3395",
+          "label": null,
+          "rect": [
+            454.1400146484375,
+            331.260009765625,
+            502.8370056152344,
+            348.7980041503906
+          ]
+        },
+        {
+          "name": "AP_ADMT_WAIT_N",
+          "value": "293",
+          "label": null,
+          "rect": [
+            454.1400146484375,
+            349.3219909667969,
+            502.8370056152344,
+            366.8599853515625
+          ]
+        },
+        {
+          "name": "WAITLIST_RANK",
+          "value": "N",
+          "label": null,
+          "rect": [
+            224.13499450683594,
+            403.82000732421875,
+            235.21600341796875,
+            414.91400146484375
+          ]
+        },
+        {
+          "name": "WAITLIST_INFO_STUD",
+          "value": "N",
+          "label": null,
+          "rect": [
+            390.8320007324219,
+            432.9750061035156,
+            400.2049865722656,
+            444.0690002441406
+          ]
+        },
+        {
+          "name": "WAITLIST_INFO_SCH",
+          "value": "N",
+          "label": null,
+          "rect": [
+            375.614013671875,
+            458.5169982910156,
+            384.98699951171875,
+            469.6109924316406
+          ]
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "text": "                               Common Data Set 2025-2026\n\n\nC3-C5: Admission Requirements\n\nC3. High school completion requirement\n\nCheck the appropriate box to identify your high school completion requirement for degree-seeking entering\nstudents:\n\n        High school diploma is required and GED is accepted   ☐\n        High school diploma is required and GED is not accepted         N/A   ☐\n        High school diploma or equivalent is not required   ☐\nC4. Does your institution require or recommend a general college-preparatory program for degree-seeking\nstudents?\n\n        Require   ☐                                              N/A       Recommend   ☐\n         Neither require nor recommend   ☐\nC5. Distribution of high school units required and/or recommended. Specify the distribution of academic high\nschool course units required and/or recommended of all or most degree-seeking students using Carnegie units (one unit\nequals one year of study or its equivalent). If you use a different system for calculating units, please convert.\n\n\n                                                 Units Required    Units Recommended\n\n                 Total academic units                    20.00\n\n                English                                 4.00\n               Mathematics                             4.00\n               Science                                 3.00\n                Of these, units that must be lab          3.00\n\n               Foreign language                        2.00\n                Social studies                            2.00\n                 History                                  1.00\n              Academic electives                       2.00\n             Computer Science\n                 Visual/Performing Arts                    1.00\n               Other (specify)                           1.00",
+      "form_fields": [
+        {
+          "name": "AD_HS_REQ_ALL",
+          "value": "GED",
+          "label": null,
+          "rect": [
+            82.71240234375,
+            158.489990234375,
+            90.56700134277344,
+            165.69000244140625
+          ]
+        },
+        {
+          "name": "AD_COL_PREP",
+          "value": "REQ",
+          "label": null,
+          "rect": [
+            83.26309967041016,
+            244.36297607421875,
+            90.9540023803711,
+            251.56298828125
+          ]
+        },
+        {
+          "name": "TOT_ACAD_UNITS_REQ",
+          "value": "20",
+          "label": null,
+          "rect": [
+            281.0400085449219,
+            375.4800109863281,
+            383.760009765625,
+            398.0400085449219
+          ]
+        },
+        {
+          "name": "ENG_UNITS_REQ",
+          "value": "4",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            399.4800109863281,
+            384.0,
+            416.8800048828125
+          ]
+        },
+        {
+          "name": "MATH_UNITS_REQ",
+          "value": "4",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            418.32000732421875,
+            384.0,
+            435.6000061035156
+          ]
+        },
+        {
+          "name": "SCI_UNITS_REQ",
+          "value": "3",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            437.0400085449219,
+            384.0,
+            454.32000732421875
+          ]
+        },
+        {
+          "name": "SCI_LAB_UNITS_REQ",
+          "value": "3",
+          "label": null,
+          "rect": [
+            280.9200134277344,
+            455.8800048828125,
+            383.8800048828125,
+            478.0799865722656
+          ]
+        },
+        {
+          "name": "LANG_UNITS_REQ",
+          "value": "2",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            479.5199890136719,
+            384.0,
+            496.79998779296875
+          ]
+        },
+        {
+          "name": "SOC_UNITS_REQ",
+          "value": "2",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            498.239990234375,
+            384.0,
+            515.6400146484375
+          ]
+        },
+        {
+          "name": "HIST_UNITS_REQ",
+          "value": "1",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            517.0799560546875,
+            384.0,
+            534.3599853515625
+          ]
+        },
+        {
+          "name": "ACAD_ELECTIVE_REQ",
+          "value": "2",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            535.7999877929688,
+            384.0,
+            553.0800170898438
+          ]
+        },
+        {
+          "name": "VISUAL_UNITS_REQ",
+          "value": "1",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            573.239990234375,
+            384.0,
+            590.6400146484375
+          ]
+        },
+        {
+          "name": "OTH_UNITS_REQ",
+          "value": "1",
+          "label": null,
+          "rect": [
+            280.79998779296875,
+            592.0800170898438,
+            384.0,
+            609.3599853515625
+          ]
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "text": "                               Common Data Set 2025-2026\n\n\nC6-C7: Basis for Selection\n\nC6. Do you have an open admission policy, under which virtually all secondary school graduates or students with GED\nequivalency diplomas are admitted without regard to academic record, test scores, or other qualifications?\n\nIf so, check which applies:\n\n       Open admission policy as described above for all students       N/A   ☐\n     Open admission policy as described above for most students, but\n\n              Selective admission for out-of-state students      ☐                                                   N/A\n              Selective admission to some programs      ☐\n            Other (explain):                                                             N/A      ☐\nC7. Relative importance of each of the following academic and nonacademic factors in your first-time, first-\n    year, degree-seeking general (not including programs with specific criteria) admission decisions.\n\n                                                                                        Not                                    Very Important      Important      Considered                                                                                    Considered\n Academic\n      Rigor of secondary school record                   ☐      ☐      ☐      ☐\n     Class rank                   ☐      ☐      ☐      ☐\n     Academic GPA                   ☐      ☐      ☐      ☐\n      Standardized test scores                   ☐      ☐      ☐      ☐\n      Application Essay                   ☐      ☐      ☐      ☐\n     Recommendation(s)                   ☐      ☐      ☐      ☐\n Nonacademic\n      Interview                   ☐      ☐      ☐      ☐\n      Extracurricular activities                   ☐      ☐      ☐      ☐\n       Talent/ability                   ☐      ☐      ☐      ☐\n      Character/personal qualities                   ☐      ☐      ☐      ☐\n       First generation                   ☐      ☐      ☐      ☐\n      Alumni/ae relation                   ☐      ☐      ☐      ☐\n      Geographical residence                   ☐      ☐      ☐      ☐\n      State residency                   ☐      ☐      ☐      ☐\n      Religious affiliation/commitment                   ☐      ☐      ☐      ☐\n      Volunteer work                   ☐      ☐      ☐      ☐\n     Work experience                   ☐      ☐      ☐      ☐\n      Level of applicant’s interest                   ☐      ☐      ☐      ☐",
+      "form_fields": [
+        {
+          "name": "AD_OPEN_MOST",
+          "value": "S",
+          "label": null,
+          "rect": [
+            104.9729995727539,
+            219.27301025390625,
+            112.5,
+            226.79998779296875
+          ]
+        },
+        {
+          "name": "AD_OPEN",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            82.92720031738281,
+            158.072998046875,
+            90.45449829101562,
+            165.5999755859375
+          ]
+        },
+        {
+          "name": "Q111_1",
+          "value": "I",
+          "label": null,
+          "rect": [
+            367.6910095214844,
+            334.4729919433594,
+            378.8179931640625,
+            344.94500732421875
+          ]
+        },
+        {
+          "name": "Q111_2",
+          "value": "I",
+          "label": null,
+          "rect": [
+            367.6910095214844,
+            353.12701416015625,
+            378.8179931640625,
+            363.6000061035156
+          ]
+        },
+        {
+          "name": "Q111_3",
+          "value": "VI",
+          "label": null,
+          "rect": [
+            278.66400146484375,
+            371.7449951171875,
+            289.7909851074219,
+            382.2179870605469
+          ]
+        },
+        {
+          "name": "Q111_4",
+          "value": "I",
+          "label": null,
+          "rect": [
+            367.9540100097656,
+            390.4909973144531,
+            379.0820007324219,
+            400.9630126953125
+          ]
+        },
+        {
+          "name": "Q111_5",
+          "value": "C",
+          "label": null,
+          "rect": [
+            449.1180114746094,
+            408.4909973144531,
+            460.2449951171875,
+            418.9630126953125
+          ]
+        },
+        {
+          "name": "Q111_6",
+          "value": "C",
+          "label": null,
+          "rect": [
+            449.1180114746094,
+            427.9909973144531,
+            460.2449951171875,
+            438.4630126953125
+          ]
+        },
+        {
+          "name": "Q112_1",
+          "value": "NC",
+          "label": null,
+          "rect": [
+            530.6270141601562,
+            464.0360107421875,
+            541.7540283203125,
+            474.5090026855469
+          ]
+        },
+        {
+          "name": "Q112_2",
+          "value": "C",
+          "label": null,
+          "rect": [
+            449.1180114746094,
+            483.0360107421875,
+            460.2449951171875,
+            493.5090026855469
+          ]
+        },
+        {
+          "name": "Q112_3",
+          "value": "C",
+          "label": null,
+          "rect": [
+            449.1180114746094,
+            501.58099365234375,
+            460.2449951171875,
+            512.053955078125
+          ]
+        },
+        {
+          "name": "Q112_4",
+          "value": "NC",
+          "label": null,
+          "rect": [
+            530.6270141601562,
+            519.5809936523438,
+            541.7540283203125,
+            530.053955078125
+          ]
+        },
+        {
+          "name": "Q112_5",
+          "value": "NC",
+          "label": null,
+          "rect": [
+            530.6270141601562,
+            539.0809936523438,
+            541.7540283203125,
+            549.5540161132812
+          ]
+        },
+        {
+          "name": "Q112_6",
+          "value": "NC",
+          "label": null,
+          "rect": [
+            530.6270141601562,
+            557.5809936523438,
+            541.7540283203125,
+            568.0540161132812
+          ]
+        },
+        {
+          "name": "Q112_7",
+          "value": "NC",
+          "label": null,
+          "rect": [
+            530.6270141601562,
+            576.0,
+            541.7540283203125,
+            586.4719848632812
+          ]
+        },
+        {
+          "name": "Q112_8",
+          "value": "C",
+          "label": null,
+          "rect": [
+            449.1180114746094,
+            595.0,
+            460.2449951171875,
+            605.4719848632812
+          ]
+        },
+        {
+          "name": "Q112_9",
+          "value": "NC",
+          "label": null,
+          "rect": [
+            530.6270141601562,
+            613.0,
+            541.7540283203125,
+            623.4719848632812
+          ]
+        },
+        {
+          "name": "Q112_11",
+          "value": "C",
+          "label": null,
+          "rect": [
+            449.1180114746094,
+            631.489990234375,
+            460.2449951171875,
+            641.9630126953125
+          ]
+        },
+        {
+          "name": "Q112_12",
+          "value": "C",
+          "label": null,
+          "rect": [
+            449.1180114746094,
+            649.489990234375,
+            460.2449951171875,
+            659.9630126953125
+          ]
+        },
+        {
+          "name": "Q112_13",
+          "value": "NC",
+          "label": null,
+          "rect": [
+            530.6270141601562,
+            668.989990234375,
+            541.7540283203125,
+            679.4630126953125
+          ]
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "text": "                                 Common Data Set 2025-2026\n\n   Please provide additional information if the importance of any specific academic or nonacademic\n    factors differ by academic program.\n\n\n\n\n\nC8: SAT and ACT Policies\nC8A. Entrance exams\n\n   Does your institution make use of SAT or ACT scores in admission decisions for first-time, first-year,\n   degree-seeking applicants:\n\n          Yes       No       N/A     ☐      ☐     ☐\n\n    If yes, place check marks in the appropriate boxes below to reflect your institution’s policies for use in admission\n   for Fall 2027.\n\n                                                                        Not required for\n                            Required to be                                    admission, but    Not considered\n                            considered for    Required for  Recommended     consider if        for admission,\n                             admission       some                         submitted     even if submitted\n\n   SAT or ACT\n  ACT Only\n   SAT Only\n\n\nC8B. Has been removed from the CDS.\n\n C8C. Has been removed from the CDS.\n\n C8D. In addition, does your institution use applicants' test scores for academic advising?\n\n         Yes       No      N/A\n\n C8E.                                                                         Month      Day\n\n       Latest date by which SAT or ACT scores must be received for fall-            1          15\n      term admission:\n\n\n C8F. If necessary, use this space to clarify your test policies (e.g., if tests are recommended for some students,\n or if tests are not required of some students due to differences by academic program, student academic\n background, or if other examinations may be considered in lieu of the SAT and ACT.)\n\n               Students indicate on their application whether they want USC to consider their standardized\n                  test scores in the admission process.",
+      "form_fields": [
+        {
+          "name": "ADMS",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            87.0,
+            247.4530029296875,
+            95.5199966430664,
+            257.6939697265625
+          ]
+        },
+        {
+          "name": "EXAM_CODE_S1A",
+          "value": "ADMS_CONSIDER",
+          "label": null,
+          "rect": [
+            422.47601318359375,
+            373.03900146484375,
+            431.9849853515625,
+            382.54901123046875
+          ]
+        },
+        {
+          "name": "EXAM_CODE_ACT",
+          "value": "ADMS_CONSIDER",
+          "label": null,
+          "rect": [
+            422.4159851074219,
+            390.88800048828125,
+            431.92498779296875,
+            400.39599609375
+          ]
+        },
+        {
+          "name": "EXAM_CODE_SAT",
+          "value": "ADMS_CONSIDER",
+          "label": null,
+          "rect": [
+            422.6759948730469,
+            409.0069885253906,
+            432.18499755859375,
+            418.5159912109375
+          ]
+        },
+        {
+          "name": "AP_TEST_ADVISE",
+          "value": "Y",
+          "label": "D. In addition, does your institution use applicants",
+          "rect": [
+            69.42579650878906,
+            527.114013671875,
+            78.73799896240234,
+            535.9819946289062
+          ]
+        },
+        {
+          "name": "AP_SAT1_ACT_DL_MON",
+          "value": "1",
+          "label": null,
+          "rect": [
+            420.6109924316406,
+            578.239990234375,
+            467.7380065917969,
+            592.3489990234375
+          ]
+        },
+        {
+          "name": "AP_SAT1_ACT_DL_DAY",
+          "value": "15",
+          "label": null,
+          "rect": [
+            473.6029968261719,
+            578.0579833984375,
+            520.72998046875,
+            592.1669921875
+          ]
+        },
+        {
+          "name": "AD_TEST_POLICY_T",
+          "value": "Students indicate on their application whether they want USC to consider their standardized test scores in the admission process.",
+          "label": null,
+          "rect": [
+            104.98699951171875,
+            685.7440185546875,
+            478.5790100097656,
+            724.5969848632812
+          ]
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "text": "                                Common Data Set 2025-2026\n\n\nC8G. Please indicate which tests your institution uses for placement (e.g., state tests):\n\n               SAT          ☐\n               ACT          ☐\n               AP          ☐\n               CLEP          ☐\n                         Institutional Exam          ☐\n                     State Exam (specify):  International Baccalaureate          ☐",
+      "form_fields": [
+        {
+          "name": "AP_PLACE",
+          "value": "X",
+          "label": null,
+          "rect": [
+            136.02699279785156,
+            120.11297607421875,
+            143.35899353027344,
+            127.39697265625
+          ]
+        },
+        {
+          "name": "CLEP_PLACE",
+          "value": "X",
+          "label": null,
+          "rect": [
+            135.63099670410156,
+            133.4329833984375,
+            143.7550048828125,
+            141.11297607421875
+          ]
+        },
+        {
+          "name": "INST_PLACE",
+          "value": "X",
+          "label": null,
+          "rect": [
+            135.82899475097656,
+            147.02899169921875,
+            143.5570068359375,
+            154.708984375
+          ]
+        },
+        {
+          "name": "STATE_PLACE_T_CHECK",
+          "value": "X",
+          "label": null,
+          "rect": [
+            135.82899475097656,
+            160.9530029296875,
+            143.5570068359375,
+            167.84002685546875
+          ]
+        },
+        {
+          "name": "STATE_PLACE_T",
+          "value": "International Baccalaureate",
+          "label": null,
+          "rect": [
+            247.7519989013672,
+            154.74700927734375,
+            442.5589904785156,
+            171.083984375
+          ]
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "text": "                               Common Data Set 2025-2026\n\n\nC9-C12: First-time, first-year Profile\n\nProvide information for ALL enrolled, degree-seeking, full-time and part-time, first-time, first-year students\nenrolled  in  Fall  2025,  including  students  who  began  studies  during  summer,  international  students/\nnonresident, and students admitted under special arrangements.\n\nC9. Percent and number of first-time, first-year students enrolled in Fall 2025 who submitted national\nstandardized (SAT/ACT) test scores.\n    Include information for ALL enrolled, degree-seeking, first-time, first-year students who submitted\n        test scores.\n\n    Do not include partial test scores (e.g., mathematics scores but not critical reading for a category of\n        students) or combine other standardized test results (such as TOEFL) in this item.\n\n    Do not convert SAT scores to ACT scores and vice versa.\n\n      If a student submitted multiple sets of scores for a single test, report this information according to how you\n       use the data. For example:\n\n        •     If you consider the highest scores from either submission, use the highest combination of scores (e.g.,\n            verbal from one submission, math from the other).\n\n        •     If you average the scores, use the average to report the scores.\n\n                                                                           Percent           Number\n              Submitting SAT Scores                                             32.00              2487\n              Submitting ACT Scores                                             15.00              1139\n\nFor each assessment listed below, report the score that represents the 25th percentile (the score that\n25 percent of the first-time, first-year population scored at or below) and the 75th percentile score (the\nscore that 25 percent scored at or above).\n\n                               25th Percentile        50th Percentile        75th Percentile          Assessment                                 Score               Score               Score\n      SAT Composite               1200                  1280                  1360\n\n      SAT Evidence-Based                                      610                   650                   690       Reading and Writing\n\n      SAT Math                     580                   630                   680\n\n      ACT Composite                26                    29                    32\n\n      ACT Math                      24                    27                    30\n\n      ACT English                   25                    29                    33\n\n      ACT Writing\n\n      ACT Science                   25                    28                    32\n\n      ACT Reading                   28                    32                    34",
+      "form_fields": [
+        {
+          "name": "SUBMIT_SAT1_P",
+          "value": "32",
+          "label": null,
+          "rect": [
+            374.22198486328125,
+            384.63299560546875,
+            464.22198486328125,
+            402.239990234375
+          ]
+        },
+        {
+          "name": "SUBMIT_SAT1_N",
+          "value": "2487",
+          "label": null,
+          "rect": [
+            465.6610107421875,
+            384.67999267578125,
+            556.22900390625,
+            401.43701171875
+          ]
+        },
+        {
+          "name": "SUBMIT_ACT_P",
+          "value": "15",
+          "label": null,
+          "rect": [
+            374.22198486328125,
+            402.7850036621094,
+            464.22198486328125,
+            420.3599853515625
+          ]
+        },
+        {
+          "name": "SUBMIT_ACT_N",
+          "value": "1139",
+          "label": null,
+          "rect": [
+            465.3349914550781,
+            402.8320007324219,
+            556.7529907226562,
+            419.8840026855469
+          ]
+        },
+        {
+          "name": "SAT1_COMP_25TH_P",
+          "value": "1200",
+          "label": null,
+          "rect": [
+            196.37100219726562,
+            515.821044921875,
+            305.4620056152344,
+            537.322998046875
+          ]
+        },
+        {
+          "name": "SAT1_COMP_50TH_P",
+          "value": "1280",
+          "label": null,
+          "rect": [
+            306.3190002441406,
+            515.6920166015625,
+            415.4100036621094,
+            537.1939697265625
+          ]
+        },
+        {
+          "name": "SAT1_COMP_75TH_P",
+          "value": "1360",
+          "label": null,
+          "rect": [
+            416.4410095214844,
+            515.6920166015625,
+            525.531982421875,
+            537.1939697265625
+          ]
+        },
+        {
+          "name": "SAT1_VERB_25TH_P",
+          "value": "610",
+          "label": null,
+          "rect": [
+            196.197998046875,
+            537.322998046875,
+            305.28900146484375,
+            568.6430053710938
+          ]
+        },
+        {
+          "name": "SAT1_VERB_50TH_P",
+          "value": "650",
+          "label": null,
+          "rect": [
+            306.0790100097656,
+            537.47802734375,
+            415.1700134277344,
+            568.7979736328125
+          ]
+        },
+        {
+          "name": "SAT1_VERB_75TH_P",
+          "value": "690",
+          "label": null,
+          "rect": [
+            416.4410095214844,
+            537.9520263671875,
+            525.531982421875,
+            569.5989990234375
+          ]
+        },
+        {
+          "name": "SAT1_MATH_25TH_P",
+          "value": "580",
+          "label": null,
+          "rect": [
+            196.197998046875,
+            569.5650024414062,
+            305.28900146484375,
+            591.0659790039062
+          ]
+        },
+        {
+          "name": "SAT1_MATH_50TH_P",
+          "value": "630",
+          "label": null,
+          "rect": [
+            306.3190002441406,
+            569.5650024414062,
+            415.4100036621094,
+            591.0659790039062
+          ]
+        },
+        {
+          "name": "SAT1_MATH_75TH_P",
+          "value": "680",
+          "label": null,
+          "rect": [
+            416.4410095214844,
+            569.9600219726562,
+            525.531982421875,
+            591.4620361328125
+          ]
+        },
+        {
+          "name": "ACT_COMP_25TH_P",
+          "value": "26",
+          "label": null,
+          "rect": [
+            196.197998046875,
+            592.1430053710938,
+            305.28900146484375,
+            613.64501953125
+          ]
+        },
+        {
+          "name": "ACT_COMP_50TH_P",
+          "value": "29",
+          "label": null,
+          "rect": [
+            306.71600341796875,
+            591.7470092773438,
+            415.8070068359375,
+            613.2490234375
+          ]
+        },
+        {
+          "name": "ACT_COMP_75TH_P",
+          "value": "32",
+          "label": null,
+          "rect": [
+            416.8370056152344,
+            592.1430053710938,
+            525.927978515625,
+            613.64501953125
+          ]
+        },
+        {
+          "name": "ACT_MATH_25TH_P",
+          "value": "24",
+          "label": null,
+          "rect": [
+            196.593994140625,
+            614.3259887695312,
+            305.68499755859375,
+            635.8280029296875
+          ]
+        },
+        {
+          "name": "ACT_MATH_50TH_P",
+          "value": "27",
+          "label": null,
+          "rect": [
+            306.0780029296875,
+            614.0850219726562,
+            415.16900634765625,
+            635.5870361328125
+          ]
+        },
+        {
+          "name": "ACT_MATH_75TH_P",
+          "value": "30",
+          "label": null,
+          "rect": [
+            416.4410095214844,
+            614.3259887695312,
+            525.531982421875,
+            635.8280029296875
+          ]
+        },
+        {
+          "name": "ACT_ENG_25TH_P",
+          "value": "25",
+          "label": null,
+          "rect": [
+            196.197998046875,
+            636.9039916992188,
+            305.28900146484375,
+            658.406005859375
+          ]
+        },
+        {
+          "name": "ACT_ENG_50TH_P",
+          "value": "29",
+          "label": null,
+          "rect": [
+            306.0790100097656,
+            637.0599975585938,
+            415.1700134277344,
+            658.56201171875
+          ]
+        },
+        {
+          "name": "ACT_ENG_75TH_P",
+          "value": "33",
+          "label": null,
+          "rect": [
+            416.8370056152344,
+            636.905029296875,
+            525.927978515625,
+            658.406982421875
+          ]
+        },
+        {
+          "name": "ACT_SCIENCE_25TH_P",
+          "value": "25",
+          "label": null,
+          "rect": [
+            196.99000549316406,
+            681.27001953125,
+            306.08099365234375,
+            702.7719116210938
+          ]
+        },
+        {
+          "name": "ACT_SCIENCE_50TH_P",
+          "value": "28",
+          "label": null,
+          "rect": [
+            306.71600341796875,
+            681.27001953125,
+            415.8070068359375,
+            702.7719116210938
+          ]
+        },
+        {
+          "name": "ACT_SCIENCE_75TH_P",
+          "value": "32",
+          "label": null,
+          "rect": [
+            416.99200439453125,
+            681.4249877929688,
+            526.0830078125,
+            702.9271240234375
+          ]
+        },
+        {
+          "name": "ACT_READING_25TH_P",
+          "value": "28",
+          "label": null,
+          "rect": [
+            196.50900268554688,
+            703.7630004882812,
+            305.6000061035156,
+            725.2650146484375
+          ]
+        },
+        {
+          "name": "ACT_READING_50TH_P",
+          "value": "32",
+          "label": null,
+          "rect": [
+            306.3890075683594,
+            703.5220947265625,
+            415.4800109863281,
+            725.0241088867188
+          ]
+        },
+        {
+          "name": "ACT_READING_75TH_P",
+          "value": "34",
+          "label": null,
+          "rect": [
+            416.6650085449219,
+            704.0734252929688,
+            525.7559814453125,
+            725.5753784179688
+          ]
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "text": "                               Common Data Set 2025-2026\n\n\nPercent of first-time, first-year students with scores in each range:\n\n              SAT Evidence-\n  Score Range   Based Reading and      SAT Math\n                        Writing\n    700-800              24.61                   19.42\n    600-699              55.65                   48.82\n    500-599              18.34                   27.74\n    400-499               1.32                    3.94\n    300-399               0.08                    0.08\n    200-299\n Total should be 100%         100                  100\n\n\n     Score Range     SAT Composite\n      1400-1600              18.62\n      1200-1399              57.02\n      1000-1199              22.56\n        800-999                1.76\n        600-799                0.04\n        400-599400-599\n Total should be 100%           100.00\n\n    Score       ACT                        ACT English    ACT Math    ACT Reading   ACT Science   Range      Composite\n     30-36           46.80             45.57              28.01             68.48              42.32\n     24-29           42.23             36.96              50.13             23.53             44.07\n     18-23           10.18             15.28              17.30              7.11              12.64\n     12-17            0.79               2.11               4.57               0.79               0.88\n     6-11\n   Below 6\n               100%         100%         100%         100%         100%\n\n\n\nC10. Percent of  all degree-seeking,  first-time,  first-year students who had high school class rank\nwithin each  of  the  following  ranges  (report  information  for  those  students  from whom you\ncollected high school rank information)",
+      "form_fields": [
+        {
+          "name": "SAT1_VERB_700_P",
+          "value": "24.61",
+          "label": null,
+          "rect": [
+            130.42999267578125,
+            131.4119873046875,
+            235.35299682617188,
+            149.6409912109375
+          ]
+        },
+        {
+          "name": "SAT1_MATH_700_P",
+          "value": "19.42",
+          "label": null,
+          "rect": [
+            236.3560028076172,
+            131.28497314453125,
+            341.2799987792969,
+            149.51397705078125
+          ]
+        },
+        {
+          "name": "SAT1_VERB_600_P",
+          "value": "55.65",
+          "label": null,
+          "rect": [
+            130.39300537109375,
+            149.9849853515625,
+            235.31700134277344,
+            168.2139892578125
+          ]
+        },
+        {
+          "name": "SAT1_MATH_600_P",
+          "value": "48.82",
+          "label": null,
+          "rect": [
+            236.31900024414062,
+            149.85797119140625,
+            341.2430114746094,
+            168.0880126953125
+          ]
+        },
+        {
+          "name": "SAT1_VERB_500_P",
+          "value": "18.34",
+          "label": null,
+          "rect": [
+            130.39300537109375,
+            168.9849853515625,
+            235.31700134277344,
+            187.2139892578125
+          ]
+        },
+        {
+          "name": "SAT1_MATH_500_P",
+          "value": "27.74",
+          "label": null,
+          "rect": [
+            236.31900024414062,
+            168.85797119140625,
+            341.2430114746094,
+            187.0880126953125
+          ]
+        },
+        {
+          "name": "SAT1_VERB_400_P",
+          "value": "1.32",
+          "label": null,
+          "rect": [
+            130.39300537109375,
+            187.78497314453125,
+            235.31700134277344,
+            206.34100341796875
+          ]
+        },
+        {
+          "name": "SAT1_MATH_400_P",
+          "value": "3.94",
+          "label": null,
+          "rect": [
+            236.31900024414062,
+            187.98602294921875,
+            341.2430114746094,
+            206.21502685546875
+          ]
+        },
+        {
+          "name": "SAT1_VERB_300_P",
+          "value": "0.08",
+          "label": null,
+          "rect": [
+            130.5449981689453,
+            206.77099609375,
+            235.468994140625,
+            225.0
+          ]
+        },
+        {
+          "name": "SAT1_MATH_300_P",
+          "value": "0.08",
+          "label": null,
+          "rect": [
+            236.3090057373047,
+            206.21099853515625,
+            341.2330017089844,
+            224.76702880859375
+          ]
+        },
+        {
+          "name": "SAT1_COMP_1400_P",
+          "value": "18.62",
+          "label": null,
+          "rect": [
+            163.0469970703125,
+            305.72198486328125,
+            248.66200256347656,
+            320.02398681640625
+          ]
+        },
+        {
+          "name": "SAT1_COMP_1200_P",
+          "value": "57.02",
+          "label": null,
+          "rect": [
+            163.31900024414062,
+            320.7760009765625,
+            248.4980010986328,
+            335.0780029296875
+          ]
+        },
+        {
+          "name": "SAT1_COMP_1000_P",
+          "value": "22.56",
+          "label": null,
+          "rect": [
+            163.2830047607422,
+            335.4670104980469,
+            248.46200561523438,
+            349.7690124511719
+          ]
+        },
+        {
+          "name": "SAT1_COMP_800_P",
+          "value": "1.76",
+          "label": null,
+          "rect": [
+            163.13800048828125,
+            350.4849853515625,
+            248.7530059814453,
+            364.7869873046875
+          ]
+        },
+        {
+          "name": "SAT1_COMP_600_P",
+          "value": "0.04",
+          "label": null,
+          "rect": [
+            163.1020050048828,
+            365.1759948730469,
+            248.71600341796875,
+            379.4779968261719
+          ]
+        },
+        {
+          "name": "ACT_6_P",
+          "value": "46.8",
+          "label": null,
+          "rect": [
+            125.36900329589844,
+            444.9119873046875,
+            201.88900756835938,
+            462.9230041503906
+          ]
+        },
+        {
+          "name": "ACT_ENG_6_P",
+          "value": "45.57",
+          "label": null,
+          "rect": [
+            201.88299560546875,
+            444.9119873046875,
+            285.53399658203125,
+            462.9230041503906
+          ]
+        },
+        {
+          "name": "ACT_MATH_6_P",
+          "value": "28.01",
+          "label": null,
+          "rect": [
+            285.4909973144531,
+            444.00299072265625,
+            369.1419982910156,
+            462.8869934082031
+          ]
+        },
+        {
+          "name": "ACT_READING_6_P",
+          "value": "68.48",
+          "label": null,
+          "rect": [
+            369.34698486328125,
+            444.7690124511719,
+            451.8089904785156,
+            463.1369934082031
+          ]
+        },
+        {
+          "name": "ACT_SCIENCE_6_P",
+          "value": "42.32",
+          "label": null,
+          "rect": [
+            452.5320129394531,
+            444.7690124511719,
+            535.3900146484375,
+            463.1369934082031
+          ]
+        },
+        {
+          "name": "ACT_5_P",
+          "value": "42.23",
+          "label": null,
+          "rect": [
+            125.11799621582031,
+            463.97100830078125,
+            202.03500366210938,
+            481.5450134277344
+          ]
+        },
+        {
+          "name": "ACT_ENG_5_P",
+          "value": "36.96",
+          "label": null,
+          "rect": [
+            202.3560028076172,
+            463.97100830078125,
+            285.35198974609375,
+            481.5450134277344
+          ]
+        },
+        {
+          "name": "ACT_MATH_5_P",
+          "value": "50.13",
+          "label": null,
+          "rect": [
+            285.635986328125,
+            463.60699462890625,
+            369.3559875488281,
+            481.83599853515625
+          ]
+        },
+        {
+          "name": "ACT_READING_5_P",
+          "value": "23.53",
+          "label": null,
+          "rect": [
+            369.14898681640625,
+            463.7829895019531,
+            451.6109924316406,
+            482.1499938964844
+          ]
+        },
+        {
+          "name": "ACT_SCIENCE_5_P",
+          "value": "44.07",
+          "label": null,
+          "rect": [
+            452.3340148925781,
+            463.7829895019531,
+            534.7960205078125,
+            482.1499938964844
+          ]
+        },
+        {
+          "name": "ACT_4_P",
+          "value": "10.18",
+          "label": null,
+          "rect": [
+            125.76499938964844,
+            482.6610107421875,
+            201.88900756835938,
+            500.2359924316406
+          ]
+        },
+        {
+          "name": "ACT_ENG_4_P",
+          "value": "15.28",
+          "label": null,
+          "rect": [
+            202.6060028076172,
+            482.6610107421875,
+            285.92999267578125,
+            500.2359924316406
+          ]
+        },
+        {
+          "name": "ACT_MATH_4_P",
+          "value": "17.3",
+          "label": null,
+          "rect": [
+            286.0369873046875,
+            482.2980041503906,
+            369.1419982910156,
+            500.20001220703125
+          ]
+        },
+        {
+          "name": "ACT_READING_4_P",
+          "value": "7.11",
+          "label": null,
+          "rect": [
+            369.14898681640625,
+            482.4010009765625,
+            451.6109924316406,
+            500.76800537109375
+          ]
+        },
+        {
+          "name": "ACT_SCIENCE_4_P",
+          "value": "12.64",
+          "label": null,
+          "rect": [
+            452.3340148925781,
+            482.0050048828125,
+            534.7960205078125,
+            500.37200927734375
+          ]
+        },
+        {
+          "name": "ACT_3_P",
+          "value": "0.79",
+          "label": null,
+          "rect": [
+            124.99800109863281,
+            501.1889953613281,
+            201.44900512695312,
+            518.7630004882812
+          ]
+        },
+        {
+          "name": "ACT_ENG_3_P",
+          "value": "2.11",
+          "label": null,
+          "rect": [
+            202.4429931640625,
+            501.1889953613281,
+            286.093994140625,
+            518.7630004882812
+          ]
+        },
+        {
+          "name": "ACT_MATH_3_P",
+          "value": "4.57",
+          "label": null,
+          "rect": [
+            286.04998779296875,
+            500.82501220703125,
+            369.3739929199219,
+            518.7269897460938
+          ]
+        },
+        {
+          "name": "ACT_READING_3_P",
+          "value": "0.79",
+          "label": null,
+          "rect": [
+            369.14898681640625,
+            500.62200927734375,
+            451.6109924316406,
+            518.989013671875
+          ]
+        },
+        {
+          "name": "ACT_SCIENCE_3_P",
+          "value": "0.88",
+          "label": null,
+          "rect": [
+            452.3340148925781,
+            500.62200927734375,
+            534.7960205078125,
+            518.989013671875
+          ]
+        },
+        {
+          "name": "SAT_VERB_CHECKER",
+          "value": "100",
+          "label": null,
+          "rect": [
+            129.28500366210938,
+            243.3289794921875,
+            235.6649932861328,
+            262.176025390625
+          ]
+        },
+        {
+          "name": "SAT_MATH_CHECKER",
+          "value": "100",
+          "label": null,
+          "rect": [
+            236.38800048828125,
+            242.5780029296875,
+            341.1910095214844,
+            263.0009765625
+          ]
+        },
+        {
+          "name": "SAT1_COMP_CHECKER",
+          "value": "100",
+          "label": null,
+          "rect": [
+            163.01800537109375,
+            395.0840148925781,
+            248.63299560546875,
+            409.60400390625
+          ]
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "text": "                                  Common Data Set 2025-2026\n\n\n                         Assessment                         Percent\n\n     Percent in top tenth of high school graduating class                   31.26\n\n     Percent in top quarter of high school graduating class                 64.82\n\n     Percent in top half of high school graduating class                    92.43\n     Percent in bottom half of high school graduating class                  7.57   } Top half + bottom half =\n                                                                     100%.\n\n     Percent in bottom quarter of high school graduating class              0.99\n\n     Percent of total first-time, first-year students who submitted                                                                          63.09      high school class rank:\n\n    C11. Percentage of all enrolled, degree-seeking, first-time, first-year students who had high school\n               grade-point averages within each of the following ranges (using 4.0 scale).\n\n    •  Report information only for those students from whom you collected high school GPA.\n    •   If you are able to report GPA ranges separately for students that also submitted at least one test score\n           versus those who did not submit a test score, please do so in the respective columns. If you are unable\n            to report these data, please report the ranges for all students.\n\n                                                 Percent              Percent              Percent\n              Score Range                    (Students who      (Students who did          (All enrolled\n                                           submitted scores)    not submit scores)         students)\nPercent who had GPA of 4.0                                21.15                     9.44                    15.01\nPercent who had GPA between 3.75 and 3.99                 34.42                   32.49                   33.41\nPercent who had GPA between 3.50 and 3.74                 24.68                   31.01                   28.00\nPercent who had GPA between 3.25 and 3.49                 12.58                   17.97                   15.40\nPercent who had GPA between 3.00 and 3.24                  5.96                     7.41                     6.72\nPercent who had GPA between 2.50 and 2.99                  1.21                     1.58                     1.41\nPercent who had GPA between 2.0 and 2.49                                             0.10                     0.05\nPercent who had GPA between 1.0 and 1.99\nPercent who had GPA below 1.0\nTotals should = 100%                                     100.00                  100.00                  100.00\n\n\n\n    C12. Average high school GPA of all degree-seeking, first-time, first-year students who\n       submitted GPA:\n\n\n                               Average High School GPA               3.68\n\n    Percent of total first-time, first-year students who submitted high school GPA:\n                                 %\n                                  Percent Submitting GPA                97.61",
+      "form_fields": [
+        {
+          "name": "FRSH_HS_RANK_10_P",
+          "value": "31.26",
+          "label": null,
+          "rect": [
+            356.3559875488281,
+            84.4329833984375,
+            404.70599365234375,
+            112.676025390625
+          ]
+        },
+        {
+          "name": "FRSH_HS_RANK_25_P",
+          "value": "64.82",
+          "label": null,
+          "rect": [
+            356.50799560546875,
+            113.95697021484375,
+            404.85699462890625,
+            142.20098876953125
+          ]
+        },
+        {
+          "name": "FRSH_HS_RANK_50_P",
+          "value": "92.43",
+          "label": null,
+          "rect": [
+            355.9840087890625,
+            143.54302978515625,
+            404.85699462890625,
+            172.833984375
+          ]
+        },
+        {
+          "name": "FRSH_HS_RANK_LESS50_P",
+          "value": "7.57",
+          "label": null,
+          "rect": [
+            356.2460021972656,
+            173.12799072265625,
+            404.5950012207031,
+            203.46600341796875
+          ]
+        },
+        {
+          "name": "FRSH_HS_RANK_LESS25_P",
+          "value": "0.99",
+          "label": null,
+          "rect": [
+            355.9840087890625,
+            203.4990234375,
+            404.85699462890625,
+            233.83697509765625
+          ]
+        },
+        {
+          "name": "FRSH_HS_RANK_SUBMIT_P",
+          "value": "63.09",
+          "label": null,
+          "rect": [
+            356.2749938964844,
+            234.1610107421875,
+            404.6239929199219,
+            262.927978515625
+          ]
+        },
+        {
+          "name": "FRSH_GPA_SUBMIT_1_P",
+          "value": "21.15",
+          "label": null,
+          "rect": [
+            251.6320037841797,
+            429.40399169921875,
+            360.13299560546875,
+            443.4440002441406
+          ]
+        },
+        {
+          "name": "FRSH_GPA_SUBMIT_2_P",
+          "value": "34.42",
+          "label": null,
+          "rect": [
+            251.6320037841797,
+            445.6400146484375,
+            360.13299560546875,
+            459.6809997558594
+          ]
+        },
+        {
+          "name": "FRSH_GPA_SUBMIT_3_P",
+          "value": "24.68",
+          "label": null,
+          "rect": [
+            251.6320037841797,
+            460.9859924316406,
+            360.13299560546875,
+            475.0270080566406
+          ]
+        },
+        {
+          "name": "FRSH_GPA_SUBMIT_4_P",
+          "value": "12.58",
+          "label": null,
+          "rect": [
+            251.6320037841797,
+            476.0039978027344,
+            360.13299560546875,
+            490.0450134277344
+          ]
+        },
+        {
+          "name": "FRSH_GPA_SUBMIT_5_P",
+          "value": "5.96",
+          "label": null,
+          "rect": [
+            251.6320037841797,
+            490.0220031738281,
+            360.13299560546875,
+            504.06298828125
+          ]
+        },
+        {
+          "name": "FRSH_GPA_SUBMIT_6_P",
+          "value": "1.21",
+          "label": null,
+          "rect": [
+            251.6320037841797,
+            505.3680114746094,
+            360.13299560546875,
+            519.4089965820312
+          ]
+        },
+        {
+          "name": "FRSH_GPA_NO_SUB_1_P",
+          "value": "9.44",
+          "label": null,
+          "rect": [
+            361.93798828125,
+            428.7040100097656,
+            470.4389953613281,
+            442.7439880371094
+          ]
+        },
+        {
+          "name": "FRSH_GPA_NO_SUB_2_P",
+          "value": "32.49",
+          "label": null,
+          "rect": [
+            361.93798828125,
+            445.6929931640625,
+            470.4389953613281,
+            459.7330017089844
+          ]
+        },
+        {
+          "name": "FRSH_GPA_NO_SUB_3_P",
+          "value": "31.01",
+          "label": null,
+          "rect": [
+            361.93798828125,
+            461.03900146484375,
+            470.4389953613281,
+            475.0790100097656
+          ]
+        },
+        {
+          "name": "FRSH_GPA_NO_SUB_4_P",
+          "value": "17.97",
+          "label": null,
+          "rect": [
+            361.93798828125,
+            476.0570068359375,
+            470.4389953613281,
+            490.09698486328125
+          ]
+        },
+        {
+          "name": "FRSH_GPA_NO_SUB_5_P",
+          "value": "7.41",
+          "label": null,
+          "rect": [
+            361.93798828125,
+            490.07501220703125,
+            470.4389953613281,
+            504.114990234375
+          ]
+        },
+        {
+          "name": "FRSH_GPA_NO_SUB_6_P",
+          "value": "1.58",
+          "label": null,
+          "rect": [
+            361.93798828125,
+            505.4209899902344,
+            470.4389953613281,
+            519.4609985351562
+          ]
+        },
+        {
+          "name": "FRSH_GPA_NO_SUB_7_P",
+          "value": "0.1",
+          "label": null,
+          "rect": [
+            361.93798828125,
+            520.7659912109375,
+            470.4389953613281,
+            534.8060302734375
+          ]
+        },
+        {
+          "name": "EN_FRSH_GPA_1_P",
+          "value": "15.01",
+          "label": null,
+          "rect": [
+            471.7619934082031,
+            428.7040100097656,
+            580.2630004882812,
+            442.7439880371094
+          ]
+        },
+        {
+          "name": "EN_FRSH_GPA_2_P",
+          "value": "33.41",
+          "label": null,
+          "rect": [
+            471.7619934082031,
+            445.3380126953125,
+            580.2630004882812,
+            459.37799072265625
+          ]
+        },
+        {
+          "name": "EN_FRSH_GPA_3_P",
+          "value": "28",
+          "label": null,
+          "rect": [
+            471.7619934082031,
+            460.4679870605469,
+            580.2630004882812,
+            474.50799560546875
+          ]
+        },
+        {
+          "name": "EN_FRSH_GPA_4_P",
+          "value": "15.4",
+          "label": null,
+          "rect": [
+            471.7619934082031,
+            475.5989990234375,
+            580.2630004882812,
+            489.6390075683594
+          ]
+        },
+        {
+          "name": "EN_FRSH_GPA_5_P",
+          "value": "6.72",
+          "label": null,
+          "rect": [
+            471.7619934082031,
+            490.72900390625,
+            580.2630004882812,
+            504.7690124511719
+          ]
+        },
+        {
+          "name": "EN_FRSH_GPA_6_P",
+          "value": "1.41",
+          "label": null,
+          "rect": [
+            471.7619934082031,
+            505.8590087890625,
+            580.2630004882812,
+            519.9000244140625
+          ]
+        },
+        {
+          "name": "EN_FRSH_GPA_7_P",
+          "value": "0.05",
+          "label": null,
+          "rect": [
+            471.7619934082031,
+            520.989990234375,
+            580.2630004882812,
+            535.030029296875
+          ]
+        },
+        {
+          "name": "TOT_FRSH_GPA_SUBMIT_P",
+          "value": "100",
+          "label": "%",
+          "rect": [
+            251.6320037841797,
+            565.7650146484375,
+            360.13299560546875,
+            579.8060302734375
+          ]
+        },
+        {
+          "name": "TOT_FRSH_GPA_NO_SUB_P",
+          "value": "100",
+          "label": "%",
+          "rect": [
+            361.93798828125,
+            565.7130126953125,
+            470.4389953613281,
+            579.7529907226562
+          ]
+        },
+        {
+          "name": "TOT_EN_FRSH_GPA_P",
+          "value": "100",
+          "label": "%",
+          "rect": [
+            471.7619934082031,
+            566.3809814453125,
+            580.2630004882812,
+            580.4210205078125
+          ]
+        },
+        {
+          "name": "FRSH_GPA",
+          "value": "3.68",
+          "label": null,
+          "rect": [
+            361.1889953613281,
+            665.2880249023438,
+            418.375,
+            683.2559814453125
+          ]
+        },
+        {
+          "name": "FRSH_GPA_SUBMIT_P",
+          "value": "97.61",
+          "label": null,
+          "rect": [
+            361.0249938964844,
+            727.3070068359375,
+            418.5379943847656,
+            745.6013793945312
+          ]
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "text": "                               Common Data Set 2025-2026\n\n\nC13-C20: Admission Policies\nC13.Application fee\n\n     If your institution has waiv ed its application fee for the Fall 2027 admission cycle please select no.\n   Does your institution have an app lication fee?  Yes  No  N/A                          ☐   ☐\n   Amount of application fee: $65.00\n\n   Can it be waived for applicants with financial need?  Yes  No   N/A                             ☐   ☐\nIf you have an application fee and an on-line application option, please indicate policy for students who\napply on-line:\n      Same Fee   ☐                  N/A        Free   ☐\n       Reduced   ☐\nCan on-line application fee be waived for applicants with financial need?  Yes  No   N/A                                        ☐   ☐\n\nC14. Application closing date\n   Does your institution have an application closing date?  Yes  No    N/A                              ☐   ☐\n\n                                                           Month     Day\n                                 Application closing date (fall)        12          1\n                                     Priority Date                      12          1\n\nC15. Are first-time, first-year students accepted for terms other than the fall?  Yes  No   N/A                                          ☐   ☐\nC16.Notification to applicants of admission decision sent (fill in one only)\n\n                                                                    Month       Day\n      On a rolling basis beginning (date):   ☐\n       By (date):   ☐\n         Other: Mid March   ☐\n\nC17. Reply policy for admitted applicants (fill in one only)\n\n                                                                    Month       Day\n       Must reply by (date):                 5       1   ☐\n      No set date   ☐\n       Must reply by May 1st or within           weeks if notified thereafter   ☐\n         Other:   ☐\n                                                                    Month       Day\n    Deadline for housing deposit:\n\n   Amount of housing deposit: $0.00\n\n   Refundable if student does not enroll?\n\n        Yes, in full   ☐\n        Yes, in part           N/A   ☐\n      No   ☐",
+      "form_fields": [
+        {
+          "name": "AP_FEE",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            278.4800109863281,
+            135.3599853515625,
+            287.0,
+            143.03997802734375
+          ]
+        },
+        {
+          "name": "AP_FEE_RES_D",
+          "value": "65",
+          "label": null,
+          "rect": [
+            189.49099731445312,
+            155.781982421875,
+            322.14599609375,
+            168.97698974609375
+          ]
+        },
+        {
+          "name": "AP_FEE_WAIVE",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            301.44000244140625,
+            184.239990234375,
+            309.9599914550781,
+            191.91998291015625
+          ]
+        },
+        {
+          "name": "AP_FEE_ONLINE",
+          "value": "SAME",
+          "label": null,
+          "rect": [
+            83.30180358886719,
+            237.19598388671875,
+            91.00360107421875,
+            244.8759765625
+          ]
+        },
+        {
+          "name": "AP_FEE_ONLINE_WAIVE",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            398.1600036621094,
+            288.3599853515625,
+            406.67999267578125,
+            296.0400085449219
+          ]
+        },
+        {
+          "name": "AP_DL_FRSH",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            312.9599914550781,
+            332.9200134277344,
+            321.4800109863281,
+            340.6000061035156
+          ]
+        },
+        {
+          "name": "AP_DL_FRSH_MON",
+          "value": "12",
+          "label": null,
+          "rect": [
+            361.74798583984375,
+            369.2359924316406,
+            418.9119873046875,
+            386.3999938964844
+          ]
+        },
+        {
+          "name": "AP_DL_FRSH_DAY",
+          "value": "1",
+          "label": null,
+          "rect": [
+            419.927001953125,
+            369.1629943847656,
+            465.9639892578125,
+            386.5450134277344
+          ]
+        },
+        {
+          "name": "AP_DL_PRIO_MON",
+          "value": "12",
+          "label": null,
+          "rect": [
+            361.82000732421875,
+            387.56298828125,
+            418.656005859375,
+            405.1619873046875
+          ]
+        },
+        {
+          "name": "AP_DL_PRIO_DAY",
+          "value": "1",
+          "label": null,
+          "rect": [
+            419.88800048828125,
+            387.3800048828125,
+            466.25201416015625,
+            405.0899963378906
+          ]
+        },
+        {
+          "name": "AP_ACCEPT_OTH",
+          "value": "Y",
+          "label": "C15. Are first-time, first-year students accepted for terms other than the fall",
+          "rect": [
+            417.7309875488281,
+            415.4070129394531,
+            426.2510070800781,
+            423.0870056152344
+          ]
+        },
+        {
+          "name": "AP_NOTF_DL_OTH",
+          "value": "X",
+          "label": null,
+          "rect": [
+            81.98179626464844,
+            491.2359924316406,
+            92.45449829101562,
+            501.7090148925781
+          ]
+        },
+        {
+          "name": "AP_NOTF_DL_OTH_T",
+          "value": "Mid March",
+          "label": null,
+          "rect": [
+            125.18199920654297,
+            491.09100341796875,
+            248.0189971923828,
+            501.5039978027344
+          ]
+        },
+        {
+          "name": "AP_REPLY_DL",
+          "value": "X",
+          "label": null,
+          "rect": [
+            82.30899810791016,
+            552.7630004882812,
+            92.78170013427734,
+            563.2359619140625
+          ]
+        },
+        {
+          "name": "AP_REPLY_DL_MON",
+          "value": "5",
+          "label": null,
+          "rect": [
+            265.95599365234375,
+            552.2000122070312,
+            301.5190124511719,
+            562.927001953125
+          ]
+        },
+        {
+          "name": "AP_REPLY_DL_DAY",
+          "value": "1",
+          "label": null,
+          "rect": [
+            304.1180114746094,
+            552.291015625,
+            339.6809997558594,
+            562.7999877929688
+          ]
+        },
+        {
+          "name": "HOUS_DEPOSIT_AMT",
+          "value": "0",
+          "label": null,
+          "rect": [
+            195.60000610351562,
+            642.4660034179688,
+            264.7640075683594,
+            652.8790283203125
+          ]
+        },
+        {
+          "name": "HOUS_DEPOSIT_REFUND",
+          "value": "N/A",
+          "label": null,
+          "rect": [
+            190.95199584960938,
+            697.719970703125,
+            200.11599731445312,
+            706.8836059570312
+          ]
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "text": "                               Common Data Set 2025-2026\n\n\nC18. Deferred admission: Does your institution allow students to postpone enrollment after admission?\n\n     Yes  No    N/A  ☐   ☐\n       If yes, maximum period of postponement: By request only, one year from admission\n\nC19. Early admission of high school students: Does your institution allow high school students to enroll as full-\n    time, first-time, first-year students one year or more before high school graduation?\n     Yes  No   N/AN/A  ☐   ☐\nC20. Common Application: Question removed from CDS. (Initiated during 2006-2007 cycle)\n\nC21-C22: Early Decision and Early Action Plans\n\nC21. Early decision: Does your institution offer an early decision plan (an admission plan that permits students to\n    apply and be notified of an admission decision well in advance of the regular notification date and that asks\n    students to commit to attending if accepted) for first-time, first-year applicants for fall enrollment?\n     Yes  No   N/A  ☐   ☐\n       If “yes,” please complete the following:                  Month   Day\n          First or only early decision plan closing date:\n          First or only early decision plan notification date:\n        Other early decision plan closing date:\n        Other early decision plan notification date:\n\n   For the Fall 2024 entering class:\n      Number of early decision applications received by your institution:\n      Number of applicants admitted under early decision plan:\n\n       Please provide significant details about your early decision plan:\n\n\n\nC22. Early action: Do you have a nonbinding early action plan whereby students are notified of an admission\n    decision well in advance of the regular notification date but do not have to commit to attending your college?\n      Yes   ☐      ☐ No    N/A\n       If “yes,” please complete the following:                  Month   Day\n         Early action closing date:                        10      15\n         Early action notification date:\n\n\nIs your early action plan a “restrictive” plan under which you limit students from applying to other early plans?\n\n      Yes  No   N/A   ☐   ☐",
+      "form_fields": [
+        {
+          "name": "AD_DEFER",
+          "value": "Y",
+          "label": "C19. Early admission of high school students: Does your institution allow high school students to enroll as full",
+          "rect": [
+            72.0,
+            98.03997802734375,
+            80.5199966430664,
+            105.719970703125
+          ]
+        },
+        {
+          "name": "AD_DEFER_MAX",
+          "value": "By request only, one year from admission.",
+          "label": null,
+          "rect": [
+            257.1050109863281,
+            114.20001220703125,
+            425.95599365234375,
+            131.583984375
+          ]
+        },
+        {
+          "name": "AD_EAD",
+          "value": "N",
+          "label": "C19. Early admission of high school students: Does your institution allow high school students to enroll as full",
+          "rect": [
+            103.91999816894531,
+            174.84002685546875,
+            112.44000244140625,
+            182.52001953125
+          ]
+        },
+        {
+          "name": "AD_EDEC",
+          "value": "N",
+          "label": null,
+          "rect": [
+            103.91999816894531,
+            287.3999938964844,
+            112.44000244140625,
+            295.0799865722656
+          ]
+        },
+        {
+          "name": "AD_EACT",
+          "value": "Y",
+          "label": null,
+          "rect": [
+            75.58260345458984,
+            531.06298828125,
+            84.10260009765625,
+            538.7429809570312
+          ]
+        },
+        {
+          "name": "AP_DL_EACT_MON",
+          "value": "10",
+          "label": null,
+          "rect": [
+            321.781005859375,
+            573.1920166015625,
+            357.343994140625,
+            583.9190063476562
+          ]
+        },
+        {
+          "name": "AP_DL_EACT_DAY",
+          "value": "15",
+          "label": null,
+          "rect": [
+            359.9429931640625,
+            573.2830200195312,
+            395.5060119628906,
+            583.7919921875
+          ]
+        },
+        {
+          "name": "AP_EACT_RESTRICT",
+          "value": "N",
+          "label": null,
+          "rect": [
+            108.51799774169922,
+            652.031982421875,
+            117.03800201416016,
+            659.7120361328125
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Admissions policies and deadlines may refer to a later application cycle than the reported fall cohort; consult the source before advising."
+  ]
+}

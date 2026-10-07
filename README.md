@@ -40,3 +40,12 @@ node scripts/check-import.mjs
 ```
 
 Apply pending local migrations once in order; do not replay already applied migrations. Sites applies production migrations during publication. The first request seeds the initial records idempotently; seeds never overwrite imported edits. Browser checks in `scripts/check-ui.mjs` cover UTF-8 rendering, school browsing, all 27 years, source links, year switching, comparisons, CSV downloads, search states, and mobile overflow. They use Playwright installed under ignored `.sites-runtime/browser` and the local Windows Chrome executable. WebMCP validation still needs a supported browser context.
+
+Import USC Columbia from its official archive (five PDFs and 21 Section C webpages):
+
+```sh
+python scripts/ingest_south_carolina.py
+python scripts/verify_data.py
+```
+
+South Carolina?s historical document server uses HTTP; links preserve the working official URLs. PDF records link to physical pages; HTML records link directly to the official Section C page. Unreported SAT composites are left blank. Cached sources and normalized evidence are stored in `data/sources/south-carolina-*`.
