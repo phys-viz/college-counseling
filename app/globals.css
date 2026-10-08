@@ -232,5 +232,40 @@ footer a { display:flex; align-items:center; gap:6px; color:#3b6980; }
 .compare-dialog [data-slot=table-cell] { padding:11px; font-size:.875rem; }
 .compare-dialog [data-slot=table-head]:first-child { min-width:220px; }
 textarea { width:100%; border:1px solid var(--border); border-radius:6px; padding:12px; font-size:.875rem; resize:vertical; background:#fff; color:#172d48; }
+.trends { min-width:0; }
+.trend-controls { display:grid; grid-template-columns:1.3fr 1fr 1.3fr 1fr; gap:20px; background:#fff; padding:22px; border:1px solid var(--border); border-radius:12px; margin-bottom:22px; }
+.trend-choice,.trend-year-range label { display:flex; flex-direction:column; gap:8px; color:#536880; font-size:.875rem; min-width:0; }
+.trend-choice [data-slot=select-trigger] { width:100%; min-width:0; height:42px; background:#f8fafd; color:#213b59; font-size:.875rem; box-shadow:none; }
+.trend-choice [data-slot=select-value] { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-year-range { display:grid; grid-template-columns:1fr 1fr; gap:12px; min-width:0; }
+.trend-year-range input { height:42px; font-size:.875rem; width:100%; min-width:0; background:#f8fafd; color:#213b59; }
+.trend-figure { background:#fff; border:1px solid var(--border); border-radius:12px; padding:26px 26px 0; overflow:hidden; }
+.trend-heading { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.trend-heading h2 { font-size:1.5rem; letter-spacing:-.025em; }
+.trend-heading p { color:#536880; margin-top:6px; font-size:.875rem; }
+.trend-label-toggle { display:flex; align-items:center; gap:8px; font-size:.875rem; color:#536880; white-space:nowrap; }
+.trend-legend { display:flex; flex-wrap:wrap; gap:14px 30px; margin:22px 0 16px; font-size:.875rem; font-weight:600; }
+.trend-legend span { display:flex; align-items:center; gap:9px; }
+.trend-axis-caption,.trend-x-caption { font-size:.875rem; color:#536880; }
+.trend-x-caption { text-align:center; margin:0 0 14px; }
+.trend-scroll { overflow-x:auto; max-width:100%; padding-bottom:10px; }
+.trend-plot { width:100%; height:370px; }
+.trend-point { cursor:pointer; }
+.trend-point:focus { outline:none; }
+.trend-point:focus circle:last-child,.trend-point:focus path { stroke:#172d48; stroke-width:4; }
+.trend-tooltip,.trend-focus-details { background:#fff; border:1px solid var(--border); box-shadow:0 5px 20px #17395b18; padding:16px; border-radius:8px; font-size:.875rem; }
+.trend-tooltip>div,.trend-focus-details>div { display:grid; gap:3px; margin-top:10px; }
+.trend-tooltip span,.trend-focus-details span { color:#536880; font-size:.8125rem; }
+.trend-notes { display:flex; gap:12px; border-top:1px solid #e6edf4; margin-top:20px; padding:18px 0; font-size:.875rem; color:#536880; }
+.trend-notes>svg { flex-shrink:0; margin-top:2px; }
+.trend-notes p+p { margin-top:5px; }
+.trend-downloads { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:20px 0; }
+.trend-downloads>span { margin-right:auto; font-size:.875rem; color:#536880; }
+.trend-export-error { color:#a02a35; margin:12px 0; }
+.trend-data [data-slot=table-head] { white-space:normal; padding:14px 22px; }
+.trend-data [data-slot=table-cell] { padding:14px 22px; }
+.trend-source { display:inline-flex; align-items:center; gap:8px; }
+@media(max-width:1000px) { .trend-controls{grid-template-columns:1fr 1fr}.trend-heading{align-items:flex-start;flex-wrap:wrap} }
+@media(max-width:600px) { .trend-controls{grid-template-columns:1fr;padding:18px;gap:16px}.trend-figure{padding:20px 16px 0}.trend-heading h2{font-size:1.3rem}.trend-downloads>span{width:100%}.trend-downloads [data-slot=button]{font-size:.875rem}.trend-tooltip{max-width:280px}.trend-data [data-slot=table-head]{min-width:160px}.view-header:has([data-state=active][data-slot=tabs-trigger]:last-child){flex-wrap:wrap}.view-header:has([data-state=active][data-slot=tabs-trigger]:last-child) .muted{max-width:none;text-align:left} }
 @media(max-width:850px) { .top-note{display:none}.topbar>[data-slot=button]{margin-left:auto}.school-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.overview-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{gap:16px}.reset-filters{margin-left:0} }
 @media(max-width:600px) { .workspace{padding:24px 16px 110px}.topbar{padding:14px 16px;gap:10px}.brand{font-size:1rem}.brand-mark{width:34px;height:34px}.topbar>[data-slot=button]{font-size:.875rem;padding:8px}.page-title{align-items:flex-start;flex-wrap:wrap;gap:18px}.page-title h1{font-size:1.7rem}.page-title p{font-size:.875rem}.search-box{padding:10px 14px}.search-box input{font-size:.875rem}.filters{padding:14px}.filter{width:100%;justify-content:space-between}.filter [data-slot=select-trigger]{min-width:65%!important}.reset-filters{margin:0}.view-header{align-items:flex-start;gap:12px}.view-header .muted{font-size:.8125rem;max-width:120px;text-align:right}.view-header [data-slot=tabs-trigger]{padding:8px 12px}.school-card-header{padding:20px}.school-card-header h2{font-size:1.3rem}.school-metrics{padding:0 20px 22px;gap:20px}.school-metrics strong{font-size:1.4rem}.school-card-bottom{padding:18px 20px;align-items:flex-start;flex-direction:column;gap:12px}.school-card-bottom>[data-slot=button]{width:100%}.card-source{padding:12px 20px;font-size:.8125rem}.overview-heading{align-items:flex-start;flex-direction:column;gap:12px}.school-overview{padding:20px}.overview-metrics{gap:20px}.overview-metrics strong{font-size:1.6rem}.panel-header{padding:18px;align-items:flex-start}.panel-header .muted{max-width:110px;text-align:right;font-size:.8125rem}.panel-header h2{font-size:1rem}.detail-columns,.factor-grid{grid-template-columns:1fr}.detail-cards{gap:8px}.detail-cards>div{padding:12px}.detail-cards strong{font-size:1.4rem}.report-dialog{padding:20px!important}.compare-bar{gap:12px;padding:12px}.compare-bar>div>span,.compare-bar>div>svg{display:none}.compare-bar strong{font-size:.8125rem}.compare-bar [data-slot=button]{font-size:.8125rem}.compare-bar .text-button{display:none}footer{flex-direction:column;gap:10px}.source-page summary a{float:none;display:block;margin-top:6px}.reading-note{font-size:.8125rem}.school-card .school-metrics>div>span{font-size:.875rem} }

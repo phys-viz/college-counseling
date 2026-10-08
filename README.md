@@ -48,4 +48,8 @@ python scripts/ingest_south_carolina.py
 python scripts/verify_data.py
 ```
 
-South Carolina?s historical document server uses HTTP; links preserve the working official URLs. PDF records link to physical pages; HTML records link directly to the official Section C page. Unreported SAT composites are left blank. Cached sources and normalized evidence are stored in `data/sources/south-carolina-*`.
+South Carolina's historical document server uses HTTP; links preserve the working official URLs. PDF records link to physical pages; HTML records link directly to the official Section C page. Unreported SAT composites are left blank. Cached sources and normalized evidence are stored in `data/sources/south-carolina-*`.
+
+The **Trends** tab starts with Cornell admission rates for fall 2010?2015. It supports admission rate, applications, enrollment, and yield, any imported school, a comparison school, and calendar-year gaps. Rates are calculated from counts before display rounding. Each point and table value links to its original source. PNG/SVG exports include a title, legend, year range, definition, and institutional attribution; SVG also retains source hyperlinks and metadata. CSV includes counts and annual source links. No access changes are needed to download a chart for sharing.
+
+`node scripts/check-trends.mjs` checks known counts/rates, comparisons, source links, downloaded artifacts, keyboard point details, missing-year gaps, single-year and invalid ranges, and mobile layout.

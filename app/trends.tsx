@@ -1,0 +1,103 @@
+'use client';
+import {useEffect,useMemo,useRef,useState} from 'react';
+import {CartesianGrid,Line,LineChart,ResponsiveContainer,Tooltip,XAxis,YAxis} from 'recharts';
+import {Download,ExternalLink,Info} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Checkbox} from '@/components/ui/checkbox';
+import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
+import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
+import {trendFormat,trendMetrics,trendSource,trendValue,type TrendMetric,type TrendReport,type TrendResults} from '@/lib/trend-types';
+import {exportTrendCSV,exportTrendImage} from '@/lib/export-trend';
+
+const COLORS=['#087b6c','#3c61ad'];
+type YearRow={year:number;primary:number|null;comparison:number|null;reports:(TrendReport|undefined)[]};
+function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(s:string)=>void;options:{value:string;label:string}[]}) {
+  return <label className="trend-choice"><span>{label}</span><Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label}><SelectValue/></SelectTrigger><SelectContent>{options.map(o=><SelectItem value={o.value} key={o.value}>{o.label}</SelectItem>)}</SelectContent></Select></label>;
+}
+function PointDetails({row,metric}:{row:YearRow;metric:TrendMetric}) {
+  return <><strong>Fall {row.year}</strong>{row.reports.map((r,i)=>r&&<div key={r.school_id}><b style={{color:COLORS[i]}}>{r.school}</b><strong>{trendFormat(metric,trendValue(r,metric))}</strong><span>{r.metrics.applicants?.toLocaleString('en-US')??'Unreported'} applicants · {r.metrics.admitted?.toLocaleString('en-US')??'Unreported'} admitted · {r.metrics.enrolled?.toLocaleString('en-US')??'Unreported'} enrolled</span></div>)}</>;
+}
+
+export default function Trends({refresh}:{refresh:number}) {
+  const [school,setSchool]=useState('cornell'),[comparison,setComparison]=useState('none');
+  const [metric,setMetric]=useState<TrendMetric>('admit_rate'),[start,setStart]=useState('2010'),[end,setEnd]=useState('2015');
+  const [data,setData]=useState<TrendResults|null>(null),[loading,setLoading]=useState(true),[error,setError]=useState(''),[retry,setRetry]=useState(0);
+  const [showLabels,setShowLabels]=useState(true),[focused,setFocused]=useState<YearRow|null>(null),[exporting,setExporting]=useState(false),[exportError,setExportError]=useState('');
+  const figure=useRef<HTMLDivElement>(null);
+  const from=Number(start),to=Number(end);
+  const valid=!!start&&!!end&&Number.isInteger(from)&&Number.isInteger(to)&&from>=1900&&to<=2100&&from<=to;
+  useEffect(()=>{
+    setFocused(null);setExportError('');if(!valid)return;
+    const abort=new AbortController();setLoading(true);setError('');
+    const params=new URLSearchParams({school,from:String(from),to:String(to)});if(comparison!=='none')params.append('school',comparison);
+    fetch('/api/trends?'+params,{signal:abort.signal}).then(async res=>{const result=await res.json() as TrendResults&{error?:string};if(!res.ok)throw new Error(result.error);setData(result);}).catch(e=>{if(!abort.signal.aborted)setError(e instanceof Error?e.message:'The trend data could not load.');}).finally(()=>{if(!abort.signal.aborted)setLoading(false);});
+    return()=>abort.abort();
+  },[school,comparison,from,to,valid,refresh,retry]);
+  useEffect(()=>{setFocused(null);setExportError('');},[metric]);
+  const ids=comparison==='none'?[school]:[school,comparison];
+  const names=ids.map(id=>data?.schools.find(s=>s.school_id===id)?.school??(id==='cornell'?'Cornell University':id));
+  const rows=useMemo(()=>{
+    if(!valid)return [];
+    const map=new Map((data?.reports??[]).map(r=>[`${r.school_id}:${r.year}`,r]));
+    return Array.from({length:to-from+1},(_,i)=>{
+      const year=from+i,primary=map.get(`${school}:${year}`),second=map.get(`${comparison}:${year}`);
+      return {year,primary:trendValue(primary,metric),comparison:trendValue(second,metric),reports:comparison==='none'?[primary]:[primary,second]};
+    });
+  },[data,from,to,valid,school,comparison,metric]);
+  const hasData=rows.some(r=>r.primary!==null||r.comparison!==null);
+  const percentage=metric.endsWith('_rate'),metricLabel=trendMetrics.find(m=>m.value===metric)!.label;
+  const subtitle=`${names.join(' vs. ')} · Fall ${from}${from===to?'':`–${to}`}`;
+  const note=metric==='admit_rate'?'Admission rate = admitted ÷ applicants. Historical institution-wide rates are not an individual student’s chance.':metric==='yield_rate'?'Enrollment yield = enrolled ÷ admitted. Counts refer to first-time, first-year students.':'Counts refer to first-time, first-year students in each fall cohort.';
+  const missing=rows.reduce((n,r)=>n+(r.primary===null?1:0)+(comparison!=='none'&&r.comparison===null?1:0),0);
+  const filename=`${ids.join('-vs-')}-${metric}-${from}-${to}`;
+  const ready=valid&&!loading&&!error&&hasData;
+  async function exportImage(kind:'png'|'svg') {
+    const chart=figure.current?.querySelector<SVGSVGElement>('svg.recharts-surface');if(!chart)return;
+    setExporting(true);setExportError('');
+    try {await exportTrendImage(chart,kind,{title:`${metricLabel} · Fall ${from}${from===to?'':`–${to}`}`,subtitle:'First-year admissions · College Admissions research library',names,colors:COLORS,reports:data?.reports??[],metric,note,name:filename});}
+    catch(e){setExportError(e instanceof Error?e.message:'Chart download failed. Try SVG or CSV.');}finally{setExporting(false);}
+  }
+  function dot(props:{cx?:number;cy?:number;payload?:YearRow},series:number) {
+    const {cx,cy,payload}=props,r=payload?.reports[series];if(cx===undefined||cy===undefined||!r||trendValue(r,metric)===null)return <g/>;
+    const description=`${r.school}, Fall ${r.year}: ${trendFormat(metric,trendValue(r,metric))}. Open original source.`;
+    return <g key={`${r.school_id}:${r.year}`}><a className="trend-point" href={trendSource(r,metric)} target="_blank" rel="noreferrer" aria-label={description} tabIndex={0} onFocus={()=>setFocused(payload!)} onBlur={()=>setFocused(null)}>
+      <title>{description}</title><circle cx={cx} cy={cy} r={10} fill="transparent"/>
+      {series===0?<circle cx={cx} cy={cy} r={4.5} fill="#fff" stroke={COLORS[series]} strokeWidth={2}/>:<path d={`M ${cx} ${cy-5} L ${cx+5} ${cy} L ${cx} ${cy+5} L ${cx-5} ${cy} Z`} fill="#fff" stroke={COLORS[series]} strokeWidth={2}/>}
+    </a>{showLabels&&<text x={cx} y={cy+(series===0?-14:23)} fill={COLORS[series]} fontFamily="Arial, Helvetica, sans-serif" fontSize={13} fontWeight={600} textAnchor="middle" pointerEvents="none">{trendFormat(metric,trendValue(r,metric))}</text>}</g>;
+  }
+  return <section className="trends" aria-label="Admissions trends">
+    <div className="trend-controls">
+      <Choice label="Trend school" value={school} onChange={v=>{setSchool(v);if(v===comparison)setComparison('none');}} options={data?.schools.map(s=>({value:s.school_id,label:s.school}))??[{value:'cornell',label:'Cornell University'}]}/>
+      <Choice label="Metric" value={metric} onChange={v=>setMetric(v as TrendMetric)} options={[...trendMetrics]}/>
+      <Choice label="Compare with" value={comparison} onChange={setComparison} options={[{value:'none',label:'No comparison'},...(data?.schools??[]).filter(s=>s.school_id!==school).map(s=>({value:s.school_id,label:s.school}))]}/>
+      <div className="trend-year-range"><label><span>From year</span><Input aria-label="From year" type="number" min={1900} max={2100} step={1} value={start} onChange={e=>setStart(e.target.value)}/></label><label><span>To year</span><Input aria-label="To year" type="number" min={1900} max={2100} step={1} value={end} onChange={e=>setEnd(e.target.value)}/></label></div>
+    </div>
+    {!valid?<div className="empty" role="alert"><h2>Check the year range</h2><p>Enter whole years between 1900 and 2100, with the starting year no later than the ending year.</p></div>:loading?<div className="empty" role="status">Loading trend data…</div>:error?<div className="empty" role="alert"><h2>Trend data could not load</h2><p>{error}</p><Button onClick={()=>setRetry(v=>v+1)}>Retry chart</Button></div>:!hasData?<div className="empty"><h2>No reported values in this range</h2><p>Choose another year range or school.</p></div>:<>
+      <div className="trend-figure" ref={figure}>
+        <div className="trend-heading"><div><h2>{metricLabel}</h2><p>{subtitle}</p></div><label className="trend-label-toggle"><Checkbox checked={showLabels} onCheckedChange={v=>setShowLabels(v===true)} aria-label="Show point labels"/> Show point labels</label></div>
+        <div className="trend-legend">{names.map((name,i)=><span key={name} style={{color:COLORS[i]}}><b aria-hidden="true">{i===0?'●':'◆'}</b>{name}</span>)}</div>
+        <p className="trend-axis-caption">{percentage?'Percent of '+(metric==='admit_rate'?'applicants admitted':'admitted students enrolled'):'Number of '+(metric==='applicants'?'applications':'students enrolled')}</p>
+        <div className="trend-scroll"><div className="trend-plot" style={{minWidth:Math.max(650,rows.length*(showLabels?70:28))}}>
+          <ResponsiveContainer width="100%" height={370}>
+            <LineChart data={rows} margin={{top:30,right:42,bottom:12,left:22}} accessibilityLayer>
+              <CartesianGrid stroke="#e3eaf2" strokeDasharray="3 3" vertical={false}/>
+              <XAxis dataKey="year" type="number" domain={from===to?[from-.5,to+.5]:[from,to]} ticks={rows.map(r=>r.year)} allowDecimals={false} tick={{fill:'#536880',fontSize:13}} axisLine={{stroke:'#ccd8e5'}} tickLine={false} minTickGap={18}/>
+              <YAxis domain={[0,'auto']} allowDecimals={percentage} tick={{fill:'#536880',fontSize:13}} axisLine={false} tickLine={false} width={66} tickFormatter={v=>percentage?`${v}%`:Number(v).toLocaleString('en-US')}/>
+              <Tooltip content={({active,payload})=>{const row=payload?.[0]?.payload as YearRow|undefined;return active&&row?<div className="trend-tooltip"><PointDetails row={row} metric={metric}/></div>:null;}}/>
+              <Line dataKey="primary" name={names[0]} type="linear" stroke={COLORS[0]} strokeWidth={2.5} connectNulls={false} isAnimationActive={false} activeDot={false} dot={props=>dot(props,0)}/>
+              {comparison!=='none'&&<Line dataKey="comparison" name={names[1]} type="linear" stroke={COLORS[1]} strokeWidth={2.5} strokeDasharray="6 4" connectNulls={false} isAnimationActive={false} activeDot={false} dot={props=>dot(props,1)}/>}
+            </LineChart>
+          </ResponsiveContainer>
+        </div></div>
+        <p className="trend-x-caption">Fall cohort</p>
+        {focused&&<div className="trend-focus-details" role="status"><PointDetails row={focused} metric={metric}/></div>}
+        <div className="trend-notes"><Info size={18}/><div><p>{note}</p><p>Hover for counts. Click a point or table value to open the original source.{missing>0?` ${missing} missing ${missing===1?'value is':'values are'} shown as gaps.`:''}</p></div></div>
+      </div>
+      <div className="trend-downloads"><span>Download for research or sharing</span><Button variant="outline" disabled={!ready||exporting} onClick={()=>exportImage('png')}><Download size={16}/> Download PNG</Button><Button variant="outline" disabled={!ready||exporting} onClick={()=>exportImage('svg')}>Download SVG</Button><Button variant="outline" disabled={!ready||exporting} onClick={()=>exportTrendCSV(data?.reports??[],ids,from,to,metric,filename)}>Download chart data</Button></div>
+      {exportError&&<p role="alert" className="trend-export-error">{exportError}</p>}
+      {exporting&&<p role="status">Preparing your chart…</p>}
+      <section className="results-panel trend-data"><div className="panel-header"><h2>Chart data & sources</h2><span className="muted">{rows.length} fall {rows.length===1?'cohort':'cohorts'}</span></div><Table><TableHeader><TableRow><TableHead>Fall cohort</TableHead>{names.map(name=><TableHead key={name}>{name}<br/>{metricLabel}</TableHead>)}</TableRow></TableHeader><TableBody>{rows.map(row=><TableRow key={row.year}><TableCell>{row.year}</TableCell>{row.reports.map((r,i)=><TableCell key={ids[i]}>{r&&trendValue(r,metric)!==null?<a className="table-metric trend-source" href={trendSource(r,metric)} target="_blank" rel="noreferrer">{trendFormat(metric,trendValue(r,metric))}<ExternalLink size={13}/><span className="sr-only">Original source for {r.school}, Fall {r.year}</span></a>:<span className="muted">Not reported</span>}</TableCell>)}</TableRow>)}</TableBody></Table></section>
+    </>}
+  </section>;
+}
