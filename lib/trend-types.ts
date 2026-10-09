@@ -20,7 +20,12 @@ export type TrendReport = {
   reporting?:{cost_year?:string;aid_year?:string;retention_cohort?:number;graduation_cohort?:number};
   previous?:{year:number;source_url:string;source_type:string;page:number|null;applicants?:number;admit_rate?:number};
 };
-export type TrendResults = {reports:TrendReport[];schools:{school_id:string;school:string}[]};
+export type TrendResults = {reports:TrendReport[];schools:{school_id:string;school:string;index_url?:string}[]};
+export function trendYearRanges(years:number[]):string {
+ const sorted=[...new Set(years)].sort((a,b)=>a-b),ranges:string[]=[];
+ for(let i=0;i<sorted.length;i++){const start=sorted[i];let end=start;while(sorted[i+1]===end+1)end=sorted[++i];ranges.push(start===end?String(start):`${start}–${end}`);}
+ return ranges.join(', ');
+}
 export function trendValue(report:TrendReport|undefined,metric:TrendMetric):number|null {
   if(isScoreRange(metric))return scoreRange(report,metric.replace('_range',''))?.low??null;
   const value=report?.metrics[metric];

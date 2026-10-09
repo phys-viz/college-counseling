@@ -7,7 +7,7 @@ import {Input} from '@/components/ui/input';
 import {Checkbox} from '@/components/ui/checkbox';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
-import {trendFormat,trendDisplay,trendContext,trendDetails,trendMetrics,trendSource,trendValue,trendUnit,trendNote,isScoreRange,type TrendMetric,type TrendReport,type TrendResults} from '@/lib/trend-types';
+import {trendFormat,trendDisplay,trendContext,trendDetails,trendMetrics,trendSource,trendValue,trendUnit,trendNote,trendYearRanges,isScoreRange,type TrendMetric,type TrendReport,type TrendResults} from '@/lib/trend-types';
 import {ScoreRangePlot} from './score-visuals';
 import MetricPicker from './metric-picker';
 import SchoolLegend from './school-legend';
@@ -19,11 +19,11 @@ type YearRow={year:number;primary:number|null;comparison:number|null;reports:(Tr
 function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(s:string)=>void;options:{value:string;label:string}[]}) {
   return <label className="trend-choice"><span>{label}</span><Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label}><SelectValue/></SelectTrigger><SelectContent>{options.map(o=><SelectItem value={o.value} key={o.value}>{o.label}</SelectItem>)}</SelectContent></Select></label>;
 }
-function PointDetails({row,metric}:{row:YearRow;metric:TrendMetric}) {
-  return <><strong>Fall {row.year}</strong>{row.reports.map(r=>r&&<div key={r.school_id}><b style={{color:schoolBrand(r.school_id,r.school).color}}>{r.school}</b><strong>{trendDisplay(r,metric)}</strong>{trendContext(r,metric)&&<span>{trendContext(r,metric)}</span>}{trendDetails(r,metric).map(detail=><span key={detail}>{detail}</span>)}</div>)}</>;
+function PointDetails({row,metric,names}:{row:YearRow;metric:TrendMetric;names:string[]}) {
+  return <><strong>Fall {row.year}</strong>{row.reports.map((r,i)=><div key={names[i]}><b style={r?{color:schoolBrand(r.school_id,r.school).color}:undefined}>{names[i]}</b><strong>{trendDisplay(r,metric)}</strong>{r&&trendValue(r,metric)!==null&&<>{trendContext(r,metric)&&<span>{trendContext(r,metric)}</span>}{trendDetails(r,metric).map(detail=><span key={detail}>{detail}</span>)}</>}</div>)}</>;
 }
 
-export default function Trends({refresh}:{refresh:number}) {
+export default function Trends({refresh,onSummaryChange}:{refresh:number;onSummaryChange?:(summary:string)=>void}) {
   const [school,setSchool]=useState('cornell'),[comparison,setComparison]=useState('none');
   const [metric,setMetric]=useState<TrendMetric>('admit_rate'),[start,setStart]=useState('2010'),[end,setEnd]=useState('2015');
   const [data,setData]=useState<TrendResults|null>(null),[loading,setLoading]=useState(true),[error,setError]=useState(''),[retry,setRetry]=useState(0);
@@ -55,7 +55,6 @@ export default function Trends({refresh}:{refresh:number}) {
   const unit=trendUnit(metric),percentage=unit==='percent'||unit==='points',metricLabel=trendMetrics.find(m=>m.value===metric)!.label;
   const subtitle=`${names.join(' vs. ')} · Fall ${from}${from===to?'':`–${to}`}`;
   const note=trendNote(metric);
-  const missing=rows.reduce((n,r)=>n+(r.primary===null?1:0)+(comparison!=='none'&&r.comparison===null?1:0),0);
   const filename=`${ids.join('-vs-')}-${metric}-${from}-${to}`;
   const customAxisValid=axisMin.trim()!==''&&axisMax.trim()!==''&&Number.isFinite(Number(axisMin))&&Number.isFinite(Number(axisMax))&&Number(axisMin)<Number(axisMax);
   const axisValid=isScoreRange(metric)||axisMode!=='custom'||customAxisValid;
@@ -63,6 +62,19 @@ export default function Trends({refresh}:{refresh:number}) {
   const plotValues=rows.flatMap(r=>[r.primary,r.comparison]).filter((v):v is number=>v!==null);
   const axisDomain:[number|'auto',number|'auto']=axisMode==='custom'&&customAxisValid?[Number(axisMin),Number(axisMax)]:axisMode==='zero'?(signedMetric?[Math.min(0,...plotValues),Math.max(0,...plotValues)]:[0,'auto']):['auto','auto'];
   const axisLabel=isScoreRange(metric)?'':axisMode==='custom'&&customAxisValid?`Y-axis: ${trendFormat(metric,Number(axisMin))} to ${trendFormat(metric,Number(axisMax))}`:axisMode==='zero'?(signedMetric?'Y-axis includes zero':'Y-axis starts at zero'):'Y-axis: automatic range';
+  const outsideAxis=(value:number|null)=>value!==null&&!isScoreRange(metric)&&axisMode==='custom'&&customAxisValid&&(value<Number(axisMin)||value>Number(axisMax));
+  const availability=ids.map((id,i)=>{
+    const missing=rows.filter(row=>trendValue(row.reports[i],metric)===null).map(row=>row.year);
+    const hidden=rows.filter(row=>outsideAxis(trendValue(row.reports[i],metric))).map(row=>row.year);
+    const reported=rows.length-missing.length;
+    const status=reported===0?'No reported data':hidden.length===reported?'All reported values outside Y-axis range':[missing.length?`${missing.length} ${missing.length===1?'year':'years'} missing`:'',hidden.length?`${hidden.length} ${hidden.length===1?'value':'values'} outside Y-axis range`:''].filter(Boolean).join(' · ');
+    const messages=[missing.length?`${names[i]}: ${reported===0?'no reported '+metricLabel+' values':'missing '+metricLabel+' values'} for ${trendYearRanges(missing)}${reported===0?isScoreRange(metric)?'. No range is drawn.':'. No line is drawn.':missing.length===1?'. This year remains a gap.':'. These years remain gaps.'}`:'',hidden.length?`${names[i]}: ${metricLabel} values for ${trendYearRanges(hidden)} are outside the custom Y-axis range. Reset the axis to show them; the values remain in the source table.`:''].filter(Boolean);
+    return {id,status,messages};
+  });
+  const availabilityMessages=availability.flatMap(a=>a.messages);
+  const sourceReportCount=rows.reduce((total,row)=>total+row.reports.filter(Boolean).length,0);
+  useEffect(()=>{onSummaryChange?.(!valid?'Check year range':loading?'Loading chart…':error?'Chart unavailable':`${rows.length} ${rows.length===1?'year':'years'} · ${sourceReportCount} source ${sourceReportCount===1?'report':'reports'}`);},[onSummaryChange,valid,loading,error,rows.length,sourceReportCount]);
+  const archives=ids.map((id,i)=>({id,name:names[i],url:data?.schools.find(s=>s.school_id===id)?.index_url??data?.reports.find(r=>r.school_id===id)?.index_url})).filter(a=>a.url&&/^https?:\/\//i.test(a.url));
   const ready=valid&&axisValid&&!loading&&!error&&hasData;
   function changeMetric(value:TrendMetric){setMetric(value);setAxisMode('auto');setAxisMin('');setAxisMax('');}
   function changeAxis(value:string){
@@ -76,7 +88,7 @@ export default function Trends({refresh}:{refresh:number}) {
   async function exportImage(kind:'png'|'svg'|'copy') {
     const chart=figure.current?.querySelector<SVGSVGElement>('svg.recharts-surface,svg.score-range-chart');if(!chart)return;
     setExporting(true);setExportError('');setCopied(false);
-    const options={title:`${metricLabel} · Fall ${from}${from===to?'':`–${to}`}`,subtitle:'College research · College Admissions research library',names,brands,reports:(data?.reports??[]).filter(r=>ids.includes(r.school_id)&&r.year>=from&&r.year<=to),metric,note:[axisLabel,note].filter(Boolean).join('. '),name:filename,axisLabel};
+    const options={title:`${metricLabel} · Fall ${from}${from===to?'':`–${to}`}`,subtitle:'College research · College Admissions research library',names,brands,reports:(data?.reports??[]).filter(r=>ids.includes(r.school_id)&&r.year>=from&&r.year<=to),metric,note:[axisLabel?axisLabel+'.':'',note,...availabilityMessages].filter(Boolean).join(' '),name:filename,axisLabel};
     try {if(kind==='copy'){await copyTrendImage(chart,options);setCopied(true);}else await exportTrendImage(chart,kind,options);}
     catch(e){setExportError(kind==='copy'?'Could not copy the graph. Allow clipboard access in your browser, or use Download PNG.':e instanceof Error?e.message:'Chart download failed. Try SVG or CSV.');}finally{setExporting(false);}
   }
@@ -96,10 +108,11 @@ export default function Trends({refresh}:{refresh:number}) {
       <Choice label="Compare with" value={comparison} onChange={setComparison} options={[{value:'none',label:'No comparison'},...(data?.schools??[]).filter(s=>s.school_id!==school).map(s=>({value:s.school_id,label:s.school}))]}/>
       <div className="trend-year-range"><label><span>From year</span><Input aria-label="From year" type="number" min={1900} max={2100} step={1} value={start} onChange={e=>setStart(e.target.value)}/></label><label><span>To year</span><Input aria-label="To year" type="number" min={1900} max={2100} step={1} value={end} onChange={e=>setEnd(e.target.value)}/></label></div>
     </div>
-    {!valid?<div className="empty" role="alert"><h2>Check the year range</h2><p>Enter whole years between 1900 and 2100, with the starting year no later than the ending year.</p></div>:loading?<div className="empty" role="status">Loading trend data…</div>:error?<div className="empty" role="alert"><h2>Trend data could not load</h2><p>{error}</p><Button onClick={()=>setRetry(v=>v+1)}>Retry chart</Button></div>:!hasData?<div className="empty"><h2>No reported values in this range</h2><p>Choose another year range or school.</p></div>:<>
+    {!valid?<div className="empty" role="alert"><h2>Check the year range</h2><p>Enter whole years between 1900 and 2100, with the starting year no later than the ending year.</p></div>:loading?<div className="empty" role="status">Loading trend data…</div>:error?<div className="empty" role="alert"><h2>Trend data could not load</h2><p>{error}</p><Button onClick={()=>setRetry(v=>v+1)}>Retry chart</Button></div>:!hasData?<div className="empty"><h2>No reported values in this range</h2>{availabilityMessages.map(message=><p key={message}>{message}</p>)}<p>Choose another year range or school.</p></div>:<>
       <div className="trend-figure" ref={figure}>
         <div className="trend-heading"><div><h2>{metricLabel}</h2><p>{subtitle}</p></div><label className="trend-label-toggle"><Checkbox checked={showLabels} onCheckedChange={v=>setShowLabels(v===true)} aria-label="Show point labels"/> Show point labels</label></div>
-        <SchoolLegend names={names} brands={brands}/>
+        <SchoolLegend names={names} brands={brands} statuses={availability.map(a=>a.status)}/>
+        {availabilityMessages.length>0&&<div className="trend-availability" role="status">{availabilityMessages.map(message=><p key={message}>{message}</p>)}</div>}
         {!isScoreRange(metric)&&<div className="trend-axis-controls"><Choice label="Y-axis view" value={axisMode} onChange={changeAxis} options={[{value:'auto',label:'Automatic range'},{value:'zero',label:signedMetric?'Include zero':'Start at zero'},{value:'custom',label:'Custom range'}]}/>{axisMode==='custom'&&<div className="trend-axis-range"><label><span>Y-axis minimum</span><Input aria-label="Y-axis minimum" type="number" step="any" value={axisMin} onChange={e=>setAxisMin(e.target.value)}/></label><label><span>Y-axis maximum</span><Input aria-label="Y-axis maximum" type="number" step="any" value={axisMax} onChange={e=>setAxisMax(e.target.value)}/></label></div>}{axisMode!=='auto'&&<Button variant="ghost" onClick={()=>setAxisMode('auto')}>Reset axis</Button>}<p>{axisLabel}</p></div>}
         {!axisValid&&<p className="trend-export-error" role="alert">Enter a minimum and maximum, with the minimum smaller than the maximum. The chart uses automatic range until both are valid.</p>}
         <p className="trend-axis-caption">{isScoreRange(metric)?'Bars: 25th–75th percentiles · dots: reported medians':metricLabel+(unit==='percent'?' (%)':unit==='points'?' (percentage points)':unit==='dollars'?' (US dollars)':'')}</p>
@@ -110,21 +123,22 @@ export default function Trends({refresh}:{refresh:number}) {
               <CartesianGrid stroke="#e3eaf2" strokeDasharray="3 3" vertical={false}/>
               <XAxis dataKey="year" type="number" domain={from===to?[from-.5,to+.5]:[from,to]} ticks={rows.map(r=>r.year)} allowDecimals={false} tick={{fill:'#536880',fontSize:13}} axisLine={{stroke:'#ccd8e5'}} tickLine={false} minTickGap={18}/>
               <YAxis domain={axisDomain} allowDataOverflow={axisValid&&axisMode!=='auto'} allowDecimals={percentage||unit==='gpa'||unit==='ratio'} tick={{fill:'#536880',fontSize:13}} axisLine={false} tickLine={false} width={78} tickFormatter={v=>trendFormat(metric,Number(v))}/>
-              <Tooltip content={({active,payload})=>{const row=payload?.[0]?.payload as YearRow|undefined;return active&&row?<div className="trend-tooltip"><PointDetails row={row} metric={metric}/></div>:null;}}/>
+              <Tooltip content={({active,payload})=>{const row=payload?.[0]?.payload as YearRow|undefined;return active&&row?<div className="trend-tooltip"><PointDetails row={row} metric={metric} names={names}/></div>:null;}}/>
               <Line dataKey="primary" name={names[0]} type="linear" stroke={colors[0]} strokeWidth={2.5} connectNulls={false} isAnimationActive={false} activeDot={false} dot={props=>dot(props,0)}/>
               {comparison!=='none'&&<Line dataKey="comparison" name={names[1]} type="linear" stroke={colors[1]} strokeWidth={2.5} strokeDasharray="6 4" connectNulls={false} isAnimationActive={false} activeDot={false} dot={props=>dot(props,1)}/>}
             </LineChart>
           </ResponsiveContainer>
         </div></div>}
         <p className="trend-x-caption">{isScoreRange(metric)?'Test score · each row is a fall cohort':'CDS report fall year'}</p>
-        {focused&&<div className="trend-focus-details" role="status"><PointDetails row={focused} metric={metric}/></div>}
-        <div className="trend-notes"><Info size={18}/><div><p>{note}</p><p>{isScoreRange(metric)?'Click a range or table value to open the original source.':'Hover for metric details. Click a point or table value to open the original source.'}{missing>0?` ${missing} missing ${missing===1?'value is':'values are'} shown as gaps.`:''}</p></div></div>
+        {focused&&<div className="trend-focus-details" role="status"><PointDetails row={focused} metric={metric} names={names}/></div>}
+        <div className="trend-notes"><Info size={18}/><div><p>{note}</p><p>{isScoreRange(metric)?'Click a range or table value to open the original source.':'Hover for metric details. Click a point or table value to open the original source.'}</p></div></div>
       </div>
       <div className="trend-downloads"><span>Share the current graph</span><Button variant="outline" disabled={!ready||exporting} onClick={()=>exportImage('copy')}><Copy size={16}/> Copy graph</Button><Button variant="outline" disabled={!ready||exporting} onClick={()=>exportImage('png')}><Download size={16}/> Download PNG</Button><Button variant="outline" disabled={!ready||exporting} onClick={()=>exportImage('svg')}>Download SVG</Button><Button variant="outline" disabled={!ready||exporting} onClick={()=>exportTrendCSV(data?.reports??[],ids,from,to,metric,filename)}>Download chart data</Button></div>
       {copied&&<p role="status">Graph copied. Paste it into an email or document.</p>}
       {exportError&&<p role="alert" className="trend-export-error">{exportError}</p>}
       {exporting&&<p role="status">Preparing your chart…</p>}
-      <section className="results-panel trend-data"><div className="panel-header"><h2>Chart data & sources</h2><span className="muted">{rows.length} report {rows.length===1?'year':'years'}</span></div><Table><TableHeader><TableRow><TableHead>Report fall year</TableHead>{names.map(name=><TableHead key={name}>{name}<br/>{metricLabel}</TableHead>)}</TableRow></TableHeader><TableBody>{rows.map(row=><TableRow key={row.year}><TableCell>{row.year}</TableCell>{row.reports.map((r,i)=><TableCell key={ids[i]}>{r&&trendValue(r,metric)!==null?<><a className="table-metric trend-source" href={trendSource(r,metric)} target="_blank" rel="noreferrer">{trendDisplay(r,metric)}<ExternalLink size={13}/><span className="sr-only">Original source for {r.school}, Fall {r.year}</span></a>{trendContext(r,metric)&&<span className="reporting-context">{trendContext(r,metric)}</span>}{r.previous&&['application_growth','admit_rate_change'].includes(metric)&&<a className="prior-source" href={r.previous.source_url+(r.previous.source_type==='pdf'&&r.previous.page?`#page=${r.previous.page}`:'')} target="_blank" rel="noreferrer">{r.previous.year} baseline source</a>}</>:<span className="muted">Not reported</span>}</TableCell>)}</TableRow>)}</TableBody></Table></section>
+      <section className="results-panel trend-data"><div className="panel-header"><h2>Chart data & sources</h2><span className="muted">{rows.length} selected {rows.length===1?'year':'years'}</span></div><Table><TableHeader><TableRow><TableHead>Report fall year</TableHead>{names.map(name=><TableHead key={name}>{name}<br/>{metricLabel}</TableHead>)}</TableRow></TableHeader><TableBody>{rows.map(row=><TableRow key={row.year}><TableCell>{row.year}</TableCell>{row.reports.map((r,i)=><TableCell key={ids[i]}>{r&&trendValue(r,metric)!==null?<><a className="table-metric trend-source" href={trendSource(r,metric)} target="_blank" rel="noreferrer">{trendDisplay(r,metric)}<ExternalLink size={13}/><span className="sr-only">Original source for {r.school}, Fall {r.year}</span></a>{outsideAxis(trendValue(r,metric))&&<span className="reporting-context">Outside Y-axis range</span>}{trendContext(r,metric)&&<span className="reporting-context">{trendContext(r,metric)}</span>}{r.previous&&['application_growth','admit_rate_change'].includes(metric)&&<a className="prior-source" href={r.previous.source_url+(r.previous.source_type==='pdf'&&r.previous.page?`#page=${r.previous.page}`:'')} target="_blank" rel="noreferrer">{r.previous.year} baseline source</a>}</>:<span className="muted">Not reported</span>}</TableCell>)}</TableRow>)}</TableBody></Table></section>
     </>}
+    {valid&&!loading&&!error&&<footer className="trend-archives"><span>Institutional Common Data Set archives</span>{archives.map(a=><a key={a.id} href={a.url} target="_blank" rel="noreferrer">{a.name} archive <ExternalLink size={13}/></a>)}</footer>}
   </section>;
 }

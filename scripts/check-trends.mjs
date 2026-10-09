@@ -62,7 +62,7 @@ try {
  assert.equal(await page.locator('.trend-point').count(),5);
  assert((await page.locator('.trend-data tbody tr').nth(2).innerText()).includes('Not reported'));
  assert((await page.locator('.recharts-line-curve').getAttribute('d')).match(/M/g).length===2,'Missing cohort must break the line');
- assert((await page.locator('.trend-notes').innerText()).includes('1 missing value'));
+ assert((await page.locator('.trend-availability').innerText()).includes('Cornell University: missing Applications values for 2012. This year remains a gap.'));
  assert.deepEqual(errors,[]);
  console.log('PASS: Cornell 2010–2015 rates reconciled, source points, hover/focus counts, standalone PNG/SVG and CSV, school comparison, counts, single year, gaps, empty/invalid ranges, mobile layout, no browser errors.');
 } finally {await browser.close();}

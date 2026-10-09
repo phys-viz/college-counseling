@@ -15,7 +15,10 @@ export async function GET(request:Request) {
     await ensureSeed();
     const [result,schoolList]=await Promise.all([
       database().prepare(`SELECT payload FROM reports WHERE school_id IN (${schools.map(()=>'?').join(',')}) AND year BETWEEN ? AND ? ORDER BY year,school`).bind(...schools,Math.max(1900,from-4),to).all<{payload:string}>(),
-      database().prepare('SELECT DISTINCT school_id,school FROM reports ORDER BY school').all<{school_id:string;school:string}>(),
+      // Archive links must remain available even when the selected years have no reports.
+      database().prepare(`SELECT school_id,school,json_extract(payload,'$.index_url') AS index_url FROM
+        (SELECT school_id,school,payload,ROW_NUMBER() OVER (PARTITION BY school_id ORDER BY year DESC,id) AS position FROM reports)
+        WHERE position=1 ORDER BY school`).all<{school_id:string;school:string;index_url:string}>(),
     ]);
     const reports:TrendReport[]=result.results.map(row=>{
       const r=deriveExtraMetrics(enrichSavedGender(JSON.parse(row.payload) as Report));

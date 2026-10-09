@@ -270,6 +270,11 @@ textarea { width:100%; border:1px solid var(--border); border-radius:6px; paddin
 .trend-legend span { display:flex; align-items:center; gap:9px; }
 .school-legend-item { display:flex; align-items:center; gap:10px; min-width:0; }
 .school-legend-item>span { display:block; }
+.school-legend-label small { display:block; font-size:.75rem; font-weight:400; margin-top:3px; color:#536880; }
+.trend-availability { background:#f8fafd; border:1px solid var(--border); border-radius:8px; padding:12px 16px; margin:0 0 18px; font-size:.875rem; color:#3b536c; }
+.trend-availability p+p { margin-top:6px; }
+.trend-archives { flex-wrap:wrap; }
+.trend-archives a { overflow-wrap:anywhere; }
 .school-logo { width:32px; height:32px; object-fit:contain; flex-shrink:0; }
 .school-initials { display:flex!important; align-items:center; justify-content:center; width:32px; height:32px; border:1px solid; border-radius:7px; font-size:12px; flex-shrink:0; }
 .school-legend-item>svg { flex-shrink:0; }
