@@ -31,6 +31,32 @@ export function trendPopulation(report:TrendReport|undefined,metric:TrendMetric)
  const prefix=category?category[0]+'_':'';
  return {label:category?.[1]??'All first-year students',applicants:report?.metrics[prefix+'applicants'],admitted:report?.metrics[prefix+'admitted'],enrolled:report?.metrics[prefix+'enrolled']};
 }
+// Tooltip context follows the selected measure. Never attach unrelated C1 totals.
+export function trendDetails(report:TrendReport,metric:TrendMetric):string[]{
+ const m=report.metrics,details:string[]=[];
+ const count=(key:string,label:string)=>{if(typeof m[key]==='number'&&Number.isFinite(m[key]))details.push(`${m[key].toLocaleString('en-US')} ${label}`);};
+ const gender=genderCategories.find(([id])=>isGenderMetric(metric)&&metric.startsWith(id+'_'));
+ const prefix=gender?gender[0]+'_':'';
+ if(metric==='admit_rate'||gender&&metric.endsWith('_admit_rate')){count(prefix+'admitted','admitted');count(prefix+'applicants','applicants');}
+ else if(metric==='yield_rate'||gender&&metric.endsWith('_yield_rate')){count(prefix+'enrolled','enrolled');count(prefix+'admitted','admitted');}
+ else if(metric==='sat_submitted'){count('sat_submitted_count','enrolled SAT submitters');details.push('Percentage of enrolled first-year students submitting SAT scores');}
+ else if(isScoreRange(metric)||metric==='sat_50'){count(metric==='act_range'?'act_submitted_count':'sat_submitted_count','enrolled test submitters');}
+ else if(metric==='ed_rate'){count('ed_admitted','ED admits');count('ed_applicants','ED applicants');}
+ else if(metric==='ed_share'){count('ed_admitted','ED admits');count('admitted','total admits');}
+ else if(metric==='waitlist_rate'){count('waitlist_admitted','admitted from the waitlist');count('waitlist_accepted','accepted a waitlist place');}
+ else if(/^(in_state|out_state|international)_admit_rate$/.test(metric)){const p=metric.replace('admit_rate','');count(p+'admitted','admitted');count(p+'applicants','applicants');}
+ else if(metric==='transfer_admit_rate'){count('transfer_admitted','transfer admits');count('transfer_applicants','transfer applicants');}
+ else if(metric==='retention_rate'){count('retention_returned','retained students');count('retention_initial','students in the entering cohort');}
+ else if(metric==='graduation_4_rate'||metric==='graduation_6_rate'){count(metric==='graduation_4_rate'?'graduated_4':'graduated_6','graduates');count('graduation_adjusted','students in the adjusted cohort');}
+ else if(metric==='merit_participation'){count('merit_recipients','non-need grant recipients without need');count('aid_first_year_count','students in the first-year aid cohort');}
+ else if(metric==='average_grant')count('grant_recipients','first-year need-based grant recipients');
+ else if(metric==='average_merit_grant')count('merit_recipients','non-need grant recipients without need');
+ else if(metric==='need_met')count('aid_awarded_count','first-year aid recipients with need');
+ else if(metric==='class_under_20_rate'||metric==='class_50_plus_rate')count('class_total','undergraduate class sections');
+ else if(metric==='application_growth'){count('applicants','current-year applicants');if(typeof report.previous?.applicants==='number')details.push(`${report.previous.applicants.toLocaleString('en-US')} applicants in ${report.previous.year}`);}
+ else if(metric==='admit_rate_change'&&typeof report.previous?.admit_rate==='number'){details.push(`Current rate: ${trendFormat('admit_rate',m.admit_rate??null)}`);details.push(`${report.previous.year} rate: ${trendFormat('admit_rate',report.previous.admit_rate)}`);}
+ return details;
+}
 export function trendSource(report:TrendReport,metric:string) {
   const key=isScoreRange(metric)?metric.replace('_range','_25'):metric,e=report.evidence[key],page=e?.page;
   return (e?.source_url??report.source_url)+((e?.source_type??report.source_type)==='pdf'&&page?`#page=${page}`:'');
@@ -55,7 +81,7 @@ export function trendContext(r:TrendReport,metric:TrendMetric){const v=r.reporti
 export const trendUnit=(metric:TrendMetric):MetricUnit=>metric==='admit_rate_change'?'points':metric==='application_growth'||metric==='admit_rate_5yr'?'percent':isScoreRange(metric)?'score':metricUnit(metric);
 export function trendDisplay(report:TrendReport|undefined,metric:TrendMetric){if(!isScoreRange(metric))return trendFormat(metric,trendValue(report,metric));const range=scoreRange(report,metric.replace('_range',''));return range?`${range.low}–${range.high}${range.median!==null?` · median ${range.median}`:''}`:'Not reported';}
 export function trendNote(metric:TrendMetric){
- if(isGenderMetric(metric))return 'Gender / sex categories follow each institution’s C1 reporting. Male and female include source labels men and women. Blank categories remain unreported; unknown and another gender stay separate. Admission rate = group admitted / group applicants; yield = group enrolled / group admitted. Reporting categories may change over time.';
+ if(isGenderMetric(metric))return 'Male and female follow each institution’s C1 reporting, including source labels men and women. Blank values remain unreported. Admission rate = group admitted / group applicants; yield = group enrolled / group admitted. Reporting categories may change over time.';
  if(isScoreRange(metric)||metric==='sat_50')return 'Reported percentiles describe enrolled students who submitted that test. Bars show the 25th–75th range; dots show reported medians only. Historical SAT scales may differ.';
  if(metric==='application_growth')return 'Annual application growth = (current applications / previous-year applications − 1) × 100. Missing prior years remain gaps.';
  if(metric==='admit_rate_change')return 'Annual admission-rate change is measured in percentage points against the preceding calendar year.';

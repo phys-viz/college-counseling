@@ -124,5 +124,17 @@
     "logo": "/school-marks/the-college-of-new-jersey.png",
     "logo_source": "https://tcnj.edu/wp-content/uploads/sites/249/2026/04/headway-imported-image-18.png",
     "logo_source_sha256": "9bdc165560206bec9a25d0d0bee665469047844d6c2d2bcfab25fae9cc316301"
+  },
+  {
+    "id": "virginia-tech",
+    "aliases": [
+      "virginia-tech",
+      "virginia-polytechnic-institute-and-state-university"
+    ],
+    "color": "#861F41",
+    "color_source": "https://brand.vt.edu/content/dam/brand_vt_edu/downloads/FINAL%20Brand%20Guidelines%2010.29.19.pdf",
+    "logo": "/school-marks/virginia-tech.png",
+    "logo_source": "https://assets.cms.vt.edu/favicon/favicon.ico",
+    "logo_source_sha256": "70b07e05e5755bfbc5a44c7ed542533eba31cf2eb15c52dc7a0d727a7c851944"
   }
 ]

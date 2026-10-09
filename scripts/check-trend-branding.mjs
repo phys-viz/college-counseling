@@ -10,9 +10,9 @@ try{
  await page.goto('http://127.0.0.1:5173/');await page.getByRole('button',{name:'View admissions profile',exact:true}).first().waitFor();await page.getByRole('tab',{name:'Trends',exact:true}).click();await ready();
  const metric=page.getByRole('combobox',{name:'Metric',exact:true});await metric.click();
  const popup=page.locator('.metric-picker-popup');
- assert.deepEqual(await popup.locator('.metric-group-heading').allTextContents(),['Admissions','Test scores','Academic profile','Costs & financial aid','Student outcomes','Transfer admissions']);
+ assert.deepEqual(await popup.locator('.metric-group-heading').allTextContents(),['Admissions','Gender admissions','Test scores','Academic profile','Costs & financial aid','Student outcomes','Transfer admissions']);
  for(const group of await popup.locator('[cmdk-group]').all()){const labels=await group.getByRole('option').allTextContents();assert.deepEqual(labels,[...labels].sort((a,b)=>a.localeCompare(b,'en',{sensitivity:'base'})));}
- assert.equal(new Set(await popup.getByRole('option').evaluateAll(items=>items.map(item=>item.getAttribute('data-value')))).size,35);
+ assert.equal(new Set(await popup.getByRole('option').evaluateAll(items=>items.map(item=>item.getAttribute('data-value')))).size,45);
  await page.waitForFunction(()=>getComputedStyle(document.querySelector('.metric-picker-popup')).opacity==='1');await page.screenshot({path:'.sites-runtime/grouped-metrics-desktop.png'});
  const search=page.getByRole('combobox',{name:'Search metrics',exact:true});await search.fill('SAT');assert.equal(await popup.getByRole('option').count(),5);assert.deepEqual(await popup.locator('.metric-group-heading').allTextContents(),['Test scores']);
  await search.fill('does-not-exist');await popup.getByText('No matching metrics.',{exact:true}).waitFor();assert.equal(await popup.getByRole('option').count(),0);

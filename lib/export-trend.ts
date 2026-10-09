@@ -26,7 +26,8 @@ export function exportTrendCSV(reports:TrendReport[],ids:string[],from:number,to
 }
 
 // Package the rendered chart as a standalone figure with its own title, legend, and citations.
-export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',options:{title:string;subtitle:string;names:string[];brands:SchoolBrand[];reports:TrendReport[];metric:TrendMetric;note:string;name:string}) {
+type TrendImageOptions={title:string;subtitle:string;names:string[];brands:SchoolBrand[];reports:TrendReport[];metric:TrendMetric;note:string;name:string;axisLabel?:string};
+async function trendImageBlob(chart:SVGSVGElement,kind:'png'|'svg',options:TrendImageOptions):Promise<Blob> {
   const ns='http://www.w3.org/2000/svg';
   const original=chart.getBoundingClientRect();const width=Math.max(1200,Math.ceil(original.width)),scale=width/original.width;
   const plotHeight=Math.round(original.height*scale),top=110+options.names.length*42;
@@ -57,7 +58,8 @@ export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',opti
   originals.forEach((node,i)=>{const style=getComputedStyle(node);for(const property of properties)(clones[i] as SVGElement).style.setProperty(property,style.getPropertyValue(property));});
   clone.setAttribute('x','0');clone.setAttribute('y',String(top));clone.setAttribute('width',String(width));clone.setAttribute('height',String(plotHeight));clone.setAttribute('viewBox',chart.getAttribute('viewBox')??`0 0 ${original.width} ${original.height}`);
   clone.querySelectorAll('[tabindex]').forEach(n=>n.removeAttribute('tabindex'));root.appendChild(clone);
-  text('Report fall year',width/2,top+plotHeight+12,17).setAttribute('text-anchor','middle');
+  clone.querySelectorAll('.recharts-tooltip-cursor').forEach(n=>n.remove());
+  text(isScoreRange(options.metric)?'Test score · each row is a fall cohort':'Report fall year',width/2,top+plotHeight+12,17).setAttribute('text-anchor','middle');
   noteLines.forEach((line,i)=>text(line,36,top+plotHeight+44+i*22,16));
   sources.forEach((r,i)=>{
     const a=document.createElementNS(ns,'a');a.setAttribute('href',r.index_url);
@@ -66,9 +68,9 @@ export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',opti
     const node=text(`Source: ${r.school} · Common Data Set, Section ${section} · ${domain}`,36,top+plotHeight+76+Math.max(0,noteLines.length-1)*22+i*28,16);
     a.appendChild(node);root.appendChild(a);
   });
-  const metadata=document.createElementNS(ns,'metadata');metadata.textContent=JSON.stringify(options.reports.map(r=>({school:r.school,year:r.year,metric:options.metric,value:trendDisplay(r,options.metric),source:trendSource(r,options.metric),previous:r.previous})));root.appendChild(metadata);
+  const metadata=document.createElementNS(ns,'metadata');metadata.textContent=JSON.stringify({axis:options.axisLabel,reports:options.reports.map(r=>({school:r.school,year:r.year,metric:options.metric,value:trendDisplay(r,options.metric),source:trendSource(r,options.metric),previous:r.previous}))});root.appendChild(metadata);
   const xml=new XMLSerializer().serializeToString(root),blob=new Blob([xml],{type:'image/svg+xml;charset=utf-8'});
-  if(kind==='svg'){download(`${options.name}.svg`,blob);return;}
+  if(kind==='svg')return blob;
   const url=URL.createObjectURL(blob);
   try {
     const image=new Image();image.src=url;await image.decode();
@@ -76,6 +78,15 @@ export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',opti
     const context=canvas.getContext('2d');if(!context)throw new Error('Image export is unavailable in this browser.');
     context.drawImage(image,0,0,canvas.width,canvas.height);
     const png=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('The image could not be created.')),'image/png'));
-    download(`${options.name}.png`,png);
+    return png;
   } finally {URL.revokeObjectURL(url);}
+}
+
+export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',options:TrendImageOptions){
+ download(`${options.name}.${kind}`,await trendImageBlob(chart,kind,options));
+}
+export async function copyTrendImage(chart:SVGSVGElement,options:TrendImageOptions){
+ if(!navigator.clipboard?.write||typeof ClipboardItem==='undefined')throw new Error('Copying images is unavailable in this browser. Download PNG to share this graph.');
+ // Start the clipboard write during the click; image preparation can finish asynchronously.
+ await navigator.clipboard.write([new ClipboardItem({'image/png':trendImageBlob(chart,'png',options)})]);
 }

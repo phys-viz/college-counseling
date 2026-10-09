@@ -10,6 +10,12 @@ export function canonicalC1(lines:Line[]):Line[]{
  let region='';
  return lines.map((l,i)=>{
   let text=l.text;
+  // Narrow, tall residency cells can wrap the header and the final row verb.
+  // Keep the physical source untouched, but reconcile all reported totals.
+  if(/INTERNATIONAL\s+TOTAL\s*$/i.test(text)&&!/^Total\b/i.test(text)){
+   const header=lines.slice(Math.max(0,i-3),i+3).filter(x=>x.page===l.page&&!/^Total\b/i.test(x.text)).map(x=>x.text).join(' ');
+   if(/\bIN-\b|\bIN-\s/i.test(header)&&/\bOUT-/i.test(header)&&/\bSTATE\b/i.test(header))text='In-State Out-of-State International Total';
+  }
   text=text.replace(/^subsequently offered admission\.\s+(?=Total first[- ]time, first[- ]year)/i,'');
   if(/First.Time, First.Year.*\b(?:In-State|Out-of-State|International|Unknown)(?:\s+Total)?\s*$/i.test(text)&&(text.match(/\b(?:In-State|Out-of-State|International|Unknown)\b/gi)??[]).length===1)region=text.match(/\b(In-State|Out-of-State|International|Unknown)(?:\s+Total)?\s*$/i)![1];
   if(/^Total\b/i.test(text)){
@@ -17,7 +23,9 @@ export function canonicalC1(lines:Line[]):Line[]{
    text=text.replace(/^(Total) applications by (men|women)(.*)admission\s+/i,'$1 $2$3applied ').replace(/^(Total) offers to (men|women)(.*)admission\s+/i,'$1 $2$3admitted ').replace(/offered first-time, first-year(?:\s*\(freshman\))? admission\s+/i,'admitted ').replace(/applied for first-time, first-year(?:\s*\(freshman\))? admission\s+/i,'applied ');
    // Wrapped final verb or a single answer line, confined to this physical page.
    const next=lines[i+1];
-   if(next?.page===l.page&&/\bwho\s*$/.test(text)&&/^(?:were )?(?:applied|admitted|enrolled)(?:\s+\d[\d,]*(?:\.0+)?)?$/i.test(next.text))text+=' '+next.text;
+   const after=lines[i+2];
+   if(next?.page===l.page&&after?.page===l.page&&!/\b(?:applied|admitted|enrolled)\b/i.test(text)&&/^\d[\d,]*(?:\s+\d[\d,]*){1,4}$/.test(next.text)&&/^(?:who\s+)?(?:were\s+)?(?:applied|admitted|enrolled)$/i.test(after.text))text+=' '+after.text+' '+next.text;
+   else if(next?.page===l.page&&/\bwho\s*$/.test(text)&&/^(?:were )?(?:applied|admitted|enrolled)(?:\s+\d[\d,]*(?:\.0+)?)?$/i.test(next.text))text+=' '+next.text;
    else if(l.words.length&&next?.page===l.page&&/\b(?:applied|admitted|enrolled)\s*$/.test(text)&&integer(next.text)!==null&&integer(lines[i-1]?.text??'')===null)text+=' '+next.text;
   }
   return {...l,text:region&&/^Total\b/i.test(text)?region+' '+text:text};

@@ -1,0 +1,54 @@
+{
+  "2019": {
+    "counts": [
+      31974,
+      22393,
+      7651
+    ],
+    "evidence": "Physical PDF page 7: applicants 18,859 + 13,115; admits 12,620 + 9,773; enrolled 4,349 + 4 + 3,292 + 6",
+    "notes": [
+      "Malformed embedded font encoding repaired from independently recognized CDS labels; physical PDF page 7 visually reviewed."
+    ]
+  },
+  "2022": {
+    "counts": [
+      45321,
+      25825,
+      7166
+    ],
+    "evidence": "C - FTIC Admission!E27:E29; all gender/status rows E10:E25 independently checked",
+    "notes": []
+  },
+  "2023": {
+    "counts": [
+      47207,
+      26923,
+      7196
+    ],
+    "evidence": "Physical PDF pages 16 and 17: gender applicants 26,966 + 20,135 + 107 = 47,208, while printed residency Total is 47,207; admits 14,527 + 12,337 + 59 = 26,923; enrolled 3,932 + 3,247 + 17 = 7,196",
+    "notes": [
+      "Publisher inconsistency: 2023 applicants sum to 47,208 across gender rows, but the explicit residency Total and residency components sum to 47,207. Headline applicants preserve the printed overall Total 47,207. Gender counts remain as printed; the browser importer flags this discrepancy for review."
+    ]
+  },
+  "2024": {
+    "counts": [
+      52296,
+      28758,
+      7289
+    ],
+    "evidence": "CDS-C!C49:C51 explicit overall answers; all reported gender/status cells C27:C46 checked; residency rows C60:C77 checked",
+    "notes": [
+      "Publisher inconsistency: 2024 overall applicants are 52,296 (CDS-C!C49), while in-state and out-of-state applicant answers sum to 52,498 (C60 + C65); international 4,921 is separately reported (C70). The source does not explain whether the out-of-state count includes international students. Headline counts preserve explicit overall answers; no residency total is inferred. The gender rows report zero unknown-gender applicants but 122 unknown-gender admits; those source answers are retained.",
+      "The 2024 file is a question/answer dictionary, not a visual CDS form. Blank answers are excluded from matching text outside C1, preventing printed score-band boundaries from becoming percentiles. Worksheet cells and original labels are retained."
+    ]
+  },
+  "2025": {
+    "counts": [
+      57755,
+      31515,
+      7133
+    ],
+    "evidence": "CDS-C!I37:I39 explicit residency totals; gender rows E11:E31 checked",
+    "notes": []
+  }
+}

@@ -20,4 +20,4 @@ export function metricGroup(key:TrendMetric):MetricGroup{
  if(/^(tuition_|housing_|average_|need_|merit_)/.test(key))return 'costs';
  return 'admissions';
 }
-export const groupedMetrics=metricGroups.map(group=>({...group,metrics:trendMetrics.filter(m=>metricGroup(m.value)===group.id).sort((a,b)=>a.label.localeCompare(b.label,'en',{sensitivity:'base'}))}));
+export const groupedMetrics=metricGroups.map(group=>({...group,metrics:trendMetrics.filter(m=>metricGroup(m.value)===group.id&&(!isGenderMetric(m.value)||/^(male|female)_/.test(m.value))).sort((a,b)=>a.label.localeCompare(b.label,'en',{sensitivity:'base'}))}));

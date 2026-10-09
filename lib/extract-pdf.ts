@@ -2,6 +2,7 @@ import type {Report} from './report-types';
 import type {SourceDocument} from './source-types';
 import {enrichMetrics} from './extract-additional';
 import {canonicalC1,extractGender} from './extract-gender';
+import {repairCDSGlyphs} from './pdf-glyphs';
 export type PDFWord={str:string;x:number;y:number;width:number};
 export type PDFLine={text:string;words:PDFWord[]};
 export type PDFPage={page:number;text:string;lines:PDFLine[];form_fields:Report['sections'][number]['form_fields']};
@@ -128,9 +129,11 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     for(const line of scoreLines){const m=line.text.match(new RegExp(`^${key==='sat'?'SAT Composite':key==='reading'?'SAT (?:Evidence-Based Reading and Writing|Critical Reading|Verbal)':key==='math'?'SAT Math':'ACT Composite'}:\\s*(25th|50th|75th) Percentile\\s+(\\d{2,4})$`,'i'));if(m){const value=Number(m[2]),min=key==='act'?1:key==='sat'?400:200,max=key==='act'?36:key==='sat'?1600:800;if(value>=min&&value<=max)put(`${key}_${m[1].slice(0,2)}`,value,'C9',line.page,'PDF explicitly labeled percentile');}}
     if(r.metrics[`${key}_25`]!==undefined)continue;
     for(const [i,line] of scoreLines.entries()) {
-      if(!label.test(line.text.trim()))continue;
-      if(/Percentile|\b\d{1,4}\s*-\s*\d{1,4}\s+\d+(?:\.\d+)?%/i.test(line.text))continue;
       let text=line.text;
+      const wrapped=scoreLines[i+1],last=scoreLines[i+2];
+      if(key==='reading'&&/^SAT Evidence-\s*$/i.test(text)&&wrapped?.page===line.page&&last?.page===line.page&&/^Based Reading and\s+\d{3}\s+\d{3}\s+\d{3}$/i.test(wrapped.text)&&/^Writing\s*$/i.test(last.text))text='SAT Evidence-Based Reading and Writing '+wrapped.text.replace(/^Based Reading and\s+/i,'');
+      if(!label.test(text.trim()))continue;
+      if(/Percentile|\b\d{1,4}\s*-\s*\d{1,4}\s+\d+(?:\.\d+)?%/i.test(text))continue;
       // A wrapped reading/writing label can place all score columns on the next line.
       const next=scoreLines[i+1];
       if(!/\b\d{2,4}\b/.test(text)&&next?.page===line.page&&/^(?:(?:and\s+)?Writing\s*)?[\d\s,]+(?:\s*Writing)?$/i.test(next.text.trim()))text+=' '+next.text;
@@ -220,7 +223,7 @@ export async function extractPDF(buffer:ArrayBuffer,document:SourceDocument,inde
     for(let n=1;n<=doc.numPages;n++) {
       if(signal.aborted)throw new Error('Extraction canceled.');onProgress(`Reading PDF page ${n} of ${doc.numPages}…`);
       const page=await doc.getPage(n),content=await page.getTextContent(),annotations=await page.getAnnotations();
-      const words:PDFWord[]=content.items.filter((i):i is import('pdfjs-dist/types/src/display/api').TextItem=>'str' in i).map(i=>({str:i.str,x:i.transform[4],y:i.transform[5],width:i.width})).filter(w=>w.str.trim());
+      const words:PDFWord[]=repairCDSGlyphs(content.items.filter((i):i is import('pdfjs-dist/types/src/display/api').TextItem=>'str' in i)).map(i=>({str:i.str,x:i.transform[4],y:i.transform[5],width:i.width})).filter(w=>w.str.trim());
       const lines:PDFLine[]=[];
       for(const word of words.sort((a,b)=>b.y-a.y||a.x-b.x)) {
         const line=lines.find(l=>Math.abs(l.words[0].y-word.y)<3);if(line)line.words.push(word);else lines.push({text:'',words:[word]});
