@@ -49,27 +49,58 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     const gender=c1.filter(l=>new RegExp(`^Total.*\\b${verb}\\b`,'i').test(l.text.trim())&&genderLabel.test(l.text));
     const overall=gender.filter(l=>!/(?:full|part)\s*-\s*time/i.test(l.text));
     const rows=overall.length?overall:gender;
-    const found=rows.map(l=>({match:l.text.match(new RegExp(`\\b${verb}\\s*:?\\s*_*(\\d[\\d,]*)_*\\s*$`,'i')),line:l})).filter(x=>x.match);
-    const bothTextGenders=found.some(x=>/\b(?:men|males?)\b/i.test(x.line.text))&&found.some(x=>/\b(?:women|females?)\b/i.test(x.line.text));
-    if(bothTextGenders)candidates.push({value:found.reduce((n,x)=>n+number(x.match![1])!,0),page:found[0].line.page,method:'sum of PDF gender/status counts'});
+    const countCells=(suffix:string)=>/^\s*_*\d[\d,]*(?:\.0+)?_*(?:\s+_*\d[\d,]*(?:\.0+)?_*)*\s*$/.test(suffix)?suffix.trim().split(/\s+/).map(v=>number(v.replaceAll('_',''))!):[];
+    const suffix=(text:string)=>text.match(new RegExp(`\\b${verb}(?:\\s+in\\s+Fall\\s+\\d{4})?\\s*:?\\s*([\\d,_ .]+)\\s*$`,'i'))?.[1]??'';
+    const genderKey=(text:string)=>/\b(?:unknown gender|unknown sex)\b/i.test(text)?'unknown':/\b(?:another gender|non.binary)\b/i.test(text)?'another':/\b(?:women|females?)\b/i.test(text)?'women':/\b(?:men|males?)\b/i.test(text)?'men':'';
+    const found=rows.map(line=>{
+      const values=countCells(suffix(line.text));let value:number|null=values.length===1?values[0]:null;
+      if(key==='enrolled'&&/part\s*-\s*time/i.test(line.text)&&/\benrolled\s+(?:n\s*\/\s*a|not applicable)\s*$/i.test(line.text))value=0;
+      // Merged cells may print full-time and overall gender counts on one row.
+      // Accept the extra total only when a matching part-time row reconciles it.
+      if(values.length===2&&key==='enrolled'&&/full\s*-\s*time/i.test(line.text)){
+        const part=rows.filter(l=>/part\s*-\s*time/i.test(l.text)&&genderKey(l.text)===genderKey(line.text)&&l.page===line.page);
+        const cells=part.length===1?countCells(suffix(part[0].text)):[];
+        if(cells.length===1&&values[0]+cells[0]===values[1])value=values[0];
+      }
+      return {value,line};
+    });
+    const bothTextGenders=found.some(x=>genderKey(x.line.text)==='men')&&found.some(x=>genderKey(x.line.text)==='women');
+    const completeStatuses=overall.length>0||['men','women'].every(g=>found.some(x=>genderKey(x.line.text)===g&&/full\s*-\s*time/i.test(x.line.text))&&found.some(x=>genderKey(x.line.text)===g&&/part\s*-\s*time/i.test(x.line.text)));
+    if(bothTextGenders&&completeStatuses&&found.every(x=>x.value!==null))candidates.push({value:found.reduce((n,x)=>n+x.value!,0),page:found[0].line.page,method:'sum of PDF gender/status counts'+(found.some(x=>/\bn\s*\/\s*a\s*$/i.test(x.line.text))?' (part-time explicitly not applicable)':'')});
+    const partialGender=bothTextGenders&&completeStatuses&&found.some(x=>x.value===null)&&found.every(x=>x.value!==null||['unknown','another'].includes(genderKey(x.line.text)))?found.reduce((n,x)=>n+(x.value??0),0):null;
+    // Some CDS tables put genders in columns instead of in row labels.
+    // Read only complete rows under a recognized header; ignore the printed year.
+    let genderColumns=0;
+    for(const [i,line] of c1.entries()){
+      const header=c1.slice(Math.max(0,i-3),i+1).map(l=>l.text).join(' ');
+      if(/\bMen\b/i.test(header)&&/\bWomen\b/i.test(header)&&!header.includes('Total'))genderColumns=2+(/\bAnother\b.*\bGender\b|Non.binary/i.test(header)?1:0)+(/\bUnknown\b.*\b(?:Gender|Sex)\b/i.test(header)?1:0);
+      if(/\bIn[- ]State\b/i.test(line.text))genderColumns=0;
+      if(!genderColumns||!/^Total\b/i.test(line.text)||genderLabel.test(line.text))continue;
+      const values=countCells(suffix(line.text));
+      if(values.length===genderColumns)candidates.push({value:values.reduce((a,v)=>a+v,0),page:line.page,method:'sum of PDF gender columns'});
+    }
     const c1Text=c1.map(l=>l.text).join(' ');
     const residencyHeader=/\bin[- ]state\b/i.test(c1Text)&&/\bout(?:-|\s)/i.test(c1Text)&&/\binternat(?:ional|-)/i.test(c1Text);
     for(const [index,line] of c1.entries()) {
       if(!new RegExp(`^Total.*\\b${verb}\\b`,'i').test(line.text.trim())||genderLabel.test(line.text))continue;
-      const suffix=line.text.split(new RegExp(`\\b${verb}\\b`,'i')).at(-1)!.replace(/^\s*:?\s*/, '').trim();
-      if(!/^[\d,]+(?:\s+[\d,]+)*$/.test(suffix))continue;
-      const values=suffix.split(/\s+/).map(v=>number(v)!);
-      if(values.length===1)candidates.push({value:values[0],page:line.page,method:'PDF overall total'});
+      const values=countCells(suffix(line.text));if(!values.length)continue;
+      if(values.length===1){
+        if(values[0]===0&&residencyHeader){r.warnings.push(`C1 ${key}: a residency table shows zero with blank component cells. This ambiguous total is not used; check the original source.`);continue;}
+        candidates.push({value:values[0],page:line.page,method:'PDF overall total'});
+      }
       const header=c1.slice(0,index).findLast(l=>/\bin[- ]state\b/i.test(l.text));
       const hasTotalColumn=!!header&&/\bTotal\b/i.test(header.text);
       const totalFirst=!!header&&/\bTotal\b.*\bin[- ]state\b/i.test(header.text);
       // Some tables include an explicit Total column before their residency columns.
       // Others contain only the four residency counts, which must be summed.
-      if(residencyHeader&&hasTotalColumn&&values.length>1&&values.length<=5)candidates.push({value:totalFirst?values[0]:values.at(-1)!,page:line.page,method:'PDF residency table Total column'});
+      if(residencyHeader&&header&&hasTotalColumn&&values.length>1&&values.length<=5)candidates.push({value:totalFirst?values[0]:values.at(-1)!,page:line.page,method:'PDF residency table Total column'});
       const breakdown=hasTotalColumn?(totalFirst?values.slice(1):values.slice(0,-1)):values;
       const componentCount=header&&/\bunknown\b/i.test(header.text)?4:3;
-      if(breakdown.length===componentCount&&residencyHeader)candidates.push({value:breakdown.reduce((n,v)=>n+v,0),page:line.page,method:'sum of PDF residency counts'});
+      if(breakdown.length===componentCount&&residencyHeader&&header)candidates.push({value:breakdown.reduce((n,v)=>n+v,0),page:line.page,method:'sum of PDF residency counts'});
     }
+    // An unfilled optional gender row is never assumed to be zero. The known
+    // counts can corroborate an independently reported, equal overall total.
+    if(partialGender!==null&&candidates.some(c=>c.value===partialGender))candidates.push({value:partialGender,page:found[0].line.page,method:'reported gender counts agree with verified total; optional gender cells unfilled'});
     delete r.metrics[key];delete r.evidence[key];
     if(candidates.length&&candidates.every(c=>c.value===candidates[0].value)) {
       const first=candidates[0];put(key,first.value,'C1',first.page,[...new Set(candidates.map(c=>c.method))].join('; cross-checked with '));
@@ -97,7 +128,7 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
       let text=line.text;
       // A wrapped reading/writing label can place all score columns on the next line.
       const next=scoreLines[i+1];
-      if(!/\b\d{2,4}\b/.test(text)&&next?.page===line.page&&/^(?:Writing\s*)?[\d\s,]+(?:\s*Writing)?$/i.test(next.text.trim()))text+=' '+next.text;
+      if(!/\b\d{2,4}\b/.test(text)&&next?.page===line.page&&/^(?:(?:and\s+)?Writing\s*)?[\d\s,]+(?:\s*Writing)?$/i.test(next.text.trim()))text+=' '+next.text;
       text=text.replace(/\(\s*\d+\s*-\s*\d+\s*\)/g,'').replace(/(\d),(?=\d{3}\b)/g,'$1');
       const values=[...text.matchAll(/\b\d{2,4}\b/g)].map(m=>Number(m[0]));
       const min=key==='act'?1:200,max=key==='act'?36:key==='sat'?1600:800;
@@ -107,7 +138,8 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     }
   }
   for(const key of ['sat','act'])if(r.metrics[`${key}_submitted`]===undefined)for(const line of sectionLines(9)) {
-    const match=line.text.match(new RegExp(`^Submitting ${key} Scores\\s+([\\d.]+)%?\\s+(?:Number submitting ${key} scores\\s+)?([\\d,]+)`,'i'));
+    const match=line.text.match(new RegExp(`^(?:Percent\\s+)?Submitting ${key} Scores\\s+([\\d.]+)%?\\s+(?:Number submitting ${key} scores\\s+)?([\\d,]+)`,'i'));
+    if(/^Percent\s+Submitting/i.test(line.text)&&!/Number submitting/i.test(line.text))continue;
     if(match){put(`${key}_submitted`,number(match[1]),'C9',line.page);put(`${key}_submitted_count`,number(match[2]),'C9',line.page);break;}
   }
   for(const [prefix,names] of [['Q111_',factorNames.slice(0,6)],['Q112_',factorNames.slice(6)]] as const)names.forEach((label,i)=>{
@@ -116,6 +148,20 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
   });
   if(!r.factors.length) {
     const lines=sectionLines(7);
+    const compact=(value:string)=>value.toLowerCase().replace(/\b[x✓✔]\b/g,'').replace(/[^a-z0-9]/g,'').replace('academicgradepointaveragegpa','academicgpa').replace('extracurriculuar','extracurricular').replace('affilitation','affiliation');
+    // A factor label can wrap around its mark; keep the mark's real coordinates.
+    const factorLine=(name:string)=>{
+      const target=compact(name);
+      for(let i=0;i<lines.length;i++){
+        if(!target.startsWith(compact(lines[i].text))&&!compact(lines[i].text).startsWith(target))continue;
+        const chunks:typeof lines=[];
+        for(let j=i;j<Math.min(i+3,lines.length)&&lines[j].page===lines[i].page;j++){
+          chunks.push(lines[j]);const text=chunks.map(l=>l.text).join(' ');
+          if(compact(text).startsWith(target))return {...lines[i],text,words:chunks.flatMap(l=>l.words)};
+        }
+      }
+    };
+    for(const name of factorNames){const line=factorLine(name);if(!line)continue;const tail=compact(line.text).slice(compact(name).length);const index=ratings.findIndex(rating=>compact(rating)===tail);if(index>=0)r.factors.push({label:name,rating:ratings[index],page:line.page});}
     const header=lines.find(l=>/Very\s*Important/i.test(l.text)&&/Considered/i.test(l.text));
     if(header) {
       const words=header.words.flatMap(w=>{let used=0;return w.str.split(/\s+/).filter(Boolean).map(s=>{const word={...w,str:s,x:w.x+w.width*used/Math.max(1,w.str.length),width:w.width*s.length/Math.max(1,w.str.length)};used+=s.length+1;return word;});});
@@ -124,8 +170,8 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
       if(very&&important&&considered&&not) {
         const xs=[very.x+25,important.x+important.width/2,considered.x+considered.width/2,not.x+20];
         for(const name of factorNames) {
-          const normalized=name.toLowerCase().replace(/[’']/g,'');
-          const line=lines.find(l=>l.text.toLowerCase().replace(/[’']/g,'').includes(normalized)||name==='Recommendations'&&/Recommendation\(s\)/i.test(l.text));
+          if(r.factors.some(f=>f.label===name))continue;
+          const line=factorLine(name);
           if(!line)continue;const marks=line.words.filter(w=>/^[xX✓✔]$/.test(w.str.trim())&&w.x>very.x-10);
           if(marks.length===1){const x=marks[0].x+marks[0].width/2,index=xs.reduce((best,v,i)=>Math.abs(x-v)<Math.abs(x-xs[best])?i:best,0);r.factors.push({label:name,rating:ratings[index],page:line.page});}
         }
@@ -135,6 +181,13 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
   for(const [key,prefix,section] of [['rd_deadline','AP_DL_FRSH','C14'],['ed_deadline','AP_DL_EDEC_1','C21'],['ed_notification','AP_NOTF_DL_EDEC_1','C21']]) {
     const month=fields.get(prefix+'_MON'),day=fields.get(prefix+'_DAY');
     if(month&&day&&number(month.value)!==null&&number(day.value)!==null)put(key,`${month.value}/${day.value}`,section,month.page,'PDF form field');
+  }
+  for(const [key,n,label] of [['rd_deadline',14,'Application closing date \\(fall\\)'],['ed_deadline',21,'First or only early decision plan closing date'],['ed_notification',21,'First or only early decision plan notification date'],['ed2_deadline',21,'Other early decision plan closing date']] as const){
+    if(r.metrics[key]!==undefined)continue;
+    for(const line of sectionLines(n)){
+      const m=line.text.match(new RegExp(`^${label}\\s*:?\\s*(.+)$`,'i'));if(!m)continue;
+      if(/^(?:\d{1,2}\/\d{1,2}(?:\/\d{4})?|(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}(?:st|nd|rd|th)?)$/i.test(m[1].trim())){put(key,m[1].trim(),`C${n}`,line.page,'PDF labeled date');break;}
+    }
   }
   const policy=fields.get('EXAM_CODE_S1A');if(policy)put('test_policy',({ADMS_REQ:'Required',ADMS_CONSIDER:'Not required; considered if submitted',ADMS_REC:'Recommended',ADMS_NCONSIDER:'Not considered'} as Record<string,string>)[policy.value.trim()]??null,'C8',policy.page,'PDF form field');
   for(const [key,n,d,section] of [['admit_rate','admitted','applicants','C1'],['yield_rate','enrolled','admitted','C1'],['ed_rate','ed_admitted','ed_applicants','C21'],['waitlist_rate','waitlist_admitted','waitlist_accepted','C2']])if(typeof r.metrics[n]==='number'&&typeof r.metrics[d]==='number'&&r.metrics[d]>0)put(key,100*Number(r.metrics[n])/Number(r.metrics[d]),section,r.evidence[n]?.page??null,'calculated');

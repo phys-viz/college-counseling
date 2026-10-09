@@ -1,0 +1,90 @@
+[
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2018,
+    "title": "NYU Common Data Set 2018-19",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/nyu/2018-19/5e67394b5b8daa980da174423ed28b43facea152eabf7eab18ddee8c8574619a.pdf",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "5e67394b5b8daa980da174423ed28b43facea152eabf7eab18ddee8c8574619a",
+    "cache_path": ".sites-runtime/nyu/nyu-2018.pdf",
+    "source_type": "pdf"
+  },
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2019,
+    "title": "NYU Common Data Set 2019-20",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/nyu/2019-20/db6776d603da3f6534d90c000900e687e5e59974829559c99d21ec21e006a069.pdf",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "db6776d603da3f6534d90c000900e687e5e59974829559c99d21ec21e006a069",
+    "cache_path": ".sites-runtime/nyu/nyu-2019.pdf",
+    "source_type": "pdf"
+  },
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2020,
+    "title": "NYU Common Data Set 2020-21",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/new-york-university/2020-21/fca3655c2eb2b84ee1e4295b3bd6799083232830868bc499b35d105811316d48.pdf",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "fca3655c2eb2b84ee1e4295b3bd6799083232830868bc499b35d105811316d48",
+    "cache_path": ".sites-runtime/nyu/nyu-2020.pdf",
+    "source_type": "pdf"
+  },
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2021,
+    "title": "NYU Common Data Set 2021-22",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/nyu/2021-22/02723a50ca340457f2242546832df144dd21bd257a55c00311fe0549f41b1190.xlsx",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "02723a50ca340457f2242546832df144dd21bd257a55c00311fe0549f41b1190",
+    "cache_path": ".sites-runtime/nyu/nyu-2021.xlsx",
+    "source_type": "xlsx"
+  },
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2022,
+    "title": "NYU Common Data Set 2022-23",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/new-york-university/2022-23/3de9ca3ac5284d75244f6016d68d6bd36b44d3dcece35755889fd1ca13f3ed87.pdf",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "3de9ca3ac5284d75244f6016d68d6bd36b44d3dcece35755889fd1ca13f3ed87",
+    "cache_path": ".sites-runtime/nyu/nyu-2022.pdf",
+    "source_type": "pdf"
+  },
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2023,
+    "title": "NYU Common Data Set 2023-24",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/nyu/2023-24/4c6d603f5769609c748707514bf14d994efc37bec3ea5f5540cc07921f941963.pdf",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "4c6d603f5769609c748707514bf14d994efc37bec3ea5f5540cc07921f941963",
+    "cache_path": ".sites-runtime/nyu/nyu-2023.pdf",
+    "source_type": "pdf"
+  },
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2024,
+    "title": "NYU Common Data Set 2024-25",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/nyu/2024-25/ee0239a577622fe3142ff8bba85a792c8047e89a6b31ee869d057eba6e5026d5.pdf",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "ee0239a577622fe3142ff8bba85a792c8047e89a6b31ee869d057eba6e5026d5",
+    "cache_path": ".sites-runtime/nyu/nyu-2024.pdf",
+    "source_type": "pdf"
+  },
+  {
+    "school_id": "new-york-university",
+    "school": "New York University",
+    "year": 2025,
+    "title": "NYU Common Data Set 2025-26",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/nyu/2025-26/fbff7d3be331c60cf1a03587d8ed810315f745267cfad3d3a936500be32de476.xlsx",
+    "index_url": "https://www.nyu.edu/employees/resources-and-services/administrative-services/institutional-research/self-service-reporting-resources/factbook.html",
+    "sha256": "fbff7d3be331c60cf1a03587d8ed810315f745267cfad3d3a936500be32de476",
+    "cache_path": ".sites-runtime/nyu/nyu-2025.xlsx",
+    "source_type": "xlsx"
+  }
+]

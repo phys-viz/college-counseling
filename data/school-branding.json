@@ -78,5 +78,17 @@
     "logo": "/school-marks/boston-college.png",
     "logo_source": "https://bceagles.com/favicon.ico",
     "logo_source_sha256": "58c5a644cf122ad5f142f4e13de241962a7c22debf7ee759a75f83f34e67dfd4"
+  },
+  {
+    "id": "new-york-university",
+    "aliases": [
+      "new-york-university",
+      "nyu"
+    ],
+    "color": "#57068C",
+    "color_source": "https://engineering.nyu.edu/marketing-and-communications/identity-guide/design-elements",
+    "logo": "/school-marks/new-york-university.png",
+    "logo_source": "https://www.nyu.edu/favicon.ico",
+    "logo_source_sha256": "8e1212c3a2488920cce141a333464a8b7f69eda05ecc0fc80b853756731291c9"
   }
 ]

@@ -39,8 +39,14 @@ export function enrichMetrics(r:Report,pages:PDFPage[]):Report {
  field('gpa_average',['FRSH_GPA','FRSH_HS_GPA_AVG_N']);field('gpa_submitted',['FRSH_GPA_SUBMIT_P']);
  for(const [i,[id]] of gpaBands.entries())for(const [pop,prefix] of [['scores','FRSH_GPA_SUBMIT_'],['no_scores','FRSH_GPA_NO_SUB_'],['all','EN_FRSH_GPA_']] as const)field(`gpa_${id}_${pop}`,[prefix+(i+1)+'_P']);
  const c11=block('C',11),c12=block('C',12);
- matchValue('gpa_average','C12',c12,/Average High School GPA\b/i);
+ matchValue('gpa_average','C12',c12,/Average High School GPA\b(?: of.*?submitted GPA)?\s*:?\s*/i);
  matchValue('gpa_submitted','C12',c12,/(?:Percent Submitting GPA|submitted high school GPA\s*:)/i);
+ for(let i=0;i<c12.length;i++){
+  if(!/Average high school GPA/i.test(c12[i].text))continue;
+  const text=c12.slice(i,i+3).filter(l=>l.page===c12[i].page).map(l=>l.text.replace(/^C12[.\s]+/i,'')).join(' ');
+  const m=text.match(/Average high school GPA of[^:]*submitted GPA\s*:\s*(\d+(?:\.\d+)?)(?:\s|$)/i);
+  if(m)put('gpa_average',Number(m[1]),c12[i].page,'PDF wrapped GPA answer','C12');
+ }
  const gpaHeader=c11.find(l=>l.words.filter(w=>/^Percent$/i.test(w.str.trim())).length===3);
  const gpaXs=gpaHeader?.words.filter(w=>/^Percent$/i.test(w.str.trim())).map(w=>w.x+w.width/2);
  for(const [id,label] of gpaBands){
@@ -96,6 +102,7 @@ export function enrichMetrics(r:Report,pages:PDFPage[]):Report {
  for(const [i,[id]] of classBands.entries())field(`class_${id}`,[`CLASS_SEC_${i+1}`]);
  // Filled zero checker cells do not establish GPA or distribution answers.
  const b22=block('B',22);const retentionYear=b22.map(l=>l.text).join(' ').match(/(?:entered|entering|cohort[^.]*?)\s+(?:in\s+)?Fall\s+(\d{4})/i);if(retentionYear)put('retention_cohort',Number(retentionYear[1]),b22[0].page);
+ matchValue('retention_rate','B22',b22,/^Enter retention rate\s*:\s*/i);
  const retentionPercent=b22.flatMap(row=>{const m=row.text.match(/^(\d+(?:\.\d+)?)%$/);return m?[{value:Number(m[1]),page:row.page}]:[];});
  if(retentionPercent.length===1)put('retention_rate',retentionPercent[0].value,retentionPercent[0].page,'PDF sole retention answer','B22');
  for(const [n,key] of [[6,'graduation_adjusted'],[7,'graduated_4'],[10,'graduated_6']] as const){const rows=block('B',n);const answers=rows.filter(l=>/^[\d,]+$/.test(l.text));if(answers.length===1)put(key,numeric(answers[0].text),answers[0].page,'PDF graduation answer',`B${n}`);}
