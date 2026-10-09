@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import {normalizePDF} from '../lib/extract-pdf.ts';
+import './register-ts.mjs';
+const {normalizePDF}=await import('../lib/extract-pdf.ts');
 const document={url:'https://school.edu/cds.pdf',title:'CDS 2025',year:2025};
 function parse(text,form_fields=[]) {
  const lines=['C1 Students who applied in Fall 2025',...text,'C2 Waitlist'].map(text=>({text,words:[]}));

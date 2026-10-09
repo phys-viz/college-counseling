@@ -1,6 +1,7 @@
 import {database,ensureSeed} from '@/lib/database';
-import {trendMetrics,type TrendResults,type TrendReport} from '@/lib/trend-types';
+import {calculateTrendChanges,type TrendResults,type TrendReport} from '@/lib/trend-types';
 import type {Report} from '@/lib/report-types';
+import {deriveExtraMetrics} from '@/lib/extract-additional';
 
 export async function GET(request:Request) {
   const params=new URL(request.url).searchParams;
@@ -12,13 +13,13 @@ export async function GET(request:Request) {
   try {
     await ensureSeed();
     const [result,schoolList]=await Promise.all([
-      database().prepare(`SELECT payload FROM reports WHERE school_id IN (${schools.map(()=>'?').join(',')}) AND year BETWEEN ? AND ? ORDER BY year,school`).bind(...schools,from,to).all<{payload:string}>(),
+      database().prepare(`SELECT payload FROM reports WHERE school_id IN (${schools.map(()=>'?').join(',')}) AND year BETWEEN ? AND ? ORDER BY year,school`).bind(...schools,Math.max(1900,from-4),to).all<{payload:string}>(),
       database().prepare('SELECT DISTINCT school_id,school FROM reports ORDER BY school').all<{school_id:string;school:string}>(),
     ]);
     const reports:TrendReport[]=result.results.map(row=>{
-      const r=JSON.parse(row.payload) as Report;
+      const r=deriveExtraMetrics(JSON.parse(row.payload) as Report);
       const metrics:TrendReport['metrics']={};const evidence:TrendReport['evidence']={};
-      for(const k of [...trendMetrics.map(m=>m.value),'admitted'] as const) {
+      for(const k of Object.keys(r.metrics)) {
         const value=r.metrics[k];if(typeof value==='number'&&Number.isFinite(value))metrics[k]=value;
         if(r.evidence[k])evidence[k]=r.evidence[k];
       }
@@ -31,9 +32,11 @@ export async function GET(request:Request) {
           else delete metrics[key];
         }
       }
-      return {school_id:r.school_id,school:r.school,year:r.year,source_url:r.source_url,index_url:r.index_url,source_type:r.source_type,metrics,evidence};
+      const reporting={cost_year:typeof r.metrics.cost_year==='string'?r.metrics.cost_year:undefined,aid_year:typeof r.metrics.aid_year==='string'?r.metrics.aid_year:undefined,retention_cohort:metrics.retention_cohort,graduation_cohort:metrics.graduation_cohort};
+      return {school_id:r.school_id,school:r.school,year:r.year,source_url:r.source_url,index_url:r.index_url,source_type:r.source_type,metrics,evidence,reporting};
     });
-    return Response.json({reports,schools:schoolList.results} satisfies TrendResults);
+    calculateTrendChanges(reports);
+    return Response.json({reports:reports.filter(r=>r.year>=from),schools:schoolList.results} satisfies TrendResults);
   } catch(e) {
     console.error('Trend load failed',e);
     return Response.json({error:'The trend data could not load. Please retry.'},{status:503});

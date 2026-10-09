@@ -1,14 +1,15 @@
-import {trendFormat,trendSource,type TrendReport,type TrendMetric} from './trend-types';
+import {trendContext,trendDisplay,trendSource,isScoreRange,type TrendReport,type TrendMetric} from './trend-types';
 
 function download(name:string,blob:Blob) {
   const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;link.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 export function exportTrendCSV(reports:TrendReport[],ids:string[],from:number,to:number,metric:TrendMetric,name:string) {
-  const rows:unknown[][]=[['School','Fall year','Metric','Value','Applications','Students admitted','Students enrolled','Source URL','Source section','Source page']];
+  const rows:unknown[][]=[['School','Report fall year','Metric','Value','Applications','Students admitted','Students enrolled','Source URL','Source section','Source page','25th percentile','Reported median','75th percentile','Prior-year source','Reporting period']];
   for(let year=from;year<=to;year++)for(const id of ids) {
     const r=reports.find(r=>r.school_id===id&&r.year===year);
-    rows.push([reports.find(r=>r.school_id===id)?.school??id,year,metric,r?.metrics[metric]??'',r?.metrics.applicants??'',r?.metrics.admitted??'',r?.metrics.enrolled??'',r?trendSource(r,metric):'',r?.evidence[metric]?.section??'',r?.evidence[metric]?.page??'']);
+    const key=isScoreRange(metric)?metric.replace('_range',''):'';
+    rows.push([reports.find(r=>r.school_id===id)?.school??id,year,metric,isScoreRange(metric)?trendDisplay(r,metric):r?.metrics[metric]??'',r?.metrics.applicants??'',r?.metrics.admitted??'',r?.metrics.enrolled??'',r?trendSource(r,metric):'',r?.evidence[key?key+'_25':metric]?.section??'',r?.evidence[key?key+'_25':metric]?.page??'',key?r?.metrics[key+'_25']??'':'',key?r?.metrics[key+'_50']??'':'',key?r?.metrics[key+'_75']??'':'',r?.previous?.source_url??'',r?trendContext(r,metric):'']);
   }
   const escape=(v:unknown)=>'"'+String(v??'').replaceAll('"','""')+'"';
   download(`${name}.csv`,new Blob([rows.map(r=>r.map(escape).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}));
@@ -20,7 +21,9 @@ export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',opti
   const original=chart.getBoundingClientRect();const width=Math.max(1200,Math.ceil(original.width)),scale=width/original.width;
   const plotHeight=Math.round(original.height*scale),top=130;
   const sources=options.names.map(name=>options.reports.find(r=>r.school===name)).filter((r):r is TrendReport=>!!r);
-  const height=top+plotHeight+110+sources.length*28;
+  const noteLines:string[]=[];let noteLine='';const lineLength=Math.floor((width-72)/8);
+  for(const word of options.note.split(' ')){if(noteLine.length+word.length+1>lineLength){noteLines.push(noteLine);noteLine='';}noteLine+=(noteLine?' ':'')+word;}if(noteLine)noteLines.push(noteLine);
+  const height=top+plotHeight+110+sources.length*28+Math.max(0,noteLines.length-1)*22;
   const root=document.createElementNS(ns,'svg');root.setAttribute('xmlns',ns);root.setAttribute('width',String(width));root.setAttribute('height',String(height));root.setAttribute('viewBox',`0 0 ${width} ${height}`);
   const title=document.createElementNS(ns,'title');title.textContent=options.title;root.appendChild(title);
   const background=document.createElementNS(ns,'rect');background.setAttribute('width','100%');background.setAttribute('height','100%');background.setAttribute('fill','#fff');root.appendChild(background);
@@ -32,17 +35,18 @@ export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',opti
   const originals=[chart,...chart.querySelectorAll('*')],clones=[clone,...clone.querySelectorAll('*')];
   const properties=['fill','stroke','stroke-width','stroke-dasharray','font-family','font-size','font-weight','text-anchor','dominant-baseline','opacity'];
   originals.forEach((node,i)=>{const style=getComputedStyle(node);for(const property of properties)(clones[i] as SVGElement).style.setProperty(property,style.getPropertyValue(property));});
-  clone.setAttribute('x','0');clone.setAttribute('y',String(top));clone.setAttribute('width',String(width));clone.setAttribute('height',String(plotHeight));clone.setAttribute('viewBox',`0 0 ${original.width} ${original.height}`);
+  clone.setAttribute('x','0');clone.setAttribute('y',String(top));clone.setAttribute('width',String(width));clone.setAttribute('height',String(plotHeight));clone.setAttribute('viewBox',chart.getAttribute('viewBox')??`0 0 ${original.width} ${original.height}`);
   clone.querySelectorAll('[tabindex]').forEach(n=>n.removeAttribute('tabindex'));root.appendChild(clone);
-  text('Fall cohort',width/2,top+plotHeight+12,17).setAttribute('text-anchor','middle');
-  text(options.note,36,top+plotHeight+44,16);
+  text('Report fall year',width/2,top+plotHeight+12,17).setAttribute('text-anchor','middle');
+  noteLines.forEach((line,i)=>text(line,36,top+plotHeight+44+i*22,16));
   sources.forEach((r,i)=>{
     const a=document.createElementNS(ns,'a');a.setAttribute('href',r.index_url);
     const domain=new URL(r.index_url).hostname;
-    const node=text(`Source: ${r.school} · Common Data Set, Section C1 · ${domain}`,36,top+plotHeight+76+i*28,16);
+    const section=r.evidence[isScoreRange(options.metric)?options.metric.replace('_range','_25'):options.metric]?.section??'CDS';
+    const node=text(`Source: ${r.school} · Common Data Set, Section ${section} · ${domain}`,36,top+plotHeight+76+Math.max(0,noteLines.length-1)*22+i*28,16);
     a.appendChild(node);root.appendChild(a);
   });
-  const metadata=document.createElementNS(ns,'metadata');metadata.textContent=JSON.stringify(options.reports.map(r=>({school:r.school,year:r.year,metric:options.metric,value:trendFormat(options.metric,r.metrics[options.metric]??null),source:trendSource(r,options.metric)})));root.appendChild(metadata);
+  const metadata=document.createElementNS(ns,'metadata');metadata.textContent=JSON.stringify(options.reports.map(r=>({school:r.school,year:r.year,metric:options.metric,value:trendDisplay(r,options.metric),source:trendSource(r,options.metric),previous:r.previous})));root.appendChild(metadata);
   const xml=new XMLSerializer().serializeToString(root),blob=new Blob([xml],{type:'image/svg+xml;charset=utf-8'});
   if(kind==='svg'){download(`${options.name}.svg`,blob);return;}
   const url=URL.createObjectURL(blob);

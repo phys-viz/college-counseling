@@ -22,7 +22,7 @@ export async function GET(request:Request) {
       database().prepare('SELECT DISTINCT school_id,school FROM reports ORDER BY school').all(),
       (school?database().prepare('SELECT DISTINCT year FROM reports WHERE school_id=? ORDER BY year DESC').bind(school):database().prepare('SELECT DISTINCT year FROM reports ORDER BY year DESC')).all(),
     ]);
-    return Response.json({reports:result.results.map(row=>{const {sections,...summary}=JSON.parse(row.payload) as Report;return {...summary,available_years:row.matching_years};}),total:schoolView?count?.school_count??0:count?.report_count??0,report_count:count?.report_count??0,schools:schools.results,years:years.results,offset,limit});
+    return Response.json({reports:result.results.map(row=>{const {sections,additional_sections,...summary}=JSON.parse(row.payload) as Report;return {...summary,available_years:row.matching_years};}),total:schoolView?count?.school_count??0:count?.report_count??0,report_count:count?.report_count??0,schools:schools.results,years:years.results,offset,limit});
   }catch(e){console.error('Report load failed',e);return Response.json({error:'The admissions database is unavailable. Please retry.'},{status:503});}
 }
 export async function POST(request:Request) {

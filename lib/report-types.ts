@@ -1,13 +1,16 @@
+import {extraMetrics,metricUnit} from './metric-definitions';
 export type Report = {
   school_id: string; school: string; year: number; report_label: string; source_url: string; index_url: string;
   source_type: string; sha256: string; extracted_at: string; review_status: string;
-  metrics: Record<string, number | string>; evidence: Record<string,{section:string;page:number|null;method:string}>;
+  metrics: Record<string, number | string>; evidence: Record<string,{section:string;page:number|null;method:string;source_url?:string;source_type?:string}>;
   factors: {label:string;rating:string;page:number}[];
   sections: {page:number;text:string;form_fields:{name:string;value:string;label?:string|null;rect?:number[]}[]}[];
   warnings:string[];
+  additional_sections?: {page:number;text:string;form_fields:{name:string;value:string;label?:string|null;rect?:number[]}[]}[];
 };
 export type Summary = Omit<Report,'sections'> & {available_years?:number};
 export const labels: Record<string,string> = {
+  ...Object.fromEntries(Object.entries(extraMetrics).map(([key,value])=>[key,value.label])),
   applicants:'Applications',admitted:'Students admitted',enrolled:'Students enrolled',admit_rate:'Admission rate',yield_rate:'Enrollment yield',
   waitlist_offered:'Waitlist offers',waitlist_accepted:'Accepted waitlist places',waitlist_admitted:'Admitted from waitlist',waitlist_rate:'Waitlist admission rate',
   ed_applicants:'Early decision applications',ed_admitted:'Early decision admits',ed_rate:'Early decision admission rate',
@@ -23,7 +26,11 @@ export function format(key:string,value:unknown) {
   if(value===undefined || value===null || value==='') return 'Not reported';
   if(typeof value==='string') return value;
   if(typeof value!=='number') return 'Not reported';
-  if(key.endsWith('_rate') || ['top_tenth','top_quarter','top_half','rank_submitted','sat_submitted','act_submitted'].includes(key)) return `${value.toFixed(1)}%`;
-  if(key==='fee') return `$${value.toFixed(0)}`;
+  const unit=metricUnit(key);
+  if(unit==='percent') return `${value.toFixed(1)}%`;
+  if(unit==='dollars') return `$${value.toLocaleString('en-US',{maximumFractionDigits:0})}`;
+  if(unit==='gpa')return value.toFixed(2);
+  if(unit==='ratio')return `${value}:1`;
+  if(unit==='year')return String(value);
   return value.toLocaleString('en-US');
 }

@@ -1,0 +1,33 @@
+import {chromium} from '../.sites-runtime/browser/node_modules/playwright/index.mjs';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+const page=await browser.newPage({viewport:{width:1440,height:1050}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+const choose=async(label,value)=>{await page.getByRole('combobox',{name:label,exact:true}).click();await page.getByRole('option',{name:value,exact:true}).click();};
+const ready=()=>page.waitForFunction(()=>!Array.from(document.querySelectorAll('button')).find(b=>b.textContent.includes('Download PNG'))?.disabled);
+const download=async(button,path)=>{const p=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();await(await p).saveAs(path);return fs.readFileSync(path);};
+try{
+ await page.goto('http://127.0.0.1:5173/');const card=page.locator('.school-card').filter({hasText:'Cornell University'});await card.getByRole('button',{name:'View admissions profile'}).click();
+ const dialog=page.getByRole('dialog');await dialog.getByRole('tab',{name:'Academic profile',exact:true}).click();
+ await page.locator('.score-profiles').waitFor();assert.equal(await page.locator('.score-profile .reported-median').count(),4);
+ assert((await page.locator('.score-profile').first().innerText()).includes('Reported median: 1530'));
+ assert((await page.locator('.distribution').first().innerText()).includes('93.5%'));
+ await dialog.getByRole('tab',{name:'Costs & outcomes',exact:true}).click();assert((await dialog.innerText()).includes('$73,946'));assert((await dialog.innerText()).includes('2019'));
+ const tuition=dialog.getByRole('link',{name:'$73,946 G1',exact:true});assert((await tuition.getAttribute('href')).endsWith('#page=29'));
+ await page.screenshot({path:'.sites-runtime/metrics-profile-desktop.png'});
+ await page.setViewportSize({width:390,height:844});assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)),'Mobile dialog overflow');await page.screenshot({path:'.sites-runtime/metrics-profile-mobile.png'});
+ await dialog.getByRole('button',{name:'Close',exact:true}).click();await page.setViewportSize({width:1440,height:1050});
+ await page.getByRole('tab',{name:'Trends',exact:true}).click();await ready();await choose('Metric','SAT composite · middle 50%');
+ await page.getByRole('heading',{name:'No reported values in this range',exact:true}).waitFor();assert.equal(await page.locator('.score-range-chart').count(),0,'Historical section scores must not become invented composites');
+ await choose('Metric','SAT reading · middle 50%');await ready();assert.equal(await page.locator('.score-range-chart .trend-point').count(),6);assert.equal(await page.locator('.score-range-chart .reported-median').count(),0,'No inferred historical medians');
+ await page.getByRole('spinbutton',{name:'To year',exact:true}).fill('2025');await page.getByRole('spinbutton',{name:'From year',exact:true}).fill('2024');await ready();await choose('Metric','SAT composite · middle 50%');
+ assert.equal(await page.locator('.score-range-chart .trend-point').count(),2);assert.equal(await page.locator('.score-range-chart .reported-median').count(),2);
+ assert((await page.locator('.trend-data').innerText()).includes('1490–1550 · median 1530'));
+ const svg=(await download('Download SVG','.sites-runtime/sat-ranges.svg')).toString();assert(svg.includes('viewBox="0 0 1000 156"'));assert(svg.includes('median 1530'));assert(svg.includes('#page=19'));
+ const png=await download('Download PNG','.sites-runtime/sat-ranges.png');assert.equal(png.subarray(1,4).toString(),'PNG');assert(png.length>10000);
+ const csv=(await download('Download chart data','.sites-runtime/sat-ranges.csv')).toString();assert(csv.includes('"Reported median"'));assert(csv.includes('"1530"'));
+ await choose('Compare with','University of South Carolina (Columbia)');await ready();await page.waitForFunction(()=>document.querySelectorAll('.score-range-chart .trend-point').length===4);assert.equal(await page.locator('.score-range-chart .trend-point').count(),4);
+ await page.screenshot({path:'.sites-runtime/sat-ranges-desktop.png',fullPage:true});await page.setViewportSize({width:390,height:844});assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)),'Mobile SAT chart overflow');await page.screenshot({path:'.sites-runtime/sat-ranges-mobile.png',fullPage:true});
+ console.log('PASS: source-linked extended profiles, SAT ranges and real medians, missing composites, comparison, SVG/PNG/CSV exports, mobile layout');
+}finally{await browser.close();}
+if(errors.length)throw new Error(errors.join('\n'));

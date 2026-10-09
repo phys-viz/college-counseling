@@ -1,0 +1,35 @@
+import './register-ts.mjs';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const {enrichMetrics}=await import('../lib/extract-additional.ts');
+const {scoreRange,trendDisplay,trendFormat,calculateTrendChanges}=await import('../lib/trend-types.ts');
+const {validateReports}=await import('../lib/validate-import.ts');
+const template=JSON.parse(fs.readFileSync('public/import-template.json','utf8'))[0];
+function fixture(name){const f=JSON.parse(fs.readFileSync(`scripts/fixtures/metrics/${name}.json`,'utf8'));const r={...structuredClone(template),year:f.year,source_url:f.source_url,sha256:f.sha256,metrics:{...f.baseline},evidence:{}};return enrichMetrics(r,f.pages);}
+const cornell=fixture('cornell-2025');
+for(const [key,value] of Object.entries({sat_25:1490,sat_50:1530,sat_75:1550,sat_band_1400_1600:93.47,sat_band_1000_1199:.65,in_state_applicants:12978,in_state_admitted:1720,tuition_private:73946,cost_year:'2026-2027',average_grant:63023,retention_rate:97.82,graduation_cohort:2019,graduation_adjusted:3174,graduated_4:2724,graduated_6:3001,class_total:2391,transfer_applicants:7381,transfer_admitted:864}))assert.equal(cornell.metrics[key],value,`Cornell ${key}`);
+assert.equal(cornell.metrics.gpa_average,undefined,'Blank GPA and zero checkers are not answers');
+assert(!Object.keys(cornell.metrics).some(k=>/^gpa_4_0/.test(k)));
+assert.equal(cornell.evidence.sat_50.page,19);
+assert.equal(cornell.evidence.tuition_private.page,29);
+const usc=fixture('south-carolina-2025');
+assert.equal(usc.metrics.gpa_average,3.68);assert.equal(usc.metrics.gpa_submitted,97.61);assert.equal(usc.metrics.sat_band_1400_1600,18.62);assert.equal(usc.metrics.ea_deadline,'10/15');assert.equal(usc.metrics.ea_restrictive,'No');assert.equal(usc.metrics.graduation_cohort,2019);
+const clemson=fixture('clemson-2024');
+assert.equal(clemson.metrics.gpa_average,undefined);assert.equal(clemson.metrics.gpa_4_0_scores,86.19);assert.equal(clemson.metrics.gpa_4_0_all,undefined);assert.equal(clemson.metrics.gpa_4_0_no_scores,undefined);assert.equal(clemson.metrics.average_merit_grant,4905);assert.equal(clemson.metrics.aid_first_year_count,4506);assert.equal(clemson.metrics.merit_participation,24.19);assert.equal(clemson.metrics.graduation_cohort,2018);
+const wlu=fixture('washington-and-lee-university-2025');
+for(const [key,value] of Object.entries({applicants:8963,admitted:1214,enrolled:499,graduation_cohort:2019,graduation_adjusted:462,graduated_4:422,graduated_6:443,retention_rate:97.46,class_total:513,class_2_9:94,class_10_19:334,class_50_plus_rate:0,tuition_private:73575,required_fees:1285,housing_food:20575,cost_year:'2026-2027',aid_first_year_count:499,need_met:100,average_grant:71985,merit_recipients:29,average_merit_grant:62110}))assert.equal(wlu.metrics[key],value,`W&L ${key}`);
+const historical=fixture('cornell-2010');
+for(const [key,value] of Object.entries({graduation_cohort:2004,graduation_adjusted:3051,graduated_4:2621,graduated_6:2832,retention_rate:96,class_total:2068,class_2_9:333,class_10_19:787,books:800,personal_expenses:1630}))assert.equal(historical.metrics[key],value,`Cornell 2010 ${key}`);
+assert.equal(historical.metrics.tuition_private,undefined,'Contract and endowed college alternatives must not become one tuition');
+assert.equal(fixture('washington-and-lee-university-2024').metrics.average_grant,68548);
+assert.deepEqual(scoreRange({metrics:{sat_25:1200,sat_75:1400}},'sat'),{low:1200,median:null,high:1400});
+assert.equal(scoreRange({metrics:{reading_25:700,reading_75:750,math_25:750,math_75:800}},'sat'),null,'Do not add section percentiles to invent a composite');
+assert.equal(scoreRange({metrics:{sat_25:1500,sat_75:1400}},'sat'),null);
+assert.equal(trendDisplay({metrics:{sat_25:1200,sat_75:1400}},'sat_range'),'1200–1400');
+assert.equal(trendFormat('admit_rate_change',-2.5),'-2.50 pp');assert.equal(trendFormat('tuition_private',70000),'$70,000');assert.equal(trendFormat('gpa_average',3.68),'3.68');
+const series=Array.from({length:5},(_,i)=>({school_id:'school',school:'School',year:2020+i,source_url:`https://school.edu/${2020+i}.pdf`,source_type:'pdf',metrics:{applicants:100+i*25,admit_rate:30-i*2},evidence:{applicants:{section:'C1',page:9,method:'reported'}}}));
+calculateTrendChanges(series);assert.equal(series[1].metrics.application_growth,25);assert.equal(series[1].metrics.admit_rate_change,-2);assert.equal(series[4].metrics.admit_rate_5yr,26);assert.equal(series[0].metrics.application_growth,undefined);assert.equal(series[4].previous.year,2023);
+const gap=series.filter(r=>r.year!==2022).map(r=>({...r,metrics:{applicants:r.metrics.applicants,admit_rate:r.metrics.admit_rate}}));calculateTrendChanges(gap);assert.equal(gap.find(r=>r.year===2023).metrics.application_growth,undefined);assert.equal(gap.at(-1).metrics.admit_rate_5yr,undefined);
+for(const r of [cornell,usc,clemson,wlu,historical])validateReports([r]);
+for(const [key,value] of [['gpa_average',0],['sat_band_1400_1600',101],['transfer_admitted',20000]]){const r=structuredClone(cornell);r.metrics[key]=value;assert.throws(()=>validateReports([r]),key);}
+console.log('PASS: real-source form/text metrics, distinct GPA populations, blank checkers, graduation cohorts, aid denominators, split class labels, source pages, SAT gaps and units');

@@ -1,5 +1,6 @@
 import type {Report} from './report-types';
 import type {SourceDocument} from './source-types';
+import {enrichMetrics} from './extract-additional';
 export type PDFWord={str:string;x:number;y:number;width:number};
 export type PDFLine={text:string;words:PDFWord[]};
 export type PDFPage={page:number;text:string;lines:PDFLine[];form_fields:Report['sections'][number]['form_fields']};
@@ -143,7 +144,7 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
   if(!year)r.warnings.push('The fall cohort year could not be determined. Enter it from C1.');
   if(document.year&&year&&document.year!==year)r.warnings.push(`The archive link suggests ${document.year}, but C1 reports fall ${year}. Verify the cohort year.`);
   r.warnings.push('Automatically extracted from PDF fields and text. Review all figures against the source. Missing responses are not inferred.','Admissions policies may refer to a later application cycle than the reported cohort.');
-  return r;
+  return enrichMetrics(r,pages);
 }
 
 export async function extractPDF(buffer:ArrayBuffer,document:SourceDocument,indexURL:string,signal:AbortSignal,onProgress:(text:string)=>void):Promise<Report> {

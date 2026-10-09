@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {validateReports} from '../lib/validate-import.ts';
+import './register-ts.mjs';
+const {validateReports}=await import('../lib/validate-import.ts');
 const seed=JSON.parse(fs.readFileSync(new URL('../data/reports.json',import.meta.url),'utf8'));
 assert.equal(validateReports(structuredClone(seed)).length,seed.length);
 const template=JSON.parse(fs.readFileSync(new URL('../public/import-template.json',import.meta.url),'utf8'));
