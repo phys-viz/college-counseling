@@ -6,7 +6,7 @@ const expected=JSON.parse(fs.readFileSync('data/new-archive-source-review.json',
 const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
 const page=await browser.newPage({viewport:{width:1440,height:1050}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 try{
- await page.goto('http://127.0.0.1:5173/');await page.getByRole('tab',{name:'Trends',exact:true}).waitFor();
+ await page.goto('http://127.0.0.1:5173/');await page.getByRole('heading',{name:'Cornell University',exact:true}).waitFor();
  await page.route('**/__archive.pdf?*',route=>route.fulfill({body:fs.readFileSync(`.sites-runtime/new-archives/${new URL(route.request().url()).searchParams.get('file')}.pdf`),contentType:'application/pdf'}));
  for(const d of docs.filter(d=>!process.argv.includes('--ui-only')&&(!process.argv.includes('--remaining')||d.school_id==='the-college-of-new-jersey'&&d.year<=2015))){
   const r=await page.evaluate(async d=>{const {extractPDF}=await import('/lib/extract-pdf.ts');const bytes=await(await fetch('/__archive.pdf?file='+d.school_id+'-'+d.year)).arrayBuffer();return extractPDF(bytes,{url:d.url,title:d.title,year:d.year},d.index_url,new AbortController().signal,()=>{});},d);
