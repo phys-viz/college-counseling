@@ -35,18 +35,41 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
   const mappings:Record<string,[string,string]>={applicants:['AP_RECD_1ST_N','C1'],admitted:['AP_ADMT_1ST_N','C1'],enrolled:['EN_TOT_1ST_N','C1'],waitlist_offered:['AP_RECD_WAIT_N','C2'],waitlist_accepted:['AP_ACPT_WAIT_N','C2'],waitlist_admitted:['AP_ADMT_WAIT_N','C2'],ed_applicants:['AP_RECD_EDEC_N','C21'],ed_admitted:['AP_ADMT_EDEC_N','C21'],fee:['AP_FEE_RES_D','C13'],top_tenth:['FRSH_HS_RANK_10_P','C10'],top_quarter:['FRSH_HS_RANK_25_P','C10'],top_half:['FRSH_HS_RANK_50_P','C10'],rank_submitted:['FRSH_HS_RANK_SUBMIT_P','C10'],sat_submitted:['SUBMIT_SAT1_P','C9'],act_submitted:['SUBMIT_ACT_P','C9'],sat_submitted_count:['SUBMIT_SAT1_N','C9'],act_submitted_count:['SUBMIT_ACT_N','C9']};
   for(const [key,[name,section]] of Object.entries(mappings)){const f=fields.get(name);if(f)put(key,number(f.value),section,f.page,'PDF form field');}
   for(const [key,prefix,verb] of [['applicants','AP_RECD_1ST_','applied'],['admitted','AP_ADMT_1ST_','admitted'],['enrolled','EN_TOT_1ST_','enrolled']]) {
-    if(r.metrics[key]!==undefined)continue;
+    const candidates:{value:number;page:number;method:string}[]=[];
+    const direct=fields.get(prefix+'N');
+    if(direct&&number(direct.value)!==null)candidates.push({value:number(direct.value)!,page:direct.page,method:'PDF form field'});
     let vals=['MEN_N','WMN_N','NON_BINARY_N','UNK_N'].map(s=>fields.get(prefix+s)).filter(f=>f&&number(f.value)!==null);
     if(key==='enrolled'&&!vals.length)vals=['FT_MEN_N','PT_MEN_N','FT_WMN_N','PT_WMN_N','FT_NON_BINARY_N','PT_NON_BINARY_N','FT_UNK_N','PT_UNK_N'].map(s=>fields.get(prefix+s)).filter(f=>f&&number(f.value)!==null);
-    if(vals.length){put(key,vals.reduce((n,f)=>n+number(f!.value)!,0),'C1',vals[0]!.page,'sum of PDF form counts');continue;}
-    const gender=c1.filter(l=>new RegExp(`^Total.*\\b(?:men|women|another gender|unknown gender|unknown sex|non.binary)\\b.*\\b${verb}\\b`,'i').test(l.text.trim()));
+    // A single recognized gender field is a subgroup, never a cohort total.
+    const bothFormGenders=vals.some(f=>/(?:^|_)MEN_N$/.test(f!.name))&&vals.some(f=>/(?:^|_)WMN_N$/.test(f!.name));
+    if(bothFormGenders)candidates.push({value:vals.reduce((n,f)=>n+number(f!.value)!,0),page:vals[0]!.page,method:'sum of PDF form counts'});
+    const genderLabel=/\b(?:men|women|males?|females?|another gender|unknown gender|unknown sex|non.binary|gender|sex)\b/i;
+    const gender=c1.filter(l=>new RegExp(`^Total.*\\b${verb}\\b`,'i').test(l.text.trim())&&genderLabel.test(l.text));
     const overall=gender.filter(l=>!/(?:full|part)-time/i.test(l.text));
     const rows=overall.length?overall:gender;
-    const found=rows.map(l=>({match:l.text.match(new RegExp(`\\b${verb}\\s*:?\\s*([\\d,]+)\\s*$`,'i')),page:l.page})).filter(x=>x.match);
-    if(found.length>=2){put(key,found.reduce((n,x)=>n+number(x.match![1])!,0),'C1',found[0].page,'sum of PDF gender/status counts');continue;}
-    const total=c1.find(l=>new RegExp(`^Total.*${verb}`,'i').test(l.text.trim())&&!/\b(?:men|women|gender|sex)\b/i.test(l.text));
-    const match=total?.text.match(new RegExp(`\\b${verb}\\s*:?\\s*([\\d,]+)(?:\\s|$)`,'i'));
-    if(match)put(key,number(match[1]),'C1',total!.page);
+    const found=rows.map(l=>({match:l.text.match(new RegExp(`\\b${verb}\\s*:?\\s*([\\d,]+)\\s*$`,'i')),line:l})).filter(x=>x.match);
+    const bothTextGenders=found.some(x=>/\b(?:men|males?)\b/i.test(x.line.text))&&found.some(x=>/\b(?:women|females?)\b/i.test(x.line.text));
+    if(bothTextGenders)candidates.push({value:found.reduce((n,x)=>n+number(x.match![1])!,0),page:found[0].line.page,method:'sum of PDF gender/status counts'});
+    const c1Text=c1.map(l=>l.text).join(' ');
+    const residencyHeader=/\bin[- ]state\b/i.test(c1Text)&&/\bout(?:-|\s)/i.test(c1Text)&&/\binternat(?:ional|-)/i.test(c1Text)&&/\bunknown\b/i.test(c1Text);
+    for(const [index,line] of c1.entries()) {
+      if(!new RegExp(`^Total.*\\b${verb}\\b`,'i').test(line.text.trim())||genderLabel.test(line.text))continue;
+      const suffix=line.text.split(new RegExp(`\\b${verb}\\b`,'i')).at(-1)!.replace(/^\s*:?\s*/, '').trim();
+      if(!/^[\d,]+(?:\s+[\d,]+)*$/.test(suffix))continue;
+      const values=suffix.split(/\s+/).map(v=>number(v)!);
+      if(values.length===1)candidates.push({value:values[0],page:line.page,method:'PDF overall total'});
+      const header=c1.slice(0,index).findLast(l=>/\bin[- ]state\b/i.test(l.text));
+      const hasTotalColumn=!!header&&/\bTotal\b.*\bin[- ]state\b/i.test(header.text);
+      // Some tables include an explicit Total column before their residency columns.
+      // Others contain only the four residency counts, which must be summed.
+      if(residencyHeader&&hasTotalColumn&&values.length>1&&values.length<=5)candidates.push({value:values[0],page:line.page,method:'PDF residency table Total column'});
+      const breakdown=hasTotalColumn?values.slice(1):values;
+      if(breakdown.length===4&&residencyHeader)candidates.push({value:breakdown.reduce((n,v)=>n+v,0),page:line.page,method:'sum of PDF residency counts'});
+    }
+    delete r.metrics[key];delete r.evidence[key];
+    if(candidates.length&&candidates.every(c=>c.value===candidates[0].value)) {
+      const first=candidates[0];put(key,first.value,'C1',first.page,[...new Set(candidates.map(c=>c.method))].join('; cross-checked with '));
+    } else if(candidates.length)r.warnings.push(`C1 ${key} totals disagree across the PDF's reported breakdowns (${[...new Set(candidates.map(c=>c.value))].join(', ')}). Check the source and enter the correct total before saving.`);
   }
   const patterns:[string,number,RegExp][]=[
     ['waitlist_offered',2,/Number of qualified applicants (?:offered|placed).*?([\d,]+)\s*$/i],
