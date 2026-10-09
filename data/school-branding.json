@@ -1,0 +1,82 @@
+[
+  {
+    "id": "cornell",
+    "aliases": [
+      "cornell"
+    ],
+    "color": "#B31B1B",
+    "color_source": "https://cals.cornell.edu/faculty-staff/marketing-communications/resources/brand-guide/visual-identity/color-typography",
+    "logo": "/school-marks/cornell.png",
+    "logo_source": "https://www.cornell.edu/favicon-96x96.png",
+    "logo_source_sha256": "d9161d985a88747713cc6506b0f02edeac1be6f1a7b66a341df46011681d94b5"
+  },
+  {
+    "id": "harvard",
+    "aliases": [
+      "harvard",
+      "harvard-university"
+    ],
+    "color": "#A51C30",
+    "color_source": "https://identityguide.hms.harvard.edu/brand-design/colors",
+    "logo": "/school-marks/harvard.png",
+    "logo_source": "https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed.png?w=192",
+    "logo_source_sha256": "2cb61f339af6d378bccaba83fe1636151c5d7e421a720f7781305f9171a4eff8"
+  },
+  {
+    "id": "south-carolina",
+    "aliases": [
+      "south-carolina"
+    ],
+    "color": "#73000A",
+    "color_source": "https://www.sc.edu/about/offices_and_divisions/communications/toolbox/colors/index.php",
+    "logo": "/school-marks/south-carolina.png",
+    "logo_source": "https://www.sc.edu/favicon.ico",
+    "logo_source_sha256": "dc68e60175f6d16fb853663d4b599abb105da1bddc34724126772ca22315b3c5"
+  },
+  {
+    "id": "clemson",
+    "aliases": [
+      "clemson"
+    ],
+    "color": "#B94700",
+    "color_source": "https://www.clemson.edu/brand/web/color.html",
+    "logo": "/school-marks/clemson.png",
+    "logo_source": "https://www.clemson.edu/brand/images/logo/level-one/paw-orange.png",
+    "logo_source_sha256": "bd567d30b8b7f2384afb3e4a498d8064db8735720873fd95df554dc2e88ec9f1"
+  },
+  {
+    "id": "washington-and-lee",
+    "aliases": [
+      "washington-and-lee-university",
+      "washington-and-lee"
+    ],
+    "color": "#003087",
+    "color_source": "https://my.wlu.edu/communications-and-public-affairs/washington-and-lee-university-brand-guide/color-and-typography",
+    "logo": "/school-marks/washington-and-lee.png",
+    "logo_source": "https://www.wlu.edu/Global/favicon.ico",
+    "logo_source_sha256": "b0aa3fb80e114b8f9e6fa7cc2399d00f926e55da630d0fa950da628c963ffbd4"
+  },
+  {
+    "id": "penn-state",
+    "aliases": [
+      "penn-state-university-park",
+      "penn-state"
+    ],
+    "color": "#001E44",
+    "color_source": "https://brand.psu.edu/design-toolkit/color",
+    "logo": "/school-marks/penn-state.png",
+    "logo_source": "https://www.psu.edu/favicon.ico",
+    "logo_source_sha256": "f228d6a88c42d8b16f9138a3134e9eb1f3887896e39ef91687f0f44fed62497b"
+  },
+  {
+    "id": "boston-college",
+    "aliases": [
+      "boston-college"
+    ],
+    "color": "#8A100B",
+    "color_source": "https://library.bc.edu/answerwall/2022/01/page/2/",
+    "logo": "/school-marks/boston-college.png",
+    "logo_source": "https://bceagles.com/favicon.ico",
+    "logo_source_sha256": "58c5a644cf122ad5f142f4e13de241962a7c22debf7ee759a75f83f34e67dfd4"
+  }
+]

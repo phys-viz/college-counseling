@@ -1,4 +1,13 @@
 import {trendContext,trendDisplay,trendSource,isScoreRange,type TrendReport,type TrendMetric} from './trend-types';
+import {schoolInitials,type SchoolBrand} from './school-branding';
+
+async function embeddedLogo(path:string|undefined):Promise<string|null>{
+ if(!path?.startsWith('/school-marks/'))return null;
+ try{const response=await fetch(path,{signal:AbortSignal.timeout(5000)});if(!response.ok)return null;
+  const blob=await response.blob();if(blob.size>1_000_000||!blob.type.startsWith('image/'))return null;
+  return await new Promise<string>((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result));reader.onerror=reject;reader.readAsDataURL(blob);});
+ }catch{return null;}
+}
 
 function download(name:string,blob:Blob) {
   const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;link.click();
@@ -16,10 +25,11 @@ export function exportTrendCSV(reports:TrendReport[],ids:string[],from:number,to
 }
 
 // Package the rendered chart as a standalone figure with its own title, legend, and citations.
-export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',options:{title:string;subtitle:string;names:string[];colors:string[];reports:TrendReport[];metric:TrendMetric;note:string;name:string}) {
+export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',options:{title:string;subtitle:string;names:string[];brands:SchoolBrand[];reports:TrendReport[];metric:TrendMetric;note:string;name:string}) {
   const ns='http://www.w3.org/2000/svg';
   const original=chart.getBoundingClientRect();const width=Math.max(1200,Math.ceil(original.width)),scale=width/original.width;
-  const plotHeight=Math.round(original.height*scale),top=130;
+  const plotHeight=Math.round(original.height*scale),top=110+options.names.length*42;
+  const logos=await Promise.all(options.brands.map(brand=>embeddedLogo(brand.logo)));
   const sources=options.names.map(name=>options.reports.find(r=>r.school===name)).filter((r):r is TrendReport=>!!r);
   const noteLines:string[]=[];let noteLine='';const lineLength=Math.floor((width-72)/8);
   for(const word of options.note.split(' ')){if(noteLine.length+word.length+1>lineLength){noteLines.push(noteLine);noteLine='';}noteLine+=(noteLine?' ':'')+word;}if(noteLine)noteLines.push(noteLine);
@@ -29,7 +39,16 @@ export async function exportTrendImage(chart:SVGSVGElement,kind:'png'|'svg',opti
   const background=document.createElementNS(ns,'rect');background.setAttribute('width','100%');background.setAttribute('height','100%');background.setAttribute('fill','#fff');root.appendChild(background);
   const text=(value:string,x:number,y:number,size=18,color='#536880')=>{const node=document.createElementNS(ns,'text');node.textContent=value;node.setAttribute('x',String(x));node.setAttribute('y',String(y));node.setAttribute('font-family','Arial, Helvetica, sans-serif');node.setAttribute('font-size',String(size));node.setAttribute('fill',color);root.appendChild(node);return node;};
   text(options.title,36,42,28,'#172d48').setAttribute('font-weight','700');text(options.subtitle,36,74);
-  options.names.forEach((name,i)=>text(`${i===0?'●':'◆'} ${name}`,36+i*470,108,18,options.colors[i]));
+  options.names.forEach((name,i)=>{
+    const brand=options.brands[i],y=110+i*42;
+    if(logos[i]){const mark=document.createElementNS(ns,'image');mark.setAttribute('href',logos[i]!);mark.setAttribute('x','36');mark.setAttribute('y',String(y-23));mark.setAttribute('width','30');mark.setAttribute('height','30');root.appendChild(mark);}
+    else text(schoolInitials(name),36,y,16,brand.color);
+    text(name,78,y,18,brand.color).setAttribute('font-weight','600');
+    const sample=document.createElementNS(ns,'line');sample.setAttribute('x1',String(width-110));sample.setAttribute('x2',String(width-40));sample.setAttribute('y1',String(y-6));sample.setAttribute('y2',String(y-6));sample.setAttribute('stroke',brand.color);sample.setAttribute('stroke-width','2.5');if(i===1)sample.setAttribute('stroke-dasharray','6 4');root.appendChild(sample);
+    const marker=document.createElementNS(ns,i===0?'circle':'path'),cx=width-75,cy=y-6;
+    if(i===0){marker.setAttribute('cx',String(cx));marker.setAttribute('cy',String(cy));marker.setAttribute('r','5');}else marker.setAttribute('d',`M ${cx} ${cy-6} L ${cx+6} ${cy} L ${cx} ${cy+6} L ${cx-6} ${cy} Z`);
+    marker.setAttribute('fill','#fff');marker.setAttribute('stroke',brand.color);marker.setAttribute('stroke-width','2');root.appendChild(marker);
+  });
   const clone=chart.cloneNode(true) as SVGSVGElement;
   // Inline resolved presentation styles so downloaded SVG/PNG work outside this app.
   const originals=[chart,...chart.querySelectorAll('*')],clones=[clone,...clone.querySelectorAll('*')];
