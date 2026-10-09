@@ -1,0 +1,411 @@
+[
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2008,
+    "title": "Download PDF of Common Data Set 2008-2009 (446\u00a0KB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2008.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1000&context=cds",
+    "sha256": "0d296d57647385813e2e5293354e04429a10474c748974ffbf5f9e06f2ebd2f8",
+    "cache_path": "data/sources/clemson-2008.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2009,
+    "title": "Download PDF of Common Data Set 2009-2010 (786\u00a0KB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2009.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1001&context=cds",
+    "sha256": "b5b3850fcdd8fcdbeaab54deff6c66b291fdda0bc3ceef4ac489d387900764fc",
+    "cache_path": "data/sources/clemson-2009.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2010,
+    "title": "Download PDF of Common Data Set 2010-2011 (798\u00a0KB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2010.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1002&context=cds",
+    "sha256": "6a7c55708f8508784f5d8a1f7ee240230ce308545aac496577d2fb9ffa023741",
+    "cache_path": "data/sources/clemson-2010.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2011,
+    "title": "Download PDF of Common Data Set 2011-2012 (1.2\u00a0MB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2011.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1003&context=cds",
+    "sha256": "4f24ff349da400d31ce962c525a8c42b41c1dff1905f44b4631c63ae4d57bba9",
+    "cache_path": "data/sources/clemson-2011.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2012,
+    "title": "Download PDF of Common Data Set 2012-2013 (1.0\u00a0MB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2012.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1004&context=cds",
+    "sha256": "d68ce6a2155ba4e13ce9333ecd315d46bcd9a246acfb235ff75ac54a3c3cb714",
+    "cache_path": "data/sources/clemson-2012.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2013,
+    "title": "Download PDF of Common Data Set 2013-2014 (2.0\u00a0MB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2013.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1005&context=cds",
+    "sha256": "24790c8f2e0ce4a1073f8a1a379c06f0dd9bde25af0b22422d88bdcd052518a4",
+    "cache_path": "data/sources/clemson-2013.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2014,
+    "title": "Download PDF of Common Data Set 2014-2015 (570\u00a0KB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2014.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1006&context=cds",
+    "sha256": "9be49ed1e55d07ccdf7541642fd54a97310f796b4a435dcb5e7ebc193d2c4e7b",
+    "cache_path": "data/sources/clemson-2014.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2015,
+    "title": "Download PDF of Common Data Set 2015-2016 (533\u00a0KB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2015.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1007&context=cds",
+    "sha256": "8a3a1f1c1e9d3d556f279b35cc4e5d65b749a3699c085ed42a37052ab6cd25ae",
+    "cache_path": "data/sources/clemson-2015.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2016,
+    "title": "Download PDF of Common Data Set 2016-2017 (3.4\u00a0MB)",
+    "url": "https://web.archive.org/web/20230327135629id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2016.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1008&context=cds",
+    "sha256": "561b52b33ac3498f485d96d9a75d7cdedb6e82738cc9c576ae86306803da7e88",
+    "cache_path": "data/sources/clemson-2016.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2017,
+    "title": "Download PDF of Common Data Set 2017-2018 (495\u00a0KB)",
+    "url": "https://web.archive.org/web/20231117183409id_/https://www.clemson.edu/institutional-effectiveness/documents/oir/CommonDataSet2017.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1009&context=cds",
+    "sha256": "e518d80247d525df53a451c0d76547ff21b8c1b073b7badea85c64b40840e2f7",
+    "cache_path": "data/sources/clemson-2017.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2018,
+    "title": "Download PDF of Common Data Set 2018-2019 (476\u00a0KB)",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/clemson/2018-19/bf9bfa44affd16a2e476e75dce514ab97315333eacc746d634d69fc101519cef.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1010&context=cds",
+    "sha256": "bf9bfa44affd16a2e476e75dce514ab97315333eacc746d634d69fc101519cef",
+    "cache_path": "data/sources/clemson-2018.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2019,
+    "title": "Download PDF of Common Data Set 2019-2020 (454\u00a0KB)",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/clemson/2019-20/1f22c15a650b4438806fe55de01fd4bd88e84a738bb570bceb43b9b266243448.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1011&context=cds",
+    "sha256": "1f22c15a650b4438806fe55de01fd4bd88e84a738bb570bceb43b9b266243448",
+    "cache_path": "data/sources/clemson-2019.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2020,
+    "title": "Download PDF of Common Data Set 2020-2021 (437\u00a0KB)",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/clemson/2020-21/3e88a88ede5b843968c5aaf67dc4d1f92239ac9a2255bad19018ea7fc164c3ca.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1012&context=cds",
+    "sha256": "3e88a88ede5b843968c5aaf67dc4d1f92239ac9a2255bad19018ea7fc164c3ca",
+    "cache_path": "data/sources/clemson-2020.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2021,
+    "title": "Common Data Set 2021-2022",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/clemson/2021-22/f7d766773dc0b46cb33f60501bc34b7c5376fb8b2fd2c337d359c761a5ad948f.xlsx",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1013&context=cds",
+    "index_url": "https://open.clemson.edu/cds/",
+    "cache_path": "data/sources/clemson-2021.xlsx",
+    "sha256": "f7d766773dc0b46cb33f60501bc34b7c5376fb8b2fd2c337d359c761a5ad948f",
+    "source_type": "xlsx"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2022,
+    "title": "Download PDF of Common Data Set 2022-2023 (1.1\u00a0MB)",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/clemson/2022-23/b838da3efc8809b1b90318b7f1d22789a276862c80d660d898527718b8d17d6d.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1014&context=cds",
+    "sha256": "b838da3efc8809b1b90318b7f1d22789a276862c80d660d898527718b8d17d6d",
+    "cache_path": "data/sources/clemson-2022.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2023,
+    "title": "Download PDF of Common Data Set 2023-2024 (406\u00a0KB)",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/clemson/2023-24/227c2c1ae2bf69630c3a35c859abd03be5e746641b1164ac8e58d674a3e8fd79.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1015&context=cds",
+    "sha256": "227c2c1ae2bf69630c3a35c859abd03be5e746641b1164ac8e58d674a3e8fd79",
+    "cache_path": "data/sources/clemson-2023.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2024,
+    "title": "Download PDF of Common Data Set 2024-2025 (3.8\u00a0MB)",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/clemson/2024-25/3044c8686b1666bbad99362f54b97f9ebc6ae98b0b94da75baf699fb76fcf05b.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1016&context=cds",
+    "sha256": "3044c8686b1666bbad99362f54b97f9ebc6ae98b0b94da75baf699fb76fcf05b",
+    "cache_path": "data/sources/clemson-2024.pdf"
+  },
+  {
+    "school_id": "clemson",
+    "school": "Clemson University",
+    "year": 2025,
+    "title": "Download PDF of Common Data Set 2025-2026 (3.2\u00a0MB)",
+    "url": "https://raw.githubusercontent.com/DylMon/CommonDataSets/main/data/cds-pdfs/2025-2026/clemson-2526.pdf",
+    "index_url": "https://open.clemson.edu/cds/",
+    "official_url": "https://open.clemson.edu/cgi/viewcontent.cgi?article=1017&context=cds",
+    "sha256": "df3428c13ec37667838ec6a51cc30ead7fcfbba3ece56823204fd468391cd53a",
+    "cache_path": "data/sources/clemson-2025.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2005,
+    "title": "2005-06 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2005-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "00c477e2b16ed30d89dba021043c4e4e37f34366258804b94cd9a45d9d8651c8",
+    "cache_path": "data/sources/washington-and-lee-university-2005.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2006,
+    "title": "2006-07 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2006-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "ad9bf92d0b657b0f602542d7d695cc3e34a73a7d471471e7f6b2d30be447b15a",
+    "cache_path": "data/sources/washington-and-lee-university-2006.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2007,
+    "title": "2007-08 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2007-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "85f31c9b465604fddefcf5bf62d5fd8449e08160505c494eea113d1a7fede575",
+    "cache_path": "data/sources/washington-and-lee-university-2007.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2008,
+    "title": "2008-09 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2008-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "def0f9c05e92d9a28180a7a1aca4c653699f9b954e0c74b5831de5037fb1b1f5",
+    "cache_path": "data/sources/washington-and-lee-university-2008.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2009,
+    "title": "2009-10 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2009-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "8275cf6cda75ea4cb58cc79fc415c166071f6dc5fcfc62581c381be29cbf0b1c",
+    "cache_path": "data/sources/washington-and-lee-university-2009.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2010,
+    "title": "2010-11 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2010-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "94f750f703f0e50e891b03941836066a2e8298ffe79e8f0ba2a36c3fdf18c943",
+    "cache_path": "data/sources/washington-and-lee-university-2010.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2011,
+    "title": "2011-12 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2011-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "96638aa3d04807f56c9c762f5a04903ae26b13529a0f1a4b508ab981cd98139d",
+    "cache_path": "data/sources/washington-and-lee-university-2011.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2012,
+    "title": "2012-13 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2012-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "d748a1e2bfbb9241013941a7fb2f6ce4c32867a48a3e9b93cd6b8909e13098d2",
+    "cache_path": "data/sources/washington-and-lee-university-2012.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2013,
+    "title": "2013-14 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2013-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "5cbd7e98b2c333909125cd8cce9b43056b42cda9ec6159d23f2d8b5ae51ca3f4",
+    "cache_path": "data/sources/washington-and-lee-university-2013.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2014,
+    "title": "2014-15 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2014-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "8d3877088bedb2d8c8095ce3080ad250b7abf1cf2f16f5176fea621a0703539d",
+    "cache_path": "data/sources/washington-and-lee-university-2014.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2015,
+    "title": "2015-16 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2015-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "ed8080c354b1e3e443dc6fcafece413ba1d0452caffa325e42f10bbf7b09f4d3",
+    "cache_path": "data/sources/washington-and-lee-university-2015.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2016,
+    "title": "2016-17 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2016-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "8fae5599b27f8eeb58a28c025b9fd9ca6ae7a2e391288ece750b170d6caa8a72",
+    "cache_path": "data/sources/washington-and-lee-university-2016.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2017,
+    "title": "2017-18 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2017-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "20c154e05544d8f0a8a5c067b9d933944a57ee49fc9775a551f351490ca43673",
+    "cache_path": "data/sources/washington-and-lee-university-2017.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2018,
+    "title": "2018-19 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2018-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "13959869277b83350feed4c5313ea179602909c992e5c04b3499b4b7752b7f16",
+    "cache_path": "data/sources/washington-and-lee-university-2018.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2019,
+    "title": "2019-20 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2019-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "5361c6d74eeee8b5f8abce0ad181a39404d1d01ad3adef79cfff89dc3263514e",
+    "cache_path": "data/sources/washington-and-lee-university-2019.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2020,
+    "title": "2020-21 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2020-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "3b78675e85b28e9645d50782fb2832cf3e3e1463140a1b36442747adf4a8aa84",
+    "cache_path": "data/sources/washington-and-lee-university-2020.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2021,
+    "title": "2021-22 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2021-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "5bd7f13c1ca7e42382c18e6d6aed295ddd2ef524ca42d406270cdeb48a878453",
+    "cache_path": "data/sources/washington-and-lee-university-2021.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2022,
+    "title": "2022-23 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2022-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "0f943cc46b1b4ff57184a1d900801c05e9d10b71dee6d746cd3419895c87481a",
+    "cache_path": "data/sources/washington-and-lee-university-2022.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2023,
+    "title": "2023-24 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2023-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "191924e7f64c24843b39762b4cdfbeb8784284eeb62c2b37dc5502c850e35afe",
+    "cache_path": "data/sources/washington-and-lee-university-2023.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2024,
+    "title": "2024-25 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2024-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "7d528d0db34dfa565df44af0afd58be57a71f5741bcd67d290585f6c1e653309",
+    "cache_path": "data/sources/washington-and-lee-university-2024.pdf"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school": "Washington and Lee University",
+    "year": 2025,
+    "title": "2025-26 Common Data Set",
+    "url": "https://www.wlu.edu/Business%20Units%20and%20Administrative%20Offices/Accreditation%20and%20Institutional%20Research/Common%20Data%20Set/2025-common-data-set.pdf",
+    "index_url": "https://www.wlu.edu/accreditation-and-institutional-research/common-data-set",
+    "sha256": "9fc450a8d97b45ce4e8ba079abed36ddfc11282e5298e9d558b790e1e44e8d65",
+    "cache_path": "data/sources/wlu-2025.pdf"
+  }
+]

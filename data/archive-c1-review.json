@@ -1,0 +1,593 @@
+[
+  {
+    "school_id": "clemson",
+    "year": 2008,
+    "sha256": "0d296d57647385813e2e5293354e04429a10474c748974ffbf5f9e06f2ebd2f8",
+    "totals": {
+      "applicants": 14504,
+      "admitted": 8355,
+      "enrolled": 2982
+    },
+    "pages": {
+      "applicants": 5,
+      "admitted": 6,
+      "enrolled": 6
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2009,
+    "sha256": "b5b3850fcdd8fcdbeaab54deff6c66b291fdda0bc3ceef4ac489d387900764fc",
+    "totals": {
+      "applicants": 19328,
+      "admitted": 12470,
+      "enrolled": 4611
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2010,
+    "sha256": "6a7c55708f8508784f5d8a1f7ee240230ce308545aac496577d2fb9ffa023741",
+    "totals": {
+      "applicants": 16865,
+      "admitted": 9724,
+      "enrolled": 3017
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2011,
+    "sha256": "4f24ff349da400d31ce962c525a8c42b41c1dff1905f44b4631c63ae4d57bba9",
+    "totals": {
+      "applicants": 17016,
+      "admitted": 10215,
+      "enrolled": 2933
+    },
+    "pages": {
+      "applicants": 8,
+      "admitted": 9,
+      "enrolled": 9
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2012,
+    "sha256": "d68ce6a2155ba4e13ce9333ecd315d46bcd9a246acfb235ff75ac54a3c3cb714",
+    "totals": {
+      "applicants": 18500,
+      "admitted": 10706,
+      "enrolled": 3463
+    },
+    "pages": {
+      "applicants": 6,
+      "admitted": 6,
+      "enrolled": 6
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2013,
+    "sha256": "24790c8f2e0ce4a1073f8a1a379c06f0dd9bde25af0b22422d88bdcd052518a4",
+    "totals": {
+      "applicants": 18604,
+      "admitted": 10645,
+      "enrolled": 3289
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 8,
+      "enrolled": 8
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2014,
+    "sha256": "9be49ed1e55d07ccdf7541642fd54a97310f796b4a435dcb5e7ebc193d2c4e7b",
+    "totals": {
+      "applicants": 20755,
+      "admitted": 10967,
+      "enrolled": 3475
+    },
+    "pages": {
+      "applicants": 9,
+      "admitted": 9,
+      "enrolled": 9
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2015,
+    "sha256": "8a3a1f1c1e9d3d556f279b35cc4e5d65b749a3699c085ed42a37052ab6cd25ae",
+    "totals": {
+      "applicants": 22396,
+      "admitted": 11483,
+      "enrolled": 3448
+    },
+    "pages": {
+      "applicants": 8,
+      "admitted": 8,
+      "enrolled": 8
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2016,
+    "sha256": "561b52b33ac3498f485d96d9a75d7cdedb6e82738cc9c576ae86306803da7e88",
+    "totals": {
+      "applicants": 23506,
+      "admitted": 11881,
+      "enrolled": 3684
+    },
+    "pages": {
+      "applicants": 9,
+      "admitted": 9,
+      "enrolled": 10
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2017,
+    "sha256": "e518d80247d525df53a451c0d76547ff21b8c1b073b7badea85c64b40840e2f7",
+    "totals": {
+      "applicants": 26242,
+      "admitted": 12380,
+      "enrolled": 3649
+    },
+    "pages": {
+      "applicants": 12,
+      "admitted": 13,
+      "enrolled": 13
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2018,
+    "sha256": "bf9bfa44affd16a2e476e75dce514ab97315333eacc746d634d69fc101519cef",
+    "totals": {
+      "applicants": 28845,
+      "admitted": 13613,
+      "enrolled": 3792
+    },
+    "pages": {
+      "applicants": 14,
+      "admitted": 14,
+      "enrolled": 15
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2019,
+    "sha256": "1f22c15a650b4438806fe55de01fd4bd88e84a738bb570bceb43b9b266243448",
+    "totals": {
+      "applicants": 29070,
+      "admitted": 14900,
+      "enrolled": 3932
+    },
+    "pages": {
+      "applicants": 14,
+      "admitted": 14,
+      "enrolled": 15
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2020,
+    "sha256": "3e88a88ede5b843968c5aaf67dc4d1f92239ac9a2255bad19018ea7fc164c3ca",
+    "totals": {
+      "applicants": 28600,
+      "admitted": 17715,
+      "enrolled": 4199
+    },
+    "pages": {
+      "applicants": 14,
+      "admitted": 14,
+      "enrolled": 15
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2022,
+    "sha256": "b838da3efc8809b1b90318b7f1d22789a276862c80d660d898527718b8d17d6d",
+    "totals": {
+      "applicants": 52819,
+      "admitted": 22704,
+      "enrolled": 4588
+    },
+    "pages": {
+      "applicants": 8,
+      "admitted": 8,
+      "enrolled": 8
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2023,
+    "sha256": "227c2c1ae2bf69630c3a35c859abd03be5e746641b1164ac8e58d674a3e8fd79",
+    "totals": {
+      "applicants": 60122,
+      "admitted": 22879,
+      "enrolled": 4494
+    },
+    "pages": {
+      "applicants": 17,
+      "admitted": 17,
+      "enrolled": 17
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2024,
+    "sha256": "3044c8686b1666bbad99362f54b97f9ebc6ae98b0b94da75baf699fb76fcf05b",
+    "totals": {
+      "applicants": 61517,
+      "admitted": 23586,
+      "enrolled": 4880
+    },
+    "pages": {
+      "applicants": 14,
+      "admitted": 14,
+      "enrolled": 14
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2025,
+    "sha256": "df3428c13ec37667838ec6a51cc30ead7fcfbba3ece56823204fd468391cd53a",
+    "totals": {
+      "applicants": 64805,
+      "admitted": 27498,
+      "enrolled": 5084
+    },
+    "pages": {
+      "applicants": 15,
+      "admitted": 15,
+      "enrolled": 15
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2005,
+    "sha256": "00c477e2b16ed30d89dba021043c4e4e37f34366258804b94cd9a45d9d8651c8",
+    "totals": {
+      "applicants": 3950,
+      "admitted": 1141,
+      "enrolled": 464
+    },
+    "pages": {
+      "applicants": 5,
+      "admitted": 5,
+      "enrolled": 5
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2006,
+    "sha256": "ad9bf92d0b657b0f602542d7d695cc3e34a73a7d471471e7f6b2d30be447b15a",
+    "totals": {
+      "applicants": 4215,
+      "admitted": 1158,
+      "enrolled": 449
+    },
+    "pages": {
+      "applicants": 6,
+      "admitted": 6,
+      "enrolled": 6
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2007,
+    "sha256": "85f31c9b465604fddefcf5bf62d5fd8449e08160505c494eea113d1a7fede575",
+    "totals": {
+      "applicants": 3719,
+      "admitted": 1018,
+      "enrolled": 462
+    },
+    "pages": {
+      "applicants": 5,
+      "admitted": 5,
+      "enrolled": 5
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2008,
+    "sha256": "def0f9c05e92d9a28180a7a1aca4c653699f9b954e0c74b5831de5037fb1b1f5",
+    "totals": {
+      "applicants": 6386,
+      "admitted": 1074,
+      "enrolled": 454
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2009,
+    "sha256": "8275cf6cda75ea4cb58cc79fc415c166071f6dc5fcfc62581c381be29cbf0b1c",
+    "totals": {
+      "applicants": 6222,
+      "admitted": 1181,
+      "enrolled": 472
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2010,
+    "sha256": "94f750f703f0e50e891b03941836066a2e8298ffe79e8f0ba2a36c3fdf18c943",
+    "totals": {
+      "applicants": 6627,
+      "admitted": 1259,
+      "enrolled": 471
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2011,
+    "sha256": "96638aa3d04807f56c9c762f5a04903ae26b13529a0f1a4b508ab981cd98139d",
+    "totals": {
+      "applicants": 6487,
+      "admitted": 1182,
+      "enrolled": 494
+    },
+    "pages": {
+      "applicants": 6,
+      "admitted": 6,
+      "enrolled": 6
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2012,
+    "sha256": "d748a1e2bfbb9241013941a7fb2f6ce4c32867a48a3e9b93cd6b8909e13098d2",
+    "totals": {
+      "applicants": 5972,
+      "admitted": 1163,
+      "enrolled": 479
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2013,
+    "sha256": "5cbd7e98b2c333909125cd8cce9b43056b42cda9ec6159d23f2d8b5ae51ca3f4",
+    "totals": {
+      "applicants": 6222,
+      "admitted": 1147,
+      "enrolled": 480
+    },
+    "pages": {
+      "applicants": 6,
+      "admitted": 6,
+      "enrolled": 6
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2014,
+    "sha256": "8d3877088bedb2d8c8095ce3080ad250b7abf1cf2f16f5176fea621a0703539d",
+    "totals": {
+      "applicants": 5797,
+      "admitted": 1136,
+      "enrolled": 471
+    },
+    "pages": {
+      "applicants": 4,
+      "admitted": 4,
+      "enrolled": 4
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2015,
+    "sha256": "ed8080c354b1e3e443dc6fcafece413ba1d0452caffa325e42f10bbf7b09f4d3",
+    "totals": {
+      "applicants": 5377,
+      "admitted": 1284,
+      "enrolled": 454
+    },
+    "pages": {
+      "applicants": 6,
+      "admitted": 6,
+      "enrolled": 6
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2016,
+    "sha256": "8fae5599b27f8eeb58a28c025b9fd9ca6ae7a2e391288ece750b170d6caa8a72",
+    "totals": {
+      "applicants": 5101,
+      "admitted": 1203,
+      "enrolled": 466
+    },
+    "pages": {
+      "applicants": 4,
+      "admitted": 4,
+      "enrolled": 4
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2017,
+    "sha256": "20c154e05544d8f0a8a5c067b9d933944a57ee49fc9775a551f351490ca43673",
+    "totals": {
+      "applicants": 5455,
+      "admitted": 1200,
+      "enrolled": 471
+    },
+    "pages": {
+      "applicants": 6,
+      "admitted": 6,
+      "enrolled": 6
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2018,
+    "sha256": "13959869277b83350feed4c5313ea179602909c992e5c04b3499b4b7752b7f16",
+    "totals": {
+      "applicants": 5855,
+      "admitted": 1239,
+      "enrolled": 474
+    },
+    "pages": {
+      "applicants": 8,
+      "admitted": 8,
+      "enrolled": 8
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2019,
+    "sha256": "5361c6d74eeee8b5f8abce0ad181a39404d1d01ad3adef79cfff89dc3263514e",
+    "totals": {
+      "applicants": 6178,
+      "admitted": 1147,
+      "enrolled": 462
+    },
+    "pages": {
+      "applicants": 8,
+      "admitted": 8,
+      "enrolled": 8
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2020,
+    "sha256": "3b78675e85b28e9645d50782fb2832cf3e3e1463140a1b36442747adf4a8aa84",
+    "totals": {
+      "applicants": 4998,
+      "admitted": 1225,
+      "enrolled": 459
+    },
+    "pages": {
+      "applicants": 8,
+      "admitted": 8,
+      "enrolled": 8
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2021,
+    "sha256": "5bd7f13c1ca7e42382c18e6d6aed295ddd2ef524ca42d406270cdeb48a878453",
+    "totals": {
+      "applicants": 6614,
+      "admitted": 1248,
+      "enrolled": 484
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2022,
+    "sha256": "0f943cc46b1b4ff57184a1d900801c05e9d10b71dee6d746cd3419895c87481a",
+    "totals": {
+      "applicants": 7224,
+      "admitted": 1225,
+      "enrolled": 476
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2023,
+    "sha256": "191924e7f64c24843b39762b4cdfbeb8784284eeb62c2b37dc5502c850e35afe",
+    "totals": {
+      "applicants": 6820,
+      "admitted": 1184,
+      "enrolled": 502
+    },
+    "pages": {
+      "applicants": 8,
+      "admitted": 8,
+      "enrolled": 8
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2024,
+    "sha256": "7d528d0db34dfa565df44af0afd58be57a71f5741bcd67d290585f6c1e653309",
+    "totals": {
+      "applicants": 8213,
+      "admitted": 1147,
+      "enrolled": 472
+    },
+    "pages": {
+      "applicants": 7,
+      "admitted": 7,
+      "enrolled": 7
+    }
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "year": 2025,
+    "sha256": "9fc450a8d97b45ce4e8ba079abed36ddfc11282e5298e9d558b790e1e44e8d65",
+    "totals": {
+      "applicants": 8963,
+      "admitted": 1214,
+      "enrolled": 499
+    },
+    "pages": {
+      "applicants": 9,
+      "admitted": 9,
+      "enrolled": 9
+    }
+  },
+  {
+    "school_id": "clemson",
+    "year": 2021,
+    "sha256": "f7d766773dc0b46cb33f60501bc34b7c5376fb8b2fd2c337d359c761a5ad948f",
+    "totals": {
+      "applicants": 47007.0,
+      "admitted": 23138.0,
+      "enrolled": 4589.0
+    },
+    "pages": {
+      "applicants": null,
+      "admitted": null,
+      "enrolled": null
+    },
+    "worksheet": "CDS-C",
+    "cells": [
+      "E20",
+      "E21",
+      "E22"
+    ]
+  }
+]

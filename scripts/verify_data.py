@@ -5,6 +5,18 @@ reports=json.loads((root/'data/reports.json').read_text(encoding='utf8'))
 assert len({(r['school_id'],r['year']) for r in reports})==len(reports)
 assert {r['year'] for r in reports if r['school_id']=='cornell'}==set(range(1999,2026))
 assert {r['year'] for r in reports if r['school_id']=='south-carolina'}==set(range(2000,2026))
+assert {r['year'] for r in reports if r['school_id']=='clemson'}==set(range(2008,2026))
+assert {r['year'] for r in reports if r['school_id']=='washington-and-lee-university'}==set(range(2005,2026))
+import hashlib
+sources=json.loads((root/'data/archive-sources.json').read_text(encoding='utf8'))
+audit=json.loads((root/'data/archive-c1-review.json').read_text(encoding='utf8'))
+assert len(sources)==len(audit)==39
+for source in sources:
+ assert hashlib.sha256((root/source['cache_path']).read_bytes()).hexdigest()==source['sha256']
+ record=next(r for r in reports if r['school_id']==source['school_id'] and r['year']==source['year'])
+ checked=next(a for a in audit if a['school_id']==source['school_id'] and a['year']==source['year'])
+ assert record['sha256']==checked['sha256']==source['sha256']
+ for key,value in checked['totals'].items():assert record['metrics'][key]==value,(source['school_id'],source['year'],key)
 con=sqlite3.connect(root/'data/admissions.sqlite')
 con.execute('CREATE TABLE IF NOT EXISTS reports(id TEXT PRIMARY KEY,school_id TEXT NOT NULL,school TEXT NOT NULL,year INTEGER NOT NULL,payload TEXT NOT NULL,UNIQUE(school_id,year))')
 con.execute('CREATE INDEX IF NOT EXISTS reports_year ON reports(year)')

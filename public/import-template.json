@@ -6,8 +6,10 @@
     "report_label": "2025\u201326",
     "source_url": "https://example.edu/common-data-set.pdf",
     "index_url": "https://example.edu/common-data-set",
-    "sha256": "",
     "source_type": "pdf",
+    "sha256": "",
+    "extracted_at": "2026-10-09T00:56:42.415Z",
+    "review_status": "Replace with your review status",
     "metrics": {
       "applicants": 10000,
       "admitted": 2000,
@@ -40,8 +42,6 @@
     ],
     "warnings": [
       "Template only: replace all example values before importing."
-    ],
-    "extracted_at": "2026-10-07",
-    "review_status": "Replace with your review status"
+    ]
   }
 ]

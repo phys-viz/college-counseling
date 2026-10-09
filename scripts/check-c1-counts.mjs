@@ -16,6 +16,9 @@ assert.equal(parse(['Total In-State Out-of-State International Unknown','Total f
 assert.equal(parse(['Total first-year males who applied 4600']).metrics.applicants,undefined);
 assert.equal(parse(['Total first-year male who applied 4600','Total first-year female who applied 4362']).metrics.applicants,8962);
 assert.equal(parse(['Total first-year men who applied 4600','Total first-year women who applied 4362']).metrics.applicants,8962);
+assert.equal(parse(['Total men applied __2021___','Total women applied __1929___']).metrics.applicants,3950);
+assert.equal(parse(['In-State Out-of-State International Total','Total first\u2010time, first\u2010year (degree seeking) who applied 807 3299 2714 6820']).metrics.applicants,6820);
+assert.equal(parse(['In-State Out-of-State International Total','Total first-year students who applied 807 3299 2714 7000']).metrics.applicants,undefined);
 assert.equal(parse(['In-State Out-of-State International Unknown','Total first-year students who applied 923 3568 4472']).metrics.applicants,undefined);
 const conflict=parse([...genders,'Total first-year students who applied 9000']);
 assert.equal(conflict.metrics.applicants,undefined);assert(conflict.warnings.some(w=>w.includes('totals disagree')));assert.equal(conflict.metrics.admit_rate,undefined);
@@ -25,4 +28,11 @@ assert.equal(parse([],[field('AP_RECD_1ST_MEN_N','4600'),field('AP_RECD_1ST_WMN_
 assert.equal(parse(genders,[field('AP_RECD_1ST_N','4600')]).metrics.applicants,undefined);
 const enrolled=parse(['Total first-year males who enrolled 230','Total first-year females who enrolled 269','Total students of unknown sex who enrolled 0','Total full-time first-year males who enrolled 230','Total part-time first-year males who enrolled 0','Total full-time first-year females who enrolled 269','Total part-time first-year females who enrolled 0']);
 assert.equal(enrolled.metrics.enrolled,499,'Status rows must not be counted again after overall gender rows');
+assert.equal(parse(['Total first-year males who enrolled 230','Total first-year females who enrolled 269','Total full -time first-year males who enrolled 230','Total full -time first-year females who enrolled 269']).metrics.enrolled,499);
+const scoreLines=['C1 Students who applied in Fall 2025','C9 Test scores','Percent submitting SAT scores 41 50','SAT Composite (400 - 1600) 1,410 1,490 1,530','ACT Composite (1 - 36) 32 34 35','C21 Early decision','Number of applicants admitted under early decision plan in Fall 2003','C22 Early action'].map(text=>({text,words:[]}));
+const scores=normalizePDF([{page:9,text:scoreLines.map(l=>l.text).join('\n'),lines:scoreLines,form_fields:[]}],document,'https://school.edu','test');
+assert.equal(scores.metrics.sat_25,1410);assert.equal(scores.metrics.sat_50,1490);assert.equal(scores.metrics.sat_75,1530);
+assert.equal(scores.metrics.act_25,32);assert.equal(scores.metrics.act_75,35);
+assert.equal(scores.metrics.sat_submitted_count,undefined,'Prior-year percentages are not student counts');
+assert.equal(scores.metrics.ed_admitted,undefined,'An unanswered question year is not an admitted count');
 console.log('PASS: male/female and men/women labels, unknown-sex counts, residency reconciliation, partial fields/columns, conflicting totals, no enrollment double counting');

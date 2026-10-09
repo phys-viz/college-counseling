@@ -1,6 +1,6 @@
 # College Admissions Library
 
-A private college-counseling research app containing Cornell's 27 Common Data Set fall cohorts, 1999–2025, and USC Columbia's 26 cohorts, 2000–2025. Includes source-linked Section C text and PDF form answers, normalized admissions counts and rates, waitlists, test percentiles, rank, factor ratings, fees, and historical deadlines where extraction is reliable.
+A private college-counseling research app with 92 seeded Common Data Set reports: Cornell (1999–2025), USC Columbia (2000–2025), Clemson (2008–2025), and Washington and Lee (2005–2025). Includes source-linked Section C text and PDF form answers, normalized admissions counts and rates, waitlists, test percentiles, rank, factor ratings, fees, and historical deadlines where extraction is reliable. Schools imported by counselors remain in the shared database independently of this seed.
 
 ## Use
 
@@ -63,3 +63,19 @@ The **Trends** tab starts with Cornell admission rates for fall 2010–2015. It 
 `check-website-import.mjs` checks original Cornell and USC form/text PDFs against verified counts, scores and factor ratings, rejects Cornell's Section B-only PDF, and exercises review, corrections, replacement protection, source provenance, the save payload and mobile layout without modifying the database. `check-source-fetch.mjs` checks public URL/DNS restrictions, redirects, size limits, credentials and year parsing. `run-framework.mjs` copies the exact installed PDF.js worker to the build's public assets before development/build.
 
 C1 extraction recognizes men/women and male/female labels, includes reported unknown-sex counts, and reconciles recognized overall, gender and residency totals. Residency tables with an explicit Total column are distinguished from tables containing only residency components. A single recognized gender count is never treated as a cohort total. Conflicting totals leave the headline metric blank and require source review. `node scripts/check-c1-counts.mjs` covers these cases; `node scripts/check-wlu-import.mjs` verifies the original W&L 2025 PDF against its gender and residency totals (8,963 applicants, 1,214 admits, 499 enrolled). Updating extraction does not retroactively repair previously saved imports.
+
+Reproduce the Clemson/W&L archive extraction:
+
+```powershell
+python -X utf8 scripts/collect_clemson_wlu.py
+python -X utf8 scripts/ocr_clemson_2025.py
+node scripts/normalize_clemson_wlu.mjs
+python -X utf8 scripts/review_clemson_wlu.py
+node scripts/prepare_archive_import.mjs
+python -X utf8 scripts/verify_data.py
+node scripts/check-archive-discovery.mjs
+```
+
+`data/archive-sources.json` records the original archive links, working source-file URLs, cached paths, and SHA-256 values. W&L files came from its official server. Clemson's current download server rejected requests, so its school-issued reports were recovered from public archival copies: older official files in the Internet Archive and newer files preserved by CollegeData.fyi or a public CommonDataSets repository. The 2021 source is an XLSX workbook; the 2025 PDF requires local OCR and visually reviewed overrides. This adapter does not add OCR to the browser importer. C1 totals are recorded in `data/archive-c1-review.json`; source discrepancies and stale labels are disclosed in each report. Unrecognized factor marks remain blank. Remaining extracted fields retain source evidence and should be reviewed before use.
+
+Preparing the seed preserves an existing corrected W&L 2025 record from an optional local shared-database snapshot, or from the seed on subsequent runs. Live imports add missing school/year records and leave existing counselor records intact. Source discovery now respects HTML base URLs and accessible PDF link labels.

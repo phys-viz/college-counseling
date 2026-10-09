@@ -9,13 +9,14 @@ const clean=async()=>{const text=await page.locator('body').innerText();assert(!
 try {
  await page.goto('http://127.0.0.1:5173/');
  await page.getByRole('button',{name:'View admissions profile',exact:true}).first().waitFor();
- assert.equal(await page.locator('.school-card').count(),2);
- assert((await page.locator('.school-metrics').first().innerText()).includes('1490–1550'));
- assert.equal(await page.locator('.card-source').first().getAttribute('href'),'https://irp.cornell.edu/wp-content/uploads/2026/09/Cornell-Common-Data-Set-2025-26.pdf');
+ assert.equal(await page.locator('.school-card').count(),4);
+ const cornellCard=page.locator('.school-card').filter({hasText:'Cornell University'});
+ assert((await cornellCard.locator('.school-metrics').innerText()).includes('1490–1550'));
+ assert.equal(await cornellCard.locator('.card-source').getAttribute('href'),'https://irp.cornell.edu/wp-content/uploads/2026/09/Cornell-Common-Data-Set-2025-26.pdf');
  const computed=await page.evaluate(()=>({background:getComputedStyle(document.body).backgroundColor,color:getComputedStyle(document.body).color,overflow:document.documentElement.scrollWidth>innerWidth}));
  assert.equal(computed.background,'rgb(243, 246, 250)');assert(!computed.overflow);
  await clean();await page.screenshot({path:'.sites-runtime/schools-desktop.png',fullPage:true});
- await page.getByRole('button',{name:'View admissions profile',exact:true}).first().click();
+ await cornellCard.getByRole('button',{name:'View admissions profile',exact:true}).click();
  await page.getByRole('heading',{name:'Cornell University · Fall 2025',exact:true}).waitFor();
  const dialog=page.getByRole('dialog');
  await dialog.getByRole('tab',{name:'Admissions factors',exact:true}).click();
@@ -54,7 +55,7 @@ try {
  await page.setViewportSize({width:390,height:844});
  assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)));
  await clean();await page.screenshot({path:'.sites-runtime/schools-mobile.png',fullPage:true});
- await page.getByRole('button',{name:'View admissions profile',exact:true}).first().click();
+ await cornellCard.getByRole('button',{name:'View admissions profile',exact:true}).click();
  await page.getByRole('heading',{name:'Cornell University · Fall 2025',exact:true}).waitFor();
  assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)));
  assert.equal(errors.length,0,errors.join('\n'));
