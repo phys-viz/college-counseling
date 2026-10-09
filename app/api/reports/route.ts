@@ -1,10 +1,12 @@
 import {database,ensureSeed,statement} from '@/lib/database';
 import type {Report} from '@/lib/report-types';
 import {validateReports} from '@/lib/validate-import';
+import {savedGenderMetrics as enrichSavedGender} from '@/lib/saved-gender';
+import {deriveExtraMetrics} from '@/lib/extract-additional';
 export async function GET(request:Request) {
   try {
     await ensureSeed(); const u=new URL(request.url); const id=u.searchParams.get('id');
-    if(id) {const row=await database().prepare('SELECT payload FROM reports WHERE id=?').bind(id).first<{payload:string}>();return row?Response.json(JSON.parse(row.payload)):Response.json({error:'Report not found'},{status:404});}
+    if(id) {const row=await database().prepare('SELECT payload FROM reports WHERE id=?').bind(id).first<{payload:string}>();return row?Response.json(deriveExtraMetrics(enrichSavedGender(JSON.parse(row.payload)))):Response.json({error:'Report not found'},{status:404});}
     const q=(u.searchParams.get('q')??'').slice(0,200);const school=u.searchParams.get('school');const year=u.searchParams.get('year');
     const offset=Math.max(0,Number(u.searchParams.get('offset'))||0);const limit=100;
     const clauses:string[]=[];const args:(string|number)[]=[];
@@ -22,7 +24,7 @@ export async function GET(request:Request) {
       database().prepare('SELECT DISTINCT school_id,school FROM reports ORDER BY school').all(),
       (school?database().prepare('SELECT DISTINCT year FROM reports WHERE school_id=? ORDER BY year DESC').bind(school):database().prepare('SELECT DISTINCT year FROM reports ORDER BY year DESC')).all(),
     ]);
-    return Response.json({reports:result.results.map(row=>{const {sections,additional_sections,...summary}=JSON.parse(row.payload) as Report;return {...summary,available_years:row.matching_years};}),total:schoolView?count?.school_count??0:count?.report_count??0,report_count:count?.report_count??0,schools:schools.results,years:years.results,offset,limit});
+    return Response.json({reports:result.results.map(row=>{const {sections,additional_sections,...summary}=deriveExtraMetrics(enrichSavedGender(JSON.parse(row.payload) as Report));return {...summary,available_years:row.matching_years};}),total:schoolView?count?.school_count??0:count?.report_count??0,report_count:count?.report_count??0,schools:schools.results,years:years.results,offset,limit});
   }catch(e){console.error('Report load failed',e);return Response.json({error:'The admissions database is unavailable. Please retry.'},{status:503});}
 }
 export async function POST(request:Request) {

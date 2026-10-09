@@ -90,5 +90,39 @@
     "logo": "/school-marks/new-york-university.png",
     "logo_source": "https://www.nyu.edu/favicon.ico",
     "logo_source_sha256": "8e1212c3a2488920cce141a333464a8b7f69eda05ecc0fc80b853756731291c9"
+  },
+  {
+    "id": "villanova-university",
+    "aliases": [
+      "villanova-university",
+      "villanova"
+    ],
+    "color": "#002664",
+    "color_source": "https://www.villanova.edu/university/comm-marketing/guidelines/villanova-visual-identity/university-colors.html",
+    "logo": "/school-marks/villanova-university.png",
+    "logo_source": "https://www.villanova.edu/etc/designs/villanova/favicon.ico",
+    "logo_source_sha256": "bc8ab379e4e27e032bdfc2c1f84aa9a4a539421cb7603048a2146b0a567d353e"
+  },
+  {
+    "id": "university-of-michigan-ann-arbor",
+    "aliases": [
+      "university-of-michigan-ann-arbor"
+    ],
+    "color": "#00274C",
+    "color_source": "https://cm.engin.umich.edu/our-brand/colors/",
+    "logo": "/school-marks/university-of-michigan-ann-arbor.png",
+    "logo_source": "https://umich.edu/skins/um2013/media/images/touch-icon-iphone-retina.png",
+    "logo_source_sha256": "939abb33ffd0b95346e246d8312641962043dd70a44415a659e640399b8d4a6e"
+  },
+  {
+    "id": "the-college-of-new-jersey",
+    "aliases": [
+      "the-college-of-new-jersey"
+    ],
+    "color": "#293F6F",
+    "color_source": "https://brand.tcnj.edu/wp-content/uploads/sites/11/2026/03/Graphic-Identity-Standards-Guide.pdf",
+    "logo": "/school-marks/the-college-of-new-jersey.png",
+    "logo_source": "https://tcnj.edu/wp-content/uploads/sites/249/2026/04/headway-imported-image-18.png",
+    "logo_source_sha256": "9bdc165560206bec9a25d0d0bee665469047844d6c2d2bcfab25fae9cc316301"
   }
 ]

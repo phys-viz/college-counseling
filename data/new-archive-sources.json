@@ -1,0 +1,432 @@
+[
+  {
+    "school_id": "villanova-university",
+    "school": "Villanova University",
+    "index_url": "https://www.villanova.edu/university/provost/odsdi/external-survey-reporting.html",
+    "url": "https://www.villanova.edu/content/dam/villanova/provost/decision_support/CDS-2025-2026-v3.pdf",
+    "title": "Common Data Set 2025–2026",
+    "year": 2025,
+    "source_type": "pdf",
+    "sha256": "8278511e64ee7d65f830c3f2fe5668a80d740faa4c5356b42740d302529eaa6f"
+  },
+  {
+    "school_id": "villanova-university",
+    "school": "Villanova University",
+    "index_url": "https://www.villanova.edu/university/provost/odsdi/external-survey-reporting.html",
+    "url": "https://www.villanova.edu/content/dam/villanova/provost/decision_support/2024-2025-CDS_v2.pdf",
+    "title": "Common Data Set 2024–2025",
+    "year": 2024,
+    "source_type": "pdf",
+    "sha256": "0f50a3096a3400d633e101976719e97cb8fc6dbe0c8ae892a9b227468c34c68d"
+  },
+  {
+    "school_id": "villanova-university",
+    "school": "Villanova University",
+    "index_url": "https://www.villanova.edu/university/provost/odsdi/external-survey-reporting.html",
+    "url": "https://www.villanova.edu/content/dam/villanova/provost/decision_support/CDS_2023_2024_v2.pdf",
+    "title": "Common Data Set 2023–2024",
+    "year": 2023,
+    "source_type": "pdf",
+    "sha256": "dd0102efcf3e0c3628b38f6ee77cdd54ccfecdcbb64e17d2f17c9d8bbf7c2ca3"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2025-26_umaa.pdf",
+    "title": "2025-26 Common Data Set",
+    "year": 2025,
+    "source_type": "pdf",
+    "sha256": "4385cb8bd0fa9ccaac3633e4920671851ae869a806bfb256b864be18f2c9ab1f"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/CDS_2024-25_UMAA.pdf",
+    "title": "2024-25 Common Data Set",
+    "year": 2024,
+    "source_type": "pdf",
+    "sha256": "d0db8fcffcb7b28e2c2cf33301f8b8402f0dbdeca4d9a258e135dbc862dd72f5"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/CDS_2023-24_UMAA_10-25-24.pdf",
+    "title": "2023-24 Common Data Set",
+    "year": 2023,
+    "source_type": "pdf",
+    "sha256": "fa2f4ab50b6bc7b12bbad7259708547fa9c8ef03dec935b8958bac6f4abf02ba"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2022-2023_umaa.pdf",
+    "title": "2022-23 Common Data Set",
+    "year": 2022,
+    "source_type": "pdf",
+    "sha256": "8971bbe8d4cc86c0e9aee2ecfc154d6591524e3141f12e5dd613828410be9503"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2021-2022_umaa.pdf",
+    "title": "2021-22 Common Data Set",
+    "year": 2021,
+    "source_type": "pdf",
+    "sha256": "ef10955ceda217f02a98f302bebb42953887d4b36fde6e0a8154b5c4d553cfd0"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2020-2021_umaa.pdf",
+    "title": "2020-21 Common Data Set",
+    "year": 2020,
+    "source_type": "pdf",
+    "sha256": "217be8a8fd46bb90a774c019e208493a221bf1bc35ac43b10fc1a65c4faabd5d"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2019-2020_umaa.pdf",
+    "title": "2019-20 Common Data Set",
+    "year": 2019,
+    "source_type": "pdf",
+    "sha256": "ce7c589f838d079bac9702ba3884df60bd0364b49b3e6ec6f61e59c6d34e0769"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2018-2019_umaa.pdf",
+    "title": "2018-19 Common Data Set",
+    "year": 2018,
+    "source_type": "pdf",
+    "sha256": "7b18f6441e0127e67881465fbf2411c5b8b92d77b53f6cfdf6d6e69581f4d8e7"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2017-2018_umaa.pdf",
+    "title": "2017-18 Common Data Set",
+    "year": 2017,
+    "source_type": "pdf",
+    "sha256": "7964050f164551caced3fa72b479174a392e0c68f2b455d990c9b0d669733a48"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2016-2017_umaa.pdf",
+    "title": "2016-17 Common Data Set",
+    "year": 2016,
+    "source_type": "pdf",
+    "sha256": "1604adb7cd488548dffe2fe4e1504e92d1bfae512db5e300fef3472a1750beb5"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2015-2016_umaa.pdf",
+    "title": "2015-16 Common Data Set",
+    "year": 2015,
+    "source_type": "pdf",
+    "sha256": "70bad8c503c5fdbedc46e649a859dfbd97676eacae796959175eb8cf8907fa55"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2014-2015_umaa.pdf",
+    "title": "2014-15 Common Data Set",
+    "year": 2014,
+    "source_type": "pdf",
+    "sha256": "8b4fbe78f618fb5fa4a242bd8c7436fb69aebe7f380a66449749806f335ab099"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2013-2014_umaa.pdf",
+    "title": "2013-14 Common Data Set",
+    "year": 2013,
+    "source_type": "pdf",
+    "sha256": "578511e28d84f460271f829a2b6ec05587cac0acfe980e9173c2829c3944a5f5"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2012-2013_umaa.pdf",
+    "title": "2012-13 Common Data Set",
+    "year": 2012,
+    "source_type": "pdf",
+    "sha256": "ae8d2c751bf5057635f47cebd2ae0a2644b1927d26bf28c0e9b41370d5ee70e5"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2011-2012_umaa.pdf",
+    "title": "2011-12 Common Data Set",
+    "year": 2011,
+    "source_type": "pdf",
+    "sha256": "53a0de0d10b8124c9cffc48bba2ff13a9a191ec9fd96ce0b06fb19dda67eebba"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2010-2011_umaa.pdf",
+    "title": "2010-11 Common Data Set",
+    "year": 2010,
+    "source_type": "pdf",
+    "sha256": "a2c177fccac5e1b1f77f12228191acf2414b1335f2d91fcc9c8eebcc1f8786c9"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2009-2010_umaa.pdf",
+    "title": "2009-10 Common Data Set",
+    "year": 2009,
+    "source_type": "pdf",
+    "sha256": "4205bd6d22277ef8126be16469ff6370762a922cd067425daff0d5d74743853c"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2008-2009_umaa.pdf",
+    "title": "2008-09 Common Data Set",
+    "year": 2008,
+    "source_type": "pdf",
+    "sha256": "65b75524aae8c05a88442c8e513c507dd39f088e958a48b9bde925549e723655"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2007-2008_umaa.pdf",
+    "title": "2007-08 Common Data Set",
+    "year": 2007,
+    "source_type": "pdf",
+    "sha256": "231be853d3bb1ae022d4f0752bd4db993446c725c2b9aa6131bc7a203459760c"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2006-2007_umaa.pdf",
+    "title": "2006-07 Common Data Set",
+    "year": 2006,
+    "source_type": "pdf",
+    "sha256": "e3e17cd6f0420a5c32a8b40a11ce6ee3ffe2fd6e8230387ebaf3eb522473c9f1"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2005-2006_umaa.pdf",
+    "title": "2005-06 Common Data Set",
+    "year": 2005,
+    "source_type": "pdf",
+    "sha256": "15a794446fa40b0cea1d80369a5afe907db7d417d26608c298f9147ac38c785e"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2004-2005_umaa.pdf",
+    "title": "2004-05 CommonData Set",
+    "year": 2004,
+    "source_type": "pdf",
+    "sha256": "2e80acdc5740967c0f15e6763ee31f984f61e4645cf788e1cda925b3278c728a"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2003-2004_umaa.pdf",
+    "title": "2003-04 Common Data Set",
+    "year": 2003,
+    "source_type": "pdf",
+    "sha256": "630e0b35549ba48da1c2ae3af1336ff5947d9c0e9d22cbcf8dcb835236ad0747"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2002-2003_umaa.pdf",
+    "title": "2002-03 Common Data Set",
+    "year": 2002,
+    "source_type": "pdf",
+    "sha256": "2c5787385dff895e5f8b9532b1b5cd0818ffafd3f04c3aec6bbf7cd72e23f617"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2001-2002_umaa.pdf",
+    "title": "2001-02 Common Data Set",
+    "year": 2001,
+    "source_type": "pdf",
+    "sha256": "aa457e410eb61e6a209baa889c7b0c66e949fce0d9c9db7a50fbac97b93713d7"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_2000-2001_umaa.pdf",
+    "title": "2000-01 Common Data Set",
+    "year": 2000,
+    "source_type": "pdf",
+    "sha256": "bdd85c2c2d32756550bfc002b52f0868d50c0a75546433c22414c3262f20a7f3"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_1999-2000_umaa.pdf",
+    "title": "1999-00 Common Data Set",
+    "year": 1999,
+    "source_type": "pdf",
+    "sha256": "5840a1528e40849238bf36c928e55dcd67aebd4425026dd85e844875b217398a"
+  },
+  {
+    "school_id": "university-of-michigan-ann-arbor",
+    "school": "University of Michigan–Ann Arbor",
+    "index_url": "https://obp.umich.edu/campus-statistics/common-data-set/",
+    "url": "https://obp.umich.edu/wp-content/uploads/pubdata/cds/cds_1998-1999_umaa.pdf",
+    "title": "1998-99 Common Data Set",
+    "year": 1998,
+    "source_type": "pdf",
+    "sha256": "fb039d936592623ac0dac33a0ebe9649f954de8095439c628ebf46b5d428b657"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2026/04/CDS-2025-26-03262026.pdf",
+    "title": "Common Data Set 2025-2026",
+    "year": 2025,
+    "source_type": "pdf",
+    "sha256": "18cd33eae475ecd1812f25316d8bc9a45bcb8801ef283d9d7c30d7de92951bdb"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2025/04/CDS-2024-2025.pdf",
+    "title": "Common Data Set 2024 – 2025",
+    "year": 2024,
+    "source_type": "pdf",
+    "sha256": "ee9831268c9e8abb0852c803ade291134e25f3ea8a32cf7bbf44f8ded48ab44a"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2024/10/CDS-2023-2024.pdf",
+    "title": "Common Data Set 2023 – 2024",
+    "year": 2023,
+    "source_type": "pdf",
+    "sha256": "a97dfab568f5fc22f0802c9a16fbcb35846c8d490751df77f3ef301f870b4322"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2023/03/CDS-2022_2023-FINAL-1.pdf",
+    "title": "Common Data Set 2022 – 2023",
+    "year": 2022,
+    "source_type": "pdf",
+    "sha256": "75099698fe474721cc470af8541b996874cb98ccac9c071550f237042b39305a"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2022/10/CDS-AY2021-2022_091522.pdf",
+    "title": "Common Data Set 2021 – 2022",
+    "year": 2021,
+    "source_type": "pdf",
+    "sha256": "c55bcced96fb8f3edf2523560beb3bd50bb32b4e002f300fb3deac6b1696c2b9"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2021/06/CDS_2020-2021.pdf",
+    "title": "Common Data Set 2020 – 2021",
+    "year": 2020,
+    "source_type": "pdf",
+    "sha256": "7e5886c4f12645e3b95b7522ac60eeaca2084bc6c2ef3310e0e6608d670d5c74"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2019/12/CDS_2019_2020.pdf",
+    "title": "Common Data Set 2019 – 2020",
+    "year": 2019,
+    "source_type": "pdf",
+    "sha256": "43d7970fa23a0273b9147fbf2d0d7312c43addb5585e6374ac46447ffc86c58b"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2019/01/CDS_2018-2019_v2.pdf",
+    "title": "Common Data Set 2018 – 2019",
+    "year": 2018,
+    "source_type": "pdf",
+    "sha256": "9434aa309fc52d725df059ba9d4d45b17b4c5b214272a782671533be37f19354"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2018/10/CDS_2017-2018_FINAL.pdf",
+    "title": "Common Data Set 2017 – 2018",
+    "year": 2017,
+    "source_type": "pdf",
+    "sha256": "730a797f485943c7d84354837b46684381dbe954d11e0d64c4c1cf5fe98c147d"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2016/11/CDS_2016-2017_FINAL1.pdf",
+    "title": "Common Data Set 2016 – 2017",
+    "year": 2016,
+    "source_type": "pdf",
+    "sha256": "cf69e18da32af8f2107fff41ecbe19c85d92323ad74be99658a56495fe650986"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2016/03/CDS-2015-16.pdf",
+    "title": "Common Data Set 2015 – 2016",
+    "year": 2015,
+    "source_type": "pdf",
+    "sha256": "b0b1dd58d24c3b9317e25a70e16fcda40d74f2056aa56179f20dc2de80735139"
+  },
+  {
+    "school_id": "the-college-of-new-jersey",
+    "school": "The College of New Jersey",
+    "index_url": "https://ira.tcnj.edu/reports/common-data-set-2/",
+    "url": "https://ira.tcnj.edu/wp-content/uploads/sites/322/2014/07/TCNJ_CDS_2014-2015_FINAL.pdf",
+    "title": "Common Data Set 2014 – 2015",
+    "year": 2014,
+    "source_type": "pdf",
+    "sha256": "0c3937905f747a86e8fba66f3cc3af6296e044f52a7f2044535e80eb894ec669"
+  }
+]

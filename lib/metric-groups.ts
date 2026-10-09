@@ -1,7 +1,9 @@
 import {trendMetrics,type TrendMetric} from './trend-types';
+import {isGenderMetric} from './gender-metrics';
 
 export const metricGroups=[
  {id:'admissions',label:'Admissions',color:'#087b6c'},
+ {id:'gender',label:'Gender admissions',color:'#a13c63'},
  {id:'scores',label:'Test scores',color:'#2857a4'},
  {id:'academics',label:'Academic profile',color:'#713b99'},
  {id:'costs',label:'Costs & financial aid',color:'#926000'},
@@ -10,6 +12,7 @@ export const metricGroups=[
 ] as const;
 export type MetricGroup=typeof metricGroups[number]['id'];
 export function metricGroup(key:TrendMetric):MetricGroup{
+ if(isGenderMetric(key))return 'gender';
  if(key.startsWith('transfer_'))return 'transfer';
  if(/^(sat_|reading_|math_|act_)/.test(key))return 'scores';
  if(/^(gpa_|class_|student_faculty)/.test(key))return 'academics';

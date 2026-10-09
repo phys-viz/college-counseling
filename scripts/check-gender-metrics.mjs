@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import './register-ts.mjs';
+const {normalizePDF}=await import('../lib/extract-pdf.ts');
+const {savedGenderMetrics}=await import('../lib/saved-gender.ts');
+const {deriveExtraMetrics}=await import('../lib/extract-additional.ts');
+const {validateReports}=await import('../lib/validate-import.ts');
+const {groupedMetrics}=await import('../lib/metric-groups.ts');
+function parse(text){const lines=['C1 Fall 2025',...text,'C2 Waitlist'].map(text=>({text,words:[]}));return normalizePDF([{page:9,text:lines.map(l=>l.text).join('\n'),lines,form_fields:[]}],{url:'https://example.edu/cds.pdf',title:'CDS',year:2025},'https://example.edu','test');}
+const r=parse(['Total first-year males who applied 100','Total first-year females who applied 150','Total students of unknown sex who applied 0','Total first-year males who were admitted 20','Total first-year females who were admitted 30','Total first-year males who enrolled 10','Total first-year females who enrolled 6','Total full-time first-year males who enrolled 10','Total part-time first-year males who enrolled 0']);
+assert.equal(r.metrics.male_applicants,100);assert.equal(r.metrics.female_applicants,150);assert.equal(r.metrics.male_admit_rate,20);assert.equal(r.metrics.male_yield_rate,50);assert.equal(r.metrics.female_yield_rate,20);assert.equal(r.metrics.unknown_gender_applicants,0);assert.equal(r.metrics.unknown_gender_admit_rate,undefined);assert.equal(r.metrics.male_enrolled,10,'Overall and status rows must not be counted twice');
+assert.equal(parse(['Total full-time males who enrolled 10','Total part-time males who enrolled']).metrics.male_enrolled,undefined,'An unfilled status is not zero');
+assert.equal(parse(['Total males who enrolled 10','Total full-time males who enrolled 8','Total part-time males who enrolled 3']).metrics.male_enrolled,undefined,'Conflicting overall and status counts stay unfilled');
+const trailing=parse(['Total men who applied','100','Total women who applied','150']);assert.equal(trailing.metrics.male_applicants,undefined,'Stored text without geometry does not assume answer direction');
+assert.equal(parse(['subsequently offered admission. Total first-time, first-year men who applied 4991','Total first-time, first-year women who applied 6299']).metrics.applicants,11290,'Instruction tail merged with the first answer row');
+const seed=JSON.parse(fs.readFileSync('data/reports.json','utf8'));
+const cornell=structuredClone(seed.find(r=>r.school_id==='cornell'&&r.year===2010));const before=structuredClone(cornell);deriveExtraMetrics(savedGenderMetrics(cornell));
+assert.equal(cornell.metrics.male_applicants,19274);assert.equal(cornell.metrics.female_applicants,17064);assert.equal(cornell.metrics.male_admitted,3342);assert.equal(cornell.metrics.female_admitted,3331);assert.equal(cornell.metrics.male_enrolled,1598);assert.equal(cornell.metrics.female_enrolled,1580);
+for(const [k,v] of Object.entries(before.metrics))assert.equal(cornell.metrics[k],v,k);assert.deepEqual(cornell.sections,before.sections);assert.deepEqual(cornell.factors,before.factors);
+cornell.metrics.male_applicants=123;cornell.evidence.male_applicants={section:'C1',page:5,method:'user reviewed/edited'};savedGenderMetrics(cornell);assert.equal(cornell.metrics.male_applicants,123);assert.equal(cornell.evidence.male_applicants.method,'user reviewed/edited');
+const different={...structuredClone(before),sha256:'changed source'};savedGenderMetrics(different);assert.equal(different.metrics.male_applicants,undefined,'Source hash mismatch must not attach cached figures');
+const clemson=structuredClone(seed.find(r=>r.school_id==='clemson'&&r.year===2016));savedGenderMetrics(clemson);assert.equal(clemson.metrics.male_enrolled,undefined);assert(clemson.warnings.some(w=>w.includes('misassigned')));
+const scanned=structuredClone(seed.find(r=>r.school_id==='clemson'&&r.year===2025));savedGenderMetrics(scanned);assert.equal(scanned.metrics.unknown_gender_admitted,564);assert.equal(scanned.metrics.unknown_gender_enrolled,104);assert.equal(scanned.evidence.unknown_gender_admitted.method,'source-hash-verified gender enrichment: visually reviewed original source image');
+const zero={...structuredClone(cornell),school_id:'test',metrics:{male_applicants:0,male_admitted:0,male_enrolled:0},evidence:{}};deriveExtraMetrics(zero);assert.equal(zero.metrics.male_admit_rate,undefined);assert.equal(zero.metrics.male_yield_rate,undefined);
+const invalid={...zero,metrics:{male_applicants:10,male_admitted:11}};assert.throws(()=>validateReports([invalid]),/exceeds/);
+const gender=groupedMetrics.find(g=>g.id==='gender');assert.equal(gender.metrics.length,20);assert.deepEqual(gender.metrics.map(m=>m.label),gender.metrics.map(m=>m.label).sort((a,b)=>a.localeCompare(b,'en',{sensitivity:'base'})));
+console.log('PASS: gender counts/rates, explicit zero, incomplete statuses, source hash protection, counselor correction preservation, known source gaps, validation, grouped alphabetical picker');

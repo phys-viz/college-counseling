@@ -1,7 +1,13 @@
 export type MetricUnit='number'|'percent'|'dollars'|'gpa'|'score'|'text'|'units'|'ratio'|'year'|'points';
 export type MetricDefinition={label:string;section:string;unit:MetricUnit;group:string};
+import {genderCategories} from './gender-metrics';
 export const extraMetrics:Record<string,MetricDefinition>={};
 const add=(key:string,label:string,section:string,unit:MetricUnit,group:string)=>{extraMetrics[key]={label,section,unit,group};};
+for(const [id,label] of genderCategories){
+ for(const [key,name] of [['applicants','applications'],['admitted','students admitted'],['enrolled','students enrolled']] as const)add(`${id}_${key}`,`${label} ${name}`,'C1','number','Gender admissions');
+ add(`${id}_admit_rate`,`${label} admission rate`,'C1','percent','Gender admissions');
+ add(`${id}_yield_rate`,`${label} enrollment yield`,'C1','percent','Gender admissions');
+}
 add('gpa_average','Average reported high-school GPA','C12','gpa','GPA');
 add('gpa_submitted','Students reporting GPA','C12','percent','GPA');
 add('gpa_basis','GPA scale / source notes','C11','text','GPA');

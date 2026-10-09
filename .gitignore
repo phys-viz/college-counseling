@@ -46,4 +46,5 @@ next-env.d.ts
 /work/
 /data/sources/check-*.png
 *.tsbuildinfo
+__pycache__/
 /public/pdf.worker.min.mjs

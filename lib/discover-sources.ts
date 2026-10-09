@@ -13,11 +13,16 @@ export async function discoverSources(value:string,signal?:AbortSignal):Promise<
     let linkBase=base;
     const declaredBase=document.querySelector('base[href]')?.getAttribute('href');
     if(declaredBase)try{linkBase=sourceURL(new URL(declaredBase,base).href).href;}catch{/* Ignore invalid base URLs. */}
-    for(const el of document.querySelectorAll('a[href],option[value]')) {
+    const anchors=[...document.querySelectorAll('a[href],option[value]')];
+    const hasCDSLinks=anchors.some(el=>/common[\s_-]*data[\s_-]*set|\bcds\b/i.test((el.textContent??'')+' '+(el.getAttribute('href')??el.getAttribute('value')??'')+' '+(el.getAttribute('aria-label')??''))&&/\.pdf(?:[?#]|$)/i.test(el.getAttribute('href')??el.getAttribute('value')??''));
+    for(const el of anchors) {
       const href=el.getAttribute(el.tagName==='OPTION'?'value':'href');if(!href)continue;
       let url:URL;try{url=sourceURL(new URL(href,linkBase).href);}catch{continue;}
       const label=clean(el.textContent??''),accessibleLabel=clean(el.getAttribute('aria-label')??el.getAttribute('title')??''),context=clean(el.closest('li,tr')?.textContent??label).slice(0,400);
       if(/\.pdf(?:[?#]|$)/i.test(url.href)||/\bpdf\b/i.test(label)&&/common.?data|\bcds\b/i.test(context+' '+url.href)) {
+        // Mixed survey pages also link IPEDS feedback, calendars and guides.
+        // Prefer explicitly labeled CDS files when such links exist.
+        if(hasCDSLinks&&!/common[\s_-]*data[\s_-]*set|\bcds\b/i.test(label+' '+accessibleLabel+' '+context+' '+url.pathname))continue;
         const year=sourceYear(accessibleLabel)??sourceYear(context)??sourceYear(url.href);
         documents.set(url.href,{url:url.href,title:accessibleLabel||context||decodeURIComponent(url.pathname.split('/').pop()??'PDF report'),year});
       } else if(follow&&url.href!==base&&/common[\s_-]*data[\s_-]*set|\bcds\b/i.test(label+' '+url.pathname)) {

@@ -1,0 +1,3652 @@
+{
+  "clemson:2025": {
+    "sha256": "df3428c13ec37667838ec6a51cc30ead7fcfbba3ece56823204fd468391cd53a",
+    "metrics": {
+      "male_applicants": 38684,
+      "male_admitted": 16914,
+      "male_enrolled": 2041,
+      "female_applicants": 24946,
+      "female_admitted": 10019,
+      "female_enrolled": 2940,
+      "unknown_gender_applicants": 1175,
+      "unknown_gender_admitted": 564,
+      "unknown_gender_enrolled": 104
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 14,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 14,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 14,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 14,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 14,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 14,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 14,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 14,
+        "method": "visually reviewed original source image"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 14,
+        "method": "visually reviewed original source image"
+      }
+    },
+    "notes": [
+      "Clemson 2025 C1 page 14 was visually reviewed because the source is scanned. Unknown-sex admits are 564 and enrolled are 104; the earlier retained OCR omitted those answers. The source's gender admits sum to 27,497 versus saved overall 27,498, and gender enrollment sums to 5,085 versus saved overall 5,084. The female enrollment row reports 2,940 while its full-time/part-time rows sum to 2,939. Published group answers are preserved with these inconsistencies; the saved overall counts remain unchanged."
+    ]
+  },
+  "cornell:2025": {
+    "sha256": "4c2c22cc2ec588c6398edb787cb93b43a97fad6c31bd63f0494cc7aa641b7f7d",
+    "metrics": {
+      "male_applicants": 36834,
+      "female_applicants": 35687,
+      "unknown_gender_applicants": 2,
+      "male_admitted": 2794,
+      "female_admitted": 3282,
+      "unknown_gender_admitted": 1,
+      "male_enrolled": 1806,
+      "female_enrolled": 2020,
+      "unknown_gender_enrolled": 1
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "harvard-university:2025": {
+    "sha256": "bc0d10385acded234651a302b4a890c89d2d30ee24476a079218244cfd554985",
+    "metrics": {
+      "male_applicants": 24000,
+      "male_admitted": 968,
+      "male_enrolled": 803,
+      "female_applicants": 23872,
+      "female_admitted": 1035,
+      "female_enrolled": 872,
+      "unknown_gender_applicants": 21,
+      "unknown_gender_admitted": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2025": {
+    "sha256": "fbff7d3be331c60cf1a03587d8ed810315f745267cfad3d3a936500be32de476",
+    "metrics": {
+      "male_applicants": 46307,
+      "male_admitted": 4231,
+      "male_enrolled": 2426,
+      "female_applicants": 67818,
+      "female_admitted": 6109,
+      "female_enrolled": 3236,
+      "unknown_gender_applicants": 0,
+      "unknown_gender_admitted": 0,
+      "unknown_gender_enrolled": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count; cross-checked with sum of full-time and part-time worksheet gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count; cross-checked with sum of full-time and part-time worksheet gender counts"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "penn-state-university-park:2025": {
+    "sha256": "4745d3ce127b28f350f5688fcbfe4cb333e540fa1ffa7986eef65eb86becd37f",
+    "metrics": {
+      "male_applicants": 47811,
+      "male_admitted": 25375,
+      "male_enrolled": 4456,
+      "female_applicants": 58615,
+      "female_admitted": 33514,
+      "female_enrolled": 4691,
+      "unknown_gender_applicants": 121,
+      "unknown_gender_admitted": 63,
+      "unknown_gender_enrolled": 1
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 10,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2025": {
+    "sha256": "045e2290e44f2093390bbed85539bba6adb38715c9a6d93fd6c831e66fd2fd29",
+    "metrics": {
+      "male_applicants": 22438,
+      "female_applicants": 37192,
+      "unknown_gender_applicants": 0,
+      "male_admitted": 11657,
+      "female_admitted": 22038,
+      "unknown_gender_admitted": 0,
+      "male_enrolled": 2862,
+      "female_enrolled": 4956,
+      "unknown_gender_enrolled": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field AP_RECD_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field AP_RECD_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field AP_RECD_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field AP_ADMT_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field AP_ADMT_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field AP_ADMT_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field EN_TOT_1ST_MEN_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field EN_TOT_1ST_WMN_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender form field EN_TOT_1ST_UNK_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "washington-and-lee-university:2025": {
+    "sha256": "9fc450a8d97b45ce4e8ba079abed36ddfc11282e5298e9d558b790e1e44e8d65",
+    "metrics": {
+      "male_applicants": 4600,
+      "male_admitted": 561,
+      "male_enrolled": 230,
+      "female_applicants": 4362,
+      "female_admitted": 653,
+      "female_enrolled": 269,
+      "unknown_gender_applicants": 1,
+      "unknown_gender_enrolled": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "boston-college:2024": {
+    "sha256": "42f0948c44eae3641e73583e29608d2a8f932700392c27b30ec83a14f7c93e85",
+    "metrics": {
+      "male_applicants": 14099,
+      "male_admitted": 2800,
+      "female_applicants": 20674,
+      "female_admitted": 2832,
+      "another_gender_applicants": 6
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "retained source evidence: PDF labeled gender count"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "retained source evidence: PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2024": {
+    "sha256": "3044c8686b1666bbad99362f54b97f9ebc6ae98b0b94da75baf699fb76fcf05b",
+    "metrics": {
+      "male_applicants": 23737,
+      "female_applicants": 36761,
+      "another_gender_applicants": 237,
+      "unknown_gender_applicants": 782,
+      "male_admitted": 8572,
+      "female_admitted": 14573,
+      "another_gender_admitted": 83,
+      "unknown_gender_admitted": 358,
+      "male_enrolled": 1923,
+      "female_enrolled": 2897,
+      "another_gender_enrolled": 17,
+      "unknown_gender_enrolled": 43
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_NON_BINARY_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_NON_BINARY_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_MEN_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_WMN_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_NON_BINARY_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_UNK_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2024": {
+    "sha256": "e216260fd2f71a6f70d67e27e2c81d2974d3fc25fe57b102f2edf844ddc6d560",
+    "metrics": {
+      "male_applicants": 33387,
+      "female_applicants": 32195,
+      "another_gender_applicants": 30,
+      "unknown_gender_applicants": 0,
+      "male_admitted": 2529,
+      "female_admitted": 2987,
+      "another_gender_admitted": 0,
+      "unknown_gender_admitted": 0,
+      "male_enrolled": 1648,
+      "female_enrolled": 1877,
+      "another_gender_enrolled": 0,
+      "unknown_gender_enrolled": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_NON_BINARY_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_RECD_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_MEN_N; cross-checked with PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_WMN_N; cross-checked with PDF labeled gender count"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_NON_BINARY_N; cross-checked with PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field AP_ADMT_1ST_UNK_N; cross-checked with PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_MEN_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_WMN_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_NON_BINARY_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 13,
+        "method": "PDF gender form field EN_TOT_1ST_UNK_N; cross-checked with PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2024": {
+    "sha256": "ee0239a577622fe3142ff8bba85a792c8047e89a6b31ee869d057eba6e5026d5",
+    "metrics": {
+      "male_applicants": 45100,
+      "male_admitted": 4097,
+      "male_enrolled": 2353,
+      "female_applicants": 65707,
+      "female_admitted": 6135,
+      "female_enrolled": 3313,
+      "another_gender_applicants": 0,
+      "another_gender_admitted": 0,
+      "another_gender_enrolled": 0,
+      "unknown_gender_applicants": 0,
+      "unknown_gender_admitted": 0,
+      "unknown_gender_enrolled": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "penn-state-university-park:2024": {
+    "sha256": "c87215a5dd32b261a7f53981f8b2cc2b8c070d24292881ecf97f716652ddeb1c",
+    "metrics": {
+      "male_applicants": 40752,
+      "male_admitted": 23582,
+      "male_enrolled": 4459,
+      "female_applicants": 47118,
+      "female_admitted": 29600,
+      "female_enrolled": 4645,
+      "another_gender_applicants": 527,
+      "another_gender_admitted": 343,
+      "another_gender_enrolled": 61,
+      "unknown_gender_applicants": 81,
+      "unknown_gender_admitted": 54,
+      "unknown_gender_enrolled": 4
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 9,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 9,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 9,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 9,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2024": {
+    "sha256": "f173a258445073b253b32869358c1677096abe67e76cef29eb00861d13923d1d",
+    "metrics": {
+      "male_applicants": 20662,
+      "male_admitted": 11377,
+      "male_enrolled": 2726,
+      "female_applicants": 32041,
+      "female_admitted": 20324,
+      "female_enrolled": 4546
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "washington-and-lee-university:2024": {
+    "sha256": "7d528d0db34dfa565df44af0afd58be57a71f5741bcd67d290585f6c1e653309",
+    "metrics": {
+      "male_applicants": 4222,
+      "male_admitted": 525,
+      "male_enrolled": 231,
+      "female_applicants": 3990,
+      "female_admitted": 622,
+      "female_enrolled": 241,
+      "another_gender_applicants": 0,
+      "another_gender_admitted": 0,
+      "another_gender_enrolled": 0,
+      "unknown_gender_applicants": 1,
+      "unknown_gender_admitted": 0,
+      "unknown_gender_enrolled": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "unknown_gender_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "unknown_gender_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2023": {
+    "sha256": "227c2c1ae2bf69630c3a35c859abd03be5e746641b1164ac8e58d674a3e8fd79",
+    "metrics": {
+      "male_applicants": 23462,
+      "male_admitted": 8621,
+      "male_enrolled": 1872,
+      "female_applicants": 36378,
+      "female_admitted": 14146,
+      "female_enrolled": 2606,
+      "another_gender_applicants": 282,
+      "another_gender_admitted": 112,
+      "another_gender_enrolled": 16
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 16,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 16,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 17,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 16,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 16,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 17,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 16,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 16,
+        "method": "PDF labeled gender count"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 17,
+        "method": "PDF labeled gender count; cross-checked with sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2023": {
+    "sha256": "633feaf5dfe1fbc377c5f39e01aa42226f046a3290d9d20a1ce6176f90b250bb",
+    "metrics": {
+      "male_applicants": 33674,
+      "female_applicants": 34172,
+      "another_gender_applicants": 0,
+      "male_admitted": 2459,
+      "female_admitted": 2899,
+      "another_gender_admitted": 0,
+      "male_enrolled": 1643,
+      "female_enrolled": 1894,
+      "another_gender_enrolled": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 18,
+        "method": "PDF gender column aligned to header"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2023": {
+    "sha256": "4c6d603f5769609c748707514bf14d994efc37bec3ea5f5540cc07921f941963",
+    "metrics": {
+      "male_applicants": 45117,
+      "female_applicants": 68457,
+      "another_gender_applicants": 4,
+      "male_admitted": 4256,
+      "female_admitted": 6433,
+      "another_gender_admitted": 4,
+      "male_enrolled": 2452,
+      "female_enrolled": 3362,
+      "another_gender_enrolled": 4
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      },
+      "another_gender_enrolled": {
+        "section": "C1",
+        "page": 11,
+        "method": "PDF gender column aligned to header"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2023": {
+    "sha256": "df11942f990e17638105ade37583e2c858554c6acad948ce9505ff86bb958ce6",
+    "metrics": {
+      "male_applicants": 18477,
+      "male_admitted": 10473,
+      "male_enrolled": 2770,
+      "female_applicants": 28205,
+      "female_admitted": 18233,
+      "female_enrolled": 4549
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "washington-and-lee-university:2023": {
+    "sha256": "191924e7f64c24843b39762b4cdfbeb8784284eeb62c2b37dc5502c850e35afe",
+    "metrics": {
+      "male_applicants": 3393,
+      "female_applicants": 3427,
+      "male_admitted": 547,
+      "female_admitted": 637,
+      "male_enrolled": 241,
+      "female_enrolled": 261
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF gender column aligned to header"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF gender column aligned to header"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF gender column aligned to header"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF gender column aligned to header"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2022": {
+    "sha256": "b838da3efc8809b1b90318b7f1d22789a276862c80d660d898527718b8d17d6d",
+    "metrics": {
+      "male_applicants": 20644,
+      "male_admitted": 8497,
+      "male_enrolled": 1912,
+      "female_applicants": 32170,
+      "female_admitted": 14207,
+      "female_enrolled": 2676
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 8,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 8,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2022": {
+    "sha256": "27d519f01908469f27bcd51f7866d87a54f439f431c905166d40837a9644c151",
+    "metrics": {
+      "male_applicants": 35492,
+      "male_admitted": 2317,
+      "male_enrolled": 1570,
+      "female_applicants": 35672,
+      "female_admitted": 2851,
+      "female_enrolled": 1921,
+      "another_gender_applicants": 0,
+      "another_gender_admitted": 0
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time worksheet gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time worksheet gender counts"
+      },
+      "another_gender_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "another_gender_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: worksheet labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2022": {
+    "sha256": "3de9ca3ac5284d75244f6016d68d6bd36b44d3dcece35755889fd1ca13f3ed87",
+    "metrics": {
+      "male_applicants": 38481,
+      "male_admitted": 4743,
+      "male_enrolled": 2419,
+      "female_applicants": 62181,
+      "female_admitted": 7796,
+      "female_enrolled": 3765
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2022": {
+    "sha256": "af244200d51161d5c996f7ca1a57ad12fb5362cd69de510c7ae62970f3c4bd73",
+    "metrics": {
+      "male_applicants": 16818,
+      "male_admitted": 9970,
+      "male_enrolled": 2591,
+      "female_applicants": 25370,
+      "female_admitted": 17052,
+      "female_enrolled": 3983
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "washington-and-lee-university:2022": {
+    "sha256": "0f943cc46b1b4ff57184a1d900801c05e9d10b71dee6d746cd3419895c87481a",
+    "metrics": {
+      "male_applicants": 3575,
+      "male_admitted": 545,
+      "female_applicants": 3649,
+      "female_admitted": 680
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2021": {
+    "sha256": "f7d766773dc0b46cb33f60501bc34b7c5376fb8b2fd2c337d359c761a5ad948f",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "cornell:2021": {
+    "sha256": "80ae37a5efd87551d46e9b60c80731ad3d4c3c5312463fa6203ee041c1b2ba86",
+    "metrics": {
+      "male_applicants": 33488,
+      "male_admitted": 2613,
+      "female_applicants": 33892,
+      "female_admitted": 3239
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2021": {
+    "sha256": "02723a50ca340457f2242546832df144dd21bd257a55c00311fe0549f41b1190",
+    "metrics": {
+      "male_applicants": 36596,
+      "male_admitted": 4614,
+      "male_enrolled": 2330,
+      "female_applicants": 58921,
+      "female_admitted": 7766,
+      "female_enrolled": 3767
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: sum of full-time and part-time worksheet gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: worksheet labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 3,
+        "method": "retained source evidence: sum of full-time and part-time worksheet gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2021": {
+    "sha256": "ce81cb9854d841e1a55ea31809d7a772d86d185a8006fd4cd619469a9833b193",
+    "metrics": {
+      "male_applicants": 16363,
+      "male_admitted": 9853,
+      "male_enrolled": 2477,
+      "female_applicants": 25682,
+      "female_admitted": 16031,
+      "female_enrolled": 3697
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "washington-and-lee-university:2021": {
+    "sha256": "5bd7f13c1ca7e42382c18e6d6aed295ddd2ef524ca42d406270cdeb48a878453",
+    "metrics": {
+      "male_applicants": 3129,
+      "male_admitted": 570,
+      "female_applicants": 3485,
+      "female_admitted": 678
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2020": {
+    "sha256": "3e88a88ede5b843968c5aaf67dc4d1f92239ac9a2255bad19018ea7fc164c3ca",
+    "metrics": {
+      "male_applicants": 12259
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 14,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2020": {
+    "sha256": "79ae92e7b0112359916a9342d1a875ab75f21028df3556f9eaa44a99ffd9aff2",
+    "metrics": {
+      "male_applicants": 26848,
+      "male_admitted": 2457,
+      "male_enrolled": 1481,
+      "female_applicants": 24652,
+      "female_admitted": 3057,
+      "female_enrolled": 1768
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2020": {
+    "sha256": "fca3655c2eb2b84ee1e4295b3bd6799083232830868bc499b35d105811316d48",
+    "metrics": {
+      "male_applicants": 32389,
+      "male_admitted": 7165,
+      "male_enrolled": 2989,
+      "female_applicants": 47821,
+      "female_admitted": 9753,
+      "female_enrolled": 3712
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2020": {
+    "sha256": "5a217e21b777f382589ce10b6b22993b4d2fe84f7c2b5fbfb59cea86a0671c03",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2020": {
+    "sha256": "3b78675e85b28e9645d50782fb2832cf3e3e1463140a1b36442747adf4a8aa84",
+    "metrics": {
+      "male_applicants": 2455,
+      "male_admitted": 592,
+      "female_applicants": 2543,
+      "female_admitted": 633
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2019": {
+    "sha256": "1f22c15a650b4438806fe55de01fd4bd88e84a738bb570bceb43b9b266243448",
+    "metrics": {
+      "male_applicants": 12878
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 14,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2019": {
+    "sha256": "3701a956dbb27051f5bd8760801f6aca2e83db83939f028a572f4c473e945b1e",
+    "metrics": {
+      "male_applicants": 25582,
+      "male_admitted": 2402,
+      "female_applicants": 23532,
+      "female_admitted": 2928
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2019": {
+    "sha256": "db6776d603da3f6534d90c000900e687e5e59974829559c99d21ec21e006a069",
+    "metrics": {
+      "male_applicants": 32065,
+      "male_admitted": 5234,
+      "male_enrolled": 2447,
+      "female_applicants": 47397,
+      "female_admitted": 7639,
+      "female_enrolled": 3305
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2019": {
+    "sha256": "85767677a7b4f5800a86c0ae205c09bff15787555987daa3fc532f6df4723f14",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2019": {
+    "sha256": "5361c6d74eeee8b5f8abce0ad181a39404d1d01ad3adef79cfff89dc3263514e",
+    "metrics": {
+      "male_admitted": 546,
+      "female_applicants": 3128
+    },
+    "evidence": {
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2018": {
+    "sha256": "bf9bfa44affd16a2e476e75dce514ab97315333eacc746d634d69fc101519cef",
+    "metrics": {
+      "male_applicants": 12951
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 14,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2018": {
+    "sha256": "d8b70ee930e27b86456251bb27619199ea1b75dadbf8703ebaa07de87968f50f",
+    "metrics": {
+      "male_applicants": 26342,
+      "male_admitted": 2432,
+      "male_enrolled": 1516,
+      "female_applicants": 24982,
+      "female_admitted": 3016,
+      "female_enrolled": 1779
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "new-york-university:2018": {
+    "sha256": "5e67394b5b8daa980da174423ed28b43facea152eabf7eab18ddee8c8574619a",
+    "metrics": {
+      "male_applicants": 29356,
+      "male_admitted": 5869,
+      "male_enrolled": 2670,
+      "female_applicants": 42478,
+      "female_admitted": 8490,
+      "female_enrolled": 3504
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2018": {
+    "sha256": "649bcede355e91c3ab270bfe9f6bb2f75776925afbd93b4bba977bb3c7f4cf37",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2018": {
+    "sha256": "13959869277b83350feed4c5313ea179602909c992e5c04b3499b4b7752b7f16",
+    "metrics": {
+      "male_applicants": 2884,
+      "male_admitted": 577,
+      "female_applicants": 2971,
+      "female_admitted": 662
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2017": {
+    "sha256": "e518d80247d525df53a451c0d76547ff21b8c1b073b7badea85c64b40840e2f7",
+    "metrics": {
+      "male_applicants": 12132
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 12,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2017": {
+    "sha256": "97fe0680083276a25749dbb80198a3aece3a8cb97f3bbc0c2a11bced49b07581",
+    "metrics": {
+      "male_applicants": 24867,
+      "male_admitted": 2734,
+      "male_enrolled": 1577,
+      "female_applicants": 22172,
+      "female_admitted": 3228,
+      "female_enrolled": 1772
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2017": {
+    "sha256": "e804852f9e0ced8cfab09514d3bd2bf837e6bdd51f8005fddb25bc33c1db0dcf",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2017": {
+    "sha256": "20c154e05544d8f0a8a5c067b9d933944a57ee49fc9775a551f351490ca43673",
+    "metrics": {
+      "male_applicants": 2677,
+      "male_admitted": 585,
+      "female_applicants": 2778,
+      "female_admitted": 615
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2016": {
+    "sha256": "561b52b33ac3498f485d96d9a75d7cdedb6e82738cc9c576ae86306803da7e88",
+    "metrics": {
+      "male_applicants": 10861,
+      "male_admitted": 5255,
+      "female_applicants": 12645,
+      "female_admitted": 6626
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": [
+      "Clemson 2016 C1 page 10 prints 1,932 part-time men and only 2 full-time women. The gender/status enrollment entries appear misassigned in the published source. Gender enrollment and yield are left unfilled; the reported overall enrollment of 3,684 is preserved."
+    ]
+  },
+  "cornell:2016": {
+    "sha256": "08ed72b1bf0a9350e2e68142c768d6a683d89239a549b0e2c62102e808ddc592",
+    "metrics": {
+      "male_applicants": 23578,
+      "male_admitted": 2865,
+      "male_enrolled": 1542,
+      "female_applicants": 21387,
+      "female_admitted": 3472,
+      "female_enrolled": 1773
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2016": {
+    "sha256": "2bf2786edabcf2b341aeefef804714160a1f50d19c952159b4eb8e5b8cc17b2b",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2016": {
+    "sha256": "8fae5599b27f8eeb58a28c025b9fd9ca6ae7a2e391288ece750b170d6caa8a72",
+    "metrics": {
+      "male_applicants": 2487,
+      "male_admitted": 608,
+      "female_applicants": 2614,
+      "female_admitted": 595
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2015": {
+    "sha256": "8a3a1f1c1e9d3d556f279b35cc4e5d65b749a3699c085ed42a37052ab6cd25ae",
+    "metrics": {
+      "male_applicants": 10305,
+      "male_admitted": 5238
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2015": {
+    "sha256": "15b5d3b7916126768c81e65b0c32b18d5505d5b68f5d17c3305f7bc6c1ea597f",
+    "metrics": {
+      "male_applicants": 22594,
+      "male_admitted": 2962,
+      "female_applicants": 19306,
+      "female_admitted": 3353
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2015": {
+    "sha256": "7ddec03cc5af036860ffd646cce3347cdee42f26b90b1f91e6f5f9c8bfccd92d",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2015": {
+    "sha256": "ed8080c354b1e3e443dc6fcafece413ba1d0452caffa325e42f10bbf7b09f4d3",
+    "metrics": {
+      "male_applicants": 2672,
+      "male_admitted": 648,
+      "male_enrolled": 241,
+      "female_applicants": 2705,
+      "female_admitted": 636,
+      "female_enrolled": 213
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2014": {
+    "sha256": "9be49ed1e55d07ccdf7541642fd54a97310f796b4a435dcb5e7ebc193d2c4e7b",
+    "metrics": {
+      "male_applicants": 9553
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2014": {
+    "sha256": "b9912b619bac646776ef30b22567d0be4c6dbb3e8dab3f50a81f62e04290561f",
+    "metrics": {
+      "male_applicants": 23094,
+      "male_admitted": 2885,
+      "female_applicants": 19943,
+      "female_admitted": 3220
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2014": {
+    "sha256": "fda7c2d49d419a5245c7e7fd04e733a71c84f5789512442188b205072ef819ea",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2014": {
+    "sha256": "8d3877088bedb2d8c8095ce3080ad250b7abf1cf2f16f5176fea621a0703539d",
+    "metrics": {
+      "male_applicants": 2778,
+      "male_admitted": 544,
+      "male_enrolled": 232,
+      "female_applicants": 3019,
+      "female_admitted": 592,
+      "female_enrolled": 239
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 4,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 4,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2013": {
+    "sha256": "24790c8f2e0ce4a1073f8a1a379c06f0dd9bde25af0b22422d88bdcd052518a4",
+    "metrics": {
+      "male_applicants": 10031,
+      "male_admitted": 4949,
+      "male_enrolled": 1691,
+      "female_applicants": 8573,
+      "female_admitted": 5696,
+      "female_enrolled": 1598
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 8,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 8,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2013": {
+    "sha256": "49cfaf018f714f668d033a03b62389f563971cf96796ea3783d98352f6995a92",
+    "metrics": {
+      "male_applicants": 21577,
+      "male_admitted": 3024,
+      "male_enrolled": 1581,
+      "female_applicants": 18422,
+      "female_admitted": 3198,
+      "female_enrolled": 1642
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2013": {
+    "sha256": "870575998c347fba752bd114cc0058a9af2e01ae7956860ee860799f56c2295f",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2013": {
+    "sha256": "5cbd7e98b2c333909125cd8cce9b43056b42cda9ec6159d23f2d8b5ae51ca3f4",
+    "metrics": {
+      "male_applicants": 3034,
+      "male_admitted": 565,
+      "female_applicants": 3188,
+      "female_admitted": 582
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2012": {
+    "sha256": "d68ce6a2155ba4e13ce9333ecd315d46bcd9a246acfb235ff75ac54a3c3cb714",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "cornell:2012": {
+    "sha256": "d9dce1b43985d1b1331a90e5be0c0ff90cb15addd2b4fb967294a2d1e86d9e69",
+    "metrics": {
+      "male_applicants": 20064,
+      "male_admitted": 2996,
+      "male_enrolled": 1525,
+      "female_applicants": 17744,
+      "female_admitted": 3263,
+      "female_enrolled": 1692
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 4,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 4,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 4,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2012": {
+    "sha256": "5eb9aaf3662e839584d4e17b369a10e7e1dff3904c0a62f682f3ce3a3c0dc730",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2012": {
+    "sha256": "d748a1e2bfbb9241013941a7fb2f6ce4c32867a48a3e9b93cd6b8909e13098d2",
+    "metrics": {
+      "male_applicants": 2800,
+      "male_admitted": 596,
+      "female_applicants": 3172,
+      "female_admitted": 567
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2011": {
+    "sha256": "4f24ff349da400d31ce962c525a8c42b41c1dff1905f44b4631c63ae4d57bba9",
+    "metrics": {
+      "male_applicants": 8016,
+      "female_admitted": 5327
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 9,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2011": {
+    "sha256": "14f78347a83ee960a10e8a6e8fb3dcf7f9bf53c4a5eb070c6b826f4bf9f4ffc8",
+    "metrics": {
+      "male_applicants": 19552,
+      "male_admitted": 3278,
+      "male_enrolled": 1659,
+      "female_applicants": 16835,
+      "female_admitted": 3260,
+      "female_enrolled": 1648
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2011": {
+    "sha256": "2e4cabc9da4d1ff7c6386ecb27b4a4df11dadb31e09fc1e526a9080ddff07ffe",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2011": {
+    "sha256": "96638aa3d04807f56c9c762f5a04903ae26b13529a0f1a4b508ab981cd98139d",
+    "metrics": {
+      "male_applicants": 3116,
+      "male_admitted": 574,
+      "male_enrolled": 258,
+      "female_applicants": 3371,
+      "female_admitted": 608,
+      "female_enrolled": 236
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2010": {
+    "sha256": "6a7c55708f8508784f5d8a1f7ee240230ce308545aac496577d2fb9ffa023741",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "cornell:2010": {
+    "sha256": "af20d2b18e9a9c4c7d9237c3e0632a4bc4bed665dc87265e6cf2ee1646250615",
+    "metrics": {
+      "male_applicants": 19274,
+      "male_admitted": 3342,
+      "male_enrolled": 1598,
+      "female_applicants": 17064,
+      "female_admitted": 3331,
+      "female_enrolled": 1580
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2010": {
+    "sha256": "eaefcd465d7817b51438166b1c7d040da165b2c9466a3d1845af951cb299087a",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2010": {
+    "sha256": "94f750f703f0e50e891b03941836066a2e8298ffe79e8f0ba2a36c3fdf18c943",
+    "metrics": {
+      "male_applicants": 3059,
+      "male_admitted": 608,
+      "female_applicants": 3568,
+      "female_admitted": 651
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2009": {
+    "sha256": "b5b3850fcdd8fcdbeaab54deff6c66b291fdda0bc3ceef4ac489d387900764fc",
+    "metrics": {
+      "male_applicants": 9533,
+      "male_admitted": 6091,
+      "male_enrolled": 2496,
+      "female_applicants": 9795,
+      "female_admitted": 6379,
+      "female_enrolled": 2115
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2009": {
+    "sha256": "52d4ae4f758ad6ea8fd389198981b35356880f35afb48979bb8be87c31538e0c",
+    "metrics": {
+      "male_applicants": 17985,
+      "male_admitted": 3239,
+      "male_enrolled": 1583,
+      "female_applicants": 16386,
+      "female_admitted": 3326,
+      "female_enrolled": 1598
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2009": {
+    "sha256": "bd0c7b1a2c7dccddbb0614a49747661f9497375bc2c3a566f020f31ce67dd3c2",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2009": {
+    "sha256": "8275cf6cda75ea4cb58cc79fc415c166071f6dc5fcfc62581c381be29cbf0b1c",
+    "metrics": {
+      "male_applicants": 2991,
+      "male_admitted": 598,
+      "male_enrolled": 234,
+      "female_applicants": 3231,
+      "female_admitted": 583,
+      "female_enrolled": 238
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "clemson:2008": {
+    "sha256": "0d296d57647385813e2e5293354e04429a10474c748974ffbf5f9e06f2ebd2f8",
+    "metrics": {
+      "male_applicants": 7043,
+      "male_admitted": 4040,
+      "male_enrolled": 1528,
+      "female_applicants": 7461,
+      "female_admitted": 4315,
+      "female_enrolled": 1454
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2008": {
+    "sha256": "62b1dc596ab468e1d01ec4046ea8d8f88ef1b14c2b6c74456c67b16c80a5e610",
+    "metrics": {
+      "male_applicants": 17159,
+      "male_admitted": 3405,
+      "female_applicants": 15914,
+      "female_admitted": 3429
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2008": {
+    "sha256": "09a81861a8bfc34e556cfd77f4cc5f1f020e710103b0e4c4b99575f64c44c165",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2008": {
+    "sha256": "def0f9c05e92d9a28180a7a1aca4c653699f9b954e0c74b5831de5037fb1b1f5",
+    "metrics": {
+      "male_applicants": 2963,
+      "male_admitted": 554,
+      "male_enrolled": 230,
+      "female_applicants": 3423,
+      "female_admitted": 520,
+      "female_enrolled": 224
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2007": {
+    "sha256": "67b8cec627908a56c1a7cb982ecd6888c8f946d59c438d1dfbe15857dc36e412",
+    "metrics": {
+      "male_applicants": 15823,
+      "male_admitted": 3375,
+      "female_applicants": 14560,
+      "female_admitted": 3128
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2007": {
+    "sha256": "6944a9ed522fe884b38184194d4d8eadf20e2ecc742da6a35f13d5159edbabb8",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2007": {
+    "sha256": "85f31c9b465604fddefcf5bf62d5fd8449e08160505c494eea113d1a7fede575",
+    "metrics": {
+      "male_applicants": 1837,
+      "male_admitted": 498,
+      "male_enrolled": 230,
+      "female_applicants": 1882,
+      "female_admitted": 520,
+      "female_enrolled": 232
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2006": {
+    "sha256": "6cd71df3067430d9db7e263fb02601ff512c131cf66cac3309c676ffd672f3fc",
+    "metrics": {
+      "male_applicants": 14773,
+      "male_admitted": 3586,
+      "male_enrolled": 1671,
+      "female_applicants": 13325,
+      "female_admitted": 3349,
+      "female_enrolled": 1567
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2006": {
+    "sha256": "180a3e0cba516588bf2c134cffd28dc8e7d70a1bf92bd56411621ad348051633",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2006": {
+    "sha256": "ad9bf92d0b657b0f602542d7d695cc3e34a73a7d471471e7f6b2d30be447b15a",
+    "metrics": {
+      "male_applicants": 2087,
+      "male_admitted": 585,
+      "male_enrolled": 228,
+      "female_applicants": 2128,
+      "female_admitted": 573,
+      "female_enrolled": 221
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 6,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2005": {
+    "sha256": "069eab04c0d9ab725af513acabeedc88ef373ac586c088bbdd9c3b3ca4d1d08e",
+    "metrics": {
+      "male_applicants": 12821,
+      "male_admitted": 3404,
+      "female_applicants": 11631,
+      "female_admitted": 3217
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2005": {
+    "sha256": "e92a8de193013de8e82cc3f1bef26e998e9afd2b4a8b85dff846911cda817878",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "washington-and-lee-university:2005": {
+    "sha256": "00c477e2b16ed30d89dba021043c4e4e37f34366258804b94cd9a45d9d8651c8",
+    "metrics": {
+      "male_applicants": 2021,
+      "male_admitted": 562,
+      "male_enrolled": 230,
+      "female_applicants": 1929,
+      "female_admitted": 579,
+      "female_enrolled": 234
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 5,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2004": {
+    "sha256": "a0adb9464e232d4fa99b47fcbf3d855f11f872094f644f47695cd177d60776f2",
+    "metrics": {
+      "male_applicants": 10977,
+      "male_admitted": 3174,
+      "male_enrolled": 1559,
+      "female_applicants": 9845,
+      "female_admitted": 2956,
+      "female_enrolled": 1495
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 7,
+        "method": "PDF labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 7,
+        "method": "sum of full-time and part-time PDF gender counts"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2004": {
+    "sha256": "d178485e68dda59adbe28b4bae105aeda64c7678dc837528121b351423f7bda2",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "cornell:2003": {
+    "sha256": "04b4bd05a7239b71fa5d9f1bd59be27d6997b98975b2308edfb66fb256e41655",
+    "metrics": {
+      "male_applicants": 10775,
+      "male_admitted": 3309,
+      "female_applicants": 9666,
+      "female_admitted": 3025
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 8,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2003": {
+    "sha256": "c5c163fa0d5a4aa3dc61c1302c13d64ba94b0df6737b6b9e2af2f78262c0469e",
+    "metrics": {},
+    "evidence": {},
+    "notes": []
+  },
+  "cornell:2002": {
+    "sha256": "42a7abde63ac531276894f72ca3637738a6f8509b2f6a62d41b9d6c06ff323fa",
+    "metrics": {
+      "male_applicants": 11303,
+      "male_admitted": 3116,
+      "female_applicants": 10199,
+      "female_admitted": 3017
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 6,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2002": {
+    "sha256": "588f34ef8230cb3a4d05822993b0ec372ae3abedf9c5b641bc8ebae4e3aff833",
+    "metrics": {
+      "male_applicants": 5309,
+      "male_admitted": 3668,
+      "male_enrolled": 1621,
+      "female_applicants": 6707,
+      "female_admitted": 4778,
+      "female_enrolled": 1940
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time HTML gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time HTML gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2001": {
+    "sha256": "9d370ae3023fc18f322b48faf074929f484fd2eea16b0ff00b52457b8c49c39b",
+    "metrics": {
+      "male_applicants": 11302,
+      "male_admitted": 3017,
+      "female_applicants": 10217,
+      "female_admitted": 2844
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2001": {
+    "sha256": "3ddd648c05be16670a0c5c87bfe40244113d750786b07315b587e8386d0009e8",
+    "metrics": {
+      "male_applicants": 5016,
+      "male_admitted": 3434,
+      "male_enrolled": 1488,
+      "female_applicants": 6160,
+      "female_admitted": 4354,
+      "female_enrolled": 1799
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time HTML gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time HTML gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:2000": {
+    "sha256": "dc8643c8c615c428766a5caa89c8b743ceae4111f494aa1de199c80d9fbb7633",
+    "metrics": {
+      "male_applicants": 10477,
+      "male_admitted": 3233,
+      "female_applicants": 9722,
+      "female_admitted": 2939
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  },
+  "south-carolina:2000": {
+    "sha256": "12647f4295c3cef51da0f76712005dbb99b0f9b62976b9b1a3b0f2c5f8682ede",
+    "metrics": {
+      "male_applicants": 4334,
+      "male_admitted": 2986,
+      "male_enrolled": 1125,
+      "female_applicants": 5625,
+      "female_admitted": 3916,
+      "female_enrolled": 1417
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "male_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time HTML gender counts"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: HTML labeled gender count"
+      },
+      "female_enrolled": {
+        "section": "C1",
+        "page": 1,
+        "method": "retained source evidence: sum of full-time and part-time HTML gender counts"
+      }
+    },
+    "notes": []
+  },
+  "cornell:1999": {
+    "sha256": "abed8d5eb949a26ce0e643505957ec4722e14f5f18c520e3dee1bdec83cff834",
+    "metrics": {
+      "male_applicants": 10581,
+      "male_admitted": 3446,
+      "female_applicants": 9368,
+      "female_admitted": 3115
+    },
+    "evidence": {
+      "male_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "male_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_applicants": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      },
+      "female_admitted": {
+        "section": "C1",
+        "page": 5,
+        "method": "PDF labeled gender count"
+      }
+    },
+    "notes": []
+  }
+}

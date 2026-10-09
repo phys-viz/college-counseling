@@ -1,4 +1,4 @@
-import {trendContext,trendDisplay,trendSource,isScoreRange,type TrendReport,type TrendMetric} from './trend-types';
+import {trendContext,trendDisplay,trendSource,trendPopulation,isScoreRange,type TrendReport,type TrendMetric} from './trend-types';
 import {schoolInitials,type SchoolBrand} from './school-branding';
 
 async function embeddedLogo(path:string|undefined):Promise<string|null>{
@@ -14,11 +14,12 @@ function download(name:string,blob:Blob) {
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 export function exportTrendCSV(reports:TrendReport[],ids:string[],from:number,to:number,metric:TrendMetric,name:string) {
-  const rows:unknown[][]=[['School','Report fall year','Metric','Value','Applications','Students admitted','Students enrolled','Source URL','Source section','Source page','25th percentile','Reported median','75th percentile','Prior-year source','Reporting period']];
+  const rows:unknown[][]=[['School','Report fall year','Metric','Value','Applications','Students admitted','Students enrolled','Source URL','Source section','Source page','25th percentile','Reported median','75th percentile','Prior-year source','Reporting period','Selected population','Population applications','Population admitted','Population enrolled']];
   for(let year=from;year<=to;year++)for(const id of ids) {
     const r=reports.find(r=>r.school_id===id&&r.year===year);
     const key=isScoreRange(metric)?metric.replace('_range',''):'';
-    rows.push([reports.find(r=>r.school_id===id)?.school??id,year,metric,isScoreRange(metric)?trendDisplay(r,metric):r?.metrics[metric]??'',r?.metrics.applicants??'',r?.metrics.admitted??'',r?.metrics.enrolled??'',r?trendSource(r,metric):'',r?.evidence[key?key+'_25':metric]?.section??'',r?.evidence[key?key+'_25':metric]?.page??'',key?r?.metrics[key+'_25']??'':'',key?r?.metrics[key+'_50']??'':'',key?r?.metrics[key+'_75']??'':'',r?.previous?.source_url??'',r?trendContext(r,metric):'']);
+    const population=trendPopulation(r,metric);
+    rows.push([reports.find(r=>r.school_id===id)?.school??id,year,metric,isScoreRange(metric)?trendDisplay(r,metric):r?.metrics[metric]??'',r?.metrics.applicants??'',r?.metrics.admitted??'',r?.metrics.enrolled??'',r?trendSource(r,metric):'',r?.evidence[key?key+'_25':metric]?.section??'',r?.evidence[key?key+'_25':metric]?.page??'',key?r?.metrics[key+'_25']??'':'',key?r?.metrics[key+'_50']??'':'',key?r?.metrics[key+'_75']??'':'',r?.previous?.source_url??'',r?trendContext(r,metric):'',population.label,population.applicants??'',population.admitted??'',population.enrolled??'']);
   }
   const escape=(v:unknown)=>'"'+String(v??'').replaceAll('"','""')+'"';
   download(`${name}.csv`,new Blob([rows.map(r=>r.map(escape).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}));

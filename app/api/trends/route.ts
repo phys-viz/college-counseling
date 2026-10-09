@@ -2,6 +2,7 @@ import {database,ensureSeed} from '@/lib/database';
 import {calculateTrendChanges,type TrendResults,type TrendReport} from '@/lib/trend-types';
 import type {Report} from '@/lib/report-types';
 import {deriveExtraMetrics} from '@/lib/extract-additional';
+import {savedGenderMetrics as enrichSavedGender} from '@/lib/saved-gender';
 
 export async function GET(request:Request) {
   const params=new URL(request.url).searchParams;
@@ -17,7 +18,7 @@ export async function GET(request:Request) {
       database().prepare('SELECT DISTINCT school_id,school FROM reports ORDER BY school').all<{school_id:string;school:string}>(),
     ]);
     const reports:TrendReport[]=result.results.map(row=>{
-      const r=deriveExtraMetrics(JSON.parse(row.payload) as Report);
+      const r=deriveExtraMetrics(enrichSavedGender(JSON.parse(row.payload) as Report));
       const metrics:TrendReport['metrics']={};const evidence:TrendReport['evidence']={};
       for(const k of Object.keys(r.metrics)) {
         const value=r.metrics[k];if(typeof value==='number'&&Number.isFinite(value))metrics[k]=value;

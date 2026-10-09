@@ -1,6 +1,7 @@
 import type {Report} from './report-types';
 import type {SourceDocument} from './source-types';
 import {enrichMetrics} from './extract-additional';
+import {canonicalC1,extractGender} from './extract-gender';
 export type PDFWord={str:string;x:number;y:number;width:number};
 export type PDFLine={text:string;words:PDFWord[]};
 export type PDFPage={page:number;text:string;lines:PDFLine[];form_fields:Report['sections'][number]['form_fields']};
@@ -26,18 +27,19 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
   function sectionLines(n:number) {
     const start=combined.findIndex(l=>new RegExp(`^(?:CDS\\s+)?C\\s*${n}(?:[.\\s]|$)`,'i').test(l.text.trim()));
     if(start<0)return [];
-    const end=combined.findIndex((l,i)=>{const m=l.text.trim().match(/^(?:CDS\s+)?C\s*(\d+)(?:[A-Z]?(?:[.\s-]|$))/i);return i>start&&!!m&&Number(m[1])!==n;});
+    const end=combined.findIndex((l,i)=>{const m=l.text.trim().match(/^(?:CDS\s+)?C\s*(\d+)(?:[A-Z]?(?:[.\s-]|$))/i);return i>start&&!!m&&m[1].length<=2&&Number(m[1])!==n;});
     return combined.slice(start,end<0?undefined:end).map(l=>({...l,text:l.text.replace(/^(?:CDS\s+)?C\s*\d+[A-Z]?(?:[.\s]+|$)/i,'')}));
   }
-  const c1=sectionLines(1);const yearMatch=c1.map(l=>l.text).join(' ').match(/\bFall\s+((?:19|20)\d{2})\b/i);
+  const c1=canonicalC1(sectionLines(1));const yearMatch=c1.map(l=>l.text).join(' ').match(/\bFall\s+((?:19|20)\d{2})\b/i);
   const year=yearMatch?Number(yearMatch[1]):document.year??0;
   const detectedName=allFields.get('NAME')?.value??allFields.get('INST_NAME')?.value??'';
   const r:Report={school_id:'pending',school:detectedName,year,report_label:year?`${year}–${String(year+1).slice(-2)}`:'Year needs review',source_url:document.url,index_url:indexURL,source_type:'pdf',sha256,extracted_at:new Date().toISOString(),review_status:'Automatically extracted; awaiting review',metrics:{},evidence:{},factors:[],sections:sections.map(({page,text,form_fields})=>({page,text,form_fields})),warnings:[]};
   const put=(key:string,value:number|string|null,section:string,page:number|null,method='PDF text')=>{if(value!==null){r.metrics[key]=value;r.evidence[key]={section,page,method};}};
   const mappings:Record<string,[string,string]>={applicants:['AP_RECD_1ST_N','C1'],admitted:['AP_ADMT_1ST_N','C1'],enrolled:['EN_TOT_1ST_N','C1'],waitlist_offered:['AP_RECD_WAIT_N','C2'],waitlist_accepted:['AP_ACPT_WAIT_N','C2'],waitlist_admitted:['AP_ADMT_WAIT_N','C2'],ed_applicants:['AP_RECD_EDEC_N','C21'],ed_admitted:['AP_ADMT_EDEC_N','C21'],fee:['AP_FEE_RES_D','C13'],top_tenth:['FRSH_HS_RANK_10_P','C10'],top_quarter:['FRSH_HS_RANK_25_P','C10'],top_half:['FRSH_HS_RANK_50_P','C10'],rank_submitted:['FRSH_HS_RANK_SUBMIT_P','C10'],sat_submitted:['SUBMIT_SAT1_P','C9'],act_submitted:['SUBMIT_ACT_P','C9'],sat_submitted_count:['SUBMIT_SAT1_N','C9'],act_submitted_count:['SUBMIT_ACT_N','C9']};
   for(const [key,[name,section]] of Object.entries(mappings)){const f=fields.get(name);if(f)put(key,number(f.value),section,f.page,'PDF form field');}
+  const genderTotals=extractGender(r,c1,fields);
   for(const [key,prefix,verb] of [['applicants','AP_RECD_1ST_','applied'],['admitted','AP_ADMT_1ST_','admitted'],['enrolled','EN_TOT_1ST_','enrolled']]) {
-    const candidates:{value:number;page:number;method:string}[]=[];
+    const candidates:{value:number;page:number;method:string}[]=[...genderTotals[key]];
     const direct=fields.get(prefix+'N');
     if(direct&&number(direct.value)!==null)candidates.push({value:number(direct.value)!,page:direct.page,method:'PDF form field'});
     let vals=['MEN_N','WMN_N','NON_BINARY_N','UNK_N'].map(s=>fields.get(prefix+s)).filter(f=>f&&number(f.value)!==null);
@@ -77,14 +79,14 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
       if(/\bIn[- ]State\b/i.test(line.text))genderColumns=0;
       if(!genderColumns||!/^Total\b/i.test(line.text)||genderLabel.test(line.text))continue;
       const values=countCells(suffix(line.text));
-      if(values.length===genderColumns)candidates.push({value:values.reduce((a,v)=>a+v,0),page:line.page,method:'sum of PDF gender columns'});
+      if(values.length===genderColumns&&!c1.slice(Math.max(0,i-3),i).some(l=>/\bMen\b.*\bWomen\b.*\bTotal\b/i.test(l.text)))candidates.push({value:values.reduce((a,v)=>a+v,0),page:line.page,method:'sum of PDF gender columns'});
     }
     const c1Text=c1.map(l=>l.text).join(' ');
     const residencyHeader=/\bin[- ]state\b/i.test(c1Text)&&/\bout(?:-|\s)/i.test(c1Text)&&/\binternat(?:ional|-)/i.test(c1Text);
     for(const [index,line] of c1.entries()) {
       if(!new RegExp(`^Total.*\\b${verb}\\b`,'i').test(line.text.trim())||genderLabel.test(line.text))continue;
       const values=countCells(suffix(line.text));if(!values.length)continue;
-      if(values.length===1){
+      if(values.length===1&&!/(?:full|part)\s*-\s*time/i.test(line.text)){
         if(values[0]===0&&residencyHeader){r.warnings.push(`C1 ${key}: a residency table shows zero with blank component cells. This ambiguous total is not used; check the original source.`);continue;}
         candidates.push({value:values[0],page:line.page,method:'PDF overall total'});
       }
@@ -123,8 +125,11 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     for(const pct of [25,50,75]){const f=fields.get(`${prefix}_${pct}TH_P`);if(f)put(`${key}_${pct}`,number(f.value),'C9',f.page,'PDF form field');}
     if(r.metrics[`${key}_25`]!==undefined)continue;
     const scoreLines=sectionLines(9);
+    for(const line of scoreLines){const m=line.text.match(new RegExp(`^${key==='sat'?'SAT Composite':key==='reading'?'SAT (?:Evidence-Based Reading and Writing|Critical Reading|Verbal)':key==='math'?'SAT Math':'ACT Composite'}:\\s*(25th|50th|75th) Percentile\\s+(\\d{2,4})$`,'i'));if(m){const value=Number(m[2]),min=key==='act'?1:key==='sat'?400:200,max=key==='act'?36:key==='sat'?1600:800;if(value>=min&&value<=max)put(`${key}_${m[1].slice(0,2)}`,value,'C9',line.page,'PDF explicitly labeled percentile');}}
+    if(r.metrics[`${key}_25`]!==undefined)continue;
     for(const [i,line] of scoreLines.entries()) {
       if(!label.test(line.text.trim()))continue;
+      if(/Percentile|\b\d{1,4}\s*-\s*\d{1,4}\s+\d+(?:\.\d+)?%/i.test(line.text))continue;
       let text=line.text;
       // A wrapped reading/writing label can place all score columns on the next line.
       const next=scoreLines[i+1];
@@ -148,7 +153,7 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
   });
   if(!r.factors.length) {
     const lines=sectionLines(7);
-    const compact=(value:string)=>value.toLowerCase().replace(/\b[x✓✔]\b/g,'').replace(/[^a-z0-9]/g,'').replace('academicgradepointaveragegpa','academicgpa').replace('extracurriculuar','extracurricular').replace('affilitation','affiliation');
+    const compact=(value:string)=>value.toLowerCase().replace(/\b[x✓✔]\b/g,'').replace(/[^a-z0-9]/g,'').replace('academicgradepointaveragegpa','academicgpa').replace('extracurriculuar','extracurricular').replace('affilitation','affiliation').replace(/recommendation(?!s)/,'recommendations');
     // A factor label can wrap around its mark; keep the mark's real coordinates.
     const factorLine=(name:string)=>{
       const target=compact(name);
@@ -162,7 +167,10 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
       }
     };
     for(const name of factorNames){const line=factorLine(name);if(!line)continue;const tail=compact(line.text).slice(compact(name).length);const index=ratings.findIndex(rating=>compact(rating)===tail);if(index>=0)r.factors.push({label:name,rating:ratings[index],page:line.page});}
-    const header=lines.find(l=>/Very\s*Important/i.test(l.text)&&/Considered/i.test(l.text));
+    for(const name of factorNames){if(r.factors.some(f=>f.label===name))continue;const line=factorLine(name);if(!line)continue;const boxes=[...line.text.matchAll(/[☐☒☑]/g)].map(m=>m[0]);if(boxes.length===4&&boxes.filter(x=>x!=='☐').length===1)r.factors.push({label:name,rating:ratings[boxes.findIndex(x=>x!=='☐')],page:line.page});}
+    const headerIndex=lines.findIndex(l=>/\bVery\b/i.test(l.text));
+    const headerParts=headerIndex<0?[]:lines.slice(Math.max(0,headerIndex-1),headerIndex+3).filter(l=>l.page===lines[headerIndex].page&&!/Relative importance|first.time|admission decisions|Rigor|Class rank/i.test(l.text));
+    const header=headerParts.length&&/Very\s*Important|Very.*Important/i.test(headerParts.map(l=>l.text).join(' '))?{...headerParts[0],text:headerParts.map(l=>l.text).join(' '),words:headerParts.flatMap(l=>l.words).sort((a,b)=>a.x-b.x)}:undefined;
     if(header) {
       const words=header.words.flatMap(w=>{let used=0;return w.str.split(/\s+/).filter(Boolean).map(s=>{const word={...w,str:s,x:w.x+w.width*used/Math.max(1,w.str.length),width:w.width*s.length/Math.max(1,w.str.length)};used+=s.length+1;return word;});});
       const anchors=words.filter(w=>/^(Very|Important|Considered|Not)$/i.test(w.str));

@@ -1,0 +1,13 @@
+{
+  "clemson:2016": {
+    "sha256": "561b52b33ac3498f485d96d9a75d7cdedb6e82738cc9c576ae86306803da7e88",
+    "omit": ["male_enrolled", "female_enrolled"],
+    "notes": ["Clemson 2016 C1 page 10 prints 1,932 part-time men and only 2 full-time women. The gender/status enrollment entries appear misassigned in the published source. Gender enrollment and yield are left unfilled; the reported overall enrollment of 3,684 is preserved."]
+  },
+  "clemson:2025": {
+    "sha256": "df3428c13ec37667838ec6a51cc30ead7fcfbba3ece56823204fd468391cd53a",
+    "metrics": {"unknown_gender_admitted": 564, "unknown_gender_enrolled": 104},
+    "page": 14,
+    "notes": ["Clemson 2025 C1 page 14 was visually reviewed because the source is scanned. Unknown-sex admits are 564 and enrolled are 104; the earlier retained OCR omitted those answers. The source's gender admits sum to 27,497 versus saved overall 27,498, and gender enrollment sums to 5,085 versus saved overall 5,084. The female enrollment row reports 2,940 while its full-time/part-time rows sum to 2,939. Published group answers are preserved with these inconsistencies; the saved overall counts remain unchanged."]
+  }
+}

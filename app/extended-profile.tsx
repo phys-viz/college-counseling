@@ -6,11 +6,15 @@ import {classBands,courseSubjects} from '@/lib/metric-definitions';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 import {Distribution,GPADistribution} from './score-visuals';
+import {genderCategories} from '@/lib/gender-metrics';
 function source(r:Report,key:string){const e=r.evidence[key];return (e?.source_url??r.source_url)+((e?.source_type??r.source_type)==='pdf'&&e?.page?`#page=${e.page}`:'');}
 export function MetricFacts({report,keys}:{report:Report;keys:string[]}){return <dl className="facts">{keys.map(key=><div key={key}><dt>{labels[key]??key}</dt><dd>{report.metrics[key]===undefined?'Not reported':<a href={source(report,key)} target="_blank" rel="noreferrer">{format(key,report.metrics[key])}<span className="metric-source"> {report.evidence[key]?.section??'Source'}</span></a>}</dd></div>)}</dl>;}
 export function ResidencyProfile({report}:{report:Report}){
  if(!['in_state','out_state','international'].some(s=>report.metrics[s+'_applicants']!==undefined))return <p className="fine-print">Residency-specific admissions figures were not reported or could not be extracted reliably.</p>;
  return <><h3>Admissions by residency · C1</h3><Table><TableHeader><TableRow>{['Residency','Applications','Admitted','Enrolled','Admission rate'].map(label=><TableHead key={label}>{label}</TableHead>)}</TableRow></TableHeader><TableBody>{[['in_state','In-state'],['out_state','Out-of-state'],['international','International']].map(([region,label])=><TableRow key={region}><TableCell>{label}</TableCell>{['applicants','admitted','enrolled','admit_rate'].map(k=><TableCell key={k}>{report.metrics[region+'_'+k]!==undefined?<a href={source(report,region+'_'+k)} target="_blank" rel="noreferrer">{format(region+'_'+k,report.metrics[region+'_'+k])}</a>:'Not reported'}</TableCell>)}</TableRow>)}</TableBody></Table></>;
+}
+export function GenderProfile({report}:{report:Report}){
+ return <><h3>Admissions by gender / sex · C1</h3><p className="fine-print">Categories follow the institution’s report. Male and female include source labels men and women. Blank values stay unreported; unknown and another gender remain separate.</p><Table><TableHeader><TableRow>{['Reported category','Applications','Admitted','Enrolled','Admission rate','Yield'].map(label=><TableHead key={label}>{label}</TableHead>)}</TableRow></TableHeader><TableBody>{genderCategories.map(([group,label])=><TableRow key={group}><TableCell>{label}</TableCell>{['applicants','admitted','enrolled','admit_rate','yield_rate'].map(k=><TableCell key={k}>{report.metrics[group+'_'+k]!==undefined?<a href={source(report,group+'_'+k)} target="_blank" rel="noreferrer">{format(group+'_'+k,report.metrics[group+'_'+k])}</a>:'Not reported'}</TableCell>)}</TableRow>)}</TableBody></Table></>;
 }
 export function AcademicExtras({report}:{report:Report}){
  const [test,setTest]=useState('sat');

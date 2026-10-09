@@ -12,6 +12,6 @@ export function statement(r:Report, replace=false) {
 }
 let seeding: Promise<void> | undefined;
 export async function ensureSeed() {
-  if(!seeding) seeding=(async()=>{ await database().batch((seed as unknown as Report[]).map(r=>statement(r))); })().catch(e=>{seeding=undefined;throw e});
+  if(!seeding) seeding=(async()=>{const records=seed as unknown as Report[];for(let i=0;i<records.length;i+=50)await database().batch(records.slice(i,i+50).map(r=>statement(r)));})().catch(e=>{seeding=undefined;throw e});
   await seeding;
 }

@@ -7,7 +7,7 @@ import {Input} from '@/components/ui/input';
 import {Checkbox} from '@/components/ui/checkbox';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
-import {trendFormat,trendDisplay,trendContext,trendMetrics,trendSource,trendValue,trendUnit,trendNote,isScoreRange,type TrendMetric,type TrendReport,type TrendResults} from '@/lib/trend-types';
+import {trendFormat,trendDisplay,trendContext,trendPopulation,trendMetrics,trendSource,trendValue,trendUnit,trendNote,isScoreRange,type TrendMetric,type TrendReport,type TrendResults} from '@/lib/trend-types';
 import {ScoreRangePlot} from './score-visuals';
 import MetricPicker from './metric-picker';
 import SchoolLegend from './school-legend';
@@ -19,7 +19,7 @@ function Choice({label,value,onChange,options}:{label:string;value:string;onChan
   return <label className="trend-choice"><span>{label}</span><Select value={value} onValueChange={onChange}><SelectTrigger aria-label={label}><SelectValue/></SelectTrigger><SelectContent>{options.map(o=><SelectItem value={o.value} key={o.value}>{o.label}</SelectItem>)}</SelectContent></Select></label>;
 }
 function PointDetails({row,metric}:{row:YearRow;metric:TrendMetric}) {
-  return <><strong>Fall {row.year}</strong>{row.reports.map((r,i)=>r&&<div key={r.school_id}><b style={{color:schoolBrand(r.school_id,r.school).color}}>{r.school}</b><strong>{trendDisplay(r,metric)}</strong><span>{trendContext(r,metric)}</span><span>{r.metrics.applicants?.toLocaleString('en-US')??'Unreported'} applicants · {r.metrics.admitted?.toLocaleString('en-US')??'Unreported'} admitted · {r.metrics.enrolled?.toLocaleString('en-US')??'Unreported'} enrolled</span></div>)}</>;
+  return <><strong>Fall {row.year}</strong>{row.reports.map((r,i)=>r&&<div key={r.school_id}><b style={{color:schoolBrand(r.school_id,r.school).color}}>{r.school}</b><strong>{trendDisplay(r,metric)}</strong><span>{trendContext(r,metric)}</span><span>{trendPopulation(r,metric).applicants?.toLocaleString('en-US')??'Unreported'} applicants · {trendPopulation(r,metric).admitted?.toLocaleString('en-US')??'Unreported'} admitted · {trendPopulation(r,metric).enrolled?.toLocaleString('en-US')??'Unreported'} enrolled</span></div>)}</>;
 }
 
 export default function Trends({refresh}:{refresh:number}) {

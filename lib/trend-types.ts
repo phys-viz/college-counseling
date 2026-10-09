@@ -1,5 +1,7 @@
 import {extraMetrics,metricUnit,type MetricUnit} from './metric-definitions';
+import {genderCategories,genderMetricKeys,isGenderMetric} from './gender-metrics';
 export const trendMetrics = [
+  ...genderMetricKeys.map(value=>({value,label:extraMetrics[value].label})),
   {value:'admit_rate',label:'Admission rate'},
   {value:'applicants',label:'Applications'},
   {value:'enrolled',label:'Enrollment'},
@@ -23,6 +25,11 @@ export function trendValue(report:TrendReport|undefined,metric:TrendMetric):numb
   if(isScoreRange(metric))return scoreRange(report,metric.replace('_range',''))?.low??null;
   const value=report?.metrics[metric];
   return typeof value==='number'&&Number.isFinite(value)?value:null;
+}
+export function trendPopulation(report:TrendReport|undefined,metric:TrendMetric){
+ const category=genderCategories.find(([id])=>isGenderMetric(metric)&&metric.startsWith(id+'_'));
+ const prefix=category?category[0]+'_':'';
+ return {label:category?.[1]??'All first-year students',applicants:report?.metrics[prefix+'applicants'],admitted:report?.metrics[prefix+'admitted'],enrolled:report?.metrics[prefix+'enrolled']};
 }
 export function trendSource(report:TrendReport,metric:string) {
   const key=isScoreRange(metric)?metric.replace('_range','_25'):metric,e=report.evidence[key],page=e?.page;
@@ -48,6 +55,7 @@ export function trendContext(r:TrendReport,metric:TrendMetric){const v=r.reporti
 export const trendUnit=(metric:TrendMetric):MetricUnit=>metric==='admit_rate_change'?'points':metric==='application_growth'||metric==='admit_rate_5yr'?'percent':isScoreRange(metric)?'score':metricUnit(metric);
 export function trendDisplay(report:TrendReport|undefined,metric:TrendMetric){if(!isScoreRange(metric))return trendFormat(metric,trendValue(report,metric));const range=scoreRange(report,metric.replace('_range',''));return range?`${range.low}–${range.high}${range.median!==null?` · median ${range.median}`:''}`:'Not reported';}
 export function trendNote(metric:TrendMetric){
+ if(isGenderMetric(metric))return 'Gender / sex categories follow each institution’s C1 reporting. Male and female include source labels men and women. Blank categories remain unreported; unknown and another gender stay separate. Admission rate = group admitted / group applicants; yield = group enrolled / group admitted. Reporting categories may change over time.';
  if(isScoreRange(metric)||metric==='sat_50')return 'Reported percentiles describe enrolled students who submitted that test. Bars show the 25th–75th range; dots show reported medians only. Historical SAT scales may differ.';
  if(metric==='application_growth')return 'Annual application growth = (current applications / previous-year applications − 1) × 100. Missing prior years remain gaps.';
  if(metric==='admit_rate_change')return 'Annual admission-rate change is measured in percentage points against the preceding calendar year.';
