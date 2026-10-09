@@ -13,6 +13,7 @@ import MetricPicker from './metric-picker';
 import SchoolLegend from './school-legend';
 import {schoolBrand} from '@/lib/school-branding';
 import {exportTrendCSV,exportTrendImage} from '@/lib/export-trend';
+import {fetchJSON} from '@/lib/fetch-json';
 
 type YearRow={year:number;primary:number|null;comparison:number|null;reports:(TrendReport|undefined)[]};
 function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(s:string)=>void;options:{value:string;label:string}[]}) {
@@ -34,7 +35,7 @@ export default function Trends({refresh}:{refresh:number}) {
     setFocused(null);setExportError('');if(!valid)return;
     const abort=new AbortController();setLoading(true);setError('');
     const params=new URLSearchParams({school,from:String(from),to:String(to)});if(comparison!=='none')params.append('school',comparison);
-    fetch('/api/trends?'+params,{signal:abort.signal}).then(async res=>{const result=await res.json() as TrendResults&{error?:string};if(!res.ok)throw new Error(result.error);setData(result);}).catch(e=>{if(!abort.signal.aborted)setError(e instanceof Error?e.message:'The trend data could not load.');}).finally(()=>{if(!abort.signal.aborted)setLoading(false);});
+    fetchJSON<TrendResults>('/api/trends?'+params,abort.signal).then(setData).catch(e=>{if(!abort.signal.aborted)setError(e instanceof Error?e.message:'The trend data could not load.');}).finally(()=>{if(!abort.signal.aborted)setLoading(false);});
     return()=>abort.abort();
   },[school,comparison,from,to,valid,refresh,retry]);
   useEffect(()=>{setFocused(null);setExportError('');},[metric]);
