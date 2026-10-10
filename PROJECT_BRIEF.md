@@ -31,6 +31,7 @@ React/TypeScript app using Vinext/Vite, Tailwind/Radix and Recharts, published t
 - `lib/extract-pdf.ts`, `lib/extract-additional.ts`: shared browser PDF normalization.
 - `lib/metric-definitions.ts`, `lib/metric-groups.ts`, `lib/trend-types.ts`: labels, categories, chart metrics and definitions.
 - `lib/extract-gender.ts`: reusable C1 gender parsing; `lib/saved-gender.ts` and `data/gender-source-backfill.json`: additive enrichment of existing records, keyed by institution/year and exact source hash. Existing gender corrections are preserved. Profiles, trends and exports include the enrichment without overwriting stored core fields.
+- `lib/saved-scores.ts`, `data/score-source-backfill.json` (built by `scripts/build-score-backfill.mjs`), `data/score-source-review.json`: source-hash-pinned C9 score enrichment of saved records. The parser maps score tables by their printed column header (Average/Mean/Median/scale columns), fixing missed Bentley/Alabama/Michigan percentiles; reviewed corrections (Alabama 2015–2021 mean stored as 75th percentile, W&L 2022 fraction) apply only while the saved value is unchanged. Check: `node scripts/check-score-tables.mjs`.
 - `lib/validate-import.ts`: schema/count validation and calculated rates.
 - `lib/database.ts`: database access and idempotent seed inserts; never overwrite counselor edits through seeding.
 - `data/reports.json`: reproducible seed; production also contains counselor-imported schools.

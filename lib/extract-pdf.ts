@@ -7,6 +7,31 @@ export type PDFWord={str:string;x:number;y:number;width:number};
 export type PDFLine={text:string;words:PDFWord[]};
 export type PDFPage={page:number;text:string;lines:PDFLine[];form_fields:Report['sections'][number]['form_fields']};
 export const factorNames=['Rigor of secondary school record','Class rank','Academic GPA','Standardized test scores','Application essay','Recommendations','Interview','Extracurricular activities','Talent/ability','Character/personal qualities','First generation','Alumni/ae relation','Geographical residence','State residency','Religious affiliation/commitment','Racial/ethnic status','Volunteer work','Work experience',"Level of applicant’s interest"];
+// C9 score-table headers can wrap and add Median, Average/Mean or score-scale
+// columns. Each line gets the column order of the nearest header block above it
+// on the same page; instruction prose ends a header block. The order is trusted
+// only when every percentile label is on one line, none repeats (current and
+// prior-year pairs) and median/mean labels on other lines can only trail it.
+// Otherwise columns stay unknown, because stacked headers do not preserve order.
+const scoreHeaderWord=/^(?:25th|50th|75th|percentiles?|scores?|assessments?|median|average|mean|test|sat|act|and|combined|possible)$/i;
+const scoreColumns=(lines:{text:string,page:number|null}[])=>{
+  let block:string[][]=[],columns:string[]|null=null,page:number|null|undefined;
+  const order=()=>{
+    const main=block.findIndex(t=>t.some(c=>/^\d/.test(c)));
+    if(main<0||block.some((t,j)=>j!==main&&t.some(c=>/^\d/.test(c))||j<main&&t.length))return null;
+    const found=[...block[main],...block.slice(main+1).flat()];
+    return found.includes('25th')&&found.includes('75th')&&new Set(found).size===found.length?found:null;
+  };
+  return lines.map(line=>{
+    if(line.page!==page){page=line.page;block=[];columns=null;}
+    const words=line.text.trim().split(/\s+/).filter(Boolean);
+    if(words.length&&words.every(w=>scoreHeaderWord.test(w))){
+      block.push(line.text.match(/\b(?:25th|50th|75th|median|average|mean)\b/gi)?.map(c=>c.toLowerCase().replace('average','mean'))??[]);
+      if(block.flat().some(c=>/^\d/.test(c)))columns=order();
+    } else block=[];
+    return columns;
+  });
+};
 const number=(v:unknown)=>{const text=String(v??'').trim().replace(/[,$%]/g,'');return /^\d+(?:\.\d+)?$/.test(text)?Number(text):null;};
 const ratings=['Very important','Important','Considered','Not considered'];
 
@@ -147,18 +172,35 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     const scoreLines=sectionLines(9);
     for(const line of scoreLines){const m=line.text.match(new RegExp(`^${key==='sat'?'SAT Composite':key==='reading'?'SAT (?:Evidence-Based Reading and Writing|Critical Reading|Verbal)':key==='math'?'SAT Math':'ACT Composite'}:\\s*(25th|50th|75th) Percentile\\s+(\\d{2,4})$`,'i'));if(m){const value=Number(m[2]),min=key==='act'?1:key==='sat'?400:200,max=key==='act'?36:key==='sat'?1600:800;if(value>=min&&value<=max)put(`${key}_${m[1].slice(0,2)}`,value,'C9',line.page,'PDF explicitly labeled percentile');}}
     if(r.metrics[`${key}_25`]!==undefined)continue;
+    const columnsAt=scoreColumns(scoreLines);
     for(const [i,line] of scoreLines.entries()) {
       let text=line.text;
       const wrapped=scoreLines[i+1],last=scoreLines[i+2];
       if(key==='reading'&&/^SAT Evidence-\s*$/i.test(text)&&wrapped?.page===line.page&&last?.page===line.page&&/^Based Reading and\s+\d{3}\s+\d{3}\s+\d{3}$/i.test(wrapped.text)&&/^Writing\s*$/i.test(last.text))text='SAT Evidence-Based Reading and Writing '+wrapped.text.replace(/^Based Reading and\s+/i,'');
+      // A label can also wrap after its scores: "SAT Evidence-Based 570 650" / "Reading and Writing".
+      if(key==='reading'&&/^SAT Evidence-Based\s+[\d\s.,]+$/i.test(text)&&wrapped?.page===line.page&&/^Reading and Writing\s*$/i.test(wrapped.text))text=text.replace(/^SAT Evidence-Based/i,'SAT Evidence-Based Reading and Writing');
       if(!label.test(text.trim()))continue;
       if(/Percentile|\b\d{1,4}\s*-\s*\d{1,4}\s+\d+(?:\.\d+)?%/i.test(text))continue;
       // A wrapped reading/writing label can place all score columns on the next line.
       const next=scoreLines[i+1];
-      if(!/\b\d{2,4}\b/.test(text)&&next?.page===line.page&&/^(?:(?:and\s+)?Writing\s*)?[\d\s,]+(?:\s*Writing)?$/i.test(next.text.trim()))text+=' '+next.text;
-      text=text.replace(/\(\s*\d+\s*-\s*\d+\s*\)/g,'').replace(/(\d),(?=\d{3}\b)/g,'$1');
-      const values=[...text.matchAll(/\b\d{2,4}\b/g)].map(m=>Number(m[0]));
+      if(!/\b\d{2,4}\b/.test(text)&&next?.page===line.page&&/^(?:(?:and\s+)?Writing(?:\s*\([^)]*\))?\s*)?[\d\s,.]+(?:\s*Writing)?$/i.test(next.text.trim()))text+=' '+next.text;
+      text=text.replace(/\(\s*\d+\s*-\s*\d+\s*\)/g,'').replace(/\b\d{1,4}\s+to\s+\d{1,4}\b/gi,'').replace(/(\d),(?=\d{3}\b)/g,'$1');
       const min=key==='act'?1:200,max=key==='act'?36:key==='sat'?1600:800;
+      // A header of only percentiles adds nothing beyond the 2/3-column rule below,
+      // which also covers a blank optional 50th percentile.
+      const columns=columnsAt[i]?.some(c=>!/^(?:25th|50th|75th)$/.test(c))?columnsAt[i]:null;
+      if(columns) {
+        // Printed column order decides the percentiles; averages and extra columns are not percentiles.
+        const values=[...text.matchAll(/(?<![\d.])\d+(?:\.\d+)?(?![\d.])/g)].map(m=>Number(m[0]));
+        const middle=columns.includes('50th')?'50th':'median';
+        const slots=([[25,'25th'],[50,middle],[75,'75th']] as const).filter(([,c])=>columns.includes(c)).map(([pct,c])=>[pct,columns.indexOf(c)] as const);
+        // Blank trailing mean/median cells are fine; a blank before a percentile would shift it.
+        if(values.length<=Math.max(...slots.map(([,j])=>j)))continue;
+        const picked=slots.map(([pct,j])=>[pct,values[j]] as const);
+        if(picked.every(([,v],j)=>Number.isInteger(v)&&v>=min&&v<=max&&(j===0||v>=picked[j-1][1]))){picked.forEach(([pct,v])=>put(`${key}_${pct}`,v,'C9',line.page,'PDF score table mapped by printed column header'));break;}
+        continue;
+      }
+      const values=[...text.matchAll(/\b\d{2,4}\b/g)].map(m=>Number(m[0]));
       if([2,3].includes(values.length)&&values.every(v=>v>=min&&v<=max)) {
         const pcts=values.length===3?[25,50,75]:[25,75];values.forEach((v,i)=>put(`${key}_${pcts[i]}`,v,'C9',line.page));break;
       }

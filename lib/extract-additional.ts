@@ -62,25 +62,34 @@ export function enrichMetrics(r:Report,pages:PDFPage[]):Report {
  for(const [test,prefix] of [['sat','SAT1_COMP'],['reading','SAT1_VERB'],['math','SAT1_MATH']] as const)for(const [id] of scoreBands[test])field(`${test}_band_${id}`,[`${prefix}_${id.split('_')[0]}_P`]);
  for(const [i,[id]] of scoreBands.act.entries())field(`act_band_${id}`,[`ACT_${6-i}_P`]);
  // Text distributions: identify the header's population; never turn score boundaries into percentages.
- let distribution:string[]=[],dualComposite=false;
+ // A row with fewer values than the table's fullest row has blank cells whose
+ // column cannot be known from text, so it stays unreported rather than shifting.
+ let distribution:string[]=[],dualComposite=false,table=0;
+ const setDistribution=(tests:string[])=>{if(tests.join()!==distribution.join())table++;distribution=tests;};
+ const bandRows:{table:number,tests:string[],id:string,vals:number[],page:number}[]=[];
  const scoreRows=block('C',9);
  for(const [i,row] of scoreRows.entries()){
-  const t=row.text;
+  const t=row.text.replace(/^C9\s+/,''); // some reports prefix every C9 row with its item number
   const header=scoreRows.slice(Math.max(0,i-2),i+1).filter(l=>l.page===row.page).map(l=>l.text).join(' ');
-  if(!/%/.test(header)&&/SAT Evidence[- ]\s*(?:Score Range\s+)?Based Reading.*SAT Math.*and Writing/i.test(header))distribution=['reading','math'];
-  if(/SAT ACT Score Range Score Range Composite Composite$/i.test(header)){dualComposite=true;distribution=[];}
-  if(/^Score Range ACT English\b|^Total\s+100%\s+Total\s+100%/i.test(t)){dualComposite=false;distribution=[];}
+  if(!/%/.test(header)&&/SAT Evidence[- ]\s*(?:Score Range\s+)?Based Reading.*SAT Math.*and Writing/i.test(header))setDistribution(['reading','math']);
+  if(/SAT ACT Score Range Score Range Composite Composite$/i.test(header)){dualComposite=true;setDistribution([]);}
+  if(/^Score Range ACT English\b|^Total\s+100%\s+Total\s+100%/i.test(t)){dualComposite=false;setDistribution([]);}
   if(dualComposite){
    const pair=t.match(/^(\d{3,4}\s*-\s*\d{3,4})\s+(\d+(?:\.\d+)?)%\s+(\d{1,2}\s*-\s*\d{1,2}|Below 6)\s+(\d+(?:\.\d+)?)%$/i);
    if(pair){for(const [test,range,value]of [['sat',pair[1],pair[2]],['act',pair[3],pair[4]]] as const){const id=/^Below/i.test(range)?'below_6':range.replace(/\s/g,'').replace('-','_');if(scoreBands[test].some(b=>b[0]===id))put(`${test}_band_${id}`,Number(value),row.page,'PDF paired SAT/ACT Composite columns','C9');}continue;}
   }
-  if(/^Score Range\s+SAT Composite$|^SAT Composite$/i.test(t))distribution=['sat'];
-  else if(/^(?:SAT Evidence-Based|SAT Critical Reading|Based Reading).*SAT Math/i.test(t)||/^SAT .*Writing SAT Math$/i.test(t))distribution=['reading','math'];
-  else if(/^ACT Composite(?:\s+ACT English|\s+ACT Math|$)/i.test(t))distribution=['act'];
+  if(/^Score Range\s+SAT Composite$|^SAT Composite$/i.test(t))setDistribution(['sat']);
+  else if(/^(?:SAT Evidence-Based|SAT Critical Reading|Based Reading).*SAT Math/i.test(t)||/^SAT .*Writing SAT Math$/i.test(t))setDistribution(['reading','math']);
+  else if(/^(?:Score Range\s+)?ACT Composite(?:\s+ACT English|\s+ACT Math|$)/i.test(t))setDistribution(['act']);
   const m=t.match(/^(\d{1,4}\s*-\s*\d{1,4}|Below 6)\s+(.+)$/i);if(!m||!distribution.length)continue;
   const id=m[1].toLowerCase()==='below 6'?'below_6':m[1].replace(/\s/g,'').replace('-','_');
   const vals=m[2].split(/\s+/).map(numeric);if(vals.some(v=>v===null))continue;
-  for(const [j,test] of distribution.entries())if(scoreBands[test as keyof typeof scoreBands].some(b=>b[0]===id)&&vals[j]!==undefined)put(`${test}_band_${id}`,vals[j],row.page);
+  // Rows of an unrecognized following table (e.g. ACT ranges under SAT columns) are not this table's rows.
+  if(distribution.some(test=>scoreBands[test as keyof typeof scoreBands].some(b=>b[0]===id)))bandRows.push({table,tests:distribution,id,vals:vals as number[],page:row.page});
+ }
+ for(const band of bandRows){
+  if(band.vals.length<Math.max(...bandRows.filter(b=>b.table===band.table).map(b=>b.vals.length)))continue;
+  for(const [j,test] of band.tests.entries())if(scoreBands[test as keyof typeof scoreBands].some(b=>b[0]===band.id)&&band.vals[j]!==undefined)put(`${test}_band_${band.id}`,band.vals[j],band.page);
  }
  const rankRows=block('C',10);
  for(const [i,row]of rankRows.entries()){
