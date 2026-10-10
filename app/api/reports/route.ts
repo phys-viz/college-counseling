@@ -21,7 +21,7 @@ export async function GET(request:Request) {
     const [result,count,schools,years]=await Promise.all([
       database().prepare(query).bind(...args,limit,offset).all<{payload:string;matching_years?:number}>(),
       database().prepare('SELECT COUNT(*) AS report_count,COUNT(DISTINCT school_id) AS school_count FROM reports'+where).bind(...args).first<{report_count:number;school_count:number}>(),
-      database().prepare('SELECT DISTINCT school_id,school FROM reports ORDER BY school').all(),
+      database().prepare('SELECT school_id,school,MIN(year) AS first_year,MAX(year) AS last_year FROM reports GROUP BY school_id,school ORDER BY school').all(),
       (school?database().prepare('SELECT DISTINCT year FROM reports WHERE school_id=? ORDER BY year DESC').bind(school):database().prepare('SELECT DISTINCT year FROM reports ORDER BY year DESC')).all(),
     ]);
     return Response.json({reports:result.results.map(row=>{const {sections,additional_sections,...summary}=deriveExtraMetrics(enrichSavedGender(JSON.parse(row.payload) as Report));return {...summary,available_years:row.matching_years};}),total:schoolView?count?.school_count??0:count?.report_count??0,report_count:count?.report_count??0,schools:schools.results,years:years.results,offset,limit});

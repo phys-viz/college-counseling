@@ -1,5 +1,6 @@
 import {extraMetrics,metricUnit,type MetricUnit} from './metric-definitions';
 import {genderCategories,genderMetricKeys,isGenderMetric} from './gender-metrics';
+import type {TrendSchool} from './trend-settings';
 export const trendMetrics = [
   ...genderMetricKeys.map(value=>({value,label:extraMetrics[value].label})),
   {value:'admit_rate',label:'Admission rate'},
@@ -20,7 +21,7 @@ export type TrendReport = {
   reporting?:{cost_year?:string;aid_year?:string;retention_cohort?:number;graduation_cohort?:number};
   previous?:{year:number;source_url:string;source_type:string;page:number|null;applicants?:number;admit_rate?:number};
 };
-export type TrendResults = {reports:TrendReport[];schools:{school_id:string;school:string;index_url?:string}[]};
+export type TrendResults = {reports:TrendReport[];schools:TrendSchool[]};
 export function trendYearRanges(years:number[]):string {
  const sorted=[...new Set(years)].sort((a,b)=>a-b),ranges:string[]=[];
  for(let i=0;i<sorted.length;i++){const start=sorted[i];let end=start;while(sorted[i+1]===end+1)end=sorted[++i];ranges.push(start===end?String(start):`${start}–${end}`);}

@@ -14,6 +14,9 @@ import SchoolLegend from './school-legend';
 import {schoolBrand} from '@/lib/school-branding';
 import {copyTrendImage,exportTrendCSV,exportTrendImage} from '@/lib/export-trend';
 import {fetchJSON} from '@/lib/fetch-json';
+import SchoolPicker from './school-picker';
+import {withTrendSchool,type TrendSettings,type TrendSchool} from '@/lib/trend-settings';
+import type {Dispatch,SetStateAction} from 'react';
 
 type YearRow={year:number;primary:number|null;comparison:number|null;reports:(TrendReport|undefined)[]};
 function Choice({label,value,onChange,options}:{label:string;value:string;onChange:(s:string)=>void;options:{value:string;label:string}[]}) {
@@ -23,12 +26,14 @@ function PointDetails({row,metric,names}:{row:YearRow;metric:TrendMetric;names:s
   return <><strong>Fall {row.year}</strong>{row.reports.map((r,i)=><div key={names[i]}><b style={r?{color:schoolBrand(r.school_id,r.school).color}:undefined}>{names[i]}</b><strong>{trendDisplay(r,metric)}</strong>{r&&trendValue(r,metric)!==null&&<>{trendContext(r,metric)&&<span>{trendContext(r,metric)}</span>}{trendDetails(r,metric).map(detail=><span key={detail}>{detail}</span>)}</>}</div>)}</>;
 }
 
-export default function Trends({refresh,onSummaryChange}:{refresh:number;onSummaryChange?:(summary:string)=>void}) {
-  const [school,setSchool]=useState('cornell'),[comparison,setComparison]=useState('none');
-  const [metric,setMetric]=useState<TrendMetric>('admit_rate'),[start,setStart]=useState('2010'),[end,setEnd]=useState('2015');
+export default function Trends({refresh,onSummaryChange,settings,onSettingsChange,schools}:{refresh:number;onSummaryChange?:(summary:string)=>void;settings:TrendSettings;onSettingsChange:Dispatch<SetStateAction<TrendSettings>>;schools:TrendSchool[]}) {
+  const {school,comparison,metric,start,end,showLabels,axisMode,axisMin,axisMax}=settings;
+  const update=<K extends keyof TrendSettings>(key:K,value:TrendSettings[K])=>onSettingsChange(previous=>({...previous,[key]:value}));
+  const setMetric=(value:TrendMetric)=>update('metric',value),setStart=(value:string)=>update('start',value),setEnd=(value:string)=>update('end',value),setComparison=(value:string)=>update('comparison',value);
+  const setShowLabels=(value:boolean)=>update('showLabels',value),setAxisMode=(value:string)=>update('axisMode',value),setAxisMin=(value:string)=>update('axisMin',value),setAxisMax=(value:string)=>update('axisMax',value);
   const [data,setData]=useState<TrendResults|null>(null),[loading,setLoading]=useState(true),[error,setError]=useState(''),[retry,setRetry]=useState(0);
-  const [showLabels,setShowLabels]=useState(true),[focused,setFocused]=useState<YearRow|null>(null),[exporting,setExporting]=useState(false),[exportError,setExportError]=useState('');
-  const [axisMode,setAxisMode]=useState('auto'),[axisMin,setAxisMin]=useState(''),[axisMax,setAxisMax]=useState(''),[copied,setCopied]=useState(false);
+  const [focused,setFocused]=useState<YearRow|null>(null),[exporting,setExporting]=useState(false),[exportError,setExportError]=useState(''),[copied,setCopied]=useState(false);
+  const availableSchools=data?.schools??schools;
   const figure=useRef<HTMLDivElement>(null);
   const from=Number(start),to=Number(end);
   const valid=!!start&&!!end&&Number.isInteger(from)&&Number.isInteger(to)&&from>=1900&&to<=2100&&from<=to;
@@ -41,7 +46,7 @@ export default function Trends({refresh,onSummaryChange}:{refresh:number;onSumma
   },[school,comparison,from,to,valid,refresh,retry]);
   useEffect(()=>{setFocused(null);setExportError('');setCopied(false);},[metric,school,comparison,start,end,axisMode,axisMin,axisMax,showLabels]);
   const ids=comparison==='none'?[school]:[school,comparison];
-  const names=ids.map(id=>data?.schools.find(s=>s.school_id===id)?.school??(id==='cornell'?'Cornell University':id));
+  const names=ids.map(id=>availableSchools.find(s=>s.school_id===id)?.school??(id==='cornell'?'Cornell University':id));
   const brands=ids.map((id,i)=>schoolBrand(id,names[i])),colors=brands.map(b=>b.color);
   const rows=useMemo(()=>{
     if(!valid)return [];
@@ -103,9 +108,9 @@ export default function Trends({refresh,onSummaryChange}:{refresh:number;onSumma
   }
   return <section className="trends" aria-label="Admissions trends">
     <div className="trend-controls">
-      <Choice label="Trend school" value={school} onChange={v=>{setSchool(v);if(v===comparison)setComparison('none');}} options={data?.schools.map(s=>({value:s.school_id,label:s.school}))??[{value:'cornell',label:'Cornell University'}]}/>
+      <SchoolPicker label="Trend school" value={school} onChange={value=>{if(value!==school)onSettingsChange(previous=>withTrendSchool(previous,value,availableSchools.find(s=>s.school_id===value)));}} options={availableSchools.length?availableSchools.map(s=>({value:s.school_id,label:s.school})):[{value:'cornell',label:'Cornell University'}]}/>
       <MetricPicker value={metric} onChange={changeMetric}/>
-      <Choice label="Compare with" value={comparison} onChange={setComparison} options={[{value:'none',label:'No comparison'},...(data?.schools??[]).filter(s=>s.school_id!==school).map(s=>({value:s.school_id,label:s.school}))]}/>
+      <SchoolPicker label="Compare with" value={comparison} onChange={setComparison} options={[{value:'none',label:'No comparison'},...availableSchools.filter(s=>s.school_id!==school).map(s=>({value:s.school_id,label:s.school}))]}/>
       <div className="trend-year-range"><label><span>From year</span><Input aria-label="From year" type="number" min={1900} max={2100} step={1} value={start} onChange={e=>setStart(e.target.value)}/></label><label><span>To year</span><Input aria-label="To year" type="number" min={1900} max={2100} step={1} value={end} onChange={e=>setEnd(e.target.value)}/></label></div>
     </div>
     {!valid?<div className="empty" role="alert"><h2>Check the year range</h2><p>Enter whole years between 1900 and 2100, with the starting year no later than the ending year.</p></div>:loading?<div className="empty" role="status">Loading trend data…</div>:error?<div className="empty" role="alert"><h2>Trend data could not load</h2><p>{error}</p><Button onClick={()=>setRetry(v=>v+1)}>Retry chart</Button></div>:!hasData?<div className="empty"><h2>No reported values in this range</h2>{availabilityMessages.map(message=><p key={message}>{message}</p>)}<p>Choose another year range or school.</p></div>:<>
