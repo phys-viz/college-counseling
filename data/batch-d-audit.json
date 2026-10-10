@@ -1,0 +1,28 @@
+{
+  "reports": 51,
+  "coverage": {
+    "fordham-university": 12,
+    "ohio-state-university-columbus": 12,
+    "university-of-massachusetts-amherst": 27
+  },
+  "reviewed_c1_tables": 51,
+  "source_hashes_verified": 51,
+  "source_page_fixtures": 51,
+  "offline_ocr_reports": 2,
+  "known_unavailable_sources": [
+    {
+      "school_id": "fordham-university",
+      "year": 2024,
+      "source_type": "xlsx",
+      "url": "https://fordhamit-my.sharepoint.com/:x:/g/personal/oira_fordham_edu/EaJPT5Oj60pOvKeX3_fzOqQBLFA9sVfvKFLE4nT-WLJSRQ?e=9ExBg2",
+      "reason": "SharePoint public view requires Microsoft authentication; download response denies download capability"
+    },
+    {
+      "school_id": "fordham-university",
+      "year": 2023,
+      "source_type": "docx",
+      "url": "https://fordhamit-my.sharepoint.com/:w:/g/personal/oira_fordham_edu/EbW__FMxYS5EvzURTaAuWWUBU7Ixxmu0jPUX5itWVK6yYQ?e=UbOzDp",
+      "reason": "SharePoint public view requires Microsoft authentication; download response denies download capability"
+    }
+  ]
+}

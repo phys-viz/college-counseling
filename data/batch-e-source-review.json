@@ -1,0 +1,2263 @@
+{
+  "university-of-alabama": {
+    "2025": {
+      "counts": [
+        61994,
+        44124,
+        8127
+      ],
+      "gender_counts": [
+        [
+          25528,
+          36466,
+          0
+        ],
+        [
+          17977,
+          26147,
+          0
+        ]
+      ],
+      "status_counts": [
+        3318,
+        26,
+        4742,
+        41,
+        0,
+        0
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports26/CDS%202025-26%20FINAL%209Dec2025.pdf",
+      "sha256": "0ec0308863796e6cee71f3abde12ba8cb4d2b9f7a9ca81331d62cadbd3713f9e",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted.",
+        "Publisher labels the final overall enrollment line as part-time, but the published total reconciles all full-time plus part-time gender cells; the whole first-year cohort is retained."
+      ],
+      "omit_metrics": []
+    },
+    "2024": {
+      "counts": [
+        56795,
+        43531,
+        8032
+      ],
+      "gender_counts": [
+        [
+          23104,
+          33691,
+          0
+        ],
+        [
+          17506,
+          26025,
+          0
+        ]
+      ],
+      "status_counts": [
+        3336,
+        26,
+        4637,
+        33,
+        0,
+        0
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports25/UA%20CDS%202024-25%20FINAL%2022aJan2025.pdf",
+      "sha256": "379c62a8e4d23c07d41daa8f4b376471daaf85e72b23e33190a913c59a70ffe7",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted.",
+        "Publisher labels the final overall enrollment line as part-time, but the published total reconciles all full-time plus part-time gender cells; the whole first-year cohort is retained."
+      ],
+      "omit_metrics": []
+    },
+    "2023": {
+      "counts": [
+        58418,
+        44295,
+        8279
+      ],
+      "gender_counts": [
+        [
+          23331,
+          35087,
+          0
+        ],
+        [
+          17444,
+          26851,
+          0
+        ]
+      ],
+      "status_counts": [
+        3483,
+        37,
+        4732,
+        27,
+        0,
+        0
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports24/CDS%202023-24%20FINAL.pdf",
+      "sha256": "967e7db9c5bba80031a4caab2a30eb5706beafd8b9e5afd6744c4eb909bf7861",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted.",
+        "Publisher labels the final overall enrollment line as part-time, but the published total reconciles all full-time plus part-time gender cells; the whole first-year cohort is retained."
+      ],
+      "omit_metrics": []
+    },
+    "2022": {
+      "counts": [
+        54072,
+        43290,
+        8037
+      ],
+      "gender_counts": [
+        [
+          21550,
+          32522
+        ],
+        [
+          17129,
+          26161
+        ]
+      ],
+      "status_counts": [
+        3462,
+        28,
+        4519,
+        28
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports23/CDS%202022-23%20FINAL.pdf",
+      "sha256": "f46fea3298b69a5dc2a92c0cd49915c9a53e0b998ab5fcf85d59f22f2c05d692",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted.",
+        "Publisher labels the final overall enrollment line as part-time, but the published total reconciles all full-time plus part-time gender cells; the whole first-year cohort is retained."
+      ],
+      "omit_metrics": []
+    },
+    "2021": {
+      "counts": [
+        42421,
+        33472,
+        7593
+      ],
+      "gender_counts": [
+        [
+          15567,
+          26854
+        ],
+        [
+          12338,
+          21134
+        ]
+      ],
+      "status_counts": [
+        3206,
+        15,
+        4334,
+        38
+      ],
+      "c1_page": 8,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports22/CDS%202021-22%20FINAL.pdf",
+      "sha256": "a898ddd11e5d916432e8737bc11d7f70e9eb69921064db191179644191bd0784",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted.",
+        "Publisher labels the final overall enrollment line as part-time, but the published total reconciles all full-time plus part-time gender cells; the whole first-year cohort is retained."
+      ],
+      "omit_metrics": []
+    },
+    "2020": {
+      "counts": [
+        39560,
+        31804,
+        6507
+      ],
+      "gender_counts": [
+        [
+          14907,
+          24653
+        ],
+        [
+          12112,
+          19692
+        ]
+      ],
+      "status_counts": [
+        2728,
+        24,
+        3738,
+        17
+      ],
+      "c1_page": 7,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports21/THE%20CDS%202020-21%20FINAL.pdf",
+      "sha256": "3ab7cb05666626dc86db12198692bcbfb84a629c38b947406df9255a0c6baad3",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2019": {
+      "counts": [
+        38505,
+        31835,
+        6764
+      ],
+      "gender_counts": [
+        [
+          14709,
+          23796
+        ],
+        [
+          12230,
+          19605
+        ]
+      ],
+      "status_counts": [
+        2879,
+        9,
+        3855,
+        21
+      ],
+      "c1_page": 7,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports20/THE%20CDS%202019-20%20FINAL.pdf",
+      "sha256": "86db84dd0808422c5c2c842a8e05cce28975c6154a9ef4c130b084ca49afca6d",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2018": {
+      "counts": [
+        37302,
+        22032,
+        6663
+      ],
+      "gender_counts": [
+        [
+          14458,
+          22844
+        ],
+        [
+          8666,
+          13366
+        ]
+      ],
+      "status_counts": [
+        2889,
+        14,
+        3743,
+        17
+      ],
+      "c1_page": 7,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports19/THE%20CDS%202018-19%20FINAL.pdf",
+      "sha256": "2de4757190f1ca67e0b4b5458405c05e4e84a243d35adf02a0833d76dc99a03d",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2017": {
+      "counts": [
+        38129,
+        21344,
+        7407
+      ],
+      "gender_counts": [
+        [
+          14705,
+          23424
+        ],
+        [
+          8435,
+          12909
+        ]
+      ],
+      "status_counts": [
+        3157,
+        10,
+        4228,
+        12
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports18/1718_cds.pdf",
+      "sha256": "9930e8614c7480669f159a872e49ddc9da7c4488aa5bb87a6dfaa1ba9e42ded2",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2016": {
+      "counts": [
+        38237,
+        20107,
+        7559
+      ],
+      "gender_counts": [
+        [
+          14846,
+          23391
+        ],
+        [
+          7819,
+          12288
+        ]
+      ],
+      "status_counts": [
+        3246,
+        9,
+        4295,
+        9
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports17//1617_cds.pdf",
+      "sha256": "782eb00ac3e25a3d477eb9514631f268497a434b69a0b2d11f331bad7d4a36eb",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2015": {
+      "counts": [
+        36203,
+        19400,
+        7211
+      ],
+      "gender_counts": [
+        [
+          13795,
+          22408
+        ],
+        [
+          7345,
+          12055
+        ]
+      ],
+      "status_counts": [
+        3005,
+        12,
+        4171,
+        23
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports16//1516_cds.pdf",
+      "sha256": "dabba88e3da7e7986acafdddff3ea79737d9fe517773205d755cdbbe69a64c4f",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2014": {
+      "counts": [
+        33736,
+        17221,
+        6824
+      ],
+      "gender_counts": [
+        [
+          13467,
+          20269
+        ],
+        [
+          6952,
+          10269
+        ]
+      ],
+      "status_counts": [
+        2921,
+        15,
+        3873,
+        15
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports15/1415_cds.pdf",
+      "sha256": "376930597d894b9b89e8d31eb4d0dc3894bc10542b4282ac0b80ca11d9112a56",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2013": {
+      "counts": [
+        30975,
+        17515,
+        6454
+      ],
+      "gender_counts": [
+        [
+          12615,
+          18360
+        ],
+        [
+          7069,
+          10446
+        ]
+      ],
+      "status_counts": [
+        2820,
+        10,
+        3608,
+        16
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports14/1314_cds.pdf",
+      "sha256": "5c1b65d36cef137c87366fcc08923917b0df88983f6850cc36a77cd15f1521fe",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2012": {
+      "counts": [
+        26409,
+        14019,
+        6371
+      ],
+      "gender_counts": [
+        [
+          11152,
+          15257
+        ],
+        [
+          5987,
+          8032
+        ]
+      ],
+      "status_counts": [
+        2797,
+        11,
+        3541,
+        22
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports13/1213_cds.pdf",
+      "sha256": "bdee57b087fc4e049276a961c1e73dc90d46f86338ec599404a7727667f7c547",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2011": {
+      "counts": [
+        22136,
+        9636,
+        5728
+      ],
+      "gender_counts": [
+        [
+          9608,
+          12528
+        ],
+        [
+          4249,
+          5387
+        ]
+      ],
+      "status_counts": [
+        2554,
+        11,
+        3149,
+        14
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports12/1112_cds.pdf",
+      "sha256": "a479fd6f9740352851ce9bc4cd16443bbcfc4846137f8d8012b61b03e4f96380",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2010": {
+      "counts": [
+        20112,
+        10790,
+        5519
+      ],
+      "gender_counts": [
+        [
+          8762,
+          11350
+        ],
+        [
+          4668,
+          6122
+        ]
+      ],
+      "status_counts": [
+        2470,
+        14,
+        3019,
+        16
+      ],
+      "c1_page": 5,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports11/1011_cds_new.pdf",
+      "sha256": "f7f6d32f210f3b19877501b5e7fd854d6e2327ce79bea71433f6705977ed0558",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2009": {
+      "counts": [
+        19518,
+        11194,
+        5116
+      ],
+      "gender_counts": [
+        [
+          8605,
+          10913
+        ],
+        [
+          4968,
+          6226
+        ]
+      ],
+      "status_counts": [
+        2338,
+        9,
+        2758,
+        11
+      ],
+      "c1_page": 5,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports10/0910_cds.pdf",
+      "sha256": "1a4c1c13f782fb41a7ddc3f8db521b30dd489d36d9f6ff8e1e4cf4591082d6d1",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2008": {
+      "counts": [
+        18500,
+        11172,
+        5116
+      ],
+      "gender_counts": [
+        [
+          8160,
+          10340
+        ],
+        [
+          4782,
+          6390
+        ]
+      ],
+      "status_counts": [
+        2251,
+        49,
+        2783,
+        33
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports09/0809_cds.pdf",
+      "sha256": "18455761bab91bafa543a0aed7bca04489a825feacb45b7e580668dc88eb5041",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    },
+    "2007": {
+      "counts": [
+        14313,
+        9140,
+        4538
+      ],
+      "gender_counts": [
+        [
+          6186,
+          8127
+        ],
+        [
+          3909,
+          5231
+        ]
+      ],
+      "status_counts": [
+        2017,
+        25,
+        2476,
+        20
+      ],
+      "c1_page": 6,
+      "source_url": "https://oira.ua.edu/d/sites/all/files/reports08/0708_cds.pdf",
+      "sha256": "f8c8f129898e1b0692f19e41f4eea1e587a967b0be49e380c4a26832db516c71",
+      "notes": [
+        "C1 gender/status answer cells and published merged overall totals independently reviewed; all full-time and part-time students are included, and overall totals are not double-counted."
+      ],
+      "omit_metrics": []
+    }
+  },
+  "university-of-north-carolina-at-charlotte": {
+    "2025": {
+      "counts": [
+        27218,
+        21170,
+        4934
+      ],
+      "gender_counts": [
+        [
+          11978,
+          15240,
+          0
+        ],
+        [
+          9133,
+          12037,
+          0
+        ]
+      ],
+      "status_counts": [
+        2388,
+        49,
+        2454,
+        43,
+        0,
+        0
+      ],
+      "c1_page": 3,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2026/06/CDS-2025-26.xlsx",
+      "sha256": "e5a13f9cfcdd458cf6c529a05eec20734a98836df7e695c38afb123431597d95",
+      "notes": [],
+      "omit_metrics": [],
+      "residency_counts": [
+        [
+          18398,
+          8106,
+          714,
+          0
+        ],
+        [
+          15202,
+          5419,
+          549,
+          0
+        ],
+        [
+          4305,
+          497,
+          132,
+          0
+        ]
+      ]
+    },
+    "2024": {
+      "counts": [
+        23887,
+        19015,
+        4657
+      ],
+      "gender_counts": [
+        [
+          10414,
+          13473
+        ],
+        [
+          8134,
+          10881
+        ]
+      ],
+      "status_counts": [
+        2253,
+        34,
+        2314,
+        56
+      ],
+      "c1_page": 58,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2025/03/CDS_2024-2025.pdf",
+      "sha256": "014c61550ca8501074a018efa823f9b547d68ded2d6eb8fff2e56c46822f49aa",
+      "notes": [
+        "C1 is physical PDF page 58 in the publisher’s 153-page printout. Another/unknown gender and their FT/PT rows are blank, not inferred as zero; independent residency totals agree with the reported men/women and FT/PT cells."
+      ],
+      "omit_metrics": [],
+      "residency_counts": [
+        [
+          16976,
+          6389,
+          522
+        ],
+        [
+          14324,
+          4305,
+          386
+        ],
+        [
+          4089,
+          443,
+          125
+        ]
+      ]
+    },
+    "2023": {
+      "counts": [
+        22698,
+        18207,
+        4501
+      ],
+      "gender_counts": [
+        [
+          9991,
+          12707,
+          0
+        ],
+        [
+          7808,
+          10399,
+          0
+        ]
+      ],
+      "status_counts": [
+        2155,
+        44,
+        2266,
+        36,
+        0,
+        0
+      ],
+      "c1_page": 58,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2024/06/CDS_2023-2024.pdf",
+      "sha256": "3a8da1bfc50893384073d130606e65006a38a5db441f5e8fe59f73847226ecfc",
+      "notes": [
+        "C1 is physical page 58 of the official 154-page PDF. Gender and all full-time/part-time cells agree with the separately published official workbook. Independently reviewed residency components corroborate the overall counts."
+      ],
+      "omit_metrics": [],
+      "residency_counts": [
+        [
+          16299,
+          5870,
+          529
+        ],
+        [
+          14011,
+          3842,
+          354
+        ],
+        [
+          4000,
+          413,
+          88
+        ]
+      ]
+    },
+    "2022": {
+      "counts": [
+        21355,
+        17007,
+        4157
+      ],
+      "gender_counts": [
+        [
+          9262,
+          12093
+        ],
+        [
+          7257,
+          9750
+        ]
+      ],
+      "status_counts": [
+        1966,
+        53,
+        2095,
+        43
+      ],
+      "c1_page": 3,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS_2022-2023.xlsx",
+      "sha256": "00ac1c83636e3716cd53261a9e25267f3a85d541741c03f50f5aecb1dae6cb5c",
+      "notes": [
+        "Official Excel workbook used because the separately linked two-page PDF lacks Section C. Original worksheet names, cell coordinates and formatted answers are retained."
+      ],
+      "omit_metrics": []
+    },
+    "2021": {
+      "counts": [
+        20365,
+        16210,
+        4256
+      ],
+      "gender_counts": [
+        [
+          8789,
+          11576
+        ],
+        [
+          6817,
+          9393
+        ]
+      ],
+      "status_counts": [
+        2035,
+        28,
+        2168,
+        25
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS_2021-2022.pdf",
+      "sha256": "fb597d56ca573fc4e4fc05106a13a25bba36cd8bb66412e4bc34bc487cca5135",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2020": {
+      "counts": [
+        19946,
+        15863,
+        3999
+      ],
+      "gender_counts": [
+        [
+          8960,
+          10986
+        ],
+        [
+          7194,
+          8669
+        ]
+      ],
+      "status_counts": [
+        2071,
+        33,
+        1859,
+        36
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS_2020-2021.pdf",
+      "sha256": "2b917d369688dc6e91b2174c2e6e2a37a2c2e2455a82510afa7ff840cbcde67a",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2019": {
+      "counts": [
+        21867,
+        14224,
+        3652
+      ],
+      "gender_counts": [
+        [
+          9770,
+          12097
+        ],
+        [
+          6463,
+          7761
+        ]
+      ],
+      "status_counts": [
+        1920,
+        19,
+        1706,
+        7
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS-2019-2020_0.pdf",
+      "sha256": "67188c85f5ab82536bb5adba36ed1a107480ee6acf42dc97130c6752e2fe060b",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2018": {
+      "counts": [
+        17119,
+        11500,
+        3708
+      ],
+      "gender_counts": [
+        [
+          7664,
+          9455
+        ],
+        [
+          5296,
+          6204
+        ]
+      ],
+      "status_counts": [
+        1975,
+        18,
+        1703,
+        12
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS-2018-2019.pdf",
+      "sha256": "96def7f3ed00776e358a1847cb09dd978b8b2f5ace933068fabc8d140a342f7f",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2017": {
+      "counts": [
+        16743,
+        11061,
+        3373
+      ],
+      "gender_counts": [
+        [
+          7620,
+          9123
+        ],
+        [
+          5174,
+          5887
+        ]
+      ],
+      "status_counts": [
+        1837,
+        12,
+        1518,
+        6
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS-2017-2018.pdf",
+      "sha256": "8de9ffe5bba873bc58a12fb9b718badbb65d2511964d19efb1fda364f17e8320",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2016": {
+      "counts": [
+        17475,
+        10868,
+        3453
+      ],
+      "gender_counts": [
+        [
+          7841,
+          9634
+        ],
+        [
+          4972,
+          5896
+        ]
+      ],
+      "status_counts": [
+        1838,
+        6,
+        1601,
+        8
+      ],
+      "c1_page": 6,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS-2016-2017.pdf",
+      "sha256": "c486101412848179fa77f18498699066ba685f5b33d0f9e9ddd280977e95e2bc",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2015": {
+      "counts": [
+        16383,
+        10372,
+        3452
+      ],
+      "gender_counts": [
+        [
+          7353,
+          9030
+        ],
+        [
+          4757,
+          5615
+        ]
+      ],
+      "status_counts": [
+        1855,
+        5,
+        1583,
+        9
+      ],
+      "c1_page": 6,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2015-2016.pdf",
+      "sha256": "33871b31de775479d9499b3f6fc82c36454775a97abed3973cad678aea535724",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2014": {
+      "counts": [
+        15610,
+        10004,
+        3319
+      ],
+      "gender_counts": [
+        [
+          7113,
+          8497
+        ],
+        [
+          4660,
+          5344
+        ]
+      ],
+      "status_counts": [
+        1758,
+        6,
+        1541,
+        14
+      ],
+      "c1_page": 6,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2014-2015.pdf",
+      "sha256": "4d3e947067af54244909b23e84908b14912c1b0d4fb05f1319c4c8db96ca2b61",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2013": {
+      "counts": [
+        14300,
+        8967,
+        3087
+      ],
+      "gender_counts": [
+        [
+          6521,
+          7779
+        ],
+        [
+          4149,
+          4818
+        ]
+      ],
+      "status_counts": [
+        1571,
+        9,
+        1486,
+        21
+      ],
+      "c1_page": 6,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2013-14_0.pdf",
+      "sha256": "be0a4f842461245e3fc5ed4db4483fb5457c987cbd8f1e7f92261db9db9aff02",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2012": {
+      "counts": [
+        13742,
+        9416,
+        3541
+      ],
+      "gender_counts": [
+        [
+          6383,
+          7359
+        ],
+        [
+          4403,
+          5013
+        ]
+      ],
+      "status_counts": [
+        1863,
+        13,
+        1649,
+        16
+      ],
+      "c1_page": 6,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2012-13.pdf",
+      "sha256": "3c673e283a65febb188fc76d48cf8784329abeb75382dcbe87ec564647f937d4",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2011": {
+      "counts": [
+        12306,
+        8570,
+        3169
+      ],
+      "gender_counts": [
+        [
+          5382,
+          6924
+        ],
+        [
+          3828,
+          4742
+        ]
+      ],
+      "status_counts": [
+        1550,
+        11,
+        1592,
+        16
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2011-12-Final.pdf",
+      "sha256": "6bafe9fbbe4d83be159a490b992bf394214c4e77c13bb7612db0d7942efd9d6c",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2010": {
+      "counts": [
+        11239,
+        8034,
+        2985
+      ],
+      "gender_counts": [
+        [
+          5078,
+          6161
+        ],
+        [
+          3644,
+          4390
+        ]
+      ],
+      "status_counts": [
+        1439,
+        13,
+        1516,
+        17
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS2010_2011-Final.pdf",
+      "sha256": "40c74935f63618a6672deca815c9ae1cf49625a486cb08d04c7be25e9b16115a",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2009": {
+      "counts": [
+        10702,
+        8158,
+        3187
+      ],
+      "gender_counts": [
+        [
+          4913,
+          5789
+        ],
+        [
+          3809,
+          4349
+        ]
+      ],
+      "status_counts": [
+        1585,
+        15,
+        1573,
+        14
+      ],
+      "c1_page": 6,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/CDS2009_2010-Final_0.pdf",
+      "sha256": "337c9d2a7dcae7f40708c0ae4335afee5744f38c72c3a397923a61373f214d0a",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2008": {
+      "counts": [
+        10336,
+        7906,
+        3090
+      ],
+      "gender_counts": [
+        [
+          4694,
+          5642
+        ],
+        [
+          3568,
+          4338
+        ]
+      ],
+      "status_counts": [
+        1450,
+        11,
+        1610,
+        19
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2008_09.pdf",
+      "sha256": "97bd981bfa1895d6375135ec351832d96e71d4e8ae38d3e39181af949859dcfa",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2007": {
+      "counts": [
+        9911,
+        7477,
+        2955
+      ],
+      "gender_counts": [
+        [
+          4540,
+          5371
+        ],
+        [
+          3452,
+          4025
+        ]
+      ],
+      "status_counts": [
+        1520,
+        8,
+        1413,
+        14
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-data-set-07-08-Final.pdf",
+      "sha256": "9aa9a3acb272d8714ffe5410193db70c23daa604cbec9447700ee03f24e00256",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2006": {
+      "counts": [
+        9409,
+        6881,
+        2798
+      ],
+      "gender_counts": [
+        [
+          4154,
+          5255
+        ],
+        [
+          3057,
+          3824
+        ]
+      ],
+      "status_counts": [
+        1290,
+        22,
+        1477,
+        9
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2006-07-Final.pdf",
+      "sha256": "9700679dd421a29a9e38b3466aa43d2ee808f3db0885f20210e4846951f0da32",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2005": {
+      "counts": [
+        8665,
+        6738,
+        2890
+      ],
+      "gender_counts": [
+        [
+          3884,
+          4781
+        ],
+        [
+          2980,
+          3758
+        ]
+      ],
+      "status_counts": [
+        1364,
+        12,
+        1500,
+        14
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2005-06-Final.pdf",
+      "sha256": "5eeddb4ef7c0faf21aa4ac449a6bf8131b08a48d01f97aae92ee512998842002",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2004": {
+      "counts": [
+        8848,
+        6413,
+        2629
+      ],
+      "gender_counts": [
+        [
+          3800,
+          5048
+        ],
+        [
+          2748,
+          3665
+        ]
+      ],
+      "status_counts": [
+        1184,
+        15,
+        1417,
+        13
+      ],
+      "c1_page": 7,
+      "source_url": "https://ir.charlotte.edu/wp-content/uploads/sites/871/2023/11/Common-Data-Set-2004-05-Final.pdf",
+      "sha256": "940a78291350868149088fec022ba296d60c71a9d0559fef4756747a271e0640",
+      "notes": [],
+      "omit_metrics": []
+    }
+  },
+  "university-of-delaware": {
+    "2024": {
+      "counts": [
+        39742,
+        27517,
+        4075
+      ],
+      "gender_counts": [
+        [
+          15747,
+          23994,
+          null,
+          null
+        ],
+        [
+          10155,
+          17361,
+          null,
+          null
+        ],
+        [
+          1590,
+          2485,
+          null,
+          null
+        ]
+      ],
+      "status_counts": [
+        1589,
+        1,
+        2485,
+        0
+      ],
+      "c1_page": 13,
+      "source_url": "https://ire.udel.edu/files/2025/07/CDS2425_UDelaware.pdf",
+      "sha256": "625b0202adbb16842325798745f8c4aba2bbbf3b67438414906d23e0b17827c1",
+      "notes": [
+        "Newark Campus admissions activity. Explicit residency totals reconcile all reported residency components. Applicants/admitted totals each exceed the reported men/women sum by one; another/unknown gender cells are blank and remain unfilled. C1 and raw Section C were OCR-extracted because some PDF font mappings are corrupt; C1 physical pages 13–14 visually verified against original pages."
+      ],
+      "omit_metrics": [],
+      "residency_counts": [
+        [
+          4119,
+          33360,
+          2263
+        ],
+        [
+          2913,
+          23364,
+          1240
+        ],
+        [
+          1381,
+          2638,
+          56
+        ]
+      ],
+      "reviewed_metrics": {
+        "applicants": 39742,
+        "admitted": 27517,
+        "enrolled": 4075,
+        "male_applicants": 15747,
+        "female_applicants": 23994,
+        "male_admitted": 10155,
+        "female_admitted": 17361,
+        "male_enrolled": 1590,
+        "female_enrolled": 2485
+      },
+      "parser_counts": [
+        39742,
+        null,
+        4075
+      ]
+    },
+    "2023": {
+      "counts": [
+        37472,
+        23818,
+        4205
+      ],
+      "gender_counts": [
+        [
+          15106,
+          22366
+        ],
+        [
+          8786,
+          15032
+        ]
+      ],
+      "status_counts": [
+        1502,
+        4,
+        2688,
+        11
+      ],
+      "c1_page": 13,
+      "source_url": "https://ire.udel.edu/files/2024/07/CDS2324_UDelaware.pdf",
+      "sha256": "979646a8b2a15615b9244e83fa47e94b3a931155ba09362f7a77768a116642fc",
+      "notes": [
+        "C1 explicitly describes Newark Campus admissions activity; gender FT/PT cells and residency totals reconcile. Blank another-gender cells remain unfilled."
+      ],
+      "omit_metrics": [],
+      "residency_counts": [
+        [
+          3796,
+          31014,
+          2662
+        ],
+        [
+          2475,
+          20069,
+          1274
+        ],
+        [
+          1224,
+          2911,
+          70
+        ]
+      ]
+    },
+    "2022": {
+      "counts": [
+        35228,
+        26101,
+        4906
+      ],
+      "c1_page": 13,
+      "source_url": "https://ire.udel.edu/files/2024/06/CDS2223_UDelaware.pdf",
+      "sha256": "0dfcb979a2a864afea55fdbca41b4734a6b1ed84e82ed8a54f2f9db2c25ebb89",
+      "notes": [
+        "Explicit institution-wide degree-seeking C1 totals include Newark Campus and the Associate in Arts Program. The separately reported gender/status rows describe Newark only; their admissions/enrollment do not sum to the institution-wide totals. Newark-only subgroup rows remain in raw source pages, with subgroup admissions/enrollment and derived subgroup rates omitted."
+      ],
+      "omit_metrics": [
+        "male_admitted",
+        "male_enrolled",
+        "male_admit_rate",
+        "male_yield_rate",
+        "female_admitted",
+        "female_enrolled",
+        "female_admit_rate",
+        "female_yield_rate",
+        "another_gender_admitted",
+        "another_gender_enrolled",
+        "another_gender_admit_rate",
+        "another_gender_yield_rate",
+        "unknown_gender_admitted",
+        "unknown_gender_enrolled",
+        "unknown_gender_admit_rate",
+        "unknown_gender_yield_rate"
+      ],
+      "newark_gender_counts": [
+        [
+          13789,
+          21439
+        ],
+        [
+          9353,
+          16166
+        ]
+      ],
+      "gender_counts": [
+        [
+          13789,
+          21439
+        ]
+      ],
+      "newark_status_counts": [
+        1781,
+        4,
+        2842,
+        5
+      ],
+      "reviewed_metrics": {
+        "admitted": 26101,
+        "enrolled": 4906
+      },
+      "parser_counts": [
+        35228,
+        null,
+        null
+      ]
+    },
+    "2021": {
+      "counts": [
+        33965,
+        24679,
+        4617
+      ],
+      "c1_page": 8,
+      "source_url": "https://ire.udel.edu/files/2022/06/CDS2122_UDelaware-062922.pdf",
+      "sha256": "2688eb5c10ce5523d6ff6f0b404ce2ab1b53c439ae75f981fc18ae24f78b8b1a",
+      "notes": [
+        "Explicit institution-wide degree-seeking C1 totals include Newark Campus and the Associate in Arts Program. The separately reported gender/status rows describe Newark only; their admissions/enrollment do not sum to the institution-wide totals. Newark-only subgroup rows remain in raw source pages, with subgroup admissions/enrollment and derived subgroup rates omitted."
+      ],
+      "omit_metrics": [
+        "male_admitted",
+        "male_enrolled",
+        "male_admit_rate",
+        "male_yield_rate",
+        "female_admitted",
+        "female_enrolled",
+        "female_admit_rate",
+        "female_yield_rate",
+        "another_gender_admitted",
+        "another_gender_enrolled",
+        "another_gender_admit_rate",
+        "another_gender_yield_rate",
+        "unknown_gender_admitted",
+        "unknown_gender_enrolled",
+        "unknown_gender_admit_rate",
+        "unknown_gender_yield_rate"
+      ],
+      "newark_gender_counts": [
+        [
+          13138,
+          20827
+        ],
+        [
+          8691,
+          15240
+        ]
+      ],
+      "gender_counts": [
+        [
+          13138,
+          20827
+        ]
+      ],
+      "newark_status_counts": [
+        1572,
+        9,
+        2691,
+        4
+      ],
+      "reviewed_metrics": {
+        "admitted": 24679,
+        "enrolled": 4617
+      },
+      "parser_counts": [
+        33965,
+        null,
+        null
+      ]
+    },
+    "2020": {
+      "counts": [
+        33505,
+        21125,
+        3742
+      ],
+      "gender_counts": [
+        [
+          13668,
+          19837
+        ],
+        [
+          8142,
+          12983
+        ]
+      ],
+      "status_counts": [
+        1493,
+        12,
+        2218,
+        19
+      ],
+      "c1_page": 8,
+      "source_url": "https://ire.udel.edu/files/2014/12/CDS2021_UDelaware-121021.pdf",
+      "sha256": "8b494ff282c0a992b4d450524e4af528a7cc2bf9650602cb2b0ff705878c3830",
+      "notes": [
+        "C1 source scope: applications to the University of Delaware; admitted and enrolled to Newark Campus only. Counts are preserved as published. Admission rates that would mix the application population with Newark-only admitted counts are omitted; Newark admitted/enrolled yield uses matching scopes."
+      ],
+      "omit_metrics": [
+        "admit_rate",
+        "male_admit_rate",
+        "female_admit_rate"
+      ]
+    },
+    "2019": {
+      "counts": [
+        26500,
+        18106,
+        4144
+      ],
+      "gender_counts": [
+        [
+          11038,
+          15462
+        ],
+        [
+          7080,
+          11026
+        ]
+      ],
+      "status_counts": [
+        1677,
+        1,
+        2459,
+        7
+      ],
+      "c1_page": 8,
+      "source_url": "https://ire.udel.edu/files/2014/12/CDS1920_UDelaware-070120.pdf",
+      "sha256": "1d32f8fe67005f83d5e84e6f43596f1e786ffebc45e205336523db1e967fdece",
+      "notes": [
+        "C1 source scope: applications to the University of Delaware; admitted and enrolled to Newark Campus only. Counts are preserved as published. Admission rates that would mix the application population with Newark-only admitted counts are omitted; Newark admitted/enrolled yield uses matching scopes."
+      ],
+      "omit_metrics": [
+        "admit_rate",
+        "male_admit_rate",
+        "female_admit_rate"
+      ]
+    },
+    "2018": {
+      "counts": [
+        27691,
+        17277,
+        4249
+      ],
+      "gender_counts": [
+        [
+          11652,
+          16039
+        ],
+        [
+          6732,
+          10545
+        ]
+      ],
+      "status_counts": [
+        1736,
+        3,
+        2507,
+        3
+      ],
+      "c1_page": 8,
+      "source_url": "https://ire.udel.edu/files/2019/05/CDS1819_UDelaware-051019-1.pdf",
+      "sha256": "ef9c8d57339e1bd4042460e7250c2b488a22014619c618597f4452ada9651396",
+      "notes": [
+        "C1 source scope: applications to the University of Delaware; admitted and enrolled to Newark Campus only. Counts are preserved as published. Admission rates that would mix the application population with Newark-only admitted counts are omitted; Newark admitted/enrolled yield uses matching scopes."
+      ],
+      "omit_metrics": [
+        "admit_rate",
+        "male_admit_rate",
+        "female_admit_rate"
+      ]
+    },
+    "2017": {
+      "counts": [
+        27803,
+        16648,
+        4306
+      ],
+      "gender_counts": [
+        [
+          11926,
+          15877
+        ],
+        [
+          6650,
+          9998
+        ]
+      ],
+      "status_counts": [
+        1802,
+        11,
+        2483,
+        10
+      ],
+      "c1_page": 8,
+      "source_url": "https://ire.udel.edu/files/2019/05/CDS1718_UDelaware-051019-1.pdf",
+      "sha256": "1d9f5d185d838f9ec7d91bf88071d581bde1e739d2602b8d35a33ee61d7c92ab",
+      "notes": [
+        "C1 source scope: applications to the University of Delaware; admitted and enrolled to Newark Campus only. Counts are preserved as published. Admission rates that would mix the application population with Newark-only admitted counts are omitted; Newark admitted/enrolled yield uses matching scopes."
+      ],
+      "omit_metrics": [
+        "admit_rate",
+        "male_admit_rate",
+        "female_admit_rate"
+      ]
+    },
+    "2016": {
+      "counts": [
+        24456,
+        15879,
+        3952
+      ],
+      "gender_counts": [
+        [
+          10329,
+          14127
+        ],
+        [
+          6357,
+          9522
+        ]
+      ],
+      "status_counts": [
+        1652,
+        4,
+        2291,
+        5
+      ],
+      "c1_page": 6,
+      "source_url": "https://ire.udel.edu/files/2017/04/CDS1617-040417-1aak3ud.pdf",
+      "sha256": "3a3d5be87587833113a77216e08343db587f122285bf6768c653cbc644fd1f07",
+      "notes": [
+        "C1 source scope: applications to the University of Delaware; admitted and enrolled to Newark Campus only. Counts are preserved as published. Admission rates that would mix the application population with Newark-only admitted counts are omitted; Newark admitted/enrolled yield uses matching scopes."
+      ],
+      "omit_metrics": [
+        "admit_rate",
+        "male_admit_rate",
+        "female_admit_rate"
+      ]
+    },
+    "2015": {
+      "counts": [
+        24881,
+        15567,
+        4098
+      ],
+      "gender_counts": [
+        [
+          10465,
+          14416
+        ],
+        [
+          6300,
+          9267
+        ]
+      ],
+      "status_counts": [
+        1713,
+        2,
+        2379,
+        4
+      ],
+      "c1_page": 6,
+      "source_url": "https://ire.udel.edu/files/2016/05/CDS1516-as-of-052416-16yz6sm.pdf",
+      "sha256": "e8b470dcf7d770007a59eb2a9dd0e43119ac08616784f4c5420df4b153de4f86",
+      "notes": [
+        "C1 source scope: applications to the University of Delaware; admitted and enrolled to Newark Campus only. Counts are preserved as published. Admission rates that would mix the application population with Newark-only admitted counts are omitted; Newark admitted/enrolled yield uses matching scopes."
+      ],
+      "omit_metrics": [
+        "admit_rate",
+        "male_admit_rate",
+        "female_admit_rate"
+      ]
+    },
+    "2014": {
+      "counts": [
+        25032,
+        16491,
+        4179
+      ],
+      "gender_counts": [
+        [
+          10717,
+          14315
+        ],
+        [
+          6661,
+          9830
+        ]
+      ],
+      "status_counts": [
+        1698,
+        9,
+        2471,
+        1
+      ],
+      "c1_page": 6,
+      "source_url": "https://ire.udel.edu/files/2015/05/CDS1415-Rev-042415-2i1asx9.pdf",
+      "sha256": "54e915764520dccbac01fcf9d7d22eeb7c075f1b5d526222a251b019c0a10386",
+      "notes": [
+        "C1 source scope: applied and admitted to Newark Campus only. The enrollment campus scope is not explicitly stated in C1; published enrollment counts are retained, while yield rates with potentially different population scopes are omitted."
+      ],
+      "omit_metrics": [
+        "yield_rate",
+        "male_yield_rate",
+        "female_yield_rate"
+      ]
+    },
+    "2013": {
+      "counts": [
+        25423,
+        15673,
+        3806
+      ],
+      "gender_counts": [
+        [
+          10749,
+          14674
+        ],
+        [
+          6171,
+          9502
+        ]
+      ],
+      "status_counts": [
+        1539,
+        4,
+        2257,
+        6
+      ],
+      "c1_page": 6,
+      "source_url": "https://ire.udel.edu/files/2015/05/CDS1314-Rev0415-1zsvlvt.pdf",
+      "sha256": "740c18adad7dd172c94e457bb095f9b302be972efb8b77cf8ba294ba890d0b94",
+      "notes": [
+        "C1 source scope: applied and admitted to Newark Campus only. The enrollment campus scope is not explicitly stated in C1; published enrollment counts are retained, while yield rates with potentially different population scopes are omitted."
+      ],
+      "omit_metrics": [
+        "yield_rate",
+        "male_yield_rate",
+        "female_yield_rate"
+      ]
+    },
+    "2012": {
+      "counts": [
+        26225,
+        14829,
+        3817
+      ],
+      "gender_counts": [
+        [
+          11198,
+          15027
+        ],
+        [
+          5805,
+          9024
+        ]
+      ],
+      "status_counts": [
+        1583,
+        3,
+        2223,
+        8
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds1213.pdf",
+      "sha256": "81ea4462e4221a5e350fef8f44204c48ec3a7caa05b5cc50cc293c856b892985",
+      "notes": [
+        "C1 source scope: applied and admitted to Newark Campus only. The enrollment campus scope is not explicitly stated in C1; published enrollment counts are retained, while yield rates with potentially different population scopes are omitted."
+      ],
+      "omit_metrics": [
+        "yield_rate",
+        "male_yield_rate",
+        "female_yield_rate"
+      ]
+    },
+    "2011": {
+      "counts": [
+        23647,
+        13768,
+        3914
+      ],
+      "gender_counts": [
+        [
+          10227,
+          13420
+        ],
+        [
+          5560,
+          8208
+        ]
+      ],
+      "status_counts": [
+        1605,
+        3,
+        2301,
+        5
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds1112.pdf",
+      "sha256": "07520d0488d021ddd5abf627dccf5d5e6507f236df5e14b21bc8127d8442f4ec",
+      "notes": [
+        "C1 source scope: applied and admitted to Newark Campus only. The enrollment campus scope is not explicitly stated in C1; published enrollment counts are retained, while yield rates with potentially different population scopes are omitted."
+      ],
+      "omit_metrics": [
+        "yield_rate",
+        "male_yield_rate",
+        "female_yield_rate"
+      ]
+    },
+    "2010": {
+      "counts": [
+        23510,
+        12752,
+        3391
+      ],
+      "gender_counts": [
+        [
+          10053,
+          13457
+        ],
+        [
+          5283,
+          7469
+        ]
+      ],
+      "status_counts": [
+        1436,
+        14,
+        1929,
+        12
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds1011.pdf",
+      "sha256": "51cbdff50ac4834b71da82e0d6cf449e18761fe00fca4d18d08bd7d1da8d6131",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2009": {
+      "counts": [
+        22886,
+        13425,
+        3818
+      ],
+      "gender_counts": [
+        [
+          9759,
+          13127
+        ],
+        [
+          5597,
+          7828
+        ]
+      ],
+      "status_counts": [
+        1612,
+        4,
+        2199,
+        3
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0910.pdf",
+      "sha256": "df6feb52470e93e6eb82b0465865b0cfd095137a8e482f5ff302614ecdcea9f6",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2008": {
+      "counts": [
+        22491,
+        12586,
+        3526
+      ],
+      "gender_counts": [
+        [
+          9213,
+          13278
+        ],
+        [
+          5140,
+          7446
+        ]
+      ],
+      "status_counts": [
+        1473,
+        12,
+        2027,
+        14
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0809.pdf",
+      "sha256": "4f2291f9cbeb182924d92190d3c2313da20b29a352cdc21b5fb3890bac550e09",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2007": {
+      "counts": [
+        20615,
+        11452,
+        3592
+      ],
+      "gender_counts": [
+        [
+          8238,
+          12377
+        ],
+        [
+          4601,
+          6851
+        ]
+      ],
+      "status_counts": [
+        1450,
+        null,
+        2142,
+        null
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0708.pdf",
+      "sha256": "fd6b79e305a0e437f1910f2a64d38581af5dd3e77746b01fba9c038438b221ed",
+      "notes": [
+        "C1 annotates both nominal full-time enrollment answer rows as including full- and part-time students; 1,450 men plus 2,142 women gives 3,592 overall. Blank part-time cells are preserved, not imputed to zero."
+      ],
+      "omit_metrics": [],
+      "inclusive_enrollment_counts": [
+        1450,
+        2142
+      ]
+    },
+    "2006": {
+      "counts": [
+        21930,
+        10373,
+        3259
+      ],
+      "gender_counts": [
+        [
+          8971,
+          12959
+        ],
+        [
+          4075,
+          6298
+        ]
+      ],
+      "status_counts": [
+        1255,
+        28,
+        1947,
+        29
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0607.pdf",
+      "sha256": "486706e520982afca8df317e13cae044e530b8f4f533c6fd283e4bd25a036744",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2005": {
+      "counts": [
+        21617,
+        10256,
+        3522
+      ],
+      "gender_counts": [
+        [
+          8906,
+          12711
+        ],
+        [
+          4191,
+          6065
+        ]
+      ],
+      "status_counts": [
+        1441,
+        3,
+        2074,
+        4
+      ],
+      "c1_page": 6,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0506.pdf",
+      "sha256": "17992080d6300f98b2651d60d6b06950e914a0af567061dbbb1d453f8639d511",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2004": {
+      "counts": [
+        22208,
+        9999,
+        3458
+      ],
+      "gender_counts": [
+        [
+          9205,
+          13003
+        ],
+        [
+          4080,
+          5919
+        ]
+      ],
+      "status_counts": [
+        1434,
+        6,
+        2014,
+        4
+      ],
+      "c1_page": 5,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0405.pdf",
+      "sha256": "5e1bb540e1e1c89e93476217ce5193a4f3f355c8b6709cfa39d3f053e9802b12",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2003": {
+      "counts": [
+        22020,
+        9267,
+        3450
+      ],
+      "gender_counts": [
+        [
+          9179,
+          12841
+        ],
+        [
+          3841,
+          5426
+        ]
+      ],
+      "status_counts": [
+        1484,
+        5,
+        1956,
+        5
+      ],
+      "c1_page": 5,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0304.pdf",
+      "sha256": "ff37f813983ce6deea5c9d84a6e6779251edced9c04c9a94de57ed66e9408203",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2002": {
+      "counts": [
+        20365,
+        9693,
+        3420
+      ],
+      "gender_counts": [
+        [
+          8339,
+          12026
+        ],
+        [
+          3822,
+          5871
+        ]
+      ],
+      "status_counts": [
+        1338,
+        10,
+        2064,
+        8
+      ],
+      "c1_page": 5,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0203.pdf",
+      "sha256": "c5125c50e363014572191abfa3b0da0b98b0fdebb394edaa39acc3ca827ffaec",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2001": {
+      "counts": [
+        18209,
+        9581,
+        3379
+      ],
+      "gender_counts": [
+        [
+          7442,
+          10767
+        ],
+        [
+          3851,
+          5730
+        ]
+      ],
+      "status_counts": [
+        1418,
+        6,
+        1951,
+        4
+      ],
+      "c1_page": 5,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0102.pdf",
+      "sha256": "db054bf8f6f00db652606389d7d8e86ee274f5d45ff5d59348bf5033fcdef362",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "2000": {
+      "counts": [
+        18165,
+        8831,
+        3158
+      ],
+      "gender_counts": [
+        [
+          7540,
+          10625
+        ],
+        [
+          3340,
+          5491
+        ]
+      ],
+      "status_counts": [
+        1209,
+        7,
+        1932,
+        10
+      ],
+      "c1_page": 5,
+      "source_url": "https://www1.udel.edu/IR/cds/cds0001.pdf",
+      "sha256": "2a347f66b49163f84762c7d99f45578f980518beee9bd9730218cb70ca2fb7e5",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "1999": {
+      "counts": [
+        14107,
+        8891,
+        3534
+      ],
+      "gender_counts": [
+        [
+          5832,
+          8275
+        ],
+        [
+          3446,
+          5445
+        ]
+      ],
+      "status_counts": [
+        1355,
+        19,
+        2140,
+        20
+      ],
+      "c1_page": 5,
+      "source_url": "https://www1.udel.edu/IR/cds/cds9900.pdf",
+      "sha256": "c3703a43cef50d3442ca7836146b68d76a2d9da931311be88168d1d16bcc6e8c",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "1998": {
+      "counts": [
+        15482,
+        10315,
+        3562
+      ],
+      "gender_counts": [
+        [
+          7646,
+          7836
+        ],
+        [
+          4105,
+          6210
+        ]
+      ],
+      "status_counts": [
+        1403,
+        0,
+        2159,
+        0
+      ],
+      "c1_page": 5,
+      "source_url": "https://www1.udel.edu/IR/cds/cds9899.pdf",
+      "sha256": "7be18b02b899f163a5a1a7d9960bda6a7cc00b963f758fc5ad93850e0312ed3b",
+      "notes": [],
+      "omit_metrics": []
+    },
+    "1997": {
+      "counts": [
+        15814,
+        10236,
+        3212
+      ],
+      "gender_counts": [
+        [
+          6989,
+          8825
+        ],
+        [
+          4203,
+          6033
+        ]
+      ],
+      "status_counts": [
+        1310,
+        0,
+        1902,
+        0
+      ],
+      "c1_page": 5,
+      "source_url": "https://ire.udel.edu/files/2017/07/cds9798-18p9w4s.pdf",
+      "sha256": "055a9d69034e1e68cb012a87580404fb88f84d76d6d021e656e4c324f23cbbc1",
+      "notes": [
+        "Image-only institution-authored PDF. Section C OCR extracted locally; all C1 men/women and FT/PT counts visually verified against original physical page 5. This is an offline adapter, not browser OCR support."
+      ],
+      "omit_metrics": []
+    }
+  }
+}

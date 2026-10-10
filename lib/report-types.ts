@@ -1,12 +1,14 @@
 import {extraMetrics,metricUnit} from './metric-definitions';
+export type SourcePage = {page:number;text:string;form_fields:{name:string;value:string;label?:string|null;rect?:number[]}[];source_url?:string;source_type?:string;source_label?:string;sha256?:string};
 export type Report = {
   school_id: string; school: string; year: number; report_label: string; source_url: string; index_url: string;
   source_type: string; sha256: string; extracted_at: string; review_status: string;
   metrics: Record<string, number | string>; evidence: Record<string,{section:string;page:number|null;method:string;source_url?:string;source_type?:string}>;
   factors: {label:string;rating:string;page:number}[];
-  sections: {page:number;text:string;form_fields:{name:string;value:string;label?:string|null;rect?:number[]}[]}[];
+  sections: SourcePage[];
   warnings:string[];
-  additional_sections?: {page:number;text:string;form_fields:{name:string;value:string;label?:string|null;rect?:number[]}[]}[];
+  omitted_metrics?:string[];
+  additional_sections?: SourcePage[];
 };
 export type Summary = Omit<Report,'sections'> & {available_years?:number};
 export const labels: Record<string,string> = {

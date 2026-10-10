@@ -62,9 +62,18 @@ export function enrichMetrics(r:Report,pages:PDFPage[]):Report {
  for(const [test,prefix] of [['sat','SAT1_COMP'],['reading','SAT1_VERB'],['math','SAT1_MATH']] as const)for(const [id] of scoreBands[test])field(`${test}_band_${id}`,[`${prefix}_${id.split('_')[0]}_P`]);
  for(const [i,[id]] of scoreBands.act.entries())field(`act_band_${id}`,[`ACT_${6-i}_P`]);
  // Text distributions: identify the header's population; never turn score boundaries into percentages.
- let distribution:string[]=[];
- for(const row of block('C',9)){
+ let distribution:string[]=[],dualComposite=false;
+ const scoreRows=block('C',9);
+ for(const [i,row] of scoreRows.entries()){
   const t=row.text;
+  const header=scoreRows.slice(Math.max(0,i-2),i+1).filter(l=>l.page===row.page).map(l=>l.text).join(' ');
+  if(!/%/.test(header)&&/SAT Evidence[- ]\s*(?:Score Range\s+)?Based Reading.*SAT Math.*and Writing/i.test(header))distribution=['reading','math'];
+  if(/SAT ACT Score Range Score Range Composite Composite$/i.test(header)){dualComposite=true;distribution=[];}
+  if(/^Score Range ACT English\b|^Total\s+100%\s+Total\s+100%/i.test(t)){dualComposite=false;distribution=[];}
+  if(dualComposite){
+   const pair=t.match(/^(\d{3,4}\s*-\s*\d{3,4})\s+(\d+(?:\.\d+)?)%\s+(\d{1,2}\s*-\s*\d{1,2}|Below 6)\s+(\d+(?:\.\d+)?)%$/i);
+   if(pair){for(const [test,range,value]of [['sat',pair[1],pair[2]],['act',pair[3],pair[4]]] as const){const id=/^Below/i.test(range)?'below_6':range.replace(/\s/g,'').replace('-','_');if(scoreBands[test].some(b=>b[0]===id))put(`${test}_band_${id}`,Number(value),row.page,'PDF paired SAT/ACT Composite columns','C9');}continue;}
+  }
   if(/^Score Range\s+SAT Composite$|^SAT Composite$/i.test(t))distribution=['sat'];
   else if(/^(?:SAT Evidence-Based|SAT Critical Reading|Based Reading).*SAT Math/i.test(t)||/^SAT .*Writing SAT Math$/i.test(t))distribution=['reading','math'];
   else if(/^ACT Composite(?:\s+ACT English|\s+ACT Math|$)/i.test(t))distribution=['act'];
@@ -72,6 +81,12 @@ export function enrichMetrics(r:Report,pages:PDFPage[]):Report {
   const id=m[1].toLowerCase()==='below 6'?'below_6':m[1].replace(/\s/g,'').replace('-','_');
   const vals=m[2].split(/\s+/).map(numeric);if(vals.some(v=>v===null))continue;
   for(const [j,test] of distribution.entries())if(scoreBands[test as keyof typeof scoreBands].some(b=>b[0]===id)&&vals[j]!==undefined)put(`${test}_band_${id}`,vals[j],row.page);
+ }
+ const rankRows=block('C',10);
+ for(const [i,row]of rankRows.entries()){
+  const text=rankRows.slice(i,i+3).filter(l=>l.page===row.page).map(l=>l.text).join(' ');
+  const rank=text.match(/^Percent of total first-time, first-year students who submitted high school\s+(\d+(?:\.\d+)?)%\s+class rank$/i);
+  if(rank)put('rank_submitted',Number(rank[1]),row.page,'PDF wrapped class-rank reporting percentage','C10');
  }
  for(const [region,prefix] of [['in_state','STATE'],['out_state','NRES'],['international','INTL']] as const)for(const [kind,name] of [['applicants','AP_RECD'],['admitted','AP_ADMT'],['enrolled','EN_TOT']] as const)field(`${region}_${kind}`,[`${name}_${prefix}_1ST_N`]);
  // Residency text tables use the printed header order; gender tables are excluded.
@@ -168,11 +183,12 @@ export function enrichMetrics(r:Report,pages:PDFPage[]):Report {
 }
 
 export function deriveExtraMetrics(r:Report):Report {
- const ratio=(key:string,n:string,d:string,section:string)=>{const a=r.metrics[n],b=r.metrics[d];delete r.metrics[key];delete r.evidence[key];if(typeof a==='number'&&typeof b==='number'&&b>0&&a<=b){r.metrics[key]=Math.round(a/b*100000)/1000;r.evidence[key]={...r.evidence[n],section,page:r.evidence[n]?.page??null,method:`calculated: ${n} / ${d}`};}};
+ const ratio=(key:string,n:string,d:string,section:string)=>{const a=r.metrics[n],b=r.metrics[d];delete r.metrics[key];delete r.evidence[key];if(!r.omitted_metrics?.includes(key)&&typeof a==='number'&&typeof b==='number'&&b>0&&a<=b){r.metrics[key]=Math.round(a/b*100000)/1000;r.evidence[key]={...r.evidence[n],section,page:r.evidence[n]?.page??null,method:`calculated: ${n} / ${d}`};}};
  ratio('ed_share','ed_admitted','admitted','C21');
  for(const region of ['in_state','out_state','international','male','female','another_gender','unknown_gender']){ratio(region+'_admit_rate',region+'_admitted',region+'_applicants','C1');ratio(region+'_yield_rate',region+'_enrolled',region+'_admitted','C1');}
  ratio('transfer_admit_rate','transfer_admitted','transfer_applicants','D2');ratio('transfer_yield_rate','transfer_enrolled','transfer_admitted','D2');ratio('merit_participation','merit_recipients','aid_first_year_count','H2A');ratio('graduation_4_rate','graduated_4','graduation_adjusted','B');ratio('graduation_6_rate','graduated_6','graduation_adjusted','B');
  const small=Number(r.metrics.class_2_9)+Number(r.metrics.class_10_19),large=Number(r.metrics.class_50_99)+Number(r.metrics.class_100_plus),total=r.metrics.class_total;
  for(const [key,n] of [['class_under_20_rate',small],['class_50_plus_rate',large]] as const)if(typeof total==='number'&&total>0&&Number.isFinite(n)&&n<=total){r.metrics[key]=Math.round(n/total*100000)/1000;r.evidence[key]={section:'I3',page:r.evidence.class_total?.page??null,method:'calculated from undergraduate class sections'};}
+ for(const key of r.omitted_metrics??[]){delete r.metrics[key];delete r.evidence[key];}
  return r;
 }

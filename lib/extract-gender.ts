@@ -1,15 +1,20 @@
 import type {Report} from './report-types';
 import type {PDFLine} from './extract-pdf';
+import {compactC1Columns} from './c1-columns';
 type Line=PDFLine&{page:number};
 const integer=(s:string)=>/^_*\d[\d,]*(?:\.0+)?_*$/.test(s.trim())?Number(s.replace(/[,_]/g,'')):null;
 const group=(s:string)=>/unknowns?\s+(?:gender|sex)/i.test(s)?'unknown_gender':/another\s+gender|non.binary/i.test(s)?'another_gender':/\bwomen\b|\bfemales?\b/i.test(s)?'female':/\bmen\b|\bmales?\b/i.test(s)?'male':null;
 const outcome=(s:string)=>/\bapplied\b|\bapplications by\b/i.test(s)?'applicants':/\badmitted\b|\boffers to\b|\boffered.*admission/i.test(s)?'admitted':/\benrolled\b/i.test(s)?'enrolled':null;
+const answerText=(text:string)=>text.replace(/\b(applied|admitted|enrolled)[*\u2020\u2021]+/gi,'$1').replace(/\b(\d{1,3}),\s+(\d{3})(?=\s|$)/g,'$1,$2').replace(/_{2,}\s*(\d[\d,]*)\s*_*/g,' $1').replace(/(\d[\d,]*)\s+_{2,}(?=\s|$)/g,'$1').replace(/(\d[\d,]*)\s+(?:Totals?|Applicants|Admits|Enrolled)\s*$/i,'$1').replace(/(\d[\d,]*)\s+a\s*$/,'$1').replace(/\s+/g,' ').trim();
 
 // Canonical matching text only. Raw source lines and coordinates remain intact.
 export function canonicalC1(lines:Line[]):Line[]{
  let region='';
  return lines.map((l,i)=>{
   let text=l.text;
+  // UF's older reports wrap "gender not reported" around its numeric cell.
+  const unreported=text.match(/^(Total.*?)\b(applied|admitted) with gender not\s+(\d[\d,]*)\s*$/i);
+  if(unreported&&lines[i+1]?.page===l.page&&/^reported\s*$/i.test(lines[i+1].text))text=`${unreported[1]} unknown gender who ${unreported[2]} ${unreported[3]}`;
   // Narrow, tall residency cells can wrap the header and the final row verb.
   // Keep the physical source untouched, but reconcile all reported totals.
   if(/INTERNATIONAL\s+TOTAL\s*$/i.test(text)&&!/^Total\b/i.test(text)){
@@ -17,16 +22,46 @@ export function canonicalC1(lines:Line[]):Line[]{
    if(/\bIN-\b|\bIN-\s/i.test(header)&&/\bOUT-/i.test(header)&&/\bSTATE\b/i.test(header))text='In-State Out-of-State International Total';
   }
   text=text.replace(/^subsequently offered admission\.\s+(?=Total first[- ]time, first[- ]year)/i,'');
-  if(/First.Time, First.Year.*\b(?:In-State|Out-of-State|International|Unknown)(?:\s+Total)?\s*$/i.test(text)&&(text.match(/\b(?:In-State|Out-of-State|International|Unknown)\b/gi)??[]).length===1)region=text.match(/\b(In-State|Out-of-State|International|Unknown)(?:\s+Total)?\s*$/i)![1];
+  if(!/^Total\b/i.test(text)&&/First.Time, First.Year.*\b(?:In-State|Out-of-State|International|Unknown)(?:\s+Total)?\s*$/i.test(text)){
+   const regions=text.match(/\b(?:In-State|Out-of-State|International|Unknown)\b/gi)??[];
+   region=regions.length===1?regions[0]:'';
+  }
   if(/^Total\b/i.test(text)){
+   text=answerText(text);
+   if(/\[includes full[- ] and part[- ]time students\]/i.test(text))text=text.replace(/\bfull[- ]time,?\s*/i,'').replace(/\s*\[includes full[- ] and part[- ]time students\]\s*/i,' ');
    text=text.replace(/\s+sum\s*=.*$/i,'').replace(/\s+\(\d+(?:\.\d+)?%.*$/,'').replace(/\s+(?:applications|of admitted|of adm)\)\s*$/i,'');
    text=text.replace(/^(Total) applications by (men|women)(.*)admission\s+/i,'$1 $2$3applied ').replace(/^(Total) offers to (men|women)(.*)admission\s+/i,'$1 $2$3admitted ').replace(/offered first-time, first-year(?:\s*\(freshman\))? admission\s+/i,'admitted ').replace(/applied for first-time, first-year(?:\s*\(freshman\))? admission\s+/i,'applied ');
    // Wrapped final verb or a single answer line, confined to this physical page.
    const next=lines[i+1];
    const after=lines[i+2];
-   if(next?.page===l.page&&after?.page===l.page&&!/\b(?:applied|admitted|enrolled)\b/i.test(text)&&/^\d[\d,]*(?:\s+\d[\d,]*){1,4}$/.test(next.text)&&/^(?:who\s+)?(?:were\s+)?(?:applied|admitted|enrolled)$/i.test(after.text))text+=' '+after.text+' '+next.text;
+   if(next?.page===l.page&&after?.page===l.page&&!/\b(?:applied|admitted|enrolled)\b/i.test(text)&&/^\d[\d,]*(?:\s+\d[\d,]*){0,4}$/.test(next.text)&&/^(?:seeking\)\s+)?(?:who\s+)?(?:were\s+)?(?:applied|admitted|enrolled)\s*:?$/i.test(after.text))text+=' '+after.text.replace(/\s*:\s*$/,'')+' '+next.text;
    else if(next?.page===l.page&&/\bwho\s*$/.test(text)&&/^(?:were )?(?:applied|admitted|enrolled)(?:\s+\d[\d,]*(?:\.0+)?)?$/i.test(next.text))text+=' '+next.text;
    else if(l.words.length&&next?.page===l.page&&/\b(?:applied|admitted|enrolled)\s*$/.test(text)&&integer(next.text)!==null&&integer(lines[i-1]?.text??'')===null)text+=' '+next.text;
+   // A merged right-hand total is used only after independent reconciliation.
+   // This preserves subgroup cells without counting the total a second time.
+   const extra=text.match(/^(.*\b(applied|admitted|enrolled))\s+(\d[\d,]*)\s+(\d[\d,]*)$/i);
+   if(extra&&group(text)) {
+    const first=integer(extra[3])!,total=integer(extra[4])!,g=group(text),key=outcome(text);
+    const status=/(full|part)\s*-\s*time/i.exec(text)?.[1].toLowerCase();
+    const peers=lines.filter(h=>h.page===l.page&&h!==l&&/^Total\b/i.test(h.text)&&outcome(h.text)===key).map(h=>({...h,text:answerText(h.text)}));
+    if(status) {
+     const other=peers.filter(h=>group(h.text)===g&&new RegExp(`\\b${status==='full'?'part':'full'}\\s*-\\s*time`,'i').test(h.text));
+     const v=other.length===1?integer(other[0].text.match(/\benrolled\s+(\d[\d,]*)$/i)?.[1]??''):null;
+     if(v!==null&&first+v===total)text=extra[1]+' '+extra[3];
+     else {
+      const statusRows=peers.filter(h=>group(h.text)&&/(full|part)\s*-\s*time/i.test(h.text));
+      const filled=statusRows.map(h=>({g:group(h.text),s:/(full|part)\s*-\s*time/i.exec(h.text)?.[1].toLowerCase(),v:integer(h.text.match(/\benrolled\s+(\d[\d,]*)$/i)?.[1]??'')}));
+      filled.push({g,s:status,v:first});
+      const groups=new Set(filled.filter(h=>h.v!==null).map(h=>h.g));
+      const complete=groups.has('male')&&groups.has('female')&&[...groups].every(k=>filled.filter(h=>h.g===k&&h.s==='full').length===1&&filled.filter(h=>h.g===k&&h.s==='part').length===1&&filled.filter(h=>h.g===k).every(h=>h.v!==null));
+      if(complete&&filled.filter(h=>h.v!==null).reduce((n,h)=>n+h.v!,0)===total)text=extra[1]+' '+extra[3];
+     }
+    } else {
+     const other=peers.filter(h=>group(h.text)&&group(h.text)!==g&&!/(?:full|part)\s*-\s*time/i.test(h.text));
+     const values=other.map(h=>integer(h.text.match(/\b(?:applied|admitted|enrolled)\s+(\d[\d,]*)$/i)?.[1]??''));
+     if(other.length&&new Set([g,...other.map(h=>group(h.text))]).has('male')&&new Set([g,...other.map(h=>group(h.text))]).has('female')&&values.every(v=>v!==null)&&first+values.reduce((n,v)=>n+v!,0)===total)text=extra[1]+' '+extra[3];
+    }
+   }
   }
   return {...l,text:region&&/^Total\b/i.test(text)?region+' '+text:text};
  });
@@ -36,6 +71,27 @@ export function extractGender(r:Report,lines:Line[],fields:Map<string,{name:stri
  const candidates=new Map<string,{value:number;page:number;method:string}[]>();
  const totals:Record<string,{value:number;page:number;method:string}[]>={applicants:[],admitted:[],enrolled:[]};
  const add=(key:string,value:number|null,page:number,method:string)=>{if(value!==null)candidates.set(key,[...candidates.get(key)??[],{value,page,method}]);};
+ const compact=compactC1Columns(lines);
+ for(const [key,values] of Object.entries(compact.counts))for(const c of values)add(key,c.value,c.page,c.method);
+ for(const key of ['applicants','admitted','enrolled'])totals[key].push(...compact.totals[key]);
+ // A gender-specific residency table independently reports that gender's
+ // overall total. Reconcile it with the direct answer rather than ignoring a
+ // conflicting later table (Bentley 2023 is one such publisher inconsistency).
+ let residency:{width:number;totalFirst:boolean;page:number}|undefined;
+ for(const l of lines) {
+  if(/\bIn[- ]State\b/i.test(l.text)&&/\bOut[- ](?:of[- ])?State\b/i.test(l.text)) {
+   residency=/\bTotal\b/i.test(l.text)?{width:3+(/\bInternational\b/i.test(l.text)?1:0)+(/\bUnknown\b/i.test(l.text)?1:0),totalFirst:/\bTotal\b.*\bIn[- ]State\b/i.test(l.text),page:l.page}:undefined;
+  }
+  const g=group(l.text),key=outcome(l.text);
+  if(!residency||l.page!==residency.page||!g||!key||!/^Total\b/i.test(l.text)||/(?:full|part)\s*-\s*time/i.test(l.text))continue;
+  const match=l.text.match(/\b(?:applied|admitted|enrolled)\s+([\d,\s-]+)$/i);
+  const cells=match?.[1].trim().split(/\s+/).map(integer)??[];
+  if(cells.length!==residency.width)continue;
+  const total=residency.totalFirst?cells[0]:cells.at(-1);
+  if(total!==null&&total!==undefined)add(`${g}_${key}`,total,l.page,'PDF gender-specific residency Total column');
+  const components=residency.totalFirst?cells.slice(1):cells.slice(0,-1);
+  if(components.every(v=>v!==null))add(`${g}_${key}`,components.reduce((n,v)=>n+v!,0),l.page,'sum of complete gender-specific residency cells');
+ }
  for(const [key,prefix] of [['applicants','AP_RECD_1ST_'],['admitted','AP_ADMT_1ST_'],['enrolled','EN_TOT_1ST_']]){
   for(const [g,suffix] of [['male','MEN_N'],['female','WMN_N'],['another_gender','NON_BINARY_N'],['unknown_gender','UNK_N']]){
    const direct=fields.get(prefix+suffix);
@@ -109,7 +165,7 @@ export function enrichSavedGender(r:Report):Report{
  const lines=canonicalC1(end>=0?source.slice(0,end):source);
  const fields=new Map(r.sections.flatMap(p=>p.form_fields.map(f=>[f.name,{...f,page:p.page}] as const)));
  const draft:Report={...r,metrics:{},evidence:{},warnings:[]};extractGender(draft,lines,fields);
- for(const [key,value] of Object.entries(draft.metrics))if(r.metrics[key]===undefined){r.metrics[key]=value;r.evidence[key]={...draft.evidence[key],method:'retained source evidence: '+draft.evidence[key].method};}
+ for(const [key,value] of Object.entries(draft.metrics))if(r.metrics[key]===undefined&&!r.omitted_metrics?.includes(key)){r.metrics[key]=value;r.evidence[key]={...draft.evidence[key],method:'retained source evidence: '+draft.evidence[key].method};}
  for(const warning of draft.warnings)if(!r.warnings.includes(warning))r.warnings.push(warning);
  return r;
 }

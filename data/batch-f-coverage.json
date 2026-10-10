@@ -1,0 +1,213 @@
+{
+  "review_scope": "C1 original applicants/admitted/enrolled and every printed gender/status and available residency group. Additional metrics source-extracted; targeted rank/test-score gaps and DOCX mapping documented in review.",
+  "source_method": "Official current original documents; archived institution-authored originals only when explicitly linked from the archived institutional index. No third-party numeric summaries or inferred years.",
+  "schools": [
+    {
+      "school_id": "george-washington-university",
+      "available_years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unavailable_listed_originals": [
+        {
+          "year": 2014,
+          "official_url": "https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2014-2015.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20180501000000id_/https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2014-2015.pdf",
+          "reason": "Archived retrieval refused connections; live original PDF URL returned HTTP404."
+        },
+        {
+          "year": 2015,
+          "official_url": "https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2015-2016.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20180501000000id_/https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2015-2016.pdf",
+          "reason": "Archived retrieval refused connections; live original PDF URL returned HTTP404."
+        },
+        {
+          "year": 2016,
+          "official_url": "https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2016-2017_0.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20180501000000id_/https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2016-2017_0.pdf",
+          "reason": "Archived retrieval refused connections; live original PDF URL returned HTTP404."
+        },
+        {
+          "year": 2017,
+          "official_url": "https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2017-2018-temp%20update.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20180501000000id_/https://irp.gwu.edu/sites/g/files/zaxdzs2501/f/downloads/CDS_2017-2018-temp%20update.pdf",
+          "reason": "Archived retrieval refused connections; live original PDF URL returned HTTP404."
+        }
+      ]
+    },
+    {
+      "school_id": "james-madison-university",
+      "available_years": [
+        1999,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unavailable_listed_originals": [
+        {
+          "year": 1997,
+          "official_url": "http://www.jmu.edu/instresrch/cds/1997/v0qcsg2o.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/1997/v0qcsg2o.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 1998,
+          "official_url": "http://www.jmu.edu/instresrch/cds/1998/9899cds.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/1998/9899cds.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2000,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2000/cds2000.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2000/cds2000.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2001,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2001/cds2001.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2001/cds2001.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2002,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2002/cds2002.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2002/cds2002.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2003,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2003/cds2003.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2003/cds2003.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2004,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2004/cds2004.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2004/cds2004.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2005,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2005/cds2005_2006.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2005/cds2005_2006.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2006,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2006/cds2006_07.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2006/cds2006_07.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2007,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2007/cds2007-08.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2007/cds2007-08.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2008,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2008/CDS2008_09.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2008/CDS2008_09.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2009,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2009/CDS2009_10.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2009/CDS2009_10.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2010,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2010/CDS2010_11.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2010/CDS2010_11.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2011,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2011/cds2011-12.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2011/cds2011-12.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2012,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2012/cds2012-13.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2012/cds2012-13.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2013,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2013/cds2013-14.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2013/cds2013-14.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2014,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2014/cds2014-15.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2014/cds2014-15.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        },
+        {
+          "year": 2015,
+          "official_url": "http://www.jmu.edu/instresrch/cds/2015/cds2015-16.pdf",
+          "archived_url_attempted": "https://web.archive.org/web/20160801000000id_/http://www.jmu.edu/instresrch/cds/2015/cds2015-16.pdf",
+          "reason": "Archived retrieval refused connections; original live URL redirects to current IR home without a PDF."
+        }
+      ],
+      "unlocated_years_note": "JMU2016/2017 originals were not found in the current2018-onward index or archived2016 list ending2015. The actual former index redirects/404s in2017 captures. No guessed PDF paths or inferred metrics were used."
+    },
+    {
+      "school_id": "university-of-georgia",
+      "available_years": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unavailable_listed_originals": []
+    }
+  ],
+  "historical_index_evidence": [
+    {
+      "cached_file": "jmu-legacy-2016-index.html",
+      "sha256": "f577be54a93d2ef048d450ff2896031b67c8f6a66f567222751608f710fd0002"
+    },
+    {
+      "cached_file": "jmu-legacy-2016end-index.html",
+      "sha256": "c0137100bed74797dce038952968684880726ad4ce3d4d6704f3b20b35f38aab"
+    },
+    {
+      "cached_file": "historic-index-3.html",
+      "sha256": "4ee1a58ed94c0866bc931e6817da79fde141ec0e9e9619a11932b53e7a02e116"
+    }
+  ]
+}

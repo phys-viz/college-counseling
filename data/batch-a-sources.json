@@ -1,0 +1,2349 @@
+[
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS 2025-26_v8_08.14.2026.pdf",
+    "title": "2025-26",
+    "year": 2025,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "32356d0a50168f42f72adc693fb6e50ae168a061194f2060c07f4f6bf9915b6c",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2024-2025_UFMAIN_Post_v4_ADA5.pdf",
+    "title": "2024-25",
+    "year": 2024,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "1bb5c8c7621698dd548d1277af610b29816897ad8661d70a7b1d64260ac65b5f",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2023-2024_UFMAIN_Post_v3_04.13.26_ADA2.pdf",
+    "title": "2023-24",
+    "year": 2023,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "c21faca1fbf14b967ef2222cf7961b13e1beb5c1f0c90ace89f02df7b96959bd",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds1997-98.pdf",
+    "title": "University of Florida Common Data Set 1997–1998",
+    "year": 1997,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/1997-98",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds1997-98.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "e9e0e1a8da6a4ee65f2c35a4e410aa1d77dfc45fd7e2ca30945ca78a9920fe57",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2000-01.pdf",
+    "title": "University of Florida Common Data Set 2000–2001",
+    "year": 2000,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2000-01",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2000-01.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "e82999692cc25375df3cc4ef267a2c1f9a58876a94b14a572665e5f92b793e0f",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2001-02.pdf",
+    "title": "University of Florida Common Data Set 2001–2002",
+    "year": 2001,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2001-02",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2001-02.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "dcf4a5663b84519f8de60b30981d5d60d72ecaaa4b9d5556c0f5c7e45c106fd6",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2002-03.pdf",
+    "title": "University of Florida Common Data Set 2002–2003",
+    "year": 2002,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2002-03",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2002-03.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "b80a81a744f8b84600f57a1e73be941e3308bd062019288a344a48db8ea009c9",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2003-04.pdf",
+    "title": "University of Florida Common Data Set 2003–2004",
+    "year": 2003,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2003-04",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2003-04.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "bd12751c2dc0634e77c47d02c83ac573d12dfb1f9d20e890c42982762314c272",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2004-05.pdf",
+    "title": "University of Florida Common Data Set 2004–2005",
+    "year": 2004,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2004-05",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2004-05.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "8471d3b705c2136afec2ea433e59cc7b1756c8f0b3c95d0644ffaff3cfe848ca",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2005-06.pdf",
+    "title": "University of Florida Common Data Set 2005–2006",
+    "year": 2005,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2005-06",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2005-06.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "c9ac0466aad1f5287e36c2f9c6907b9386b624384ec264a98d49cd4cfe91fbdf",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2006-07.pdf",
+    "title": "University of Florida Common Data Set 2006–2007",
+    "year": 2006,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2006-07",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2006-07.pdf",
+    "provenance": "official historical publisher file, outside current short index",
+    "sha256": "daee0cecf2d49781308eabeb3f74aafeaa35ea51917f28428713e15effa41b94",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2007-08/ca61e5bfa53c8012a8354ce65a8d9bbfc4c47efe2543f9c4c314774c3d649502.pdf",
+    "title": "University of Florida Common Data Set 2007–2008",
+    "year": 2007,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2007-08",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "ca61e5bfa53c8012a8354ce65a8d9bbfc4c47efe2543f9c4c314774c3d649502",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2008-09/b58673c815bc949e2208d601a04feec127479ef2549be7bac2a2ed61492bf438.pdf",
+    "title": "University of Florida Common Data Set 2008–2009",
+    "year": 2008,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2008-09",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "b58673c815bc949e2208d601a04feec127479ef2549be7bac2a2ed61492bf438",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2009-10/ffd19c9512745aaedd744048b7e9c5d0d3de11029d88b3e00c7fac1ac0b8eebc.pdf",
+    "title": "University of Florida Common Data Set 2009–2010",
+    "year": 2009,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2009-10",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "ffd19c9512745aaedd744048b7e9c5d0d3de11029d88b3e00c7fac1ac0b8eebc",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2010-11/892f4914abd43c352033e915f32fe598e56e8b281e61a1367b202bc1db08aea3.pdf",
+    "title": "University of Florida Common Data Set 2010–2011",
+    "year": 2010,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2010-11",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "892f4914abd43c352033e915f32fe598e56e8b281e61a1367b202bc1db08aea3",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2011-12/887803d558b84f13ce4e5bc4f53638f549a93b7cb957645d33cb1f5eb7849ba2.pdf",
+    "title": "University of Florida Common Data Set 2011–2012",
+    "year": 2011,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2011-12",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "887803d558b84f13ce4e5bc4f53638f549a93b7cb957645d33cb1f5eb7849ba2",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2012-13/6f7e902c306286cfac767505dc1e6afb1ea35bf4ecd827f4f84f463e2ffb0f11.pdf",
+    "title": "University of Florida Common Data Set 2012–2013",
+    "year": 2012,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2012-13",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "6f7e902c306286cfac767505dc1e6afb1ea35bf4ecd827f4f84f463e2ffb0f11",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2013-14/785c42a532c5ae4940cd056321329f8129259e9c395760df18798088babfe2f9.pdf",
+    "title": "University of Florida Common Data Set 2013–2014",
+    "year": 2013,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2013-14",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "785c42a532c5ae4940cd056321329f8129259e9c395760df18798088babfe2f9",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2014-15/471956f86ca9d9d131d311fab6969f6ef75fc8491628065971b995626dade451.pdf",
+    "title": "University of Florida Common Data Set 2014–2015",
+    "year": 2014,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2014-15",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "471956f86ca9d9d131d311fab6969f6ef75fc8491628065971b995626dade451",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2015-16/2dc89098aca3a02e57c2d5228107e22ac8c34d87dcb36d20c9e5878d06105b58.pdf",
+    "title": "University of Florida Common Data Set 2015–2016",
+    "year": 2015,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2015-16",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "2dc89098aca3a02e57c2d5228107e22ac8c34d87dcb36d20c9e5878d06105b58",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2016-17/ba4de511b6e6eaa512ce475c52adc6678a11a7bbb37b90af6ca9217523aacf15.pdf",
+    "title": "University of Florida Common Data Set 2016–2017",
+    "year": 2016,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2016-17",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "ba4de511b6e6eaa512ce475c52adc6678a11a7bbb37b90af6ca9217523aacf15",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2017-18/5bf13c8708e55075f03a51edd5f2f77a15515f17094af6175a59f27974430340.pdf",
+    "title": "University of Florida Common Data Set 2017–2018",
+    "year": 2017,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2017-18",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "5bf13c8708e55075f03a51edd5f2f77a15515f17094af6175a59f27974430340",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2018-19/16eeb669e735eaafc5bd73a40c728a5856b86f378d5d77be0d57985883304030.pdf",
+    "title": "University of Florida Common Data Set 2018–2019",
+    "year": 2018,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2018-19",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "16eeb669e735eaafc5bd73a40c728a5856b86f378d5d77be0d57985883304030",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2019-20/8dfe15fa4ac71413e87abc717f5d90e908c17bac446458aa177b6fe8aace7e13.pdf",
+    "title": "University of Florida Common Data Set 2019–2020",
+    "year": 2019,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2019-20",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "8dfe15fa4ac71413e87abc717f5d90e908c17bac446458aa177b6fe8aace7e13",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2020-21/444f33c4997da874d8188e20163cef35107d218bc3526219c197f53c9fa7c24d.pdf",
+    "title": "University of Florida Common Data Set 2020–2021",
+    "year": 2020,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2020-21",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "444f33c4997da874d8188e20163cef35107d218bc3526219c197f53c9fa7c24d",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2021-22_UFMAIN.pdf",
+    "title": "University of Florida Common Data Set 2021–2022",
+    "year": 2021,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2021-22",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2021-22_UFMAIN.pdf",
+    "provenance": "official publisher file",
+    "sha256": "7c3a00bf8adfc0271b78311bbc1f3cff01d4a76b4d44c286181196cd31163205",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2022-2023_UFMAIN_Post.pdf",
+    "title": "University of Florida Common Data Set 2022–2023",
+    "year": 2022,
+    "source_type": "pdf",
+    "archive_url": "https://www.collegedata.fyi/schools/uf/2022-23",
+    "official_url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2022-2023_UFMAIN_Post.pdf",
+    "provenance": "official publisher file",
+    "sha256": "089d1f7b5648b397f5fa580ccf7e85c9aefdcfad9317550e6d30a90fcb73f439",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://uofi.box.com/shared/static/orx4vnmzkt2drmgoiksxpfs39pr42uor.xlsx",
+    "title": "2025-26",
+    "year": 2025,
+    "source_type": "xlsx",
+    "provenance": "official publisher file",
+    "sha256": "9fd806a412276af516571b680b68bbec1319620cd3884540845ca29e59cf9d85",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://uofi.box.com/shared/static/1m3p4sedkotywoec55zbnodc4oci5ctf.xlsx",
+    "title": "2024-25",
+    "year": 2024,
+    "source_type": "xlsx",
+    "provenance": "official publisher file",
+    "sha256": "cc36af257029eea4c327bc51ce16f63f0c13195c9b11bd88db0c0c22f22a135c",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://uofi.box.com/shared/static/zaag0tgnyw34tt8vvai5mtacq9njj7pt.xlsx",
+    "title": "2023-24",
+    "year": 2023,
+    "source_type": "xlsx",
+    "provenance": "official publisher file",
+    "sha256": "ddddd813226f16940c0bb4de2b544875203c38155210ecd069bb6de3e503dab3",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://uofi.box.com/shared/static/oe4bf750ix6q1gz63vesiu15v8yok2xx.xlsx",
+    "title": "2022-23",
+    "year": 2022,
+    "source_type": "xlsx",
+    "provenance": "official publisher file",
+    "sha256": "a24e9bb6f462a1465df18dadb4e8c04b6994b5b72d820a4552f98af8f81e0691",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2017-18/fb80ec8ecb52f3c36cf559a17283d7608f91a526f10f2f08fb16dd85e72d3f2f.xlsx",
+    "title": "University of Illinois Urbana-Champaign Common Data Set 2017–2018",
+    "year": 2017,
+    "source_type": "xlsx",
+    "archive_url": "https://www.collegedata.fyi/schools/university-of-illinois-urbana-champaign/2017-18",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "fb80ec8ecb52f3c36cf559a17283d7608f91a526f10f2f08fb16dd85e72d3f2f",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2018-19/228269f8ddfe2475834ccae8975a43e79a8e60904fc363dda2fdc4788d3ece51.xlsx",
+    "title": "University of Illinois Urbana-Champaign Common Data Set 2018–2019",
+    "year": 2018,
+    "source_type": "xlsx",
+    "archive_url": "https://www.collegedata.fyi/schools/university-of-illinois-urbana-champaign/2018-19",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "228269f8ddfe2475834ccae8975a43e79a8e60904fc363dda2fdc4788d3ece51",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2019-20/718169494aad7db3150d4d9db36e5d3b7a470bb3a6d1608bfe9d119a4a29e497.xlsx",
+    "title": "University of Illinois Urbana-Champaign Common Data Set 2019–2020",
+    "year": 2019,
+    "source_type": "xlsx",
+    "archive_url": "https://www.collegedata.fyi/schools/university-of-illinois-urbana-champaign/2019-20",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "718169494aad7db3150d4d9db36e5d3b7a470bb3a6d1608bfe9d119a4a29e497",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2020-21/bab9a9d439b0a91576a100c7d075bd8696f6a5e80bd70c594462c28722446549.xlsx",
+    "title": "University of Illinois Urbana-Champaign Common Data Set 2020–2021",
+    "year": 2020,
+    "source_type": "xlsx",
+    "archive_url": "https://www.collegedata.fyi/schools/university-of-illinois-urbana-champaign/2020-21",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "bab9a9d439b0a91576a100c7d075bd8696f6a5e80bd70c594462c28722446549",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2021-22/9a3836aa93c9b5d68833ca8d9a6ada3320b453c1a676df14f0a7f906bb17bb5d.xlsx",
+    "title": "University of Illinois Urbana-Champaign Common Data Set 2021–2022",
+    "year": 2021,
+    "source_type": "xlsx",
+    "archive_url": "https://www.collegedata.fyi/schools/university-of-illinois-urbana-champaign/2021-22",
+    "official_url": null,
+    "provenance": "archived institution-authored original from CollegeData.fyi; not archive-generated metrics",
+    "sha256": "9a3836aa93c9b5d68833ca8d9a6ada3320b453c1a676df14f0a7f906bb17bb5d",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2023/New Brunswick CDS_2023-2024_final_V1.pdf",
+    "title": "New Brunswick Region",
+    "year": 2023,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "9adfd2e36365ee65d3316ae7a0d1ea3674cf62aa0a412018d753366ddc8296f3",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2022/New Brunswick CDS_2022-2023__Final.pdf",
+    "title": "New Brunswick Region",
+    "year": 2022,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "e56fbef82f6b90cc0a74b04b75dd75dd578e6e247eacfaf42c18d62fe8d75164",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2021/New Brunswick CDS_2021-2022_Final V1.pdf",
+    "title": "New Brunswick Region",
+    "year": 2021,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "5e4c9b92181607a74dbbb2d0d55e88aa1b1172e06ef1f3293deea9c934d07df5",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2020/New Brunswick CDS_2020-2021.pdf",
+    "title": "New Brunswick Region",
+    "year": 2020,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "1590169fea82a243c116b9ecf16a87dd74b5088ea23ef864fab3c868d7ef5917",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2019/New Brunswick CDS__2019-2020_Final_V3.pdf",
+    "title": "New Brunswick Region",
+    "year": 2019,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "1c53e0b7ea86822a1b6d8423f774431254b7930ec5a3674334a730aaceab3bda",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2018/New Brunswick CDS_2018-2019.pdf",
+    "title": "New Brunswick Region",
+    "year": 2018,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "3f43089ef2141d48e6bf66eefb3592654cc6102f90f11e92c43ab05de5153922",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2017/New Brunswick CDS_2017-2018.pdf",
+    "title": "New Brunswick Region",
+    "year": 2017,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "a0f839fedfb546027aec9b0e369aec54249f53f22087c062eaf45c1677bb4f3c",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2016/New BrunswickRegion16.pdf",
+    "title": "New Brunswick Region",
+    "year": 2016,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "123da5f065fb2e6e012fefde29c1f9d66cdc883be172a5ebbc0c24fc399a54a3",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2015/New BrunswickRegion15.pdf",
+    "title": "New Brunswick Region",
+    "year": 2015,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "340af1a5ac1f1acdb9fc7c49e38667e163e5ac1bb134c819f794ece3ea8cb948",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2014/New BrunswickRegion14.pdf",
+    "title": "New Brunswick Region",
+    "year": 2014,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "23ace752badf9f32c4d6b0223ae522c1239fdaf6f783e24b27b41f43e55b8471",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2013/NewBrunswickRegion13.pdf",
+    "title": "New Brunswick Region",
+    "year": 2013,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "e937da800bf748bce9dcaea2af0843a8a2c3568511f2d2d9c7be2072990f93e7",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://oirds.rutgers.edu/CDS/2012/NewBrunswickRegion12.pdf",
+    "title": "New Brunswick Region",
+    "year": 2012,
+    "source_type": "pdf",
+    "provenance": "official publisher file",
+    "sha256": "ba4716c30a3e0cda647b3ae0959f4687090d562320c68184f32af33cdde2044f",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2000",
+    "year": 2000,
+    "title": "IU Bloomington Common Data Set 2000–2001",
+    "source_type": "html",
+    "sha256": "8b532aa2d06b8b4428376d30b5b4aa7be550ca6a0e04d6aeace4fd05a81e6677",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2000",
+        "sha256": "2b270b79e655c3bca03353fef21c669ff7b62ee915c2f4eed8a4858652ca7fe2"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2000",
+        "sha256": "f2df21597ac9027797f01ecc450fd1aab0252261636718a02d4c07ac24c728cb"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2000",
+        "sha256": "4febfdec7696cba07bfd3de6989829842b089bfa2c06f6f5c6153f0b430f03bc"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2000",
+        "sha256": "04aa39f968821d1e124de7a5c9ece451a8fddbbfc3b9b9fd6cafc3209aa56471"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2000",
+        "sha256": "e23944a16917f145c62047d5c3cf1fac0f76a6cd4af580b29a44b0a69135bf2a"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2000",
+        "sha256": "4a2167e1c7b8d251ce1e8d6e0efb688569490e3ceaff2e3f9dbe65f7e238fd9f"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2000",
+        "sha256": "1590b9aa2a2080aec0149f12d01cc2b0cac1cc81a8a832f6764013083454ee36"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2000",
+        "sha256": "d0f3bffed22acb6eac1e9a6b9043ef7d4e3774d0b42cd6e18aaf9bd932baff14"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2000",
+        "sha256": "daa5c60c0a03e35fca703f1b7da45b6e172e3cb6dc7f9595ee5e04111a4214a0"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2000",
+        "sha256": "b58d8a8244fc000dec7b740266381d3a2e30ebc578d4e322ce135945ef150482"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2001",
+    "year": 2001,
+    "title": "IU Bloomington Common Data Set 2001–2002",
+    "source_type": "html",
+    "sha256": "039d1be4aac0d19baa22d42a50a387d05b3336c97a2be6b167d5073f83eab61e",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2001",
+        "sha256": "08ed003b1f44bae29d6474e36cd2f896a738774517aaa97839c97fb941bdf57b"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2001",
+        "sha256": "c04dc09deb19a8f8c41ba383d6ddaf5f1df2d80479f4d155517f9017dd7fde26"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2001",
+        "sha256": "c151fba4917501c80392f2d68e999bdf27e76ba0e0f9fc4f53d4634e42d5a0b7"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2001",
+        "sha256": "f2860a5ce8a44013ae95ddb64fba88e2b9be40a9d4c0e0808dcf89b4e89b2b10"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2001",
+        "sha256": "3dde42b63cf895c8c355c0bc87162484b21a60c7a5747d98d0a987aa7fb4411a"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2001",
+        "sha256": "f11344fb3fca0e3f187cc9fb9eeda8bd1f25b545e7985edb9db452f7ec132a9d"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2001",
+        "sha256": "5e71f5e49f734ae194a21c9f397f5c08f03e5f2a209776979c7570869b7b6d54"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2001",
+        "sha256": "bd9441482a0ae234d919e6637a78bf3980d26b037cc6988d4e76dec27101cf3b"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2001",
+        "sha256": "fb2a4299fbb4a16786baae904c552e73fb706f8db6424f8c4607a74201e414f3"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2001",
+        "sha256": "7e88c5465098ecd7000e01e56e9529128cc684696428144d3299e7dd2909adf6"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2002",
+    "year": 2002,
+    "title": "IU Bloomington Common Data Set 2002–2003",
+    "source_type": "html",
+    "sha256": "20fcd2cf57797cc4a96b6f38dbcc584f520770ff27f4346213fb94f404ba6590",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2002",
+        "sha256": "caab95e53a7d3f37f9e8b0d3fdee5b7d4764166ebe3785be4a8966723d314309"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2002",
+        "sha256": "fc8d15e61829219dac3543eb49c307977427b9929b7f97075d4658cafb9ad40f"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2002",
+        "sha256": "2e240920c5f6d3e72f6e3268fcc0b6a9f05dcf87c7e72db28728f462e14407bc"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2002",
+        "sha256": "353197318e4211d1739e24aa3dcd9554ad4c128238e4bcf82272d9ff734051a6"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2002",
+        "sha256": "17076b9aa5569ae5ca7a789222448fa89dcab0dd762e968ad302deda513160bb"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2002",
+        "sha256": "8b1af2e2b87eb3f8186de9ca1d487fb0146eba53b4fde23b909d12314aa4ee32"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2002",
+        "sha256": "7246fa8812e390baf18c389c3b0769a814acdccdb542c2838fe1d755b5289b68"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2002",
+        "sha256": "67ed1082d738e7176192d853a307262d55bd1ef16f13279fa1dc3de2bed89e61"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2002",
+        "sha256": "46bdd971ff7b1aa46088605c174c8ea0fd6b73f54b457c8a303b47ef6b4ad4d2"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2002",
+        "sha256": "f3b1141d5c168481c586f7533d4396d50c40dff5771621810dd1c7a36c7766bb"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2003",
+    "year": 2003,
+    "title": "IU Bloomington Common Data Set 2003–2004",
+    "source_type": "html",
+    "sha256": "13b4d718c213d9514fad72bdaadd44f77044c22691e01081d8c1bdaca78ea063",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2003",
+        "sha256": "8ad0c4376e5fd09c14febee10336bfa6f0ef31b7aea9a5a69e2125eeacf7e520"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2003",
+        "sha256": "8213d926926aa765261d96d85c8b4f6d75a905289ec58a87da0d8a9b731e287e"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2003",
+        "sha256": "4bd2f8aa52904698e511b373f4491f7f679af2d9ed88081c5eda66d71a367490"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2003",
+        "sha256": "9424d2d6b548a44abb4f069fca83833a9c37d2fecaaffceb191594849d75850d"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2003",
+        "sha256": "da0f838fcf64d23df652f639bf75784a69f7f56faacb6daa88d09ba26cc562dc"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2003",
+        "sha256": "541b6020ca9dc4197980272150fff00742cc457d715a823afa4fb4751a2b2ca2"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2003",
+        "sha256": "8678d8e02a338cf87723d14644c4ad0b63fef42631c75d4a74044b8e9008eb8a"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2003",
+        "sha256": "2ce3bc77c89c5a1a00d73d773c22275fabdcd329d415ddb37dd4eef852c51f0f"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2003",
+        "sha256": "95b22b41838b13b71460d29858c56b7f20bde65fe9c6c34630a12d90b99ddadc"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2003",
+        "sha256": "b665b0c5b72a93c4c884c28c099cd7f834b80bacb4cfc87f4504208be89ce926"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2004",
+    "year": 2004,
+    "title": "IU Bloomington Common Data Set 2004–2005",
+    "source_type": "html",
+    "sha256": "f7faff9831e46d8267574c8526993ffe27ac8b3e9be8824ceaf299e661f1e740",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2004",
+        "sha256": "a58cb58aa10452d1460f8115ba85cf3871a96e760e8202f5e2014314337d0a2c"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2004",
+        "sha256": "9dd4eb78e407cd5fe4c82eb2f7caad148d254b236d44264d77f0b52b8697cc55"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2004",
+        "sha256": "7c2b0fc3b1784c78e5d02bbb707428248ebc8dc013dca4d2919dd742a980af2b"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2004",
+        "sha256": "0948c17d430e0fd1dfc253f6622b504de5d53948a57530887210e4bd14197922"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2004",
+        "sha256": "7550f980fa5b3485d69cb4f23619603aff60194e0eb0134289e3d310c51831c0"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2004",
+        "sha256": "fa987b8055ae4b20b7efdf89fbce40eebe17f92fba4fa5a8ae640292aa263f72"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2004",
+        "sha256": "fcc822abf61cd7122448ec0214fc186cc011b151ace36ddb2ee1a53a63c05468"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2004",
+        "sha256": "c0a03d00269445bc518934d617cfefb6b5428a1d53239c5c0ba7d91ed63f785a"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2004",
+        "sha256": "b08e599f49a0db043aa15d2b4d0864e636e2faf4a66a54664628772565b75fad"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2004",
+        "sha256": "da17c4da1a70065e54b0bbc6c68ae18a711da2b6f82ee85510712e9ac5451638"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2005",
+    "year": 2005,
+    "title": "IU Bloomington Common Data Set 2005–2006",
+    "source_type": "html",
+    "sha256": "a1b9b091521beea566f5e94bcc1230508c1633c28de631a69018e0c2e42e7125",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2005",
+        "sha256": "683fe6ca41179fa24b069e1cf38347fe1860f2d82dbef002fb52be7da5c31f89"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2005",
+        "sha256": "27c68883c40a4d57253cc772608e24c32e2371434c59db9c732ac5170efb58d3"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2005",
+        "sha256": "bb11b5c5d391f896681df673168aa9656dfe67bc47c9ea27a5db388619be802f"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2005",
+        "sha256": "092cb5558182c828e1c9c913b2f4448e477643bdd24c9061763aec157bd1f24d"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2005",
+        "sha256": "fe2cf007185dac9d51737f3641d225466682ee83428163486dff278ed1b9b113"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2005",
+        "sha256": "c58a53ce2f184532df8f9e633ebc37b89f0c8e7329135319e9540b282f12a68f"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2005",
+        "sha256": "528fcf0010d7629dd85816476108594eaf96250a8a4d74592fc3f809abab6489"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2005",
+        "sha256": "121264472e0b622f00d273b0f8d4c5f4a27d33d9347b9c75730c748f1c1f3f8f"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2005",
+        "sha256": "70d1314da7a265100c8521f016b81f099bb9408312f64da0f47656351dd3ac9d"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2005",
+        "sha256": "6fd76bf5f3149ee3753f9a17744471cddf4fb81d0f36f52b67f0d1b64f099c02"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2006",
+    "year": 2006,
+    "title": "IU Bloomington Common Data Set 2006–2007",
+    "source_type": "html",
+    "sha256": "cf423e51c3a74a886f2813b66d7df4ad3f974504ab83ade74a89e8c36b4cb831",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2006",
+        "sha256": "4bb966f0b3691cba32d38978c44ea355e8695b8dd8bd580a9d4717bb5d47c91f"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2006",
+        "sha256": "eff19a4238702ee988fc748fda7543e89be100bd4501a268f2679ebb41395741"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2006",
+        "sha256": "7e617b45544d8b18f70b0a43f1b12413827c247b48f858b57318f228b8f6929b"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2006",
+        "sha256": "e0597ebebd548824720ccc7c0648415e1f03f7b91c5f5a09d25bc2e191dd9aaf"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2006",
+        "sha256": "bf120086929674ea35a2cd847db46c7e8afbf3d25384a8c7a692eb2d8deeab71"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2006",
+        "sha256": "4d87ee5dd942c03ea25273544c5ba58be8a58c93aa34d6e580cfc4682796e20c"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2006",
+        "sha256": "c8cefe2175408e1f426b8ad5b0e629be5da8883bfb279b9a64e098fcce58e629"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2006",
+        "sha256": "761e974bc043af3cc65bc94f02ebc850d19930ece48fd073d1ba6679de1a891e"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2006",
+        "sha256": "47e01419dfa17993842ef560ea0b42b351bee8160cd5f95452299b62efd61f7b"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2006",
+        "sha256": "5514dadf9b53fb8ae78f97e3d93dd7303ed8891e3d3e81c663fde5093b7ba79e"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2007",
+    "year": 2007,
+    "title": "IU Bloomington Common Data Set 2007–2008",
+    "source_type": "html",
+    "sha256": "63e34114c4b9782c827e3dc145673d2cc7300865ab9e3e8b0469532dd907d04a",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2007",
+        "sha256": "7ef0515d12386ad19d751242d338466fc141c83dbd00ea92711d7ba45994ff99"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2007",
+        "sha256": "f3b070d635c22d5f1cd979d3894243870c9b3ecca3b4161e5ba9f8f5b58191b7"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2007",
+        "sha256": "54d0677867bc5c38e287d1c060d0911a188edfd1d466fa73224c3e863d910f24"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2007",
+        "sha256": "6d8c6dab563922b356d8bac2ef965144796ee2c5c7d0c7714ae37d91fcd96ab4"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2007",
+        "sha256": "f318cc66d8410a13960a4ff64c1e3304ede1b4455d4881403e7318a79029b993"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2007",
+        "sha256": "fbc1e37352cb1a2bb7ee163fe709989ad9d02feccd9f18e7f71e217265382afb"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2007",
+        "sha256": "279963d08e6adb2b61da012e4b2bf076adfc44716a2d23cf255c6acfbe7091bf"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2007",
+        "sha256": "fe4edf67f82968cf26c04f5091d1594860d43f8593f6fc0a1a5acc8ab4dd0ebe"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2007",
+        "sha256": "2f42d91c5ad97be183d3006a090f816a24f14b2e3dce4b8f8fcd82c546937834"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2007",
+        "sha256": "6733b27f465ff55ffbafa1b3943641e826c5bb02fb5ab81f1d62a96a892d62d1"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2008",
+    "year": 2008,
+    "title": "IU Bloomington Common Data Set 2008–2009",
+    "source_type": "html",
+    "sha256": "d485a5a8a3d95fa3164c3d9c2fc29fcfddc4b216fa6821f094899924e6c4d1e3",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2008",
+        "sha256": "017167a10c198e9706320f10afa19473be2c67ba59aa378c38c99126c9d49f6a"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2008",
+        "sha256": "4450e50a7fa9f08b9779c6f5d489bcae8d8471e9e1d4c60eac8865f50dd44ac3"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2008",
+        "sha256": "d46f9bd3016a54be74931c974e78d0c80c1ace7f5e4729574cf329ce19177278"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2008",
+        "sha256": "bfa0cf84a7dd252460ad1b9184dd6b9e644b81875924a212f9f5463388cfc56c"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2008",
+        "sha256": "7ca2771b498198dea96701c940859b143dea8a23df450e4a4f7aed85d11d12bc"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2008",
+        "sha256": "aeb3ceb103f50432eeec1af41f5dc970dbebb9e33a03a741aa8da74ee472f472"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2008",
+        "sha256": "592146261e7718cf31c024359ce779125ea4e99fade6ebddcb689c703ae37517"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2008",
+        "sha256": "4e890292cddb3b860a117f6f8fdad071b353e4b5e3fc9bcd3dbb9e35149cc6f9"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2008",
+        "sha256": "80de777a1025e2b73936ecf44b20cb45908a0b2cef47a48e1dab4600ca7b70a9"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2008",
+        "sha256": "eb29ea765aaba7d23d21ef95ebdfef8d2163a491fcb1e0fb61fe7996399f63ce"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2009",
+    "year": 2009,
+    "title": "IU Bloomington Common Data Set 2009–2010",
+    "source_type": "html",
+    "sha256": "48f3b4df82bd64e09391be8f08be41ac17dcf97faecb796075b81a0ed48141d4",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2009",
+        "sha256": "d6f9871efca39d15bbeea4d20342fef0f7105a60c4561ebf70bf431c5d318237"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2009",
+        "sha256": "205a9c14b8f0b5086970cb54f5f91b1403abb9535bff7d90c8c7fbb181802c6c"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2009",
+        "sha256": "ee9b4560b6ad101d70612118e294cded454a38fc7f1b6986e97e9de1a566187c"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2009",
+        "sha256": "29882b56e05a2f38c9c04ba35ecda3a837a9a993f8187d3a09562fe0ad40c7e5"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2009",
+        "sha256": "d248e1191b415982269c4def4e212fd720f3ea668a939b56770d871b8ff6d01d"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2009",
+        "sha256": "4888507bef718f8528585e5545cd293d083da46f1e82fa6750b88b0a5b26eaf0"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2009",
+        "sha256": "0c44637a0018c00cf0d90ffdd1f4412400e1c061ac068552098a1361da762aff"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2009",
+        "sha256": "c58376afcf28827df1cd0fe325c6816aadb0fb3c7a0a2b1ba8ce26fb70c7bbb4"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2009",
+        "sha256": "2205f795699c834545237ef37bf054cfe851fe65f29d14a8d71fd5a8e2fed853"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2009",
+        "sha256": "ee2fe8433d9fad90c2ba11dbc9e95d0c4ee55d7111f702b38f80aca9b3e47ea5"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2010",
+    "year": 2010,
+    "title": "IU Bloomington Common Data Set 2010–2011",
+    "source_type": "html",
+    "sha256": "11b6e3134ff44ba19e401a1bf250e389dd36bf2cb82a87e6eb0ffc31acf949fd",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2010",
+        "sha256": "8741936718c1ce585bab000fff72b4c9547cec510feb32392af570948ee8d4b8"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2010",
+        "sha256": "5b9591cb1484f2f391f6c8f0038aa4e665ca23c2114b43e450f471d62a08ca41"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2010",
+        "sha256": "6a3064a0992bf6ba28d889ac8463bde3f0f35310f3eda7c43cfd4b4412fcbc31"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2010",
+        "sha256": "18050e949974b4e9f1d638ffe387dc3cb85354eee241d2d0e61851b770af4fe4"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2010",
+        "sha256": "b0354a778a119dd5627794198ec56b0717635a2529a37872c5cb292551c23086"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2010",
+        "sha256": "e6c6155d3ae681a8f4be002ef2f50b60becdbf639504ae1aecfda710d188dab7"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2010",
+        "sha256": "d866ce86f2f6e3e643a52ed2f056f03cab3e497baac2013326da9854d327f014"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2010",
+        "sha256": "3fba1505da38a6f6e733eed67fd4d1e86f9998f001350a1d089324aaeeb17f4d"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2010",
+        "sha256": "79ec4cc96037cfc2e41aa7ba52f79d1e9b35d530fb12e2094296aa785ca0378a"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2010",
+        "sha256": "a3a6f4ece7d61a9bc2bc7ad29b30ab569dbd9b0b842432056382d15a18bccf1d"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2011",
+    "year": 2011,
+    "title": "IU Bloomington Common Data Set 2011–2012",
+    "source_type": "html",
+    "sha256": "c92650274ca438560fc3f214167a0e7edd537a2a1bd203787afa35291b9e85cb",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2011",
+        "sha256": "77e586410eecf43aae29d002e4e30adf5286ec13b77cc9350cb873abf46847bc"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2011",
+        "sha256": "3146f9520b1704da70cf8782f851c50a6b4b4b7632a683db4d2ec890a7b15f9e"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2011",
+        "sha256": "063840c22bbf6230e656edb904fbff9f2ea09ba28d8792dd1e1a09e923d86552"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2011",
+        "sha256": "e839cccd1858e7a2075496cbc8587e2a7353e4ed81d265ca385b55170bee23dc"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2011",
+        "sha256": "5e3abcf5ae4c3690258a490ab1d046513a3ab6b8665c97358c11fe74c54592a7"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2011",
+        "sha256": "be46fc2f42dbb1d8cc8c6ae206a6473fe6f9b4e63a17559bae86d1ae8b5cdce8"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2011",
+        "sha256": "cce660351c1e4ba3d0b8614e85e50f4cb35cd2f689e37135a1bc82f3398914ac"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2011",
+        "sha256": "5b0a52f7981f223f6a66809393d05217fd811d9ea7bc09dd788bbc80fcef8049"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2011",
+        "sha256": "a5e1c79416940dda16f988531e1751833ce84be80894ac334ecb8c5f95828623"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2011",
+        "sha256": "9e29a0c00a2cfc0a6d2db1fff0a77aa99dd8232893cd2b39211e58503c039c9f"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2012",
+    "year": 2012,
+    "title": "IU Bloomington Common Data Set 2012–2013",
+    "source_type": "html",
+    "sha256": "b9674946d2c55c68aa747c8ddae94eda56a116359184be640e535580d0396ff6",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2012",
+        "sha256": "9cdb38163cb448dbee27070d667d622b751fd044bc12c279d53f06e9bc1abf3d"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2012",
+        "sha256": "d443a4ca7d8b1bcf81355c5c5dc7c66781711fcd1331a7ab9103d94f94b2d4e2"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2012",
+        "sha256": "7291a2e0f1b5d1915b50b448a7f03db3f550c5c4f468794d7779687be0755fce"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2012",
+        "sha256": "32f3b652081182b286d48499810e8450bc4a6cdc8aeff12c276b11a29b6329c6"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2012",
+        "sha256": "8b1da6c3f7236597260ca31f085bf6a7e8841fd202553db6499ee5d529133b77"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2012",
+        "sha256": "316c85849a2714bf398d0c308bf87dd6886303244559538a1ad56af8f1410d10"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2012",
+        "sha256": "1ad1886a7df086b71fd22cc392a87934371b9e8e9667bf789cb8508734b4c925"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2012",
+        "sha256": "3a736242ad5aeecff34d648d68cda3085baee27145b843903969c03fe6f202c3"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2012",
+        "sha256": "fabc1e328ba33adf0666dd918e8f01768a7e346b9a2763d990de93a97c0e40f9"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2012",
+        "sha256": "f567a1ff20634028156e11694203f423604e2a831548f2b3ec4d01f297573082"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2013",
+    "year": 2013,
+    "title": "IU Bloomington Common Data Set 2013–2014",
+    "source_type": "html",
+    "sha256": "1af15f7768e8b1ea75bf4cc685c454eb145b78ae5aa81bc7162bdd55701a73b7",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2013",
+        "sha256": "f6d88732da2842fa8ab686f21d40b4bf0736f3ceb3930b89fb85cdc25158e101"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2013",
+        "sha256": "49871a6878b56c5adb2a27ec7de25ca23847e018723a5aa1203db693778d93b0"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2013",
+        "sha256": "13b2705d8dc88aa754a2757cb99f71175c9700e90d19bac9d60420c29905bb30"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2013",
+        "sha256": "b56a5d3604328ae64cf1e6c9e239c57c29f147b61d629dea2070147b8f4c5cd0"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2013",
+        "sha256": "062959603b499afb4b973127f45ea7cd3cd730709d3ff0d7901288e2173499a4"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2013",
+        "sha256": "8d4e075eb3b00cf52c2f3509ac76485886947960c031147c3b0a3cead883246e"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2013",
+        "sha256": "852d7ad1316cb053fa0fc625317fc31b6ab0b9387f8916e0c233baf9d527d339"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2013",
+        "sha256": "e7110c20c40d806b1464bf7ecfafa874d030285615c8856cc96438f2a5e0be87"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2013",
+        "sha256": "7385069dbe776b285d7e378db6ff91cd24d4954eac81c806fa5ff7d0c28d344c"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2013",
+        "sha256": "cf4ef2508f81e6714d8129543040b84ef47d69579da3a41cb3106b2932b17f8c"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2014",
+    "year": 2014,
+    "title": "IU Bloomington Common Data Set 2014–2015",
+    "source_type": "html",
+    "sha256": "a86df43b574c830927c4d1e2ae5f0ef3a2b00df9fe344deb31530de68a03ccd9",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2014",
+        "sha256": "599cc8926e069a5c3e9735430a26eddc910da85bcb5b52faf164bdbb5d566769"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2014",
+        "sha256": "a6a82737350e065ce312affc39248f02ee2cdc14cd352fc8d446e695fa100506"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2014",
+        "sha256": "b7df829a7e5aa2f1e8cf9cdb053accadd2253c5291b657b86c49da3a236f671a"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2014",
+        "sha256": "881deb8c28d5ce523b42915d55b6bb83cc28588e203c27537c627514595ed188"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2014",
+        "sha256": "431036aa6c8897694b28178db7b4cb1051031ae022d5403f244d46ae23e20058"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2014",
+        "sha256": "fe00b6c091b1d6edbd1bd741d5fc6c89b713375454e6067ca156349bf9d57724"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2014",
+        "sha256": "920a05594ee915a6d3eee8875414b8764707d36476cdc979d813f4c90fac971b"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2014",
+        "sha256": "9ca406dcf3ef97e73a4c04f1c665e16c5b6b39e76610afbb498df484428c9fb2"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2014",
+        "sha256": "65b641516b4a793df714e0afa77c6da9df577ab0c23246ecb4c76f7414e1ddb9"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2014",
+        "sha256": "c2dff867dbadd9cb6054e9c19f664060a8eaaf45d81cf8ac17aae2ed4c0569af"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2015",
+    "year": 2015,
+    "title": "IU Bloomington Common Data Set 2015–2016",
+    "source_type": "html",
+    "sha256": "40f849f66e7ab0a0a677364b8cfab116384062aac67b8b377bb9ac8c69d47325",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2015",
+        "sha256": "9ef90a5ba3088762ebe5acdbe669f74b1bc05b4e48f413c2ffebabe9af70f5df"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2015",
+        "sha256": "6c31282e6be71888ed716bc9aa790ca04c54b2b85f1d301688eea80c4d48a5a2"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2015",
+        "sha256": "fd21f279152f2166cbaf97447e2f48a314b22ed6a2481f398e44e56180165fc0"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2015",
+        "sha256": "99ded9355de81256b3b33828860dd06d4500b90bd17963f87108af40463692e4"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2015",
+        "sha256": "5f6e931a108de3a42d657a0964e096462d40fb1078b11311834660dd3273c910"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2015",
+        "sha256": "6dc5cc67733debf8e142804430a7faf8175d117f5f79f66608976e0b9fab4f38"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2015",
+        "sha256": "8948fdc9802df839f4ae99c79621914babfca8f1f985ecd199c1283f5491727e"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2015",
+        "sha256": "faeaaa657262838d3ae54bd01a1086550494994137facf1b06931a827e186d08"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2015",
+        "sha256": "b83cf79bcfc11314493c16087e61be476a06a2385e30722f497db1d20e8570a8"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2015",
+        "sha256": "24a5b8fe662f2d585edeb8b825307b501cef618424a26babc43a4b4073a2912f"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2016",
+    "year": 2016,
+    "title": "IU Bloomington Common Data Set 2016–2017",
+    "source_type": "html",
+    "sha256": "162875607e0640c993c0add92845a32499038f5be2ecd11b8e20be1725d76e6d",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2016",
+        "sha256": "9a81a16c0a20416e5bafb78e59d166b3e49074421c0d3a714015f353ed2d4d1e"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2016",
+        "sha256": "a41607daeaa2790b8693d3c75940de1cd27b5383dff01e6c7aac91dc9e4f663e"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2016",
+        "sha256": "480576589ac516f6153939e300920d0056054fd890a3f2019234462c233d0c7e"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2016",
+        "sha256": "310a79c0aae62de2fcefe84334a46920c1d04789f8b447952efa730b0dfab41c"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2016",
+        "sha256": "4de65be8aa826436a81cd5bec3a9fe07bee3fd47da2366dbea1425bf234bf825"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2016",
+        "sha256": "52b64778a9d12545c26507e5eb63f7d1f8b96166cbc61a8121315f613e4b6aec"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2016",
+        "sha256": "7918de725f23a2e98f42ba351da8b9eb56e0cd4dd86790c84a8f9308b0870de9"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2016",
+        "sha256": "4fc7306371ed3b065d0e17b0344aca8ec3d89c5b71fd23a9620c4bccdf024632"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2016",
+        "sha256": "e825d566ab1d23c19542db16e7509fe7824667f16957ccf2c52683db3be857ee"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2016",
+        "sha256": "069b38ee0791921699ccb9bcf4812a0470b97190f59d4a82c9e83d2c3fa103f2"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2017",
+    "year": 2017,
+    "title": "IU Bloomington Common Data Set 2017–2018",
+    "source_type": "html",
+    "sha256": "b692ffc58207e09e06bec63abcc3a9402d251b119cc474fd242ed402293c7e89",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2017",
+        "sha256": "ea63c2b970f25e406219ed09cd2272aa68d84961c9de90316e912b79b3a694ca"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2017",
+        "sha256": "47382763d265f8f4205c81ddf21d406ed20c8c4bd6dfd5296861b745e764655f"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2017",
+        "sha256": "a41e567e182ea164b1c13e0b153c3469479878ed5e3fea8e4040eeba34369b63"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2017",
+        "sha256": "8fc7e397701bb96e6ac6c40dc83da70fb34ca000263822961c96f59102741b13"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2017",
+        "sha256": "ca950237d4e986658f542253da7c8e042cbb155920163ffa26134e943a720445"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2017",
+        "sha256": "09e059893692cd4cc5f8b5e9e955ca543f44d79486ce5adb41d2de93df3dac61"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2017",
+        "sha256": "acd7ea572dd5b58ab443e4d7ba86ec5251693173b743c944771cf22b7b1696bc"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2017",
+        "sha256": "de5c4f50330095f2d5fe7ff1af44bb15f8d0f486c69498da03ca516da5c6430e"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2017",
+        "sha256": "c87f677a3f1803875f5d17bca277313a2a12b979ab3d3f78c88e3f34bb3a6e16"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2017",
+        "sha256": "7ef167fa9145784cf7ff8eec617b6260a0f9c0e849d00af197c7619eaad6e4bf"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2018",
+    "year": 2018,
+    "title": "IU Bloomington Common Data Set 2018–2019",
+    "source_type": "html",
+    "sha256": "c0e78cff730fed6259e0176772cd149b59676f0b22f627749dd64870ec455fc0",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2018",
+        "sha256": "ddc91aa15329b4296843402a39d8ed138c64d204dff635efc956de9a13206701"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2018",
+        "sha256": "00487a88246c35493b32e08142701df4eaa95d5844b273e522568baf1f69cd0f"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2018",
+        "sha256": "8b52dec5d0c6ef87489d7ee8dcf28522f303bd63030c8cfe6dc6e3e8ccdb562b"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2018",
+        "sha256": "070275d8dba47f77f15b7a3097ca2dc237bb3eb55c3c1982ead9c807cef4e531"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2018",
+        "sha256": "b58a48ef32dcd0bbbf33579c5e456db32e4bc5fb351b0e02b567df93794a561e"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2018",
+        "sha256": "feb5789ca0f0399623cb7539c2ac0435b52d06e291337c66c9bb956dea30dbca"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2018",
+        "sha256": "c3299a6ca957bb2bff425b21ffa64f0323896d2e8f045fd38c52731d47c077d2"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2018",
+        "sha256": "da14d7fa255898d60f1d708607e84773b085985888932db86757ff8f00f5de25"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2018",
+        "sha256": "e0c6ed5b6f7d162f883a18dd9b382cc53cb9ad1dbd0902c5429f51525be3ab4b"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2018",
+        "sha256": "ebc9044e1db6704374e3def3875e12c12fc33fb0220a70b309a45f7357caf9d6"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2019",
+    "year": 2019,
+    "title": "IU Bloomington Common Data Set 2019–2020",
+    "source_type": "html",
+    "sha256": "e78da3c4081423d7bd44c352ee0eab54df750265a94d5b9c6c1c78313fba546c",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2019",
+        "sha256": "e71cb8b2628da0ac1bba39c83ecf87dee6f3cbb57d0839e453d35a8a7b53e220"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2019",
+        "sha256": "a3863397dda83d35b530293965a713b25e6d50c9e653b1a7e4d1cdf7969ae681"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2019",
+        "sha256": "4f0bd38721203df5d6f750e96f06ac9dd7d3972e50b0647624c22f8731f744b4"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2019",
+        "sha256": "a503164586651faa883dbf5b3b72b1e2c1f018d0041d08ce5759fde48e8ac07c"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2019",
+        "sha256": "440f325ae7e4297b2d821695aee1cd5728ae7501f2bed5303e4c2be075b2f9f3"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2019",
+        "sha256": "b500fbb6402170b8cd85a02554469f8bb2a51b9bef1080f04196dd150c702388"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2019",
+        "sha256": "3195f104382b0ebc4a2e2de8250bdad21b9bdbf1fbb2d55e7c273755cbef2e4b"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2019",
+        "sha256": "0b8aebd677b3b35560b10c6145e7d708fa2919bd550dcbb2b214ece2cf059a3e"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2019",
+        "sha256": "9d0dab5e8fd78dbbc0f35c9425a6d700bbe2e40eb61439a1d284d60285cc0a74"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2019",
+        "sha256": "d9a1f49369ac07298a01119d748f6c02278ced73f4088070a321a30daec3e831"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2020",
+    "year": 2020,
+    "title": "IU Bloomington Common Data Set 2020–2021",
+    "source_type": "html",
+    "sha256": "e255ea2976ee32aa2306705bd645d76400979d65662b7402cf8cd87ee7e7d05f",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2020",
+        "sha256": "a7c3ac01251b7e91aa6f3d1027837202806df81b2ca261c41412a877d8299652"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2020",
+        "sha256": "06d3178bd86188d4e34f7e45f3e6fbb518091d97384c678f761d4051b6dc6f6f"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2020",
+        "sha256": "0f1cbfb52ed48a8042c39e40d07e9dd3eea0c57d94c21ecb32d47b0be7688c4e"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2020",
+        "sha256": "00797edfac19b266fe1d54ae579b6c0776e395d0c8b19eae3be195ddb33a1d46"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2020",
+        "sha256": "84cea30c57c4456aeef034f0e6e37936927c4fa236a0fb92df5c817ac37ed7df"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2020",
+        "sha256": "3dcb59ebca7326a8a06a1fa8db48b9755c0e375680bc2b4878bb6aa46bc1c472"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2020",
+        "sha256": "4c6b657770b113152edc8c96e12c048289f16b612bf84ef8c7ff424498956913"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2020",
+        "sha256": "df14e708d63f5d338f3d712e4940ae50ed758d09ad1594af902bb19acfaac63e"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2020",
+        "sha256": "a1307e8e994ad19bcda29db70959f81794596b363a3af26a2cd205d40361535f"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2020",
+        "sha256": "21931f4ee756f57893ac0bd8a3350fd92568630e54adfe7a52f9ca4c59a6d78b"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2021",
+    "year": 2021,
+    "title": "IU Bloomington Common Data Set 2021–2022",
+    "source_type": "html",
+    "sha256": "80ba649d2fc454e85e71bc9bd714250c5bfc064cd80eea637bd564b1d0550cb4",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2021",
+        "sha256": "fff9c2b227a48644f5decf3e2589c98dd9769447e719221cfed43298edb82d23"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2021",
+        "sha256": "2f59eca6d88d1ec21349405435c64b8adb98eee71dc3d1a8743d532bbfdb8180"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2021",
+        "sha256": "e0ae76e0e2f86745d7382fbf3b047bb858f81f6b697bff8d2b5e9230783f3e22"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2021",
+        "sha256": "9af00c948f8b3dacde9e2eeab532abaf726f8c8bc5f3191e41b18f278c8cbcc3"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2021",
+        "sha256": "5f493f8125bb8b541eef43fa5c3b510f70f50bd7713e8961afad76de18686554"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2021",
+        "sha256": "b897891f3971ef6dbf0d513cb64000c011a057b3df163bbf119cc3bbc9cc5275"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2021",
+        "sha256": "ca97519010f0123ca20ab5f458f6dc002b8238d626ed1a6d3a5980f570fd6f46"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2021",
+        "sha256": "a163efa6d40e21d08de84fe4f8aa36fbb023150e92afadfe39b22fe4e3252ffb"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2021",
+        "sha256": "3f79fcc5c8af4ef093ea614f721d635c4a0ca63b9419075d6e0c003241d7895b"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2021",
+        "sha256": "203bf2b26628284825fa2e37451c55d483d38ab78a64c8c8352e44a88203399b"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2022",
+    "year": 2022,
+    "title": "IU Bloomington Common Data Set 2022–2023",
+    "source_type": "html",
+    "sha256": "5e6810c5a30f232dd9cfbdaf4e37c9c9b5d4a7fd15607951f27e92925319f49a",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2022",
+        "sha256": "86e677d2f98aa2d5cbf52addab4f76aa0f495d9773caf53820bc2e26931bef7a"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2022",
+        "sha256": "730b458c701779bdb7cd40825040c04708454a27207ceb312e5953b597c0f245"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2022",
+        "sha256": "04c0cd26b4c69999d23f3b73ad497c91cad8486625d4aed21c0935f082c1fa9a"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2022",
+        "sha256": "54ad8f1485533c6462b8e51ea113a7573de0dc27d1899209a7ac9d61510c410e"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2022",
+        "sha256": "18fbefed120cf628c91e0ccf6dde7f434cc3e91f82b0c4b713cd58e6dc72f29b"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2022",
+        "sha256": "c1de489ae865a686db53f22f813756e5b2fb19fd7483cf33a92ffc0fd53b2eeb"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2022",
+        "sha256": "7712b05b88d42499e34522fde11bfa76ee40b62f7a0aa4d3c7aa9667e91fd572"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2022",
+        "sha256": "bad7c440b8af8761314081196783106e68d66278d54f591ea599cf6fdd8e5095"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2022",
+        "sha256": "e0709dddf8b3ca7da5b356cd1769f66a1d46ab548b8ef5587390786ba3e690bf"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2022",
+        "sha256": "19ec081a292736aa88a9e3c704101b7b243cb18166fac6cb29c1228455708ede"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2023",
+    "year": 2023,
+    "title": "IU Bloomington Common Data Set 2023–2024",
+    "source_type": "html",
+    "sha256": "a19cf3fe58d20706fc52ed1cd59540f19c98040cd52a8f6e015b5c12f8ac39d4",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2023",
+        "sha256": "4108c5e622585948976dff45af4961a2713ae61d2aa662e2fad9af5df9cbefda"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2023",
+        "sha256": "9521146c70b446baa6b5f109da7717ea1bb9a5549ce57366ac3b5e686b379cd6"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2023",
+        "sha256": "5b168a42de0e187db0cadf286750ffa2c5646e5658d94d8322d60de380d178bf"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2023",
+        "sha256": "158825f8b5d5329b137f5910e25134eda58bc868887dd9dab7f6cf38b3af1071"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2023",
+        "sha256": "ddf938c75d1b899f6d80951b81835eba2670b5c551522835e3693c69691aaf6a"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2023",
+        "sha256": "f81451b4420dc68adcb17fbb5758f39a150beb5902288aa8d3ef046c7026b4a0"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2023",
+        "sha256": "0508f12f2863c639c1e7b6b4830732fa1474c979954bb082a972c3993d11c90f"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2023",
+        "sha256": "db168269a8cae450f086d6b1d90000ac0a081741b8a2c4f7544bd37aa840772f"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2023",
+        "sha256": "8c864351a96e11bf3389692f9246080c6ab763abc3210eefaa6a8430c5dda7cc"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2023",
+        "sha256": "0cf9d2314d9f6768207ac02ac5491eb2216b68faa8cb49f309be62fe0eb05eb4"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2024",
+    "year": 2024,
+    "title": "IU Bloomington Common Data Set 2024–2025",
+    "source_type": "html",
+    "sha256": "d7bae3764e4f7986e37d8c5e8fb135cef4832691197d5740039fca6cffb92509",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2024",
+        "sha256": "b57bb9d94f85f475ce3aef0a9b5653baaf1522855aab65eedcb3e568375167a2"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2024",
+        "sha256": "863318c280ffa97d8f93f3337158a72ebc9d874f1f8bb7e6f727a2ceb83c6232"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2024",
+        "sha256": "432203646c86c2e48c78ca730c8da35ddf80f0b4cba1ad2f8ed8aa3a02109fa8"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2024",
+        "sha256": "712c6b7d5594d0382f91e539215f19f817467a915c08ce82e2dda8577f4a97b5"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2024",
+        "sha256": "b3c3a724997ce9a3bd51d200f833c98ad69d6db1395cea7c3cb3c9951db4ffb1"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2024",
+        "sha256": "f7797f86bddcb6906da3825226e29f1eae29468bfae82557658ef059e08fc031"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2024",
+        "sha256": "385139cd19f6658ed502b6c020b680c27b74fd7a3a6cf431879fb082084b0b03"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2024",
+        "sha256": "ce31b74365b097ede66107991850ab3bd502cd84e8feb266e1199702ce6b4715"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2024",
+        "sha256": "bcdd5f17a45b94d5ceb82d5d495583492768a03c2f76b33edd5d57cfeb11c3d5"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2024",
+        "sha256": "e646d7fa0677606d6d681cdc1cb145262d6a50d659f75efa713abae7a223c6e0"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school": "Indiana University Bloomington",
+    "index_url": "https://iuapps.iu.edu/cds/",
+    "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2025",
+    "year": 2025,
+    "title": "IU Bloomington Common Data Set 2025–2026",
+    "source_type": "html",
+    "sha256": "65d351c5995f3132d338e9cd65cac3507a59084ecda4f1dc4c38dcf53628385a",
+    "section_sources": [
+      {
+        "section": "A. General Information",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=A.+General+Information&year=2025",
+        "sha256": "80826d6faecebddba0678b34a92f4665a035773a2a635ace9afe9b711751aa21"
+      },
+      {
+        "section": "B. Enrollment and Persistence",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=B.+Enrollment+and+Persistence&year=2025",
+        "sha256": "694eb9636263c0df26d7d3c2f46db9cb964edab83a5bb2b4c108223e0460ea57"
+      },
+      {
+        "section": "C. First-Time, (Freshman) Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2025",
+        "sha256": "1d37fd6008ec77813bae4316a5c90c55f0ab416e43069d1de60fae33b73a1fcf"
+      },
+      {
+        "section": "D. Transfer Admission",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=D.+Transfer+Admission&year=2025",
+        "sha256": "b541cb8b9d10b7f5f5501bfde083d7536214d917a9d7d74d882bccec1b703ea4"
+      },
+      {
+        "section": "E. Academic Offerings and Policies",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=E.+Academic+Offerings+and+Policies&year=2025",
+        "sha256": "91628d37c5d462a8c7ff085747932090867fba3ec9a494541c84de7e58d2c394"
+      },
+      {
+        "section": "F. Student Life",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=F.+Student+Life&year=2025",
+        "sha256": "fd3d1e62596e64814e465975ada9843446edc3606c374cf039a1ae9f970f38da"
+      },
+      {
+        "section": "G. Annual Expenses",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=G.+Annual+Expenses&year=2025",
+        "sha256": "939dc7460f19b26838d62d1a4295da04aa4a1f99559858c2cc0632737f13f8fd"
+      },
+      {
+        "section": "H. Financial Aid",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=H.+Financial+Aid&year=2025",
+        "sha256": "b4cc37cc5406a9f152d97cceac7fcfc6fba4c9d531a28295483012387574d446"
+      },
+      {
+        "section": "I. Instructional Faculty and Class Size",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=I.+Instructional+Faculty+and+Class+Size&year=2025",
+        "sha256": "851aa8915aec17ef017cc77bdb7cd3915b6ebc0628c20fbf4d7a47d043d027d3"
+      },
+      {
+        "section": "J. Degrees Conferred",
+        "url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=J.+Degrees+Conferred&year=2025",
+        "sha256": "8e83ca4ad4d01dd96591e2aa009ae0311d959c7b53984deb80d6ef4292174b95"
+      }
+    ],
+    "provenance": "official campus-and-year-specific HTML; composite hash of A–J response hashes",
+    "usable_report": true
+  },
+  {
+    "school_id": "rutgers-university-new-brunswick",
+    "school": "Rutgers University–New Brunswick",
+    "index_url": "https://oirds.rutgers.edu/ReportingCommonDataSet.html",
+    "url": "https://admissions.rutgers.edu/sites/default/files/2025-07/2025%20Desk%20Reference%20Card%20FINAL%20QR.pdf",
+    "year": 2025,
+    "title": "Rutgers 2025 undergraduate admissions desk reference card",
+    "source_type": "pdf",
+    "provenance": "official supplemental admitted-student profile, not Common Data Set",
+    "sha256": "27fe0b9def35baa348e0689c9c202a9163db59915076e343fcf652f73fccc754",
+    "usable_report": false,
+    "exclusion_reason": "Supplemental admitted-student midranges by academic school and multiple campuses; no New Brunswick overall C1 counts and a different population from CDS enrolled-student C9. Not imported as a comparable annual CDS record."
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds1998-99.pdf",
+    "title": "University of Florida Common Data Set 1998-1999",
+    "year": 1998,
+    "source_type": "pdf",
+    "provenance": "official historical publisher file, located outside current archive index",
+    "sha256": "3c608578adeed71f4ca61287e4c524b0b9e10b9e0ab784868e032dcd17340246",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-florida",
+    "school": "University of Florida",
+    "index_url": "https://ir.aa.ufl.edu/reports/cds-reports/",
+    "url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds1999-00.pdf",
+    "title": "University of Florida Common Data Set 1999-2000",
+    "year": 1999,
+    "source_type": "pdf",
+    "provenance": "official historical publisher file, located outside current archive index",
+    "sha256": "c4ebc6414d16a4c08bff616819bf4574daf03b80919fabc72b1fcc11f609e0c9",
+    "usable_report": true
+  },
+  {
+    "school_id": "university-of-illinois-urbana-champaign",
+    "school": "University of Illinois Urbana-Champaign",
+    "year": 2016,
+    "title": "Illinois 2016-2017 legacy CDS URL",
+    "index_url": "https://dair.illinois.edu/access-data/common-data-set/",
+    "url": "https://www.dmi.illinois.edu/stuenr/misc/cds_2016_2017.xls",
+    "source_type": "xls",
+    "usable_report": false,
+    "response_sha256": "e69e89a5c34c589d2310fda91e4b57e6f88f6f10aecdf09dc6d5556def30abed",
+    "exclusion_reason": "Legacy publisher XLS URL returns HTML, not the original workbook. No data imported; earlier files require a genuine original."
+  }
+]

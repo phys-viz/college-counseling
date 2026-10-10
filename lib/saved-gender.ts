@@ -7,7 +7,7 @@ export function savedGenderMetrics(r:Report):Report{
  const entry=(backfill as Record<string,{sha256:string;metrics:Record<string,number>;evidence:Report['evidence'];notes:string[]}>)[r.school_id+':'+r.year];
  if(!entry||entry.sha256!==r.sha256)enrichSavedGender(r);
  else{
-  for(const [key,value] of Object.entries(entry.metrics))if(r.metrics[key]===undefined){r.metrics[key]=value;r.evidence[key]={...entry.evidence[key],method:'source-hash-verified gender enrichment: '+entry.evidence[key].method};}
+  for(const [key,value] of Object.entries(entry.metrics))if(r.metrics[key]===undefined&&!r.omitted_metrics?.includes(key)){r.metrics[key]=value;r.evidence[key]={...entry.evidence[key],method:'source-hash-verified gender enrichment: '+entry.evidence[key].method};}
   for(const note of entry.notes)if(!r.warnings.includes(note))r.warnings.push(note);
  }
  for(const kind of ['applicants','admitted','enrolled']){

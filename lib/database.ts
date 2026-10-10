@@ -1,6 +1,7 @@
 import { env } from 'cloudflare:workers';
-import seed from '@/data/reports.json';
+import seed from '@/data/seed-payloads.json';
 import type { Report } from './report-types';
+import {decodeSeed} from './seed-payload';
 export function database(): D1Database {
   const db=(env as unknown as {DB?:D1Database}).DB;
   if(!db) throw new Error('Database binding unavailable');
@@ -16,6 +17,10 @@ export async function ensureSeed() {
   // Check persisted IDs in this request instead, and insert only missing seeds.
   const existing=await database().prepare('SELECT id FROM reports').all<{id:string}>();
   const ids=new Set(existing.results.map(row=>row.id));
-  const missing=(seed as unknown as Report[]).filter(r=>!ids.has(`${r.school_id}:${r.year}`));
-  for(let i=0;i<missing.length;i+=50)await database().batch(missing.slice(i,i+50).map(r=>statement(r)));
+  const missing=seed.filter(r=>!ids.has(r.id));
+  for(let i=0;i<missing.length;i+=50){
+    const statements=[];
+    for(const entry of missing.slice(i,i+50))statements.push(statement(await decodeSeed(entry)));
+    await database().batch(statements);
+  }
 }

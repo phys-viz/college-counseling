@@ -2,7 +2,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {registerHooks} from 'node:module';
 import './register-ts.mjs';
+import './write-seed-payloads.mjs';
 const seed=JSON.parse(fs.readFileSync('data/reports.json','utf8'));
+const packed=JSON.parse(fs.readFileSync('data/seed-payloads.json','utf8'));
+const {decodeSeed}=await import('../lib/seed-payload.ts');
+for(let i=0;i<seed.length;i++)assert.deepEqual(await decodeSeed(packed[i]),seed[i],'Compressed seed preserves every metric and source field');
 const records=new Map(seed.map(r=>[`${r.school_id}:${r.year}`,'counselor-reviewed payload']));
 const batches=[];let calls=0,rejectFirst;
 globalThis.__loadingTestDB={
@@ -14,7 +18,7 @@ globalThis.__loadingTestDB={
 };
 registerHooks({resolve(specifier,context,next){
  if(specifier==='cloudflare:workers')return {url:'data:text/javascript,export const env={DB:globalThis.__loadingTestDB}',shortCircuit:true};
- if(specifier==='@/data/reports.json')return {url:'data:text/javascript,'+encodeURIComponent('export default '+JSON.stringify(seed)),shortCircuit:true};
+ if(specifier==='@/data/seed-payloads.json')return {url:'data:text/javascript,'+encodeURIComponent('export default '+JSON.stringify(packed)),shortCircuit:true};
  return next(specifier,context);
 }});
 const {ensureSeed}=await import('../lib/database.ts');

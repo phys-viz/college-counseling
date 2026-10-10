@@ -12,11 +12,19 @@ const ratings=['Very important','Important','Considered','Not considered'];
 
 export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:string,sha256:string):Report {
   const sections:PDFPage[]=[];let started=false;
+  const c1Header=/^(?:CDS\s*(?:[-\u2010-\u2015]\s*)?)?C\s*1(?:[.\s-]|$)/i;
+  // Revision lists can repeat C1/C2 labels before the actual response table.
+  const responsePage=pages.find(p=>p.lines.some((l,i)=>c1Header.test(l.text.trim())&&/Provide the number of degree[- ]seeking/i.test(p.lines.slice(i,i+8).map(l=>l.text).join(' '))))?.page;
   for(const page of pages) {
-    const start=page.lines.findIndex(l=>/^(?:CDS\s+)?C\s*1(?:[.\s-]|$)/i.test(l.text.trim()));
+    if(!started&&responsePage!==undefined&&page.page!==responsePage)continue;
+    let start=page.lines.findIndex(l=>/^(?:CDS\s*(?:[-\u2010-\u2015]\s*)?)?C\s*1(?:[.\s-]|$)/i.test(l.text.trim()));
+    if(start<0) {
+     const heading=page.lines.findIndex(l=>/^C\.\s*FIRST[- ]TIME,\s*FIRST[- ]YEAR(?:\s*\(FRESHMAN\))?\s+ADMISSION\s*$/i.test(l.text.trim()));
+     if(heading>=0&&/First.time, first.year.*?students: Provide the number of degree.seeking, first.time, first.year students who applied/i.test(page.lines.slice(heading,heading+8).map(l=>l.text).join(' ')))start=heading;
+    }
     if(!started&&start<0)continue;
     const lines=page.lines.slice(!started?start:0);started=true;
-    const end=lines.findIndex(l=>/^(?:CDS\s+)?D\s*\.?\s*(?:1(?:[.\s]|$)|TRANSFER)/i.test(l.text.trim()));
+    const end=lines.findIndex(l=>/^(?:CDS\s*(?:[-\u2010-\u2015]\s*)?)?D\s*\.?\s*(?:1(?:[.\s]|$)|TRANSFER)/i.test(l.text.trim()));
     if(end>=0){if(end>0)sections.push({...page,lines:lines.slice(0,end),text:lines.slice(0,end).map(l=>l.text).join('\n'),form_fields:page.form_fields.filter(f=>!/^.*TFER/.test(f.name))});break;}
     sections.push({...page,lines,text:lines.map(l=>l.text).join('\n')});
   }
@@ -26,10 +34,11 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
   // Normalize typographic hyphens for matching, retaining the original source text above.
   const combined=sections.flatMap(p=>p.lines.map(l=>({...l,text:l.text.normalize('NFKC').replace(/[\u00ad\u2010-\u2015\u2212]/g,'-'),page:p.page})));
   function sectionLines(n:number) {
-    const start=combined.findIndex(l=>new RegExp(`^(?:CDS\\s+)?C\\s*${n}(?:[.\\s]|$)`,'i').test(l.text.trim()));
+    let start=combined.findIndex(l=>new RegExp(`^(?:CDS\\s*(?:-\\s*)?)?C\\s*${n}(?:[.\\s-]|$)`,'i').test(l.text.trim()));
+    if(start<0&&n===1&&/^C\.\s*FIRST[- ]TIME,\s*FIRST[- ]YEAR/i.test(combined[0]?.text??''))start=0;
     if(start<0)return [];
-    const end=combined.findIndex((l,i)=>{const m=l.text.trim().match(/^(?:CDS\s+)?C\s*(\d+)(?:[A-Z]?(?:[.\s-]|$))/i);return i>start&&!!m&&m[1].length<=2&&Number(m[1])!==n;});
-    return combined.slice(start,end<0?undefined:end).map(l=>({...l,text:l.text.replace(/^(?:CDS\s+)?C\s*\d+[A-Z]?(?:[.\s]+|$)/i,'')}));
+    const end=combined.findIndex((l,i)=>{const m=l.text.trim().match(/^(?:CDS\s*(?:-\s*)?)?C\s*(\d+)(?:[A-Z]?(?:[.\s-]|$))/i);return i>start&&!!m&&m[1].length<=2&&Number(m[1])!==n;});
+    return combined.slice(start,end<0?undefined:end).map(l=>({...l,text:l.text.replace(/^(?:CDS\s*(?:-\s*)?)?C\s*\d+[A-Z]?(?:[.\s-]+|$)/i,'')}));
   }
   const c1=canonicalC1(sectionLines(1));const yearMatch=c1.map(l=>l.text).join(' ').match(/\bFall\s+((?:19|20)\d{2})\b/i);
   const year=yearMatch?Number(yearMatch[1]):document.year??0;
@@ -86,7 +95,17 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     const residencyHeader=/\bin[- ]state\b/i.test(c1Text)&&/\bout(?:-|\s)/i.test(c1Text)&&/\binternat(?:ional|-)/i.test(c1Text);
     for(const [index,line] of c1.entries()) {
       if(!new RegExp(`^Total.*\\b${verb}\\b`,'i').test(line.text.trim())||genderLabel.test(line.text))continue;
-      const values=countCells(suffix(line.text));if(!values.length)continue;
+      const values=countCells(suffix(line.text));
+      // A complete header can identify an explicit total despite an unreported
+      // component. Preserve the dash as missing; do not sum it as zero.
+      const marked=line.text.match(new RegExp(`\\b${verb}(?:\\s+in\\s+Fall\\s+\\d{4})?\\s*:?\\s*([\\d, .-]+)\\s*$`,'i'))?.[1].trim().split(/\s+/).map(v=>v==='-'?null:number(v));
+      const preceding=c1.slice(0,index).findLast(l=>/\bin[- ]state\b/i.test(l.text));
+      if(!values.length&&marked&&preceding&&/\bTotal\b/i.test(preceding.text)&&residencyHeader) {
+       const width=1+(/\bIn[- ]State\b/i.test(preceding.text)?1:0)+(/\bOut[- ](?:of[- ])?State\b/i.test(preceding.text)?1:0)+(/\bInternational\b/i.test(preceding.text)?1:0)+(/\bUnknown\b/i.test(preceding.text)?1:0);
+       const total=/\bTotal\b.*\bin[- ]state\b/i.test(preceding.text)?marked[0]:marked.at(-1);
+       if(marked.length===width&&total!==null&&total!==undefined)candidates.push({value:total,page:line.page,method:'PDF residency table explicit Total column; unreported components remain missing'});
+      }
+      if(!values.length)continue;
       if(values.length===1&&!/(?:full|part)\s*-\s*time/i.test(line.text)){
         if(values[0]===0&&residencyHeader){r.warnings.push(`C1 ${key}: a residency table shows zero with blank component cells. This ambiguous total is not used; check the original source.`);continue;}
         candidates.push({value:values[0],page:line.page,method:'PDF overall total'});
@@ -116,12 +135,12 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     ['ed_applicants',21,/Number of early decision applications received.*?([\d,]+)\s*$/i],
     ['ed_admitted',21,/Number of applicants admitted under early decision plan.*?([\d,]+)\s*$/i],
     ['fee',13,/Amount of (?:the )?application fee\s*:?\s*\$?\s*([\d.]+)\s*$/i],
-    ['top_tenth',10,/Percent in top (?:tenth|10th).*?([\d.]+)%?\s*$/i],
-    ['top_quarter',10,/Percent in top quarter.*?([\d.]+)%?\s*$/i],
-    ['top_half',10,/Percent in top half[^%]*?([\d.]+)%/i],
+    ['top_tenth',10,/^Percent in top (?:tenth|10th)(?: of high school graduating class)?\s*:?\s*([\d.]+)%?\s*(?:a)?\s*$/i],
+    ['top_quarter',10,/^Percent in top quarter(?: of high school graduating class)?\s*:?\s*([\d.]+)%?\s*(?:a)?\s*$/i],
+    ['top_half',10,/^Percent in top half(?: of high school graduating class)?\s*:?\s*([\d.]+)%?\s*(?:Top half\s*\+)?\s*(?:a)?\s*$/i],
     ['rank_submitted',10,/.*submitted.*high school.*rank.*?([\d.]+)%?\s*$/i],
   ];
-  for(const [key,n,pattern] of patterns)if(r.metrics[key]===undefined)for(const line of sectionLines(n)){const match=line.text.match(pattern);if(match){if(n===21&&new RegExp(`\\bFall\\s+${match[1]}\\s*$`,'i').test(line.text))continue;put(key,number(match[1]),`C${n}`,line.page);break;}}
+  for(const [key,n,pattern] of patterns)if(r.metrics[key]===undefined)for(const line of sectionLines(n)){const match=line.text.match(pattern);if(match){if(n===21&&new RegExp(`\\bFall\\s+${match[1]}\\s*$`,'i').test(line.text))continue;if(n===10&&Number(match[1])>100)continue;put(key,number(match[1]),`C${n}`,line.page);break;}}
   for(const [key,prefix,label] of [['sat','SAT1_COMP',/^SAT (?:I )?Composite/i],['reading','SAT1_VERB',/^SAT (?:I )?(?:Evidence.Based Reading|Critical Reading|Verbal)/i],['math','SAT1_MATH',/^SAT (?:I )?Math/i],['act','ACT_COMP',/^ACT Composite/i]] as const) {
     for(const pct of [25,50,75]){const f=fields.get(`${prefix}_${pct}TH_P`);if(f)put(`${key}_${pct}`,number(f.value),'C9',f.page,'PDF form field');}
     if(r.metrics[`${key}_25`]!==undefined)continue;
@@ -149,6 +168,12 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
     const match=line.text.match(new RegExp(`^(?:Percent\\s+)?Submitting ${key} Scores\\s+([\\d.]+)%?\\s+(?:Number submitting ${key} scores\\s+)?([\\d,]+)`,'i'));
     if(/^Percent\s+Submitting/i.test(line.text)&&!/Number submitting/i.test(line.text))continue;
     if(match){put(`${key}_submitted`,number(match[1]),'C9',line.page);put(`${key}_submitted_count`,number(match[2]),'C9',line.page);break;}
+  }
+  for(const key of ['sat','act'])for(const line of sectionLines(9)) {
+    const percent=line.text.match(new RegExp(`^Percent submitting ${key} scores\\s*:?\\s*([\\d.]+)%?\\s*$`,'i'));
+    const count=line.text.match(new RegExp(`^Number submitting ${key} scores\\s*:?\\s*([\\d,]+)\\s*$`,'i'));
+    if(percent&&r.metrics[`${key}_submitted`]===undefined&&Number(percent[1])<=100)put(`${key}_submitted`,number(percent[1]),'C9',line.page,'PDF separately labeled percentage');
+    if(count&&r.metrics[`${key}_submitted_count`]===undefined)put(`${key}_submitted_count`,number(count[1]),'C9',line.page,'PDF separately labeled submitter count');
   }
   for(const [prefix,names] of [['Q111_',factorNames.slice(0,6)],['Q112_',factorNames.slice(6)]] as const)names.forEach((label,i)=>{
     const f=fields.get(prefix+(i+1));const rating=f?({VI:ratings[0],I:ratings[1],C:ratings[2],NC:ratings[3]} as Record<string,string>)[f.value.trim()]:undefined;

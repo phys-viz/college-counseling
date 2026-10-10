@@ -1,0 +1,1380 @@
+{
+  "university-of-florida": {
+    "2025": {
+      "counts": [
+        90523,
+        18403,
+        7619
+      ],
+      "page": 9,
+      "source_pages": [
+        9,
+        10
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS 2025-26_v8_08.14.2026.pdf",
+      "sha256": "32356d0a50168f42f72adc693fb6e50ae168a061194f2060c07f4f6bf9915b6c",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2025.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for admission\n(i.e., who completed actionable applications) and who have been notified of one of the following actions:\nadmission, non-admission, placement on waiting list, or application withdrawn (by applicant or institution).\n• Note that recent high school graduates and other students without prior postsecondary experience will still be\nconsidered \"first-time students\" for fall enrollment reporting purposes even if they enrolled in the summer prior to\nfall enrollment.\nFirst-Time, First-Year Student Applications Total\nTotal first-time, first-year males who applied 40,876\nTotal first-time, first-year females who applied 49,647\nTotal first-time, first-year students of unknown sex who applied -\nFirst-Time, First-Year Student Admitted Total\nTotal first-time, first-year males who were admitted 8,725\nTotal first-time, first-year females who were admitted 9,678\nTotal first-time, first-year students of unknown sex who were admitted -\nFirst-Time, First-Year Student Enrolled Total\nTotal first-time, first-year males who enrolled 3,526\nTotal first-time, first-year females who enrolled 4,093\nTotal first-time, first-year students of unknown sex who enrolled -\nFirst-Time, First-Year Student Enroll by Status Total\nTotal full-time, first-time, first-year males who enrolled 3,519\nTotal part-time, first-time, first-year males who enrolled 7\nTotal full-time, first-time, first-year females who enrolled 4,072\nTotal part-time, first-time, first-year females who enrolled 21\nTotal full-time, first-time, first-year students of unknown sex who enrolled -\nTotal part-time, first-time, first-year students of unknown sex who enrolled -\nIf available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2025\nPlease report based on known physical address at time of application.\nFirst-Time, First-Year by Residency In-State Out-of-State Total\nTotal first-time, first-year (degree-seeking) who applied 42,172 39,420 90,523\nTotal first-time, first-year (degree-seeking) who were admitted 9,387 8,086 18,403\nTotal first-time, first-year (degree-seeking) who enrolled 5,856 1,608 7,619\nFirst-Time, First-Year by Residency International Unknown\nTotal first-time, first-year (degree-seeking) who applied 8,931 -\nTotal first-time, first-year (degree-seeking) who were admitted 930 -\nTotal first-time, first-year (degree-seeking) who enrolled 155 -\nInstitutional Planning and Research CDS-C Page 9\nCommon Data Set 2025-2026 - UF Main Campus\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2024": {
+      "counts": [
+        73557,
+        17804,
+        7513
+      ],
+      "page": 10,
+      "source_pages": [
+        10,
+        11
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2024-2025_UFMAIN_Post_v4_ADA5.pdf",
+      "sha256": "1bb5c8c7621698dd548d1277af610b29816897ad8661d70a7b1d64260ac65b5f",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2024.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for\nadmission (i.e., who completed actionable applications) and who have been notified of one of the following\nactions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant or\ninstitution).\n• Since the total may include students who did not provide gender data, the detail need not sum to the\ntotal.\n• If your institution collects and reports non-binary gender data, please use the \"Another Gender\" category.\n• Note that recent high school graduates and other students without prior postsecondary experience will\nstill be considered \"first-time students\" for fall enrollment reporting purposes even if they enrolled in the\nsummer prior to fall enrollment.\n• Provide numbers of students for each of the following categories as of the institution’s official fall\nreporting date or as of October 15, 2024.\nFirst-Time, First-Year Student Applicants Total\nTotal first-time, first-year men who applied 32,729\nTotal first-time, first-year women who applied 40,826\nTotal first-time, first-year another gender who applied -\nTotal first-time, first-year unknown gender who applied 2\nFirst-Time, First-Year Student Admits Total\nTotal first-time, first-year men who were admitted 8,260\nTotal first-time, first-year women who were admitted 9,542\nTotal first-time, first-year another gender who were admitted -\nTotal first-time, first-year unknown gender who were admitted 2\nFirst-Time, First-Year Student Enrollees by Status Total\nTotal full-time, first-time, first-year men who enrolled 3,375\nTotal part-time, first-time, first-year men who enrolled 17\nTotal full-time, first-time, first-year women who enrolled 4,098\nTotal part-time, first-time, first-year women who enrolled 21\nTotal full-time, first-time, first-year another gender who enrolled -\nTotal part-time, first-time, first-year another gender who enrolled -\nTotal full-time, first-time, first-year unknown gender who enrolled 2\nTotal part-time, first-time, first-year unknown gender who enrolled -\nIf available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2024\nPlease report based on known physical address at time of application.\nFirst-Time, First-Year Student Applicants Total In-State Out-of-State\nTotal first-time, first-year who applied 73,557 39,022 29,376\nTotal first-time, first-year who were admitted 17,804 9,294 6,834\nTotal first-time, first-year who enrolled 7,513 5,719 1,491\nFirst-Time, First-Year Student Applicants International Unknown\nTotal first-time, first-year who applied 5,159 -\nTotal first-time, first-year who were admitted 1,676 -\nTotal first-time, first-year who enrolled 303 -\nInstitutional Planning and Research CDS-C Page 10\nCommon Data Set 2024-2025 - UF Main Campus\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2023": {
+      "counts": [
+        65375,
+        15707,
+        6762
+      ],
+      "page": 8,
+      "source_pages": [
+        8
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2023-2024_UFMAIN_Post_v3_04.13.26_ADA2.pdf",
+      "sha256": "c21faca1fbf14b967ef2222cf7961b13e1beb5c1f0c90ace89f02df7b96959bd",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2023.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for\nadmission (i.e., who completed actionable applications) and who have been notified of one of the\nfollowing actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution).\n• Since the total may include students who did not provide gender data, the detail need not sum to the total.\n• If your institution collects and reports non-binary gender data, please use the \"Another Gender\" category.\n• Note that recent high school graduates and other students without prior postsecondary experience will still be\nconsidered \"first-time students\" for fall enrollment reporting purposes even if they enrolled in the summer prior to\nfall enrollment.\n• Provide numbers of students for each of the following categories as of the institution’s official fall reporting\ndate or as of October 15, 2023.\nFirst-Time, First-Year Student Applicants Total\nTotal first-time, first-year men who applied 28,784\nTotal first-time, first-year women who applied 36,591\nTotal first-time, first-year another gender who applied -\nFirst-Time, First-Year Student Admits Total\nTotal first-time, first-year men who were admitted 6,889\nTotal first-time, first-year women who were admitted 8,818\nTotal first-time, first-year another gender who were admitted -\nFirst-Time, First-Year Student Enrollees by Status Total\nTotal full-time, first-time, first-year men who enrolled 2,826\nTotal part-time, first-time, first-year men who enrolled 19\nTotal full-time, first-time, first-year women who enrolled 3,900\nTotal part-time, first-time, first-year women who enrolled 17\nTotal full-time, first-time, first-year another gender who enrolled -\nTotal part-time, first-time, first-year another gender who enrolled -\nIf available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2023\nFirst-Time, First-Year Student Applicants In-State Out-of-State International Unknown Total\nTotal first-time, first-year who applied 65,375\nTotal first-time, first-year who were admitted 15,707\nTotal first-time, first-year who enrolled 6,762\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "1997": {
+      "counts": [
+        12694,
+        6872,
+        3853
+      ],
+      "page": 8,
+      "source_pages": [
+        8
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds1997-98.pdf",
+      "sha256": "e9e0e1a8da6a4ee65f2c35a4e410aa1d77dfc45fd7e2ca30945ca78a9920fe57",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students:\nTotal applied 12,694\nTotal admitted 6,872\nTotal first-time, first-year (freshman) enrolled 3,853\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "UF 1997 C1 page 8 reports 3,853 enrolled, while B1 page 5 first-time full-/part-time gender enrollment sums to 5,549. C1 preserves the publisher's first-year admission figure; B1 is not substituted and this discrepancy remains unresolved."
+      ]
+    },
+    "2000": {
+      "counts": [
+        20675,
+        12916,
+        6952
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2000-01.pdf",
+      "sha256": "e82999692cc25375df3cc4ef267a2c1f9a58876a94b14a572665e5f92b793e0f",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in fall 2000. Include early decision, early action, and\nstudents who began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 9,484\nTotal first-time, first-year (freshman) women who applied 11,154\nTotal first-time, first-year (freshman) applied with gender not 37\nreported\nTotal first-time, first-year (freshman) men who were admitted 5,590\nTotal first-time, first-year (freshman) women who were admitted 7,310\nTotal first-time, first-year (freshman) admitted with gender not 16\nreported\nTotal full-time, first-time, first-year (freshman) men enrolled 2,988\nTotal part-time, first-time, first-year (freshman) men enrolled 44\nTotal full-time, first-time, first-year (freshman) women enrolled 3,877\nTotal part-time, first-time, first-year (freshman) women enrolled 43\nTotal first-time, first-year (freshman) enrolled 6,952\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2001": {
+      "counts": [
+        18625,
+        11186,
+        6337
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2001-02.pdf",
+      "sha256": "dcf4a5663b84519f8de60b30981d5d60d72ecaaa4b9d5556c0f5c7e45c106fd6",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in fall 2001. Include early decision, early action, and\nstudents who began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 8,538\nTotal first-time, first-year (freshman) women who applied 10,087\nTotal first-time, first-year (freshman) men who were admitted 4,950\nTotal first-time, first-year (freshman) women who were admitted 6,236\nTotal full-time, first-time, first-year (freshman) men enrolled 2,862\nTotal part-time, first-time, first-year (freshman) men enrolled 34\nTotal full-time, first-time, first-year (freshman) women enrolled 3,395\nTotal part-time, first-time, first-year (freshman) women enrolled 46\nTotal first-time, first-year (freshman) enrolled 6,337\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2002": {
+      "counts": [
+        20119,
+        11728,
+        6536
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2002-03.pdf",
+      "sha256": "b80a81a744f8b84600f57a1e73be941e3308bd062019288a344a48db8ea009c9",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in fall 2002. Include early decision, early action, and\nstudents who began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 8,897\nTotal first-time, first-year (freshman) women who applied 11,222\nTotal first-time, first-year (freshman) men who were admitted 4,900\nTotal first-time, first-year (freshman) women who were admitted 6,828\nTotal full-time, first-time, first-year (freshman) men enrolled 2,726\nTotal part-time, first-time, first-year (freshman) men enrolled 68\nTotal full-time, first-time, first-year (freshman) women enrolled 3,674\nTotal part-time, first-time, first-year (freshman) women enrolled 68\nTotal first-time, first-year (freshman) enrolled 6,536\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2003": {
+      "counts": [
+        22973,
+        12029,
+        6599
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2003-04.pdf",
+      "sha256": "bd12751c2dc0634e77c47d02c83ac573d12dfb1f9d20e890c42982762314c272",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in fall 2003. Include early decision, early action, and\nstudents who began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 10,185\nTotal first-time, first-year (freshman) women who applied 12,788\nTotal first-time, first-year (freshman) men who were admitted 4,936\nTotal first-time, first-year (freshman) women who were admitted 7,093\nTotal full-time, first-time, first-year (freshman) men enrolled 2,721\nTotal part-time, first-time, first-year (freshman) men enrolled 28\nTotal full-time, first-time, first-year (freshman) women enrolled 3,806\nTotal part-time, first-time, first-year (freshman) women enrolled 44\nTotal first-time, first-year (freshman) enrolled 6,599\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2004": {
+      "counts": [
+        22458,
+        11928,
+        6745
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2004-05.pdf",
+      "sha256": "8471d3b705c2136afec2ea433e59cc7b1756c8f0b3c95d0644ffaff3cfe848ca",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in fall 2004. Include early decision, early action, and\nstudents who began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 10,040\nTotal first-time, first-year (freshman) women who applied 12,418\nTotal first-time, first-year (freshman) men who were admitted 5,114\nTotal first-time, first-year (freshman) women who were admitted 6,814\nTotal full-time, first-time, first-year (freshman) men enrolled 2,917\nTotal part-time, first-time, first-year (freshman) men enrolled 35\nTotal full-time, first-time, first-year (freshman) women enrolled 3,748\nTotal part-time, first-time, first-year (freshman) women enrolled 45\nTotal first-time, first-year (freshman) enrolled 6,745\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2005": {
+      "counts": [
+        21151,
+        12100,
+        7241
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2005-06.pdf",
+      "sha256": "c9ac0466aad1f5287e36c2f9c6907b9386b624384ec264a98d49cd4cfe91fbdf",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in fall 2005. Include early decision, early action, and\nstudents who began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 9,481\nTotal first-time, first-year (freshman) women who applied 11,670\nTotal first-time, first-year (freshman) men who were admitted 5,206\nTotal first-time, first-year (freshman) women who were admitted 6,894\nTotal full-time, first-time, first-year (freshman) men enrolled 3,120\nTotal part-time, first-time, first-year (freshman) men enrolled 19\nTotal full-time, first-time, first-year (freshman) women enrolled 4,072\nTotal part-time, first-time, first-year (freshman) women enrolled 30\nTotal first-time, first-year (freshman) enrolled 7,241\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2006": {
+      "counts": [
+        22093,
+        10652,
+        6702
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds2006-07.pdf",
+      "sha256": "daee0cecf2d49781308eabeb3f74aafeaa35ea51917f28428713e15effa41b94",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in fall 2006. Include early decision, early action, and\nstudents who began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 9,868\nTotal first-time, first-year (freshman) women who applied 12,225\nTotal first-time, first-year (freshman) men who were admitted 4,561\nTotal first-time, first-year (freshman) women who were admitted 6,091\nTotal full-time, first-time, first-year (freshman) men enrolled 2,874\nTotal part-time, first-time, first-year (freshman) men enrolled 29\nTotal full-time, first-time, first-year (freshman) women enrolled 3,767\nTotal part-time, first-time, first-year (freshman) women enrolled 32\nTotal first-time, first-year (freshman) enrolled 6,702\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2007": {
+      "counts": [
+        24126,
+        10158,
+        6441
+      ],
+      "page": 9,
+      "source_pages": [
+        9
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2007-08/ca61e5bfa53c8012a8354ce65a8d9bbfc4c47efe2543f9c4c314774c3d649502.pdf",
+      "sha256": "ca61e5bfa53c8012a8354ce65a8d9bbfc4c47efe2543f9c4c314774c3d649502",
+      "source_c1_text": "CDS ‐ C1. First‐time, first‐year (freshman) students:\nProvide the number of degree‐seeking, first‐time, first‐year students who applied, were admitted, and\nenrolled (full‐ or part‐time) in fall 2007. Include early decision, early action, and students who began\nstudies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who\nhave been notified of one of the following actions: admission, nonadmission, placement on waiting\nlist, or application withdrawn (by applicant or institution). Admitted applicants should include wait‐\nlisted students who were subsequently offered admission.\nTotal first‐time, first‐year (freshman) men who applied 10,956\nTotal first‐time, first‐year (freshman) women who applied 13,170\nTotal first‐time, first‐year (freshman) men who were admitted 4,199\nTotal first‐time, first‐year (freshman) women who were admitted 5,959\nTotal full‐time, first‐time, first‐year (freshman) men enrolled 2,631\nTotal part‐time, first‐time, first‐year (freshman) men enrolled 26\nTotal full‐time, first‐time, first‐year (freshman) women enrolled 3,759\nTotal part‐time, first‐time, first‐year (freshman) women enrolled 25\nTotal first‐time, first‐year (freshman) enrolled 6,441\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2008": {
+      "counts": [
+        27612,
+        10897,
+        6382
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2008-09/b58673c815bc949e2208d601a04feec127479ef2549be7bac2a2ed61492bf438.pdf",
+      "sha256": "b58673c815bc949e2208d601a04feec127479ef2549be7bac2a2ed61492bf438",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2008. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 12,098\nTotal first-time, first-year (freshman) women who applied 15,514\nTotal first-time, first-year (freshman) men who were admitted 4,426\nTotal first-time, first-year (freshman) women who were admitted 6,471\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,596\nTotal part-time, first-time, first-year (freshman) men who enrolled 9\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,768\nTotal part-time, first-time, first-year (freshman) women who enrolled 9\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2009": {
+      "counts": [
+        25798,
+        10821,
+        6253
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2009-10/ffd19c9512745aaedd744048b7e9c5d0d3de11029d88b3e00c7fac1ac0b8eebc.pdf",
+      "sha256": "ffd19c9512745aaedd744048b7e9c5d0d3de11029d88b3e00c7fac1ac0b8eebc",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2009. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 11,214\nTotal first-time, first-year (freshman) women who applied 14,584\nTotal first-time, first-year (freshman) men who were admitted 4,438\nTotal first-time, first-year (freshman) women who were admitted 6,383\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,514\nTotal part-time, first-time, first-year (freshman) men who enrolled 11\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,715\nTotal part-time, first-time, first-year (freshman) women who enrolled 13\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2010": {
+      "counts": [
+        26512,
+        11459,
+        6381
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2010-11/892f4914abd43c352033e915f32fe598e56e8b281e61a1367b202bc1db08aea3.pdf",
+      "sha256": "892f4914abd43c352033e915f32fe598e56e8b281e61a1367b202bc1db08aea3",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2010. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 11387\nTotal first-time, first-year (freshman) women who applied 15125\nTotal first-time, first-year (freshman) men who were admitted 4687\nTotal first-time, first-year (freshman) women who were admitted 6772\nTotal full-time, first-time, first-year (freshman) men who enrolled 2670\nTotal part-time, first-time, first-year (freshman) men who enrolled 25\nTotal full-time, first-time, first-year (freshman) women who enrolled 3659\nTotal part-time, first-time, first-year (freshman) women who enrolled 27\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2011": {
+      "counts": [
+        27295,
+        11786,
+        6429
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2011-12/887803d558b84f13ce4e5bc4f53638f549a93b7cb957645d33cb1f5eb7849ba2.pdf",
+      "sha256": "887803d558b84f13ce4e5bc4f53638f549a93b7cb957645d33cb1f5eb7849ba2",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2011. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 11,770\nTotal first-time, first-year (freshman) women who applied 15,525\nTotal first-time, first-year (freshman) men who were admitted 4,800\nTotal first-time, first-year (freshman) women who were admitted 6,986\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,601\nTotal part-time, first-time, first-year (freshman) men who enrolled 9\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,807\nTotal part-time, first-time, first-year (freshman) women who enrolled 12\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2012": {
+      "counts": [
+        27419,
+        12092,
+        6289
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2012-13/6f7e902c306286cfac767505dc1e6afb1ea35bf4ecd827f4f84f463e2ffb0f11.pdf",
+      "sha256": "6f7e902c306286cfac767505dc1e6afb1ea35bf4ecd827f4f84f463e2ffb0f11",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2012. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 11,828\nTotal first-time, first-year (freshman) women who applied 15,591\nTotal first-time, first-year (freshman) men who were admitted 4,959\nTotal first-time, first-year (freshman) women who were admitted 7,133\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,627\nTotal part-time, first-time, first-year (freshman) men who enrolled 7\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,645\nTotal part-time, first-time, first-year (freshman) women who enrolled 10\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2013": {
+      "counts": [
+        27107,
+        12618,
+        6373
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2013-14/785c42a532c5ae4940cd056321329f8129259e9c395760df18798088babfe2f9.pdf",
+      "sha256": "785c42a532c5ae4940cd056321329f8129259e9c395760df18798088babfe2f9",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2013. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 11,745\nTotal first-time, first-year (freshman) women who applied 15,362\nTotal first-time, first-year (freshman) men who were admitted 5,232\nTotal first-time, first-year (freshman) women who were admitted 7,386\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,648\nTotal part-time, first-time, first-year (freshman) men who enrolled 10\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,704\nTotal part-time, first-time, first-year (freshman) women who enrolled 11\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2014": {
+      "counts": [
+        27852,
+        13111,
+        6537
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2014-15/471956f86ca9d9d131d311fab6969f6ef75fc8491628065971b995626dade451.pdf",
+      "sha256": "471956f86ca9d9d131d311fab6969f6ef75fc8491628065971b995626dade451",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2014. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant\nor institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 12,097\nTotal first-time, first-year (freshman) women who applied 15,755\nTotal first-time, first-year (freshman) men who were admitted 5,353\nTotal first-time, first-year (freshman) women who were admitted 7,758\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,684\nTotal part-time, first-time, first-year (freshman) men who enrolled 20\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,810\nTotal part-time, first-time, first-year (freshman) women who enrolled 23\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2015": {
+      "counts": [
+        29837,
+        14237,
+        7204
+      ],
+      "page": 5,
+      "source_pages": [
+        5,
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2015-16/2dc89098aca3a02e57c2d5228107e22ac8c34d87dcb36d20c9e5878d06105b58.pdf",
+      "sha256": "2dc89098aca3a02e57c2d5228107e22ac8c34d87dcb36d20c9e5878d06105b58",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2015. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\nJuly 2016\nPage 5 of 37\nCommon Data Set 2015-2016 – Includes UF Online\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 12,903\nTotal first-time, first-year (freshman) women who applied 16,934\nTotal first-time, first-year (freshman) men who were admitted 5,735\nTotal first-time, first-year (freshman) women who were admitted 8,502\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,927\nTotal part-time, first-time, first-year (freshman) men who enrolled 39\nTotal full-time, first-time, first-year (freshman) women who enrolled 4,179\nTotal part-time, first-time, first-year (freshman) women who enrolled 59\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2016": {
+      "counts": [
+        30118,
+        13835,
+        6842
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2016-17/ba4de511b6e6eaa512ce475c52adc6678a11a7bbb37b90af6ca9217523aacf15.pdf",
+      "sha256": "ba4de511b6e6eaa512ce475c52adc6678a11a7bbb37b90af6ca9217523aacf15",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2016. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of\none of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant\nor institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 13,061\nTotal first-time, first-year (freshman) women who applied 17,057\nTotal first-time, first-year (freshman) men who were admitted 5,533\nTotal first-time, first-year (freshman) women who were admitted 8,302\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,850\nTotal part-time, first-time, first-year (freshman) men who enrolled 8\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,960\nTotal part-time, first-time, first-year (freshman) women who enrolled 24\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2017": {
+      "counts": [
+        32747,
+        13758,
+        6428
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2017-18/5bf13c8708e55075f03a51edd5f2f77a15515f17094af6175a59f27974430340.pdf",
+      "sha256": "5bf13c8708e55075f03a51edd5f2f77a15515f17094af6175a59f27974430340",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2017. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 13,781\nTotal first-time, first-year (freshman) women who applied 18,966\nTotal first-time, first-year (freshman) men who were admitted 5,400\nTotal first-time, first-year (freshman) women who were admitted 8,358\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,596\nTotal part-time, first-time, first-year (freshman) men who enrolled 15\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,800\nTotal part-time, first-time, first-year (freshman) women who enrolled 17\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2018": {
+      "counts": [
+        38905,
+        15077,
+        6801
+      ],
+      "page": 6,
+      "source_pages": [
+        6
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2018-19/16eeb669e735eaafc5bd73a40c728a5856b86f378d5d77be0d57985883304030.pdf",
+      "sha256": "16eeb669e735eaafc5bd73a40c728a5856b86f378d5d77be0d57985883304030",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2018. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 16,465\nTotal first-time, first-year (freshman) women who applied 22,440\nTotal first-time, first-year (freshman) men who were admitted 5,906\nTotal first-time, first-year (freshman) women who were admitted 9,171\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,705\nTotal part-time, first-time, first-year (freshman) men who enrolled 11\nTotal full-time, first-time, first-year (freshman) women who enrolled 4,063\nTotal part-time, first-time, first-year (freshman) women who enrolled 22\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2019": {
+      "counts": [
+        38069,
+        13925,
+        6554
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2019-20/8dfe15fa4ac71413e87abc717f5d90e908c17bac446458aa177b6fe8aace7e13.pdf",
+      "sha256": "8dfe15fa4ac71413e87abc717f5d90e908c17bac446458aa177b6fe8aace7e13",
+      "source_c1_text": "C1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2019. Include early decision, early action, and students\nwho began studies during summer in this cohort. Applicants should include only those students who fulfilled the\nrequirements for consideration for admission (i.e., who completed actionable applications) and who have been notified\nof one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nTotal first-time, first-year (freshman) men who applied 16,222\nTotal first-time, first-year (freshman) women who applied 21,847\nTotal first-time, first-year (freshman) men who were admitted 5,614\nTotal first-time, first-year (freshman) women who were admitted 8,311\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,679\nTotal part-time, first-time, first-year (freshman) men who enrolled 9\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,855\nTotal part-time, first-time, first-year (freshman) women who enrolled 11\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2020": {
+      "counts": [
+        48193,
+        15002,
+        6333
+      ],
+      "page": 9,
+      "source_pages": [
+        9
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/uf/2020-21/444f33c4997da874d8188e20163cef35107d218bc3526219c197f53c9fa7c24d.pdf",
+      "sha256": "444f33c4997da874d8188e20163cef35107d218bc3526219c197f53c9fa7c24d",
+      "source_c1_text": "C1-C2: Applications\nC1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2020.\n Include early decision, early action, and students who began studies during summer in this cohort.\n Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions: admission, non-\nadmission, placement on waiting list, or application withdrawn (by applicant or institution).\n Admitted applicants should include wait-listed students who were subsequently offered admission.\nFIRST-TIME, FIRST YEAR (FRESHMAN) STUDENT APPLICANTS TOTAL\nTotal first-time, first-year (freshman) men who applied 20,701\nTotal first-time, first-year (freshman) women who applied 27,492\nTotal first-time, first-year (freshman) men who were admitted 6,131\nTotal first-time, first-year (freshman) women who were admitted 8,871\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,600\nTotal part-time, first-time, first-year (freshman) men who enrolled 16\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,701\nTotal part-time, first-time, first-year (freshman) women who enrolled 16\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2021": {
+      "counts": [
+        51207,
+        15431,
+        6787
+      ],
+      "page": 10,
+      "source_pages": [
+        10
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2021-22_UFMAIN.pdf",
+      "sha256": "7c3a00bf8adfc0271b78311bbc1f3cff01d4a76b4d44c286181196cd31163205",
+      "source_c1_text": "C1-C2: Applications\nC1. First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2021.\n✓ Include early decision, early action, and students who began studies during summer in this cohort.\n✓ Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions: admission, non-\nadmission, placement on waiting list, or application withdrawn (by applicant or institution).\n✓ Admitted applicants should include wait-listed students who were subsequently offered admission.\n✓ Since the total may include students who did not provide gender data, the detail need not sum to the total.\nFIRST-TIME, FIRST YEAR (FRESHMAN) STUDENT APPLICANTS TOTAL\nTotal first-time, first-year (freshman) men who applied 21723\nTotal first-time, first-year (freshman) women who applied 29484\nTotal first-time, first-year (freshman) men who were admitted 6362\nTotal first-time, first-year (freshman) women who were admitted 9069\nTotal full-time, first-time, first-year (freshman) men who enrolled 2864\nTotal part-time, first-time, first-year (freshman) men who enrolled 7\nTotal full-time, first-time, first-year (freshman) women who enrolled 3896\nTotal part-time, first-time, first-year (freshman) women who enrolled 20\nTotal first-time, first-year (degree-seeking) who applied 51207\nTotal first-time, first-year (degree-seeking) who were admitted 15431\nTotal first-time, first-year (degree-seeking) who enrolled 6787\n`\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2022": {
+      "counts": [
+        64473,
+        15054,
+        6612
+      ],
+      "page": 7,
+      "source_pages": [
+        7
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/CDS_2022-2023_UFMAIN_Post.pdf",
+      "sha256": "089d1f7b5648b397f5fa580ccf7e85c9aefdcfad9317550e6d30a90fcb73f439",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students who\napplied, were admitted, and enrolled (full- or part-time) in Fall 2022.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for\nadmission (i.e., who completed actionable applications) and who have been notified of one of the\nfollowing actions: admission, non-admission, placement on waiting list, or application withdrawn (by\napplicant or institution).\n• Since the total may include students who did not provide gender data, the detail need not sum to the\ntotal.\n• If your institution collects and reports non-binary gender data, please use the \"Another Gender\" category.\n• Note that recent high school graduates and other students without prior postsecondary experience will\nstill be considered \"first-time students\" for fall enrollment reporting purposes even if they enrolled in the\nsummer prior to fall enrollment.\nTotal first-time, first-year men who applied 28,248\nTotal first-time, first-year women who applied 36,225\nTotal first-time, first-year men who were admitted 6,358\nTotal first-time, first-year women who were admitted 8,696\nTotal full-time, first-time, first-year men who enrolled 2,721\nTotal part-time, first-time, first-year men who enrolled 9\nTotal full-time, first-time, first-year women who enrolled 3,873\nTotal part-time, first-time, first-year women who enrolled 9\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "1998": {
+      "counts": [
+        12935,
+        7777,
+        3468
+      ],
+      "page": 8,
+      "source_pages": [
+        8
+      ],
+      "method": "reviewed explicit C1 gender applicants/admitted and overall enrollment; part-time blanks left missing",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds1998-99.pdf",
+      "sha256": "3c608578adeed71f4ca61287e4c524b0b9e10b9e0ab784868e032dcd17340246",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students:\nTotal men applied 6,108\nTotal women applied 6,827\nTotal men admitted 4,257\nTotal women admitted 3,520\nTotal full-time, first-time, first-year (freshman) men enrolled 1,544\nTotal part-time, first-time, first-year (freshman) men enrolled\nTotal full-time, first-time, first-year (freshman) women enrolled 1,924\nTotal part-time, first-time, first-year (freshman) women enrolled\nTotal first-time, first-year (freshman) enrolled 3,468\n",
+      "scope": "C1 source reconciliation; additional metrics source-extracted",
+      "notes": [
+        "C1 part-time gender enrollment cells are blank. Overall enrollment preserves the explicitly printed total; no blank part-time response is inferred as zero."
+      ]
+    },
+    "1999": {
+      "counts": [
+        13967,
+        8397,
+        3717
+      ],
+      "page": 8,
+      "source_pages": [
+        8
+      ],
+      "method": "reviewed explicit C1 gender applicants/admitted and overall enrollment; part-time blanks left missing",
+      "source_url": "https://data-apps.ir.aa.ufl.edu/public/cds/cds1999-00.pdf",
+      "sha256": "c4ebc6414d16a4c08bff616819bf4574daf03b80919fabc72b1fcc11f609e0c9",
+      "source_c1_text": "CDS - C1. First-time, first-year (freshman) students:\nTotal men applied 6,635\nTotal women applied 7,332\nTotal men admitted 3,776\nTotal women admitted 4,621\nTotal full-time, first-time, first-year (freshman) men enrolled 1,720\nTotal part-time, first-time, first-year (freshman) men enrolled\nTotal full-time, first-time, first-year (freshman) women enrolled 1,997\nTotal part-time, first-time, first-year (freshman) women enrolled\nTotal first-time, first-year (freshman) enrolled 3,717\n",
+      "scope": "C1 source reconciliation; additional metrics source-extracted",
+      "notes": [
+        "C1 part-time gender enrollment cells are blank. Overall enrollment preserves the explicitly printed total; no blank part-time response is inferred as zero."
+      ]
+    }
+  },
+  "university-of-illinois-urbana-champaign": {
+    "2025": {
+      "counts": [
+        83045,
+        30384,
+        9207
+      ],
+      "page": 4,
+      "source_pages": [
+        4
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://uofi.box.com/shared/static/orx4vnmzkt2drmgoiksxpfs39pr42uor.xlsx",
+      "sha256": "9fd806a412276af516571b680b68bbec1319620cd3884540845ca29e59cf9d85",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2025.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant or institution).\n• Note that recent high school graduates and other students without prior postsecondary experience will still be considered \"first-time students\" for fall enrollment reporting purposes even if they enrolled in the summer prior to fall enrollment.\nFirst-Time, First-Year Student Applicants Total\nTotal first-time, first-year males who applied 46897\nTotal first-time, first-year females who applied 36114\nTotal first-time, first-year students of unknown sex who applied 34\nFirst-Time, First-Year Student Admits Total\nTotal first-time, first-year males who were admitted 14656\nTotal first-time, first-year females who were admitted 15713\nTotal first-time, first-year students of unknown sex who were admitted 15\nFirst-Time, First-Year Student Enrollees Total\nTotal first-time, first-year males who enrolled 4662\nTotal first-time, first-year females who enrolled 4543\nTotal first-time, first-year students of unknown sex who enrolled 2\nFirst-Time, First-Year Student Enrollees by Status Total Added by DMI - Emily Stuby\nTotal full-time, first-time, first-year males who enrolled 4659\nTotal part-time, first-time, first-year males who enrolled 4540\nTotal full-time, first-time, first-year females who enrolled 2\nTotal part-time, first-time, first-year females who enrolled 3\nTotal full-time, first-time, first-year students of unknown sex who enrolled 3\nTotal part-time, first-time, first-year students of unknown sex who enrolled 0\nIf available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2025\nPlease report based on known physical address at time of application.\nFirst-Time, First-Year Student Applicants In-State Out-of-State International Unknown Total\nTotal first-time, first-year (degree-seeking) who applied 29419 32702 20924 0 83045\nTotal first-time, first-year (degree-seeking) who were admitted 14509 9495 6380 30384\nTotal first-time, first-year (degree-seeking) who enrolled 6587 1210 1410 9207\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "Illinois 2025 CDS-C!E21:E23 reports enrolled totals male 4,662, female 4,543 and unknown sex 2, agreeing with overall/residency total 9,207. CDS-C!E26:E31 status rows are internally inconsistent (male 4,659+4,540=9,199; female 2+3=5; unknown 3+0=3). Reviewed gender totals retain the explicit overall gender rows; status figures are preserved as printed in raw cells and are not corrected or substituted."
+      ],
+      "reviewed_metrics": {
+        "male_enrolled": 4662,
+        "female_enrolled": 4543,
+        "unknown_gender_enrolled": 2
+      }
+    },
+    "2024": {
+      "counts": [
+        73742,
+        31247,
+        9008
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://uofi.box.com/shared/static/1m3p4sedkotywoec55zbnodc4oci5ctf.xlsx",
+      "sha256": "cc36af257029eea4c327bc51ce16f63f0c13195c9b11bd88db0c0c22f22a135c",
+      "source_c1_text": "C1 Source question group\nTotal first-time, first-year men who applied 41597\nTotal first-time, first-year women who applied 32124\nTotal first-time, first-year another gender who applied 0\nTotal first-time, first-year unknown gender who applied 21\nTotal first-time, first-year men who were admitted 15134\nTotal first-time, first-year women who were admitted 16102\nTotal first-time, first-year another gender who were admitted 0\nTotal first-time, first-year unknown gender who were admitted 11\nTotal full-time, first-time, first-year men who enrolled 4538\nTotal part-time, first-time, first-year men who enrolled 0\nTotal full-time, first-time, first-year women who enrolled 4469\nTotal part-time, first-time, first-year women who enrolled 0\nTotal full-time, first-time, first-year another gender who enrolled 0\nTotal part-time, first-time, first-year another gender who enrolled 0\nTotal full-time, first-time, first-year unknown gender who enrolled 1\nTotal part-time, first-time, first-year unknown gender who enrolled 0\nTotal first-time, first-year students who applied 73742\nTotal first-time, first-year students who were admitted 31247\nTotal first-time, first-year students who enrolled 9008\nIn-State Total first-time, first-year who applied 27730\nIn-State Total first-time, first-year who were admitted 15083\nIn-State Total first-time, first-year who enrolled 6429\nOut-of-State Total first-time, first-year who applied 27575\nOut-of-State Total first-time, first-year who were admitted 9983\nOut-of-State Total first-time, first-year who enrolled 1346\nInternational Total first-time, first-year who applied 18437\nInternational Total first-time, first-year who were admitted 6181\nInternational Total first-time, first-year who enrolled 1233\nUnknown Total first-time, first-year who applied N/A\nUnknown Total first-time, first-year who were admitted N/A\nUnknown Total first-time, first-year who enrolled N/A\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2023": {
+      "counts": [
+        67398,
+        29446,
+        8325
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://uofi.box.com/shared/static/zaag0tgnyw34tt8vvai5mtacq9njj7pt.xlsx",
+      "sha256": "ddddd813226f16940c0bb4de2b544875203c38155210ecd069bb6de3e503dab3",
+      "source_c1_text": "C1. Applications: First-time, First-year Students\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2023. - Include early decision, early action, and students who began studies during summer in this cohort. - Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant or institution). - Admitted applicants should include wait-listed students who were subsequently offered admission. - Since the total may include students who did not provide gender data, the detail need not sum to the total. - If your institution collects and reports non-binary gender data, please use the “Another Gender” category. - Note that recent high school graduates and other students without prior postsecondary experience will still be considered “first-time students” for fall enrollment reporting purposes even if they enrolled in the summer prior to fall enrollment.\nMen Women Another Gender\nTotal first-time, first-year students who applied in Fall 2023 38395 28,989 14\nTotal first-time, first-year students admitted in Fall 2023 14192 15248 6\nTotal first-time, first-year students enrolled in Fall 2023 4198 4126 1\nFull-time, first-time, first-year students enrolled in Fall 2023 4198 4126 1\nPart-time, first-time, first-year students enrolled in Fall 2023 0 0 0\nIn-State Out-of-State International Total\nTotal first-time, first-year (degree seeking) who applied 26994 23890 16514 67398\nTotal first-time, first-year (degree seeking) who were admitted 15178 8570 5698 29446\nTotal first-time, first-year (degree seeking) enrolled 6150 1088 1087 8325\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2022": {
+      "counts": [
+        63257,
+        28354,
+        7957
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://uofi.box.com/shared/static/oe4bf750ix6q1gz63vesiu15v8yok2xx.xlsx",
+      "sha256": "a24e9bb6f462a1465df18dadb4e8c04b6994b5b72d820a4552f98af8f81e0691",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2022.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant or institution).\n• Since the total may include students who did not provide gender data, the detail need not sum to the total.\n• If your institution collects and reports non-binary gender data, please use the \"Another Gender\" category.\n• Note that recent high school graduates and other students without prior postsecondary experience will still be considered \"first-time students\" for fall enrollment reporting purposes even if they enrolled in the summer prior to fall enrollment.\nTotal first-time, first-year men who applied 36223\nTotal first-time, first-year women who applied 27010\nTotal first-time, first-year of another gender who applied 24\nTotal first-time, first-year men who were admitted 13926\nTotal first-time, first-year women who were admitted 14418\nTotal first-time, first-year of another gender who were admitted 10\nTotal full-time, first-time, first-year men who enrolled 4076\nTotal part-time, first-time, first-year men who enrolled 0\nTotal full-time, first-time, first-year women who enrolled 3879\nTotal part-time, first-time, first-year women who enrolled 0\nTotal full-time, first-time, first-year of another gender who enrolled 2\nTotal part-time, first-time, first-year of another gender who enrolled 0\nTotal first-time, first-year (degree-seeking) who applied 63257\nTotal first-time, first-year (degree-seeking) who were admitted 28354\nTotal first-time, first-year (degree-seeking) enrolled 7957\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2017": {
+      "counts": [
+        38965,
+        23974,
+        7518
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2017-18/fb80ec8ecb52f3c36cf559a17283d7608f91a526f10f2f08fb16dd85e72d3f2f.xlsx",
+      "sha256": "fb80ec8ecb52f3c36cf559a17283d7608f91a526f10f2f08fb16dd85e72d3f2f",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2017. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 22007\nC1 Total first-time, first-year (freshman) women who applied 16911\nUnknown 47\nC1 Total first-time, first-year (freshman) men who were admitted 12436\nC1 Total first-time, first-year (freshman) women who were admitted 11504\nUnknown 34\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 4036\nC1 Total part-time, first-time, first-year (freshman) men who enrolled N/A\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3482\nC1 Total part-time, first-time, first-year (freshman) women who enrolled N/A\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2018": {
+      "counts": [
+        39406,
+        24496,
+        7609
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2018-19/228269f8ddfe2475834ccae8975a43e79a8e60904fc363dda2fdc4788d3ece51.xlsx",
+      "sha256": "228269f8ddfe2475834ccae8975a43e79a8e60904fc363dda2fdc4788d3ece51",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2018. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 22152\nC1 Total first-time, first-year (freshman) women who applied 17210\nUnknown 44\nC1 Total first-time, first-year (freshman) men who were admitted 12498\nC1 Total first-time, first-year (freshman) women who were admitted 11963\nUnknown 35\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 4094\nC1 Total part-time, first-time, first-year (freshman) men who enrolled N/A\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3515\nC1 Total part-time, first-time, first-year (freshman) women who enrolled N/A\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2019": {
+      "counts": [
+        43509,
+        25684,
+        7665
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2019-20/718169494aad7db3150d4d9db36e5d3b7a470bb3a6d1608bfe9d119a4a29e497.xlsx",
+      "sha256": "718169494aad7db3150d4d9db36e5d3b7a470bb3a6d1608bfe9d119a4a29e497",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2019. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 24259\nC1 Total first-time, first-year (freshman) women who applied 19193\nUnknown 57\nC1 Total first-time, first-year (freshman) men who were admitted 13149\nC1 Total first-time, first-year (freshman) women who were admitted 12501\nUnknown 34\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 4086\nC1 Total part-time, first-time, first-year (freshman) men who enrolled N/A\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3579\nC1 Total part-time, first-time, first-year (freshman) women who enrolled N/A\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2020": {
+      "counts": [
+        43473,
+        27520,
+        7530
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2020-21/bab9a9d439b0a91576a100c7d075bd8696f6a5e80bd70c594462c28722446549.xlsx",
+      "sha256": "bab9a9d439b0a91576a100c7d075bd8696f6a5e80bd70c594462c28722446549",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2020.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant or institution).\n• Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 24655\nTotal first-time, first-year (freshman) women who applied 18757\nUnknown 61\nTotal first-time, first-year (freshman) men who were admitted 14371\nTotal first-time, first-year (freshman) women who were admitted 13112\nUnknown 37\nTotal full-time, first-time, first-year (freshman) men who enrolled 4042\nTotal part-time, first-time, first-year (freshman) men who enrolled N/A\nTotal full-time, first-time, first-year (freshman) women who enrolled 3488\nTotal part-time, first-time, first-year (freshman) women who enrolled N/A\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2021": {
+      "counts": [
+        47593,
+        28395,
+        8303
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://api.collegedata.fyi/storage/v1/object/public/sources/university-of-illinois-urbana-champaign/2021-22/9a3836aa93c9b5d68833ca8d9a6ada3320b453c1a676df14f0a7f906bb17bb5d.xlsx",
+      "sha256": "9a3836aa93c9b5d68833ca8d9a6ada3320b453c1a676df14f0a7f906bb17bb5d",
+      "source_c1_text": "C1-C2: Applications\nC1 First-time, first-year (freshman) students: Provide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2021.\n• Include early decision, early action, and students who began studies during summer in this cohort.\n• Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, non-admission, placement on waiting list, or application withdrawn (by applicant or institution).\n• Since the total may include students who did not provide gender data, the detail need not sum to the total.\nTotal first-time, first-year (freshman) men who applied 26889\nTotal first-time, first-year (freshman) women who applied 20638\nTotal first-time, first-year (freshman) men who were admitted 14566\nTotal first-time, first-year (freshman) women who were admitted 13786\nTotal full-time, first-time, first-year (freshman) men who enrolled 4455\nTotal part-time, first-time, first-year (freshman) men who enrolled\nTotal full-time, first-time, first-year (freshman) women who enrolled 3838\nTotal part-time, first-time, first-year (freshman) women who enrolled\nTotal first-time, first-year (degree-seeking) who applied 47593\nTotal first-time, first-year (degree-seeking) who were admitted 28395\nTotal first-time, first-year (degree-seeking) who enrolled 8303\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "Illinois 2021 C1 explicitly reports 47,593 applicants, 28,395 admitted and 8,303 enrolled. Male/female rows sum to 47,527 applicants and 28,352 admitted; C1 states the detail need not sum to total when gender is omitted. Unknown gender counts and blank part-time enrollment are not inferred. Headline counts preserve the explicit overall totals."
+      ],
+      "manual_counts": [
+        "applicants",
+        "admitted"
+      ]
+    }
+  },
+  "rutgers-university-new-brunswick": {
+    "2023": {
+      "counts": [
+        43347,
+        28326,
+        7681
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2023/New Brunswick CDS_2023-2024_final_V1.pdf",
+      "sha256": "9adfd2e36365ee65d3316ae7a0d1ea3674cf62aa0a412018d753366ddc8296f3",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in Fall 2023. Include early decision,\nearly action, and students who began studies during summer in this cohort. Applicants should include\nonly those students who fulfilled the requirements for consideration for admission (i.e., who completed\nactionable applications) and who have been notified of one of the following actions: admission,\nnonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted\napplicants should include wait-listed students who were subsequently offered admission.\nC1 Total first-time, first-year men who applied 20,326\nC1 Total first-time, first-year women who applied 23,021\nC1 Total first-time, first-year men who were admitted 13,052\nC1 Total first-time, first-year women who were admitted 15,274\nC1 Total full-time, first-time, first-year men who enrolled 3,709\nC1 Total part-time, first-time, first-year men who enrolled 2\nC1 Total full-time, first-time, first-year women who enrolled 3,961\nC1 Total part-time, first-time, first-year women who enrolled 9\nC1 Total first-time, first-year (degree-seeking) who applied 43,347\nC1 Total first-time, first-year (degree-seeking) who were admitted 28,326\nC1 Total first-time, first-year (degree-seeking) enrolled 7,681\nIf available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2023\nFirst-Time, First-Year Student Applicants In-State Out-of-State International Unknown Total\nC1 Total first-time, first-year who applied 28,992 9,625 4,730 - 43,347\nC1 Total first-time, first-year who were admitted 18,053 6,928 3,345 - 28,326\nC1 Total first-time, first-year who enrolled 6,479 671 531 - 7,681\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2022": {
+      "counts": [
+        41654,
+        27612,
+        7780
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2022/New Brunswick CDS_2022-2023__Final.pdf",
+      "sha256": "e56fbef82f6b90cc0a74b04b75dd75dd578e6e247eacfaf42c18d62fe8d75164",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in Fall 2022. Include early\ndecision, early action, and students who began studies during summer in this cohort. Applicants\nshould include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions:\nadmission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nC1 Total first-time, first-year men who applied 19,448\nC1 Total first-time, first-year women who applied 22,206\nC1 Total first-time, first-year men who were admitted 12,593\nC1 Total first-time, first-year women who were admitted 15,019\nC1 Total full-time, first-time, first-year men who enrolled 3,824\nC1 Total part-time, first-time, first-year men who enrolled 6\nC1 Total full-time, first-time, first-year women who enrolled 3,945\nC1 Total part-time, first-time, first-year women who enrolled 5\nC1 Total first-time, first-year (degree-seeking) who applied 41,654\nC1 Total first-time, first-year (degree-seeking) who were admitted 27,612\nC1 Total first-time, first-year (degree-seeking) enrolled 7,780\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2021": {
+      "counts": [
+        43161,
+        29419,
+        7105
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2021/New Brunswick CDS_2021-2022_Final V1.pdf",
+      "sha256": "5e4c9b92181607a74dbbb2d0d55e88aa1b1172e06ef1f3293deea9c934d07df5",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in Fall 2021. Include early\ndecision, early action, and students who began studies during summer in this cohort. Applicants\nshould include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions:\nadmission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nC1 Total first-time, first-year (freshman) men who applied 19,809\nC1 Total first-time, first-year (freshman) women who applied 23,352 43,161\nC1 Total first-time, first-year (freshman) men who were admitted 13,321\nC1 Total first-time, first-year (freshman) women who were admitted 16,098 29,419\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 3,481\nC1 Total part-time, first-time, first-year (freshman) men who enrolled 7 3,488\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3,614\nC1 Total part-time, first-time, first-year (freshman) women who enrolled 3 3,617\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2020": {
+      "counts": [
+        41263,
+        27618,
+        6551
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2020/New Brunswick CDS_2020-2021.pdf",
+      "sha256": "1590169fea82a243c116b9ecf16a87dd74b5088ea23ef864fab3c868d7ef5917",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in Fall 2020. Include early\ndecision, early action, and students who began studies during summer in this cohort. Applicants\nshould include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions:\nadmission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nC1 Total first-time, first-year (freshman) men who applied 19,317\nC1 Total first-time, first-year (freshman) women who applied 21,946 41,263\nC1 Total first-time, first-year (freshman) men who were admitted 13,170\nC1 Total first-time, first-year (freshman) women who were admitted 14,448 27,618\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 3,262\nC1 Total part-time, first-time, first-year (freshman) men who enrolled 3 3,265\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3,280\nC1 Total part-time, first-time, first-year (freshman) women who enrolled 6 3,286\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2019": {
+      "counts": [
+        41286,
+        25277,
+        7315
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2019/New Brunswick CDS__2019-2020_Final_V3.pdf",
+      "sha256": "1c53e0b7ea86822a1b6d8423f774431254b7930ec5a3674334a730aaceab3bda",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in Fall 2019. Include early\ndecision, early action, and students who began studies during summer in this cohort. Applicants\nshould include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions:\nadmission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nC1 Total first-time, first-year (freshman) men who applied 19,317\nC1 Total first-time, first-year (freshman) women who applied 21,969 41,286\nC1 Total first-time, first-year (freshman) men who were admitted 12,059\nC1 Total first-time, first-year (freshman) women who were admitted 13,218 25,277\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 3,763\nC1 Total part-time, first-time, first-year (freshman) men who enrolled 3 3,766\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3,548\nC1 Total part-time, first-time, first-year (freshman) women who enrolled 1 3,549\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2018": {
+      "counts": [
+        41348,
+        24854,
+        7036
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2018/New Brunswick CDS_2018-2019.pdf",
+      "sha256": "3f43089ef2141d48e6bf66eefb3592654cc6102f90f11e92c43ab05de5153922",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in Fall 2018. Include early\ndecision, early action, and students who began studies during summer in this cohort. Applicants\nshould include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions:\nadmission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nC1 Total first-time, first-year (freshman) men who applied 19,106\nC1 Total first-time, first-year (freshman) women who applied 22,242 41,348\nC1 Total first-time, first-year (freshman) men who were admitted 11,557\nC1 Total first-time, first-year (freshman) women who were admitted 13,297 24,854\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 3,464\nC1 Total part-time, first-time, first-year (freshman) men who enrolled 3 3,467\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3,564\nC1 Total part-time, first-time, first-year (freshman) women who enrolled 5 3,569\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2017": {
+      "counts": [
+        38384,
+        22186,
+        6268
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2017/New Brunswick CDS_2017-2018.pdf",
+      "sha256": "a0f839fedfb546027aec9b0e369aec54249f53f22087c062eaf45c1677bb4f3c",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year\nstudents who applied, were admitted, and enrolled (full- or part-time) in Fall 2017. Include early\ndecision, early action, and students who began studies during summer in this cohort. Applicants\nshould include only those students who fulfilled the requirements for consideration for admission (i.e.,\nwho completed actionable applications) and who have been notified of one of the following actions:\nadmission, nonadmission, placement on waiting list, or application withdrawn (by applicant or\ninstitution). Admitted applicants should include wait-listed students who were subsequently offered\nadmission.\nC1 Total first-time, first-year (freshman) men who applied 17,876\nC1 Total first-time, first-year (freshman) women who applied 20,508 38,384\nC1 Total first-time, first-year (freshman) men who were admitted 10,365\nC1 Total first-time, first-year (freshman) women who were admitted 11,821 22,186\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 3,126\nC1 Total part-time, first-time, first-year (freshman) men who enrolled 1 3,127\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 3,140\nC1 Total part-time, first-time, first-year (freshman) women who enrolled 1 3,141\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2016": {
+      "counts": [
+        36677,
+        20884,
+        6466
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2016/New BrunswickRegion16.pdf",
+      "sha256": "123da5f065fb2e6e012fefde29c1f9d66cdc883be172a5ebbc0c24fc399a54a3",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year students who applied, were\nadmitted, and enrolled (full- or part-time) in Fall 2016. Include early decision, early action, and students who began studies during\nsummer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission\n(i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission,\nplacement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students\nwho were subsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 17,457\nTotal first-time, first-year (freshman) women who applied 19,220 36,677\nTotal first-time, first-year (freshman) men who were admitted 9,804\nTotal first-time, first-year (freshman) women who were admitted 11,080 20,884\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,263\nTotal part-time, first-time, first-year (freshman) men who enrolled 5 3,268\n6602 full-time\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,197 5 part-time\nTotal part-time, first-time, first-year (freshman) women who enrolled 1 3,198\n6,466\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "Rutgers C1 page 5 has merged enrollment totals and a separate part-time annotation beside the female full-time row. Reviewed enrollment sums the labeled first numeric full-/part-time responses, cross-checks merged male/female totals, and excludes the annotation from counts. The source text retains every printed number."
+      ],
+      "manual_counts": [
+        "enrolled"
+      ],
+      "reviewed_metrics": {
+        "male_enrolled": 3268,
+        "female_enrolled": 3198
+      }
+    },
+    "2015": {
+      "counts": [
+        35340,
+        20657,
+        6607
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2015/New BrunswickRegion15.pdf",
+      "sha256": "340af1a5ac1f1acdb9fc7c49e38667e163e5ac1bb134c819f794ece3ea8cb948",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year students who applied, were\nadmitted, and enrolled (full- or part-time) in Fall 2015. Include early decision, early action, and students who began studies during\nsummer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission\n(i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission,\nplacement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students\nwho were subsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 16,943\nTotal first-time, first-year (freshman) women who applied 18,397 35,340\nTotal first-time, first-year (freshman) men who were admitted 9,837\nTotal first-time, first-year (freshman) women who were admitted 10,820 20,657\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,273\nTotal part-time, first-time, first-year (freshman) men who enrolled 2 3,275\n6602 full-time\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,329 5 part-time\nTotal part-time, first-time, first-year (freshman) women who enrolled 3 3,332\n6,607\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "Rutgers C1 page 5 has merged enrollment totals and a separate part-time annotation beside the female full-time row. Reviewed enrollment sums the labeled first numeric full-/part-time responses, cross-checks merged male/female totals, and excludes the annotation from counts. The source text retains every printed number."
+      ],
+      "manual_counts": [
+        "enrolled"
+      ],
+      "reviewed_metrics": {
+        "male_enrolled": 3275,
+        "female_enrolled": 3332
+      }
+    },
+    "2014": {
+      "counts": [
+        31941,
+        19324,
+        6412
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2014/New BrunswickRegion14.pdf",
+      "sha256": "23ace752badf9f32c4d6b0223ae522c1239fdaf6f783e24b27b41f43e55b8471",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year students who applied, were\nadmitted, and enrolled (full- or part-time) in Fall 2014. Include early decision, early action, and students who began studies during\nsummer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission\n(i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission,\nplacement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students\nwho were subsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 15,428\nTotal first-time, first-year (freshman) women who applied 16,513 31,941\nTotal first-time, first-year (freshman) men who were admitted 9,132\nTotal first-time, first-year (freshman) women who were admitted 10,192 19,324\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,152\nTotal part-time, first-time, first-year (freshman) men who enrolled 1 3,153\n6409 full-time\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,257 3 part-time\nTotal part-time, first-time, first-year (freshman) women who enrolled 2 3,259\n6,412\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "Rutgers C1 page 5 has merged enrollment totals and a separate part-time annotation beside the female full-time row. Reviewed enrollment sums the labeled first numeric full-/part-time responses, cross-checks merged male/female totals, and excludes the annotation from counts. The source text retains every printed number."
+      ],
+      "manual_counts": [
+        "enrolled"
+      ],
+      "reviewed_metrics": {
+        "male_enrolled": 3153,
+        "female_enrolled": 3259
+      }
+    },
+    "2013": {
+      "counts": [
+        30631,
+        18230,
+        6402
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2013/NewBrunswickRegion13.pdf",
+      "sha256": "e937da800bf748bce9dcaea2af0843a8a2c3568511f2d2d9c7be2072990f93e7",
+      "source_c1_text": "C1\nadmitted, and enrolled (full- or part-time) in Fall 2013. Include early decision, early action, and students who began studies during\nsummer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission\n(i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission,\nplacement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed\nstudents who were subsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 15,256\nTotal first-time, first-year (freshman) women who applied 15,375 30,631\nTotal first-time, first-year (freshman) men who were admitted 8,800\nTotal first-time, first-year (freshman) women who were admitted 9,430 18,230\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,233 3,240\nTotal part-time, first-time, first-year (freshman) men who enrolled 7\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,160 3,162\nTotal part-time, first-time, first-year (freshman) women who enrolled 2\n6,402\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2012": {
+      "counts": [
+        28635,
+        17436,
+        6170
+      ],
+      "page": 5,
+      "source_pages": [
+        5
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://oirds.rutgers.edu/CDS/2012/NewBrunswickRegion12.pdf",
+      "sha256": "ba4716c30a3e0cda647b3ae0959f4687090d562320c68184f32af33cdde2044f",
+      "source_c1_text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-year students who applied,\nwere admitted, and enrolled (full- or part-time) in Fall 2012. Include early decision, early action, and students who began\nstudies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for\nconsideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following\nactions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted\napplicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 14,177\n28,635\nTotal first-time, first-year (freshman) women who applied 14,458\nTotal first-time, first-year (freshman) men who were admitted 8,309\n17,436\nTotal first-time, first-year (freshman) women who were admitted 9,127\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,091\nTotal part-time, first-time, first-year (freshman) men who enrolled 2\n6,170\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,075\nTotal part-time, first-time, first-year (freshman) women who enrolled 2\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    }
+  },
+  "indiana-university-bloomington": {
+    "2000": {
+      "counts": [
+        19896,
+        16405,
+        6936
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2000",
+      "sha256": "8b532aa2d06b8b4428376d30b5b4aa7be550ca6a0e04d6aeace4fd05a81e6677",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2000. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 8,597\nTotal first-time, first-year (freshman) women who applied 11,299\nTotal first-time, first-year (freshman) who applied 19,896\nTotal first-time, first-year (freshman) men who were admitted 6,733\nTotal first-time, first-year (freshman) women who were admitted 9,672\nTotal first-time, first-year (freshman) who were admitted 16,405\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,029\nTotal part-time, first-time, first-year (freshman) men who enrolled 24\nTotal first-time, first-year (freshman) men who enrolled 3,053\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,845\nTotal part-time, first-time, first-year (freshman) women who enrolled 38\nTotal first-time, first-year (freshman) women who enrolled 3,883\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2001": {
+      "counts": [
+        20228,
+        16777,
+        6815
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2001",
+      "sha256": "039d1be4aac0d19baa22d42a50a387d05b3336c97a2be6b167d5073f83eab61e",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2001. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 8,902\nTotal first-time, first-year (freshman) women who applied 11,326\nTotal first-time, first-year (freshman) who applied 20,228\nTotal first-time, first-year (freshman) men who were admitted 7,010\nTotal first-time, first-year (freshman) women who were admitted 9,767\nTotal first-time, first-year (freshman) who were admitted 16,777\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,026\nTotal part-time, first-time, first-year (freshman) men who enrolled 28\nTotal first-time, first-year (freshman) men who enrolled 3,054\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,719\nTotal part-time, first-time, first-year (freshman) women who enrolled 42\nTotal first-time, first-year (freshman) women who enrolled 3,761\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2002": {
+      "counts": [
+        21264,
+        17267,
+        7080
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2002",
+      "sha256": "20fcd2cf57797cc4a96b6f38dbcc584f520770ff27f4346213fb94f404ba6590",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2002. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 9,406\nTotal first-time, first-year (freshman) women who applied 11,858\nTotal first-time, first-year (freshman) men who were admitted 7,249\nTotal first-time, first-year (freshman) women who were admitted 10,018\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,115\nTotal part-time, first-time, first-year (freshman) men who enrolled 26\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,904\nTotal part-time, first-time, first-year (freshman) women who enrolled 35\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2003": {
+      "counts": [
+        22178,
+        17992,
+        6784
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2003",
+      "sha256": "13b4d718c213d9514fad72bdaadd44f77044c22691e01081d8c1bdaca78ea063",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2003. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 9,840\nTotal first-time, first-year (freshman) women who applied 12,338\nTotal first-time, first-year (freshman) men who were admitted 7,563\nTotal first-time, first-year (freshman) women who were admitted 10,429\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,968\nTotal part-time, first-time, first-year (freshman) men who enrolled 21\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,779\nTotal part-time, first-time, first-year (freshman) women who enrolled 16\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2004": {
+      "counts": [
+        21132,
+        17572,
+        6352
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2004",
+      "sha256": "f7faff9831e46d8267574c8526993ffe27ac8b3e9be8824ceaf299e661f1e740",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2004. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 9,448\nTotal first-time, first-year (freshman) women who applied 11,684\nTotal first-time, first-year (freshman) men who were admitted 7,489\nTotal first-time, first-year (freshman) women who were admitted 10,083\nTotal full-time, first-time, first-year (freshman) men who enrolled 2,900\nTotal part-time, first-time, first-year (freshman) men who enrolled 16\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,409\nTotal part-time, first-time, first-year (freshman) women who enrolled 27\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2005": {
+      "counts": [
+        21974,
+        18602,
+        6949
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2005",
+      "sha256": "a1b9b091521beea566f5e94bcc1230508c1633c28de631a69018e0c2e42e7125",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2005. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 10,006\nTotal first-time, first-year (freshman) women who applied 11,968\nTotal first-time, first-year (freshman) men who were admitted 8,100\nTotal first-time, first-year (freshman) women who were admitted 10,502\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,125\nTotal part-time, first-time, first-year (freshman) men who enrolled 22\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,787\nTotal part-time, first-time, first-year (freshman) women who enrolled 15\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2006": {
+      "counts": [
+        24169,
+        19252,
+        7259
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2006",
+      "sha256": "cf423e51c3a74a886f2813b66d7df4ad3f974504ab83ade74a89e8c36b4cb831",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2006. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 11,062\nTotal first-time, first-year (freshman) women who applied 13,107\nTotal first-time, first-year (freshman) men who were admitted 8,344\nTotal first-time, first-year (freshman) women who were admitted 10,908\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,337\nTotal part-time, first-time, first-year (freshman) men who enrolled 20\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,881\nTotal part-time, first-time, first-year (freshman) women who enrolled 21\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2007": {
+      "counts": [
+        29059,
+        20282,
+        7197
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2007",
+      "sha256": "63e34114c4b9782c827e3dc145673d2cc7300865ab9e3e8b0469532dd907d04a",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2007. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 13,432\nTotal first-time, first-year (freshman) women who applied 15,627\nTotal first-time, first-year (freshman) men who were admitted 9,155\nTotal first-time, first-year (freshman) women who were admitted 11,127\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,469\nTotal part-time, first-time, first-year (freshman) men who enrolled 9\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,712\nTotal part-time, first-time, first-year (freshman) women who enrolled 7\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2008": {
+      "counts": [
+        31160,
+        22030,
+        7564
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2008",
+      "sha256": "d485a5a8a3d95fa3164c3d9c2fc29fcfddc4b216fa6821f094899924e6c4d1e3",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2008. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 14,288\nTotal first-time, first-year (freshman) women who applied 16,872\nTotal first-time, first-year (freshman) men who were admitted 9,846\nTotal first-time, first-year (freshman) women who were admitted 12,184\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,563\nTotal part-time, first-time, first-year (freshman) men who enrolled 5\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,990\nTotal part-time, first-time, first-year (freshman) women who enrolled 6\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2009": {
+      "counts": [
+        33011,
+        23975,
+        7327
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2009",
+      "sha256": "48f3b4df82bd64e09391be8f08be41ac17dcf97faecb796075b81a0ed48141d4",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2009. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 15,252\nTotal first-time, first-year (freshman) women who applied 17,759\nTotal first-time, first-year (freshman) men who were admitted 11,232\nTotal first-time, first-year (freshman) women who were admitted 12,743\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,665\nTotal part-time, first-time, first-year (freshman) men who enrolled 14\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,641\nTotal part-time, first-time, first-year (freshman) women who enrolled 7\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2010": {
+      "counts": [
+        36719,
+        25391,
+        7020
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2010",
+      "sha256": "11b6e3134ff44ba19e401a1bf250e389dd36bf2cb82a87e6eb0ffc31acf949fd",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2010. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 16,571\nTotal first-time, first-year (freshman) women who applied 20,148\nTotal first-time, first-year (freshman) men who were admitted 11,492\nTotal first-time, first-year (freshman) women who were admitted 13,899\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,324\nTotal part-time, first-time, first-year (freshman) men who enrolled 23\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,661\nTotal part-time, first-time, first-year (freshman) women who enrolled 12\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2011": {
+      "counts": [
+        35218,
+        25455,
+        7424
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2011",
+      "sha256": "c92650274ca438560fc3f214167a0e7edd537a2a1bd203787afa35291b9e85cb",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2011. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 16,067\nTotal first-time, first-year (freshman) women who applied 19,151\nTotal first-time, first-year (freshman) men who were admitted 11,491\nTotal first-time, first-year (freshman) women who were admitted 13,964\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,530\nTotal part-time, first-time, first-year (freshman) men who enrolled 26\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,853\nTotal part-time, first-time, first-year (freshman) women who enrolled 15\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2012": {
+      "counts": [
+        35247,
+        26228,
+        7613
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2012",
+      "sha256": "b9674946d2c55c68aa747c8ddae94eda56a116359184be640e535580d0396ff6",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2012. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 16,174\nTotal first-time, first-year (freshman) women who applied 19,073\nTotal first-time, first-year (freshman) men who were admitted 11,914\nTotal first-time, first-year (freshman) women who were admitted 14,314\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,684\nTotal part-time, first-time, first-year (freshman) men who enrolled 16\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,895\nTotal part-time, first-time, first-year (freshman) women who enrolled 18\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2013": {
+      "counts": [
+        37826,
+        27300,
+        7604
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2013",
+      "sha256": "1af15f7768e8b1ea75bf4cc685c454eb145b78ae5aa81bc7162bdd55701a73b7",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2013. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 17,178\nTotal first-time, first-year (freshman) women who applied 20,648\nTotal first-time, first-year (freshman) men who were admitted 12,437\nTotal first-time, first-year (freshman) women who were admitted 14,863\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,859\nTotal part-time, first-time, first-year (freshman) men who enrolled 15\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,724\nTotal part-time, first-time, first-year (freshman) women who enrolled 6\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2014": {
+      "counts": [
+        36362,
+        27668,
+        7716
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2014",
+      "sha256": "a86df43b574c830927c4d1e2ae5f0ef3a2b00df9fe344deb31530de68a03ccd9",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2014. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 16,308\nTotal first-time, first-year (freshman) women who applied 20,054\nTotal first-time, first-year (freshman) men who were admitted 12,566\nTotal first-time, first-year (freshman) women who were admitted 15,102\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,830\nTotal part-time, first-time, first-year (freshman) men who enrolled 10\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,867\nTotal part-time, first-time, first-year (freshman) women who enrolled 9\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2015": {
+      "counts": [
+        34483,
+        26892,
+        7875
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2015",
+      "sha256": "40f849f66e7ab0a0a677364b8cfab116384062aac67b8b377bb9ac8c69d47325",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2015. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 15,754\nTotal first-time, first-year (freshman) women who applied 18,729\nTotal first-time, first-year (freshman) men who were admitted 12,363\nTotal first-time, first-year (freshman) women who were admitted 14,529\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,867\nTotal part-time, first-time, first-year (freshman) men who enrolled 20\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,979\nTotal part-time, first-time, first-year (freshman) women who enrolled 9\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2016": {
+      "counts": [
+        34646,
+        27272,
+        7673
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2016",
+      "sha256": "162875607e0640c993c0add92845a32499038f5be2ecd11b8e20be1725d76e6d",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2016. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 16,017\nTotal first-time, first-year (freshman) women who applied 18,629\nTotal first-time, first-year (freshman) men who were admitted 12,664\nTotal first-time, first-year (freshman) women who were admitted 14,608\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,854\nTotal part-time, first-time, first-year (freshman) men who enrolled 8\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,800\nTotal part-time, first-time, first-year (freshman) women who enrolled 11\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2017": {
+      "counts": [
+        41939,
+        31878,
+        8001
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2017",
+      "sha256": "b692ffc58207e09e06bec63abcc3a9402d251b119cc474fd242ed402293c7e89",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2017. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 20,058\nTotal first-time, first-year (freshman) women who applied 21,881\nTotal first-time, first-year (freshman) men who were admitted 15,271\nTotal first-time, first-year (freshman) women who were admitted 16,607\nTotal full-time, first-time, first-year (freshman) men who enrolled 4,071\nTotal part-time, first-time, first-year (freshman) men who enrolled 14\nTotal full-time, first-time, first-year (freshman) women who enrolled 3,904\nTotal part-time, first-time, first-year (freshman) women who enrolled 12\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2018": {
+      "counts": [
+        44169,
+        33970,
+        8097
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2018",
+      "sha256": "c0e78cff730fed6259e0176772cd149b59676f0b22f627749dd64870ec455fc0",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2018. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 20,452\nTotal first-time, first-year (freshman) women who applied 23,717\nTotal first-time, first-year (freshman) men who were admitted 15,996\nTotal first-time, first-year (freshman) women who were admitted 17,974\nTotal full-time, first-time, first-year (freshman) men who enrolled 4,047\nTotal part-time, first-time, first-year (freshman) men who enrolled 19\nTotal full-time, first-time, first-year (freshman) women who enrolled 4,011\nTotal part-time, first-time, first-year (freshman) women who enrolled 20\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2019": {
+      "counts": [
+        42902,
+        33425,
+        8291
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2019",
+      "sha256": "e78da3c4081423d7bd44c352ee0eab54df750265a94d5b9c6c1c78313fba546c",
+      "source_c1_text": "C01 Applications\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2019. Include early decision, early action, and students who began studies during summer in this cohort. Applicants should include only those students who fulfilled the requirements for consideration for admission (i.e., who completed actionable applications) and who have been notified of one of the following actions: admission, nonadmission, placement on waiting list, or application withdrawn (by applicant or institution). Admitted applicants should include wait-listed students who were subsequently offered admission.\nTotal first-time, first-year (freshman) men who applied 19,783\nTotal first-time, first-year (freshman) women who applied 23,119\nTotal first-time, first-year (freshman) men who were admitted 15,513\nTotal first-time, first-year (freshman) women who were admitted 17,912\nTotal full-time, first-time, first-year (freshman) men who enrolled 4,158\nTotal part-time, first-time, first-year (freshman) men who enrolled 12\nTotal full-time, first-time, first-year (freshman) women who enrolled 4,110\nTotal part-time, first-time, first-year (freshman) women who enrolled 11\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2020": {
+      "counts": [
+        44129,
+        35469,
+        7928
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2020",
+      "sha256": "e255ea2976ee32aa2306705bd645d76400979d65662b7402cf8cd87ee7e7d05f",
+      "source_c1_text": "C1-C2 Applications\nC1\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2020.\nTotal first-time, first-year (freshman) men who applied 20,538\nTotal first-time, first-year (freshman) women who applied 23,591\nTotal first-time, first-year (freshman) men who were admitted 16,595\nTotal first-time, first-year (freshman) women who were admitted 18,874\nTotal full-time, first-time, first-year (freshman) men who enrolled 3,844\nTotal part-time, first-time, first-year (freshman) men who enrolled 14\nTotal full-time, first-time, first-year (freshman) women who enrolled 4,056\nTotal part-time, first-time, first-year (freshman) women who enrolled 14\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2021": {
+      "counts": [
+        46548,
+        39543,
+        9482
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2021",
+      "sha256": "80ba649d2fc454e85e71bc9bd714250c5bfc064cd80eea637bd564b1d0550cb4",
+      "source_c1_text": "C1-C2 Applications\nC1\nFirst-time, first-year, (freshmen) students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2021.\nTotal first-time, first-year (freshman) men who applied 21,449\nTotal first-time, first-year (freshman) women who applied 25,099\nTotal first-time, first-year (freshman) men who were admitted 18,096\nTotal first-time, first-year (freshman) women who were admitted 21,447\nTotal full-time, first-time, first-year (freshman) men who enrolled 4,696\nTotal part-time, first-time, first-year (freshman) men who enrolled 15\nTotal full-time, first-time, first-year (freshman) women who enrolled 4,754\nTotal part-time, first-time, first-year (freshman) women who enrolled 17\nTotal first-time, first-year (degree-seeking) who applied 46,548\nTotal first-time, first-year (degree-seeking) who were admitted 39,543\nTotal first-time, first-year (degree-seeking) who enrolled 9,482\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2022": {
+      "counts": [
+        50080,
+        41272,
+        9736
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2022",
+      "sha256": "5e6810c5a30f232dd9cfbdaf4e37c9c9b5d4a7fd15607951f27e92925319f49a",
+      "source_c1_text": "C1-C2 Applications\nC1\nFirst-time, first-year, students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2022.\nTotal first-time, first-year men who applied 23,646\nTotal first-time, first-year women who applied 26,434\nTotal first-time, first-year men who were admitted 19,322\nTotal first-time, first-year women who were admitted 21,950\nTotal full-time, first-time, first-year men who enrolled 4,875\nTotal part-time, first-time, first-year men who enrolled 12\nTotal full-time, first-time, first-year women who enrolled 4,834\nTotal part-time, first-time, first-year women who enrolled 15\nTotal first-time, first-year (degree-seeking) who applied 50,080\nTotal first-time, first-year (degree-seeking) who were admitted 41,272\nTotal first-time, first-year (degree-seeking) who enrolled 9,736\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    },
+    "2023": {
+      "counts": [
+        54279,
+        43624,
+        9550
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2023",
+      "sha256": "a19cf3fe58d20706fc52ed1cd59540f19c98040cd52a8f6e015b5c12f8ac39d4",
+      "source_c1_text": "C1-C2 Applications\nC1\nFirst-time, first-year, students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2023.\nMen Women Another Gender\nTotal first-time, first-year students who applied in Fall 2023 26,183 28,089 7\nTotal first-time, first-year students who admitted in Fall 2023 20,810 22,810 4\nTotal first-time, first-year students who enrolled in Fall 2023 4,635 4,913 2\nFull-time, first-time, first-year students who enrolled in Fall 2023 4,615 4,903 2\nPart-time, first-time, first-year students who enrolled in Fall 2023 20 10 0\nIn-State Out-of-State International Total\nTotal first-time, first-year (degree-seeking) who applied 15,814 33,655 4,810 54,279\nTotal first-time, first-year (degree-seeking) who were admitted 11,985 28,241 3,398 43,624\nTotal first-time, first-year (degree-seeking) enrolled 5,161 3,957 432 9,550\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "Bloomington C1 HTML gender columns are source-reviewed; table-cell headings and all columns are retained. Gender totals agree with explicit overall/residency counts."
+      ],
+      "reviewed_metrics": {
+        "male_applicants": 26183,
+        "female_applicants": 28089,
+        "another_gender_applicants": 7,
+        "male_admitted": 20810,
+        "female_admitted": 22810,
+        "another_gender_admitted": 4,
+        "male_enrolled": 4635,
+        "female_enrolled": 4913,
+        "another_gender_enrolled": 2
+      }
+    },
+    "2024": {
+      "counts": [
+        67658,
+        52918,
+        9611
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2024",
+      "sha256": "d7bae3764e4f7986e37d8c5e8fb135cef4832691197d5740039fca6cffb92509",
+      "source_c1_text": "C1-C2 Applications\nC1\nFirst-time, first-year, students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2024.\nMen Women Another Gender Unknown\nTotal first-time, first-year students who applied in Fall 2024 32,684 34,954 20 0\nTotal first-time, first-year students who admitted in Fall 2024 24,941 27,965 12 0\nTotal first-time, first-year students who enrolled in Fall 2024 4,718 4,893 0 0\nFull-time, first-time, first-year students who enrolled in Fall 2024 4,708 4,882 0 0\nPart-time, first-time, first-year students who enrolled in Fall 2024 10 11 0 0\nIn-State Out-of-State International Unknown Total\nTotal first-time, first-year (degree-seeking) who applied 16,894 45,191 5,573 0 67,658\nTotal first-time, first-year (degree-seeking) who were admitted 12,697 36,497 3,724 0 52,918\nTotal first-time, first-year (degree-seeking) enrolled 5,261 3,986 364 0 9,611\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": [
+        "Bloomington C1 HTML gender columns are source-reviewed; table-cell headings and all columns are retained. Gender totals agree with explicit overall/residency counts."
+      ],
+      "reviewed_metrics": {
+        "male_applicants": 32684,
+        "female_applicants": 34954,
+        "another_gender_applicants": 20,
+        "male_admitted": 24941,
+        "female_admitted": 27965,
+        "another_gender_admitted": 12,
+        "male_enrolled": 4718,
+        "female_enrolled": 4893,
+        "another_gender_enrolled": 0,
+        "unknown_gender_applicants": 0,
+        "unknown_gender_admitted": 0,
+        "unknown_gender_enrolled": 0
+      }
+    },
+    "2025": {
+      "counts": [
+        74077,
+        56218,
+        10127
+      ],
+      "page": 3,
+      "source_pages": [
+        3
+      ],
+      "method": "reviewed C1 reported gender/status counts, explicit totals and residency breakdowns where available",
+      "source_url": "https://iuapps.iu.edu/cds/?p=index&i=home&campus=Bloomington&section=C.+First-Time%2C+%28Freshman%29+Admission&year=2025",
+      "sha256": "65d351c5995f3132d338e9cd65cac3507a59084ecda4f1dc4c38dcf53628385a",
+      "source_c1_text": "C1-C2 Applications\nC1\nFirst-time, first-year, students:\nProvide the number of degree-seeking, first-time, first-year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2025.\nFirst-Time, First-Year Student Applicants Total\nTotal first-time, first-year male students who applied 36,410\nTotal first-time, first-year female students who applied 37,658\nTotal first-time, first-year students of unknown sex who applied 9\nFirst-Time, First-Year Student Admits Total\nTotal first-time, first-year male students who were admitted 26,562\nTotal first-time, first-year female students who were admitted 29,652\nTotal first-time, first-year students of unknown sex who were admitted 4\nFirst-Time, First-Year Student Enrollees Total\nTotal first-time, first-year male students who enrolled 5,030\nTotal first-time, first-year female students who enrolled 5096\nTotal first-time, first-year students of unknown sex who enrolled 1\nFirst-Time, First-Year Student Enrollees by Status Total\nTotal full-time , first-time, first-year males who enrolled 5,015\nTotal part-time , first-time, first-year males who enrolled 15\nTotal full-time , first-time, first-year females who enrolled 5,081\nTotal part-time , first-time, first-year females who enrolled 15\nTotal full-time , first-time, first-year students of unknown sex who enrolled 1\nTotal part-time , first-time, first-year students of unknown sex who enrolled 0\nIn-State Out-of-State International Unknown Total\nTotal first-time, first-year (degree-seeking) who applied 17,458 50,700 5,919 0 74,077\nTotal first-time, first-year (degree-seeking) who were admitted 12,612 39,841 3,765 0 56,218\nTotal first-time, first-year (degree-seeking) enrolled 5,073 4,697 357 0 10,127\n",
+      "scope": "C1 headline and gender/status/residency reconciliation; additional metrics retain source-extraction review status",
+      "notes": []
+    }
+  }
+}
