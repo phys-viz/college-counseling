@@ -197,7 +197,7 @@ export function deriveExtraMetrics(r:Report):Report {
  for(const region of ['in_state','out_state','international','male','female','another_gender','unknown_gender']){ratio(region+'_admit_rate',region+'_admitted',region+'_applicants','C1');ratio(region+'_yield_rate',region+'_enrolled',region+'_admitted','C1');}
  ratio('transfer_admit_rate','transfer_admitted','transfer_applicants','D2');ratio('transfer_yield_rate','transfer_enrolled','transfer_admitted','D2');ratio('merit_participation','merit_recipients','aid_first_year_count','H2A');ratio('graduation_4_rate','graduated_4','graduation_adjusted','B');ratio('graduation_6_rate','graduated_6','graduation_adjusted','B');
  const small=Number(r.metrics.class_2_9)+Number(r.metrics.class_10_19),large=Number(r.metrics.class_50_99)+Number(r.metrics.class_100_plus),total=r.metrics.class_total;
- for(const [key,n] of [['class_under_20_rate',small],['class_50_plus_rate',large]] as const)if(typeof total==='number'&&total>0&&Number.isFinite(n)&&n<=total){r.metrics[key]=Math.round(n/total*100000)/1000;r.evidence[key]={section:'I3',page:r.evidence.class_total?.page??null,method:'calculated from undergraduate class sections'};}
+ for(const [key,n] of [['class_under_20_rate',small],['class_50_plus_rate',large]] as const){delete r.metrics[key];delete r.evidence[key];if(typeof total==='number'&&total>0&&Number.isFinite(n)&&n<=total){r.metrics[key]=Math.round(n/total*100000)/1000;r.evidence[key]={section:'I3',page:r.evidence.class_total?.page??null,method:'calculated from undergraduate class sections'};}}
  for(const key of r.omitted_metrics??[]){delete r.metrics[key];delete r.evidence[key];}
  return r;
 }

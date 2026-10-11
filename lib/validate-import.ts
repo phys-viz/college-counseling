@@ -10,6 +10,18 @@ export function validateReports(input:unknown):Report[] {
     for(const k of ['source_url','index_url']){try{const u=new URL(r[k]);if(!['https:','http:'].includes(u.protocol))throw 0;}catch{throw new Error(`${k} must be a valid HTTP or HTTPS source URL.`);}}
     if(!r.metrics||typeof r.metrics!=='object'||Array.isArray(r.metrics)||!Array.isArray(r.sections)||!r.sections.length||!Array.isArray(r.factors)||!Array.isArray(r.warnings)||!r.evidence||typeof r.evidence!=='object')throw new Error('Reports must follow the supplied import template, including metrics, evidence, factors, sections, and warnings.');
     for(const [key,v] of Object.entries(r.metrics)){if(!/^[a-z0-9_]+$/.test(key)||!['number','string'].includes(typeof v)||typeof v==='number'&&!Number.isFinite(v))throw new Error('Metric values must be finite numbers or text.');}
+    for(const test of ['sat','reading','math','act']){
+      // The 2005–2016 reports can contain the historical three-section SAT.
+      const low=test==='act'?1:test==='sat'?400:200;
+      const high=test==='act'?36:test==='sat'?(r.year>=2005&&r.year<=2016?2400:1600):800;
+      let previous:number|undefined;
+      for(const percentile of [25,50,75]){
+        const key=`${test}_${percentile}`,value=r.metrics[key];if(value===undefined)continue;
+        if(typeof value!=='number'||!Number.isInteger(value)||value<low||value>high)throw new Error(`${key} must be a whole-number score between ${low} and ${high}.`);
+        if(previous!==undefined&&value<previous)throw new Error(`${test.toUpperCase()} percentiles must be in ascending order (25th, median, 75th).`);
+        previous=value;
+      }
+    }
     if(r.omitted_metrics!==undefined&&(!Array.isArray(r.omitted_metrics)||r.omitted_metrics.length>500||r.omitted_metrics.some((k:unknown)=>typeof k!=='string'||!/^[a-z0-9_]+$/.test(k)||r.metrics[k]!==undefined)))throw new Error('Reviewed omitted metrics must be valid unfilled metric names.');
     for(const s of r.sections){if(!Number.isInteger(s.page)||s.page<1||typeof s.text!=='string'||!Array.isArray(s.form_fields))throw new Error('Each source section needs a page, text, and form_fields array.');for(const f of s.form_fields)if(typeof f.name!=='string'||typeof f.value!=='string')throw new Error('Invalid source form field.');}
     for(const f of r.factors)if(typeof f.label!=='string'||!['Very important','Important','Considered','Not considered','Needs review'].includes(f.rating)||!Number.isInteger(f.page))throw new Error('Invalid admissions factor.');

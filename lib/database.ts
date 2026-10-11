@@ -7,8 +7,9 @@ export function database(): D1Database {
   if(!db) throw new Error('Database binding unavailable');
   return db;
 }
-export function statement(r:Report, replace=false) {
-  return database().prepare(`INSERT INTO reports (id,school_id,school,year,payload) VALUES (?,?,?,?,?) ${replace?'ON CONFLICT(school_id,year) DO UPDATE SET school=excluded.school,payload=excluded.payload':'ON CONFLICT DO NOTHING'}`)
+export function statement(r:Report, mode:'seed'|'insert'|'replace'='seed') {
+  const conflict=mode==='replace'?'ON CONFLICT(school_id,year) DO UPDATE SET school=excluded.school,payload=excluded.payload':mode==='seed'?'ON CONFLICT DO NOTHING':'';
+  return database().prepare(`INSERT INTO reports (id,school_id,school,year,payload) VALUES (?,?,?,?,?) ${conflict}`)
     .bind(`${r.school_id}:${r.year}`,r.school_id,r.school,r.year,JSON.stringify(r));
 }
 export async function ensureSeed() {

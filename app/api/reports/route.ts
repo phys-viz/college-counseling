@@ -31,9 +31,16 @@ export async function GET(request:Request) {
 export async function POST(request:Request) {
   if(request.headers.get('origin') && new URL(request.headers.get('origin')!).host!==new URL(request.url).host) return Response.json({error:'Cross-site imports are not allowed'},{status:403});
   try {
+    const replacement=request.headers.get('X-Replace-Existing');
+    if(replacement!==null&&!['true','false'].includes(replacement))return Response.json({error:'The replacement flag must be true or false.'},{status:400});
     const body=await request.text();if(body.length>5_000_000)return Response.json({error:'Import is too large (maximum 5 MB).'},{status:413});
     let records:Report[];try{records=validateReports(JSON.parse(body));}catch(e){return Response.json({error:e instanceof Error?e.message:'Invalid import'},{status:400});}
-    await ensureSeed();await database().batch(records.map(r=>statement(r,true)));
+    // Strict inserts make a concurrent school/year conflict fail atomically.
+    // D1 rolls back the entire batch, retaining every previously saved record.
+    await ensureSeed();await database().batch(records.map(r=>statement(r,replacement==='true'?'replace':'insert')));
     return Response.json({imported:records.length});
-  }catch(e){console.error('Import failed',e);return Response.json({error:'Import could not be saved. Please retry.'},{status:503});}
+  }catch(e){
+    if(e instanceof Error&&/UNIQUE constraint failed:\s*reports\.(?:id|school_id|year)/i.test(e.message))return Response.json({error:'A report for this school and fall year already exists. Check “Replace existing reports” only if you intend to replace it.',code:'report_exists'},{status:409});
+    console.error('Import failed',e);return Response.json({error:'Import could not be saved. Please retry.'},{status:503});
+  }
 }
