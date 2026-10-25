@@ -49,7 +49,7 @@ try {
  for(const doc of discovery.documents.filter(d=>d.year!==2025)){const c=card(doc);await open(c);await c.getByRole('checkbox',{name:`Reviewed report ${doc.year}`,exact:true}).click();}
  const save=dialog.getByRole('button',{name:'Save 9 reviewed reports',exact:true});assert(await save.isEnabled());assert.equal(writes.length,0);
  await d2024.getByLabel('Applications for 2024',{exact:true}).fill('');assert(await save.isDisabled());assert((await before.innerText()).includes('Fall 2024: enter valid whole-number counts for Applications'));
- await d2024.getByLabel('Applications for 2024',{exact:true}).fill('7258');assert(await save.isDisabled(),'Edits reset review approval');await d2024.getByRole('checkbox',{name:'Reviewed report 2024',exact:true}).click();assert(await save.isEnabled());
+ await d2024.getByLabel('Applications for 2024',{exact:true}).fill('7258');assert(await save.isEnabled(),'A counselor correction keeps that report reviewed');assert(await d2024.getByRole('checkbox',{name:'Reviewed report 2024',exact:true}).isChecked());
  await page.setViewportSize({width:390,height:844});assert(await dialog.evaluate(el=>el.scrollWidth<=el.clientWidth+1),'No mobile overflow');
  await page.setViewportSize({width:1440,height:1100});await save.click();await dialog.getByText('9 reviewed reports saved to the shared library.',{exact:true}).waitFor({timeout:60000});
  assert.equal(writes.length,9);assert.deepEqual([...records.values()].map(r=>r.year).sort(),Array.from({length:10},(_,i)=>2016+i));assert.deepEqual(records.get('dickinson-college:2025'),existing);

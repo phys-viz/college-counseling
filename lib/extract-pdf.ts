@@ -2,7 +2,7 @@ import type {Report} from './report-types';
 import type {SourceDocument} from './source-types';
 import {enrichMetrics} from './extract-additional';
 import {canonicalC1,extractGender} from './extract-gender';
-import {repairCDSGlyphs} from './pdf-glyphs';
+import {repairCDSGlyphs,shiftedGlyphFonts} from './pdf-glyphs';
 import {screenPDFReport,UnrecognizedReportError} from './pdf-report-screening';
 export type PDFWord={str:string;x:number;y:number;width:number};
 export type PDFLine={text:string;words:PDFWord[]};
@@ -295,11 +295,18 @@ export async function extractPDF(buffer:ArrayBuffer,document:SourceDocument,inde
   if(signal.aborted){abort();throw new Error('Extraction canceled.');}
   try {
     const doc=await task.promise;if(doc.numPages>200)throw new Error('This PDF has over 200 pages. Use the Common Data Set report rather than a full fact book.');
-    const pages:PDFPage[]=[];
+    type TextItem=import('pdfjs-dist/types/src/display/api').TextItem;
+    const raw:{items:TextItem[];annotations:Awaited<ReturnType<import('pdfjs-dist').PDFPageProxy['getAnnotations']>>}[]=[];
     for(let n=1;n<=doc.numPages;n++) {
       if(signal.aborted)throw new Error('Extraction canceled.');onProgress(`Reading PDF page ${n} of ${doc.numPages}…`);
-      const page=await doc.getPage(n),content=await page.getTextContent(),annotations=await page.getAnnotations();
-      const words:PDFWord[]=repairCDSGlyphs(content.items.filter((i):i is import('pdfjs-dist/types/src/display/api').TextItem=>'str' in i)).map(i=>({str:i.str,x:i.transform[4],y:i.transform[5],width:i.width})).filter(w=>w.str.trim());
+      const page=await doc.getPage(n);raw.push({items:(await page.getTextContent()).items.filter((i):i is TextItem=>'str' in i),annotations:await page.getAnnotations()});page.cleanup();
+    }
+    // Font encodings are judged across the document; one page may lack the evidence.
+    const brokenFonts=shiftedGlyphFonts(raw.flatMap(p=>p.items));
+    const pages:PDFPage[]=[];
+    for(const [index,{items,annotations}] of raw.entries()) {
+      const n=index+1;
+      const words:PDFWord[]=repairCDSGlyphs(items,brokenFonts).map(i=>({str:i.str,x:i.transform[4],y:i.transform[5],width:i.width})).filter(w=>w.str.trim());
       const lines:PDFLine[]=[];
       for(const word of words.sort((a,b)=>b.y-a.y||a.x-b.x)) {
         const line=lines.find(l=>Math.abs(l.words[0].y-word.y)<3);if(line)line.words.push(word);else lines.push({text:'',words:[word]});
@@ -312,7 +319,7 @@ export async function extractPDF(buffer:ArrayBuffer,document:SourceDocument,inde
         if(!value||['Off','false'].includes(value))continue;seen.add(annotation.fieldName);
         form_fields.push({name:annotation.fieldName,value,label:annotation.alternativeText??null,rect:annotation.rect});
       }
-      pages.push({page:n,text:lines.map(l=>l.text).join('\n'),lines,form_fields});page.cleanup();
+      pages.push({page:n,text:lines.map(l=>l.text).join('\n'),lines,form_fields});
     }
     if(pages.reduce((n,p)=>n+p.text.length,0)<200)throw new Error('This appears to be an image-only PDF. Automatic extraction needs selectable text or filled form fields; OCR is not available yet.');
     if(screenPDFReport(pages)==='unrecognized')throw new UnrecognizedReportError();

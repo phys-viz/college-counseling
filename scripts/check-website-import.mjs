@@ -49,11 +49,11 @@ try {
  const save=dialog.getByRole('button',{name:'Save 1 reviewed report',exact:true});assert(await save.isDisabled());
  await dialog.getByRole('checkbox',{name:'Reviewed report 2025',exact:true}).click();assert(await save.isDisabled());
  await dialog.getByRole('checkbox',{name:'Replace existing reports',exact:true}).click();assert(await save.isEnabled());
- await dialog.getByLabel('Applications for 2025',{exact:true}).fill('72524');assert(await save.isDisabled());
+ await dialog.getByLabel('Applications for 2025',{exact:true}).fill('72524');assert(await save.isEnabled(),'A counselor correction keeps the report reviewed');
  assert.equal(writes.length,0,'Extraction and review must not write to the database');
  await dialog.locator('summary').filter({hasText:'Test scores, waitlists & other figures'}).click();
  await dialog.getByLabel('SAT composite · 75th percentile for 2025',{exact:true}).fill('');
- await dialog.getByRole('checkbox',{name:'Reviewed report 2025',exact:true}).click();await save.click();
+ assert(await dialog.getByRole('checkbox',{name:'Reviewed report 2025',exact:true}).isChecked());await save.click();
  await dialog.getByText('1 reviewed report saved to the shared library.',{exact:true}).waitFor();
  assert.equal(writes.length,1);assert.equal(writes[0].replacement,'true','The checked replacement choice must reach the server');
  assert(writes[0].records[0].omitted_metrics.includes('sat_75'));assert.equal(writes[0].records[0].metrics.sat_75,undefined,'Cleared values retain explicit omission metadata');
@@ -64,12 +64,15 @@ try {
  await dialog.getByRole('button',{name:'Extract Section C from 1 PDF',exact:true}).click();
  await dialog.getByRole('heading',{name:'Review before saving',exact:true}).waitFor({timeout:60000});
  await dialog.getByLabel('Applications for 2025',{exact:true}).fill('72524');
+ // School identity is shared by the batch; choosing or correcting it keeps each year's review.
+ await dialog.getByRole('checkbox',{name:'Reviewed report 2025',exact:true}).click();
  await dialog.getByRole('combobox',{name:'Save under school',exact:true}).click();await page.getByRole('option',{name:'A new school',exact:true}).click();
  await dialog.getByLabel('School name',{exact:true}).fill('QA Website Import');
+ assert(await dialog.getByRole('checkbox',{name:'Reviewed report 2025',exact:true}).isChecked(),'School name changes keep the review confirmation');
  await dialog.locator('summary').filter({hasText:'Test scores, waitlists & other figures'}).click();
  await dialog.getByLabel('SAT composite · 75th percentile for 2025',{exact:true}).fill('');
  await dialog.getByLabel('SAT composite · 75th percentile for 2025',{exact:true}).fill(String(cornell.metrics.sat_75));
- await dialog.getByRole('checkbox',{name:'Reviewed report 2025',exact:true}).click();await save.click();
+ await save.click();
  await dialog.getByText('1 reviewed report saved to the shared library.',{exact:true}).waitFor();
  assert.equal(writes.length,2);assert.equal(writes[1].replacement,undefined,'A new import must not silently opt into replacement');
  const saved=writes[1].records[0];assert.equal(saved.school_id,'qa-website-import');assert.equal(saved.metrics.applicants,72524);
@@ -81,6 +84,6 @@ try {
  assert(await dialog.evaluate(e=>e.scrollWidth<=e.clientWidth+1),'Import dialog has horizontal overflow on mobile');
  await page.screenshot({path:'.sites-runtime/website-import-mobile.png',fullPage:true});
  await dialog.getByRole('button',{name:'Close',exact:true}).click();
- console.log('PASS: website import UI, source links, existing-report protection, edits reset review, normalized save payload, mobile layout');
+ console.log('PASS: website import UI, source links, existing-report protection, corrections and school changes keep review, normalized save payload, mobile layout');
  assert.deepEqual(errors,[]);
 } finally {await browser.close();}
