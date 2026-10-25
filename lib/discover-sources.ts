@@ -2,7 +2,9 @@ import {parseHTML} from 'linkedom/worker';
 import {fetchPublicSource,sourceURL} from './public-source';
 import {sourceYear,type SourceDiscovery,type SourceDocument} from './source-types';
 const clean=(s:string)=>s.replace(/\s+/g,' ').trim();
-const cdsLabel=/common[\s_-]*data[\s_-]*set|\bcds\b/i;
+// A filename underscore is a separator even though it is a regex word character.
+// Also recognize historical CDS+year filenames, without matching names like cdsmith.
+const cdsLabel=/common[\s_-]*data[\s_-]*set|(?:^|[^a-z0-9])cds(?=$|[^a-z0-9]|(?:19|20)\d{2})/i;
 const workbook=/\.(?:xlsx?|xlsm)(?:[?#]|$)/i;
 const wordDocument=/\.docx(?:[?#]|$)/i;
 function linkedYear(url:URL,label:string,accessibleLabel:string,context:string) {

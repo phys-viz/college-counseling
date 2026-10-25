@@ -47,6 +47,8 @@ Every school added through the assistant is also an opportunity to improve the s
 
 ## Develop and verify
 
+Dickinson's Statistics page lists ten CDS PDFs (2016-2025) and an unrelated footer policy PDF. Discovery recognizes underscore-separated and compact CDS/year filenames so its existing CDS filter excludes that policy. Extraction failures identify the selected document by title. Run `node scripts/check-dickinson-discovery.mjs` for the retained original-page fixture and boundary cases. With the local app running, `node --import ./scripts/register-ts.mjs scripts/check-dickinson-browser.mjs --collect` caches the original ten PDFs, verifies Section C extraction through PDF.js and source hashes, and checks the discovery/error UI without saving reports. Later runs can omit `--collect`. This verifies extraction availability, not a manual audit of every Dickinson metric.
+
 ```powershell
 npm run install:ci
 npm run db:generate

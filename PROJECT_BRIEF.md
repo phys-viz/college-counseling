@@ -1,70 +1,68 @@
-# Admissions Atlas — brief for a new Codex conversation
+﻿# Admissions Atlas: brief for future chats
 
-## Purpose and users
+Reviewed October 24, 2026 against the local code and seed. Read `AGENTS.md` first; it contains standing project instructions. This brief summarizes the implementation, not a full correctness or security audit. The live app and production database were not checked in this review.
 
-We are building a scalable, searchable college-counseling research library for a professional college counselor and her husband. It normalizes institutional Common Data Set (CDS) reports across schools and reporting years, initially focusing on Section C (first-year admissions), with additional academic, cost, aid, outcome, and transfer metrics. Every figure should be traceable to its original report and supporting page. This is historical research, not a prediction of an individual student's admission chances.
+## Purpose and current scope
 
-Live app: https://college-counseling-atlas.andonee.chatgpt.site
-
-The Site is shared with the owner and his wife using a custom audience. Preserve that audience. Both can browse, compare, plot, export, and save reviewed imports to the same persistent database. They do not need ChatGPT to extract supported PDFs inside the app. Never change sharing or email anyone without a new instruction.
-
-## Product
-
-- Searchable school profiles and yearly reports, school/year filters, source-linked details, comparison of up to four reports, CSV and full JSON exports.
-- Trends for one or two schools across a chosen year range; missing years remain gaps. Line charts offer automatic, zero-based, or custom Y-axis ranges with reset and bounds validation; year fields remain the horizontal range controls. Metric-specific hover/focus details show relevant supporting counts. Trend counts describe selected years and available source reports rather than the whole library. School-specific annotations name missing years and values outside custom Y-axis limits, and copied/downloaded figures retain these annotations. Archive links follow the selected schools, using saved latest-report metadata even when the chosen years have no records. Copy graph writes a PNG of the current chart with its axis and label settings, title, legend and source attribution; PNG/SVG/CSV downloads remain available. SAT/ACT middle-50% ranges show reported percentiles; medians appear only when supplied.
-- Searchable metric picker with colored categories and alphabetical metric names. Legends use bundled official school marks and documented school colors.
-- School, Trend school and Compare with use searchable dropdowns with keyboard navigation and a no-results state. Explicit library school selections, explored/opened profiles and a selection containing one school carry into Trends using that school's available fall-year range. Changing tabs preserves the trend school, metric, comparison, years, point labels and Y-axis settings within the current page session; choosing a new school starts its available range and clears a comparison against itself.
-- “Add school data” accepts a school's CDS archive page or a direct PDF URL. It discovers reports, extracts PDF text/form fields in the browser, presents drafts for review, recalculates rates, and saves to the shared database. Existing school/year records require explicit replacement. JSON is still the interchange/backup format.
-
-## Architecture and important files
+Admissions Atlas is a shared college-counseling research library that normalizes institutional Common Data Set (CDS) reports. It supports historical research rather than predicting an individual student's admission chances. Figures should link back to the original source and supporting page.
 
 Workspace: `C:\Vibe Coding\College Counseling\counselor-database`.
 
-React/TypeScript app using Vinext/Vite, Tailwind/Radix and Recharts, published through the Sites plugin to a Cloudflare Workers runtime. Cloudflare D1 SQLite is the hosted database; local development has separate local D1 state. FTS5 search is maintained by database triggers. The downloadable SQLite snapshot is not the production database.
+Existing documentation identifies the hosted app as https://college-counseling-atlas.andonee.chatgpt.site and its Sites project as `appgprj_6ac6a051d748819193e9ef93cb68ca12`. Preserve that identity, the existing custom audience, and saved counselor records. The documented audience is the owner and his wife; verify live state before making hosting changes.
 
-- `AGENTS.md`: mandatory standing project instructions; read first.
-- `README.md`: setup, source adapters, tests and known limitations.
-- `app/atlas.tsx`, components: library/import/trend UI.
-- `app/api/reports/route.ts`: paginated summaries, full records, validated imports.
-- `app/api/trends/route.ts`: numeric trend records and derived comparisons.
-- `lib/discover-sources.ts`, `lib/public-source.ts`: bounded public-source discovery/fetching.
-- `lib/extract-pdf.ts`, `lib/extract-additional.ts`: shared browser PDF normalization.
-- `lib/metric-definitions.ts`, `lib/metric-groups.ts`, `lib/trend-types.ts`: labels, categories, chart metrics and definitions.
-- `lib/extract-gender.ts`: reusable C1 gender parsing; `lib/saved-gender.ts` and `data/gender-source-backfill.json`: additive enrichment of existing records, keyed by institution/year and exact source hash. Existing gender corrections are preserved. Profiles, trends and exports include the enrichment without overwriting stored core fields.
-- `lib/saved-scores.ts`, `data/score-source-backfill.json` (built by `scripts/build-score-backfill.mjs`), `data/score-source-review.json`: source-hash-pinned C9 score enrichment of saved records. The parser maps score tables by their printed column header (Average/Mean/Median/scale columns), fixing missed Bentley/Alabama/Michigan percentiles; reviewed corrections (Alabama 2015–2021 mean stored as 75th percentile, W&L 2022 fraction) apply only while the saved value is unchanged. Check: `node scripts/check-score-tables.mjs`.
-- `lib/validate-import.ts`: schema/count validation and calculated rates.
-- `lib/review-metrics.ts`: user edits and intentional omissions; clearing a field persists `omitted_metrics`, and refilling it removes the marker. SAT/ACT validation rejects nonnumeric, fractional, out-of-scale and reversed percentiles. Class-size percentages are cleared when their supporting counts are missing or invalid. `scripts/check-review-integrity.mjs` tests these behaviors and save conflicts against an in-memory SQLite database.
-- `lib/database.ts`: database access and idempotent seed inserts; never overwrite counselor edits through seeding.
-- `data/reports.json`: reproducible seed; production also contains counselor-imported schools.
-- `data/*sources*.json`, source review files, `scripts/fixtures/`: provenance and independent regression expectations.
-- `.openai/hosting.json`: Sites project `appgprj_6ac6a051d748819193e9ef93cb68ca12`, logical D1 binding `DB`. No secrets belong in this brief or the repository.
+The local reproducible seed contains **526 reports across 31 schools**, spanning fall cohorts **1997-2025**, with gaps. Production can contain additional counselor imports; seed coverage does not establish live coverage. `SCHOOL_DATA_COVERAGE.md` details the 22-school expansion, source formats, missing years, and disputed figures. `README.md` has the longer operational reference.
 
-## Standing requirements from the user
+## User-facing behavior
 
-Every school added through Codex must also improve the shared parser when a reliable reusable pattern is found. Inspect layout changes across years; add independently checked fixtures; keep exceptional/offline adapters separate. A manually corrected record does not prove the website parser supports its layout.
+- Browse searchable Schools and Yearly reports views, filter by school/year, open source-linked profiles, compare up to four reports, and export CSV or full report JSON.
+- Profiles include admissions, gender/residency breakdowns, waitlists, early decision, test scores, academic profile, factors, policies, deadlines, costs, aid, outcomes, class sizes, and transfers where supported.
+- Trends compare one or two schools, retain missing-year gaps, offer searchable metric groups and configurable axes, and export PNG/SVG/CSV or copy a chart PNG. School marks/colors and source attribution carry into figures. SAT/ACT ranges use reported percentiles; a median appears only if reported.
+- Searchable school controls carry library selections into Trends. Trend settings persist across tabs within the current page session.
+- Add school data discovers reports from an archive page or direct PDF URL. The browser extracts text/form answers with PDF.js, presents editable drafts, and saves only after review. Existing school/year records require an explicit replacement choice.
 
-Accuracy has priority: an earlier W&L import mistakenly treated male applicants as total applicants. Reconcile all reported gender/status groups, avoid adding overall and component rows twice, and distinguish blank, zero, unknown, contradictory and unreported values. Preserve publisher inconsistencies with source notes. Never add SAT reading/math percentiles to invent a composite. Policy, aid, cost and outcome reporting periods can differ from the admissions fall year.
+## Architecture and code map
 
-Preserve raw Section C text, form fields, SHA-256, original URL and per-metric page/method evidence. Keep reviewed counselor corrections unless a correction/replacement was requested. Additive enrichment should preserve existing core values and source evidence.
+The app uses React 19 and TypeScript with Next-style App Router files, running through **Vinext/Vite** on Cloudflare Workers. Styling uses Tailwind 4 and shared UI primitives; charts use Recharts. Node's declared minimum is 22.13.0. Sites supplies hosting/access integration; local Vite development uses mock auth outside the managed Linux profile.
 
-## Coverage and current work
+| Area | Main files and responsibility |
+|---|---|
+| Entry and UI | `app/page.tsx` renders `app/atlas.tsx`; `school-import.tsx`, `trends.tsx`, `extended-profile.tsx`, pickers, legends, and score visuals implement the workflows. `components/ui/` contains shared primitives. |
+| Reports API | `app/api/reports/route.ts`: filtered/paginated summaries, full record by ID, and validated batch imports. Schools view selects the latest matching report per institution. Pages contain at most 100 results. |
+| Trends API | `app/api/trends/route.ts`: numeric metrics for up to two schools, evidence, reporting periods, and derived changes. Loads four preceding years for rolling calculations, then returns the requested range. |
+| Source API | `app/api/sources/route.ts`, `lib/public-source.ts`, `lib/discover-sources.ts`: bounded discovery/download with public URL, DNS, redirect, and response-size checks. |
+| Extraction | `lib/extract-pdf.ts`, `extract-gender.ts`, `extract-additional.ts`, `c1-columns.ts`, `pdf-glyphs.ts`: shared PDF normalization and metric extraction. |
+| Data contract/review | `lib/report-types.ts`, `validate-import.ts`, `review-metrics.ts`: report shape, validation, calculated rates, edits, and intentional omissions. |
+| Trends/exports | `lib/trend-types.ts`, `trend-settings.ts`, `metric-definitions.ts`, `metric-groups.ts`, `export-trend.ts`, `school-branding.ts`. |
+| Persistence | `lib/database.ts` uses the Workers `DB` D1 binding directly. `db/schema.ts` and `drizzle/` define reports, indexes, and trigger-maintained FTS5 search. `db/index.ts` provides a Drizzle helper. |
+| Collection/regressions | `scripts/collect_*`, school/batch import adapters, `scripts/check-*.mjs`, and `scripts/fixtures/`. Python dependencies are in `scripts/requirements.txt`. |
 
-Seed coverage: 526 reports. The expansion adds 378 reports for 22 schools; see SCHOOL_DATA_COVERAGE.md for exact years and exclusions. Prior coverage: 148 reports across Cornell 1999–2025, South Carolina (Columbia) 2000–2025, Clemson 2008–2025, Washington and Lee 2005–2025, NYU 2018–2025, Villanova 2023–2025, Michigan Ann Arbor 1998–2025, TCNJ 2014–2025, and Virginia Tech 2019 / 2022–2025. The shared library also contains four counselor-imported reports for Boston College, Harvard and Penn State (University Park); consult the live database for exact coverage.
+A report stores school/cohort identity, normalized metrics, factors, warnings, original URL/hash, review metadata, Section C text/form fields, optional additional source pages, and per-metric section/page/method evidence.
 
-Gender admissions retains 20 source metrics: applicants, admitted, enrolled, admission rate and yield for male, female, another gender and unknown gender/sex. The trend picker displays only the ten male/female metrics, as requested; underlying source data and profiles retain all reported categories. Counts and rates retain source evidence; unfilled categories stay gaps. Rate denominators use the selected group, not overall applicants. TCNJ 2023 has contradictory breakdowns and preserves its printed overall totals with notes. Michigan 2018 has a stale Fall 2017 C1 label; the reviewed cohort index is 2018. Clemson 2016 appears to misassign gender/status enrollment answers; those gender enrollment/yield values remain unfilled. Clemson 2025's scanned C1 has one-student inconsistencies between its gender, status and overall counts; visually reviewed unknown-sex counts and notes are recorded separately in `data/gender-source-review.json`. Some older formats still lack reliable normalized fields.
+`data/reports.json` is the seed. Build tooling generates ignored, losslessly compressed `data/seed-payloads.json`; `lib/seed-payload.ts` decodes missing records. Request-local initialization inserts only missing IDs in batches of 50 with conflict protection. Never cache initialization in a module-level in-flight promise: canceled Worker requests can strand later requests. `data/admissions.sqlite` is a portable snapshot, not production; `.wrangler/state` is local development state.
 
-Existing counselor-imported Harvard 2025 and Penn State 2025 have saved headline counts that disagree with their source gender totals. The enrichment flags this in source notes; it does not silently replace the counselor's saved totals. These need explicit review before relying on their overall rates.
+Reads apply source-hash-pinned gender and score enrichment through `lib/saved-gender.ts` and `lib/saved-scores.ts`, then derive additional metrics. These overlays are distinct from persisted edits. Score corrections are guarded against the saved value having changed. Deliberate omissions must remain omitted.
 
-NYU's server blocked direct downloads: eight NYU-authored archived files were used with exact archived URLs/hashes and explicit notes. NYU 2021/2025 are XLSX sources processed through an offline worksheet adapter. Cornell 2022 uses its companion Section C spreadsheet. Clemson 2021 needs a spreadsheet adapter and Clemson 2025 needs OCR/visual review. Virginia Tech has five source-verified reports (2019 and 2022–2025), using exact archived VT-authored originals; other inspected year-labeled files contain only definitions/change logs and are excluded. VT 2023 has 47,208 applicants across gender rows versus a printed overall/residency total of 47,207; the seed preserves the explicit overall total with notes, while automatic PDF imports flag it for review. VT 2024 is a question/answer XLSX dictionary with inconsistent residency and unknown-gender answers, retained in raw worksheet evidence and notes. VT 2022/2024/2025 remain offline worksheet adapters. Shared PDF improvements repair a narrowly recognized malformed font encoding and wrapped residency/score labels; source fixtures and actual PDF.js checks are in scripts/check-vt-import.mjs and scripts/check-vt-browser.mjs. Browser imports support selectable-text PDFs and filled PDF forms, not OCR, XLSX or historical HTML-only reports. Never silently fill missing years from adjacent reports.
+## Rules future changes must preserve
 
-## Development, verification and publication
+- Every assistant-led school import should improve the **shared website parser** when a reliable reusable pattern is found. Inspect layouts across years, add independently verified regression evidence, and run affected plus representative existing-school checks. An offline adapter or manually corrected record does not establish browser support.
+- Reconcile C1 applicants/admitted/enrolled across all reported gender/status groups. A subgroup is never the overall total; do not double count overall and component rows. Preserve blank, zero, missing, ambiguous, and contradictory answers distinctly, with source notes.
+- Retain raw source text, form answers, URLs, SHA-256, and per-metric evidence. Preserve counselor corrections. Never invent SAT composites by adding section percentiles or fill missing years from neighboring reports. Cost, aid, policy, and outcome periods can differ from admission cohorts.
+- `omitted_metrics` records intentionally cleared values so enrichment cannot refill them. Rates use validated counts; zero denominators produce no rate. Gender trends expose ten male/female measures while profiles/full exports retain other reported categories.
+- Report POSTs default to strict inserts. Duplicate school/year conflicts return 409 and roll back the batch. Replacement requires `X-Replace-Existing: true`; seeding remains conflict-ignore. The API validates source/text, counts, percentages, and score scales/order.
+- Access is supplied by Sites. Preserve the shared audience and production contents; do not send messages or change sharing without instruction.
 
-Use existing dependencies and local migrations; do not recreate the app or production database. Typical commands: `npm run dev`, `npm run build`, `node scripts/check-c1-counts.mjs`, `node scripts/check-additional-metrics.mjs`, `node scripts/check-gender-metrics.mjs`, `node scripts/check-new-archives.mjs`, and the affected school/browser tests under `scripts/check-*.mjs`. Read the README for local D1 setup and source collection. Playwright is installed under ignored `.sites-runtime/browser`; Chrome is at `C:/Program Files/Google/Chrome/Application/chrome.exe`. Do not depend on ignored caches without documenting a reproducible collection step. Source fixtures make the main extraction regressions independent of live university sites.
+## Limits and known source issues
 
-Database initialization must use request-local D1 operations, never a module-level in-flight promise: an interrupted Worker request can leave later visitors waiting indefinitely. Only missing seed IDs are inserted, with conflict protection. Library and trend reads have a 15-second timeout and show a retry state. Run `node scripts/check-library-loading.mjs` for cancellation, recovery and preservation checks.
+The website importer supports selectable-text PDFs and filled PDF forms, with a 25-report selection limit, 25 MB download limit, and 200-page limit. OCR, spreadsheets, Word, and historical HTML extraction remain offline adapters. Some official servers block fetching; archived institution-authored originals retain explicit provenance. Not every extracted field has been manually audited.
 
-Import POSTs default to strict inserts. Duplicate school/year conflicts return 409 and roll back the whole batch, including conflicts caused by concurrent imports. Replacing a saved report requires `X-Replace-Existing: true`; the browser sends this only for the explicit replacement checkbox. Seeding continues to use conflict-ignore inserts and never replaces counselor records.
+Examples requiring care: Cornell 2022 uses a companion Section C spreadsheet; Clemson 2021 uses a workbook and 2025 requires OCR/visual review; NYU 2021/2025 and VT 2022/2024/2025 use workbook adapters. VT 2023 and TCNJ 2023 have contradictory breakdowns; Clemson 2016 gender enrollment labels are suspect. Existing documentation flags saved Harvard/Penn State 2025 headline totals for explicit review against source gender totals; their current live state was not verified. See source review manifests and individual report warnings before relying on disputed figures.
 
-For hosted changes, read the installed Sites building/hosting skills. Open the existing Site and use the bundled `site-workflow.mjs`, native source credentials passed only through hidden stdin, then native save/deploy calls. Preserve project identity, shared audience and database contents. Never print tokens or commit them. In this Windows environment, build with literal Node/npm CLI arguments and Git on PATH; `TAR_OPTIONS=--force-local` handles drive-letter archive paths. Save/deploy only the exact verified workflow commit/archive.
+## Development and verification
 
-Suggested next-conversation opening: “Read AGENTS.md and PROJECT_BRIEF.md in the existing counselor-database workspace. Continue updating Admissions Atlas; preserve its shared library, source evidence and existing Sites identity.”
+Use `npm run install:ci`, `npm run dev`, `npm run build`, and `npm run lint` as appropriate. `scripts/run-framework.mjs` prepares generated assets, including the matching PDF.js worker. Follow README instructions for local D1 migrations; apply pending migrations once in order. Do not recreate the hosted database.
+
+There is no single npm test command. Choose checks for the change: `check-c1-counts.mjs`, `check-score-tables.mjs`, `check-additional-metrics.mjs`, `check-gender-metrics.mjs`, `check-review-integrity.mjs`, and `check-library-loading.mjs`; use affected school/batch checks for parser changes. Browser checks cover imports, library navigation, trends, exports, and mobile layouts. They commonly need a running local app, cached original sources, and Playwright under ignored `.sites-runtime/browser`; consult each script and README. Do not assume caches exist in another checkout.
+
+For publication, read the installed Sites skill and follow its current existing-project workflow. Preserve audience/database/project identity, keep credentials out of logs and source, and publish the verified artifact. Documentation-only review does not require deployment.
+
+Suggested next-chat prompt: "Read AGENTS.md and PROJECT_BRIEF.md in counselor-database, then continue [task]. Preserve source evidence, reviewed counselor records, and the existing Sites identity and audience."
