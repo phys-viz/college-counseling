@@ -3,6 +3,7 @@ import type {SourceDocument} from './source-types';
 import {enrichMetrics} from './extract-additional';
 import {canonicalC1,extractGender} from './extract-gender';
 import {repairCDSGlyphs} from './pdf-glyphs';
+import {screenPDFReport,UnrecognizedReportError} from './pdf-report-screening';
 export type PDFWord={str:string;x:number;y:number;width:number};
 export type PDFLine={text:string;words:PDFWord[]};
 export type PDFPage={page:number;text:string;lines:PDFLine[];form_fields:Report['sections'][number]['form_fields']};
@@ -306,6 +307,7 @@ export async function extractPDF(buffer:ArrayBuffer,document:SourceDocument,inde
       pages.push({page:n,text:lines.map(l=>l.text).join('\n'),lines,form_fields});page.cleanup();
     }
     if(pages.reduce((n,p)=>n+p.text.length,0)<200)throw new Error('This appears to be an image-only PDF. Automatic extraction needs selectable text or filled form fields; OCR is not available yet.');
+    if(screenPDFReport(pages)==='unrecognized')throw new UnrecognizedReportError();
     return normalizePDF(pages,document,indexURL,sha256);
   } finally {signal.removeEventListener('abort',abort);await task.destroy();}
 }

@@ -19,6 +19,7 @@ The local reproducible seed contains **526 reports across 31 schools**, spanning
 - Trends compare one or two schools, retain missing-year gaps, offer searchable metric groups and configurable axes, and export PNG/SVG/CSV or copy a chart PNG. School marks/colors and source attribution carry into figures. SAT/ACT ranges use reported percentiles; a median appears only if reported.
 - Searchable school controls carry library selections into Trends. Trend settings persist across tabs within the current page session.
 - Add school data discovers reports from an archive page or direct PDF URL. The browser extracts text/form answers with PDF.js, presents editable drafts, and saves only after review. Existing school/year records require an explicit replacement choice.
+- Archive discovery uses CDS link evidence and heading hierarchy, with generic/uncertain content links kept under Other PDF links and excluded from Select all. PDF content is screened before drafts are created; unrecognized files are named in skipped notices, while scans/download/layout failures retain errors. See `lib/pdf-report-screening.ts` and `scripts/check-source-screening*.mjs`. Classification is conservative and does not audit numbers or add OCR.
 
 ## Architecture and code map
 

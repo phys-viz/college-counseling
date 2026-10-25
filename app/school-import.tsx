@@ -13,9 +13,11 @@ import type {SourceDiscovery,SourceDocument} from '@/lib/source-types';
 import {validateReports} from '@/lib/validate-import';
 import {setReviewedMetric} from '@/lib/review-metrics';
 import {extractPDF,factorNames} from '@/lib/extract-pdf';
+import {UnrecognizedReportError} from '@/lib/pdf-report-screening';
 
 type Draft={url:string;report:Report;include:boolean;approved:boolean;saved:boolean;existing:boolean;error:string};
 type School={school_id:string;school:string};
+type ImportNotice={url:string;title:string;message:string};
 const cleanName=(s:string)=>s.toLowerCase().replace(/\([^)]*\)/g,'').replace(/[^a-z0-9]/g,'');
 const slug=(s:string)=>s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,80);
 const head=['applicants','admitted','enrolled'];
@@ -28,26 +30,26 @@ const source=(r:Report,key?:string)=>r.source_url+(r.source_type==='pdf'&&(key?r
 export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:boolean;onOpenChange:(v:boolean)=>void;schools:School[];onSaved:()=>void}) {
   const [url,setURL]=useState(''),[discovery,setDiscovery]=useState<SourceDiscovery|null>(null),[selected,setSelected]=useState<string[]>([]),[years,setYears]=useState<Record<string,string>>({});
   const [schoolName,setSchoolName]=useState(''),[target,setTarget]=useState('new'),[drafts,setDrafts]=useState<Draft[]>([]);
-  const [busy,setBusy]=useState<'discover'|'extract'|'save'|null>(null),[progress,setProgress]=useState(''),[error,setError]=useState(''),[failures,setFailures]=useState<{url:string;title:string;message:string}[]>([]),[allowReplace,setAllowReplace]=useState(false);
+  const [busy,setBusy]=useState<'discover'|'extract'|'save'|null>(null),[progress,setProgress]=useState(''),[error,setError]=useState(''),[failures,setFailures]=useState<ImportNotice[]>([]),[skipped,setSkipped]=useState<ImportNotice[]>([]),[allowReplace,setAllowReplace]=useState(false);
   const controller=useRef<AbortController|null>(null);const input=useRef<HTMLInputElement>(null);
   useEffect(()=>{if(!open)controller.current?.abort();return()=>{controller.current?.abort();};},[open]);
   async function discover(event:React.FormEvent) {
-    event.preventDefault();setBusy('discover');setError('');setDrafts([]);setFailures([]);setDiscovery(null);setProgress('Opening the school archive…');setAllowReplace(false);
+    event.preventDefault();setBusy('discover');setError('');setDrafts([]);setFailures([]);setSkipped([]);setDiscovery(null);setProgress('Opening the school archive…');setAllowReplace(false);
     setTarget('new');setSchoolName('');
     const abort=new AbortController();controller.current=abort;
     try {
       const res=await fetch('/api/sources',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:url.trim(),mode:'discover'}),signal:abort.signal});
       const data=await res.json() as SourceDiscovery&{error?:string};if(!res.ok)throw new Error(data.error);
-      setDiscovery(data);setSelected(data.documents.length?[data.documents[0].url]:[]);setYears(Object.fromEntries(data.documents.map(d=>[d.url,d.year?String(d.year):''])));
-      if(!data.documents.length)setError('No linked PDFs were found. Paste the school’s Common Data Set archive page or a direct PDF link.');
+      setDiscovery(data);setSelected(data.documents.length?[data.documents[0].url]:[]);setYears(Object.fromEntries([...data.documents,...data.other_documents??[]].map(d=>[d.url,d.year?String(d.year):''])));
+      if(!data.documents.length&&!data.other_documents?.length)setError('No linked PDFs were found. Paste the school’s Common Data Set archive page or a direct PDF link.');
     }catch(e){if(!abort.signal.aborted)setError(e instanceof Error?e.message:'The school page could not load.');}finally{setBusy(null);setProgress('');}
   }
   async function extract() {
-    if(!discovery)return;setBusy('extract');setError('');setFailures([]);setDrafts([]);setAllowReplace(false);
+    if(!discovery)return;setBusy('extract');setError('');setFailures([]);setSkipped([]);setDrafts([]);setAllowReplace(false);
     const abort=new AbortController();controller.current=abort;let detectedTarget=target;
     let knownYears=new Set<number>(),identified=false;
     try {
-      for(const [i,doc] of discovery.documents.filter(d=>selected.includes(d.url)).entries()) {
+      for(const [i,doc] of [...discovery.documents,...discovery.other_documents??[]].filter(d=>selected.includes(d.url)).entries()) {
         if(abort.signal.aborted)break;
         setProgress(`Report ${i+1} of ${selected.length}: downloading ${doc.title}…`);
         try {
@@ -69,7 +71,7 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
             identified=true;
           }
           setDrafts(v=>[...v,{url:doc.url,report,include:true,approved:false,saved:false,existing:knownYears.has(report.year),error:''}]);
-        }catch(e){if(!abort.signal.aborted)setFailures(v=>[...v,{url:doc.url,title:doc.title,message:e instanceof Error?e.message:'This PDF could not be extracted.'}]);}
+        }catch(e){if(!abort.signal.aborted){const notice={url:doc.url,title:doc.title,message:e instanceof Error?e.message:'This PDF could not be extracted.'};if(e instanceof UnrecognizedReportError)setSkipped(v=>[...v,notice]);else setFailures(v=>[...v,notice]);}}
       }
       if(abort.signal.aborted)setError('Extraction canceled. Reports already extracted remain available for review.');
     }finally{setBusy(null);setProgress('');}
@@ -108,6 +110,9 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
   function numericField(d:Draft,index:number,key:string,required=false) {
     return <label className={'import-metric '+(required&&d.report.metrics[key]===undefined?'needs-value':'')} key={key}><span>{labels[key]??key}{required?' *':''}</span><Input type="number" min={0} step={['percent','gpa','dollars','units','ratio'].includes(metricUnit(key))?'any':'1'} aria-label={`${labels[key]??key} for ${d.report.year}`} value={d.report.metrics[key]??''} disabled={d.saved||!!busy} placeholder="Not extracted" onChange={e=>changeMetric(index,key,e.target.value)}/><a href={source(d.report,key)} target="_blank" rel="noreferrer">{d.report.evidence[key]?.section??sectionFor(key)}{d.report.evidence[key]?.page?` · page ${d.report.evidence[key].page}`:''}<ExternalLink size={12}/></a></label>;
   }
+  function documentRow(doc:SourceDocument) {
+    return <div className="import-document" key={doc.url}><Checkbox aria-label={`Select PDF ${doc.title}`} checked={selected.includes(doc.url)} disabled={!!busy||selected.length>=25&&!selected.includes(doc.url)} onCheckedChange={()=>setSelected(v=>v.includes(doc.url)?v.filter(s=>s!==doc.url):[...v,doc.url])}/><a href={doc.url} target="_blank" rel="noreferrer"><FileText size={16}/><span>{doc.title}</span><ExternalLink size={13}/></a><label><span>Fall year</span><Input type="number" min={1900} max={2100} aria-label={`Fall year for ${doc.title}`} value={years[doc.url]??''} placeholder="Check PDF" disabled={!!busy} onChange={e=>setYears(v=>({...v,[doc.url]:e.target.value}))}/></label></div>;
+  }
   return <Dialog open={open} onOpenChange={v=>{if(busy==='save')return;onOpenChange(v);}}><DialogContent className="school-import-dialog"><DialogTitle>Add school data from a website</DialogTitle><DialogDescription>Find Common Data Set PDFs, review the extracted Section C answers, and save them to your shared library.</DialogDescription>
     <form className="import-link-form" onSubmit={discover}><label><span>School’s Common Data Set webpage or PDF link</span><Input ref={input} type="url" required aria-label="School website or PDF link" value={url} onChange={e=>setURL(e.target.value)} placeholder="https://school.edu/common-data-set" disabled={!!busy}/></label><Button type="submit" disabled={!!busy||!url.trim()}><Search size={16}/> Find reports</Button></form>
     <p className="fine-print">Use the institution’s Common Data Set archive page rather than its homepage. You can also paste a direct PDF link.</p>
@@ -117,10 +122,12 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
     {discovery&&<>
       <div className="import-section-heading"><h3>{discovery.documents.length} PDF report{discovery.documents.length===1?'':'s'} found</h3><a href={discovery.index_url} target="_blank" rel="noreferrer">Open archive<ExternalLink size={13}/></a></div>
       {discovery.notes.map(note=><p className="fine-print" key={note}>{note}</p>)}
-      {discovery.documents.length>0&&<><div className="import-document-actions"><button className="text-button" disabled={!!busy} onClick={()=>setSelected(discovery.documents.slice(0,25).map(d=>d.url))}>Select {discovery.documents.length>25?'newest 25':'all'}</button><button className="text-button" disabled={!!busy} onClick={()=>setSelected([])}>Clear selection</button><span>{selected.length} selected · up to 25 per batch</span></div>
-        <div className="import-document-list">{discovery.documents.map(doc=><div className="import-document" key={doc.url}><Checkbox aria-label={`Select PDF ${doc.title}`} checked={selected.includes(doc.url)} disabled={!!busy||selected.length>=25&&!selected.includes(doc.url)} onCheckedChange={()=>setSelected(v=>v.includes(doc.url)?v.filter(s=>s!==doc.url):[...v,doc.url])}/><a href={doc.url} target="_blank" rel="noreferrer"><FileText size={16}/><span>{doc.title}</span><ExternalLink size={13}/></a><label><span>Fall year</span><Input type="number" min={1900} max={2100} aria-label={`Fall year for ${doc.title}`} value={years[doc.url]??''} placeholder="Check PDF" disabled={!!busy} onChange={e=>setYears(v=>({...v,[doc.url]:e.target.value}))}/></label></div>)}</div>
+      {(discovery.documents.length>0||!!discovery.other_documents?.length)&&<><div className="import-document-actions">{discovery.documents.length>0&&<button className="text-button" disabled={!!busy} onClick={()=>setSelected(discovery.documents.slice(0,25).map(d=>d.url))}>Select {discovery.documents.length>25?'newest 25':'all'}</button>}<button className="text-button" disabled={!!busy} onClick={()=>setSelected([])}>Clear selection</button><span>{selected.length} selected · up to 25 per batch</span></div>
+        {discovery.documents.length>0&&<div className="import-document-list" aria-label="CDS report links">{discovery.documents.map(documentRow)}</div>}
+        {!!discovery.other_documents?.length&&<details className="import-optional"><summary>Other PDF links · {discovery.other_documents.length}</summary><p className="fine-print">These links were not clearly identified as CDS reports. They are not included in Select all. If a report is missing above, open these PDFs to check and select it individually.</p><div className="import-document-list" aria-label="Other PDF links">{discovery.other_documents.map(documentRow)}</div></details>}
         <Button disabled={!!busy||!selected.length} onClick={extract}>Extract Section C from {selected.length} PDF{selected.length===1?'':'s'}</Button></>}
     </>}
+    {skipped.length>0&&<div className="import-skipped" role="status"><strong>{skipped.length} PDF{skipped.length===1?' was':'s were'} skipped after checking the content</strong>{skipped.map(f=><div key={f.url}><p><b>{f.title}</b>: {f.message}</p><a href={f.url} target="_blank" rel="noreferrer">Open skipped PDF<ExternalLink size={13}/></a></div>)}</div>}
     {failures.map(f=><div className="import-failure" key={f.url}><strong>Could not extract: {f.title}</strong><p>{f.message}</p><a href={f.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink size={13}/></a></div>)}
     {drafts.length>0&&<section className="import-review"><h3>Review before saving</h3><div className="import-identity"><label><span>Save under</span><Select value={target} onValueChange={v=>{setTarget(v);setAllowReplace(false);if(v!=='new')setSchoolName(schools.find(s=>s.school_id===v)?.school??'');setDrafts(d=>d.map(r=>({...r,approved:false,existing:false})));}} disabled={!!busy||drafts.some(d=>d.saved)}><SelectTrigger aria-label="Save under school"><SelectValue/></SelectTrigger><SelectContent><SelectItem value="new">A new school</SelectItem>{schools.map(s=><SelectItem value={s.school_id} key={s.school_id}>{s.school}</SelectItem>)}</SelectContent></Select></label><label><span>School name</span><Input aria-label="School name" value={schoolName} onChange={e=>{setSchoolName(e.target.value);setDrafts(v=>v.map(d=>({...d,approved:false})));}} disabled={target!=='new'||!!busy||drafts.some(d=>d.saved)} placeholder="Name of institution and campus"/></label></div>
       {drafts.map((d,index)=><details className="import-draft" key={d.url} open={drafts.length===1||undefined}><summary><span><b>Fall {d.report.year||'year needs review'}</b> · {Object.keys(d.report.metrics).length} figures · {d.report.factors.length} factor ratings</span><span className="import-draft-state">{d.saved?'Saved':d.existing?'Already in library':d.approved?'Reviewed':'Needs review'}</span></summary><div className="import-review-toolbar"><label><Checkbox checked={d.include} disabled={d.saved||!!busy} aria-label={`Include report ${d.report.year}`} onCheckedChange={v=>setDrafts(rows=>rows.map((r,i)=>i===index?{...r,include:v===true}:r))}/> Include this report</label><a href={d.report.source_url} target="_blank" rel="noreferrer">Open original PDF<ExternalLink size={14}/></a><label>Fall cohort<Input type="number" min={1900} max={2100} aria-label={`Review fall year ${index+1}`} value={d.report.year||''} disabled={d.saved||!!busy} onChange={e=>update(index,r=>{r.year=Number(e.target.value);})}/></label></div>

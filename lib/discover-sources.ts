@@ -7,6 +7,8 @@ const clean=(s:string)=>s.replace(/\s+/g,' ').trim();
 const cdsLabel=/common[\s_-]*data[\s_-]*set|(?:^|[^a-z0-9])cds(?=$|[^a-z0-9]|(?:19|20)\d{2})/i;
 const workbook=/\.(?:xlsx?|xlsm)(?:[?#]|$)/i;
 const wordDocument=/\.docx(?:[?#]|$)/i;
+const pageFurniture='nav,footer,aside,[role="navigation"],[role="contentinfo"],[role="complementary"]';
+const unrelatedLabel=/\b(?:privacy|non[- ]?discrimination|harassment|accessibility|handbook|calendar|IPEDS|feedback|security|crime|meeting|minutes)\b/i;
 function linkedYear(url:URL,label:string,accessibleLabel:string,context:string) {
   // Campus archive rows can contain several neighboring report years. A file's
   // own label/name takes precedence over those sibling cells and upload dates.
@@ -20,35 +22,50 @@ export async function discoverSources(value:string,signal?:AbortSignal):Promise<
   if(workbook.test(first.url))return {index_url:first.url,title:'Common Data Set spreadsheet',documents:[],notes:['This source is an Excel spreadsheet. Automatic extraction currently supports PDFs; use a reviewed source adapter or JSON import for spreadsheet data.']};
   if(wordDocument.test(first.url))return {index_url:first.url,title:'Common Data Set Word document',documents:[],notes:['This source is a Word document. Automatic extraction currently supports PDFs; use a reviewed source adapter or JSON import for Word data.']};
   if(first.bytes.length>3_000_000)throw new Error('The webpage is too large. Use the Common Data Set archive page or a direct PDF link.');
-  const documents=new Map<string,SourceDocument>(),pages:string[]=[];
+  const documents=new Map<string,SourceDocument>(),otherDocuments=new Map<string,SourceDocument>(),pages:string[]=[];
   const spreadsheets=new Set<string>(),wordDocuments=new Set<string>(),viewers=new Set<string>();let nonPDF=0;
   function parse(bytes:Uint8Array,base:string,follow:boolean) {
     const {document}=parseHTML(new TextDecoder().decode(bytes));
     let linkBase=base;
     const declaredBase=document.querySelector('base[href]')?.getAttribute('href');
     if(declaredBase)try{linkBase=sourceURL(new URL(declaredBase,base).href).href;}catch{/* Ignore invalid base URLs. */}
-    const anchors=[...document.querySelectorAll('a[href],option[value]')];
-    const pageIsCDS=cdsLabel.test(clean(document.querySelector('h1')?.textContent??document.title??''));
-    const hasCDSLinks=anchors.some(el=>cdsLabel.test((el.textContent??'')+' '+(el.getAttribute('href')??el.getAttribute('value')??'')+' '+(el.getAttribute('aria-label')??''))&&/\.pdf(?:[?#]|$)/i.test(el.getAttribute('href')??el.getAttribute('value')??''));
-    for(const el of anchors) {
+    // Track heading hierarchy rather than inheriting the subject of an entire
+    // mixed statistics page. A heading in a sibling <section> does not apply.
+    const headings:{level:number;text:string;owner:Element|null}[]=[];
+    for(const el of document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"],a[href],option[value]')) {
+      if(/^H[1-6]$/.test(el.tagName)||el.getAttribute('role')==='heading') {
+        if(el.closest(pageFurniture))continue;
+        const level=Number(el.getAttribute('aria-level')??el.tagName.slice(1))||2;
+        while(headings.length&&headings[headings.length-1].level>=level)headings.pop();
+        headings.push({level,text:clean(el.textContent??''),owner:el.closest('section,article')});continue;
+      }
       const href=el.getAttribute(el.tagName==='OPTION'?'value':'href');if(!href)continue;
       let url:URL;try{url=sourceURL(new URL(href,linkBase).href);}catch{continue;}
       const label=clean(el.textContent??''),accessibleLabel=clean(el.getAttribute('aria-label')??el.getAttribute('title')??'');
       let context=clean(el.closest('li,tr')?.textContent??label).slice(0,400);
       const adjacent=clean(el.closest('p')?.previousElementSibling?.textContent??'');
       if(sourceYear(context)===null&&/^(?:Fall\s+)?(?:19|20)\d{2}(?:\s*[-\u2013]\s*(?:\d{2}|\d{4}))?$/i.test(adjacent))context=adjacent+' '+context;
-      const relevant=cdsLabel.test(label+' '+accessibleLabel+' '+context+' '+url.pathname)||pageIsCDS&&sourceYear(label)!==null;
+      let filename=url.pathname.split('/').pop()??'';try{filename=decodeURIComponent(filename);}catch{/* Keep the original path. */}
+      // Parent directories such as /cds/privacy.pdf are not document evidence.
+      const archivePath=/\/(?:cds|common[-_ ]data[-_ ]set)\/(?:19|20)\d{2}(?:[-_]\d{2,4})?\//i.test(url.pathname.replace(/%20/gi,' '));
+      const explicit=cdsLabel.test(label+' '+accessibleLabel+' '+context+' '+filename)||archivePath&&!unrelatedLabel.test(label+' '+accessibleLabel+' '+filename);
+      const scope=headings.filter(h=>!h.owner||h.owner.contains(el));
+      const nearest=scope[scope.length-1]?.text??clean(document.title??'');
+      const inCDSSection=scope.some(h=>cdsLabel.test(h.text))||!scope.length&&cdsLabel.test(nearest);
+      const archiveHeading=cdsLabel.test(nearest)||/^(?:(?:previous|past|historical|archived?|annual|pdf|older)\s+)*(?:reports?|years?|downloads?|archives?)\b/i.test(nearest)||/^(?:Fall\s+)?(?:19|20)\d{2}/.test(nearest);
+      const furniture=!!el.closest(pageFurniture);
+      const year=linkedYear(url,label,accessibleLabel,context)??(inCDSSection&&archiveHeading?sourceYear(nearest):null);
+      const relevant=explicit||!furniture&&inCDSSection&&archiveHeading&&year!==null&&!unrelatedLabel.test(label+' '+accessibleLabel);
       if(relevant&&/\bappendix\b/i.test(label+' '+accessibleLabel))continue;
       if(workbook.test(url.href)) {if(relevant)spreadsheets.add(url.href);continue;}
       if(wordDocument.test(url.href)) {if(relevant)wordDocuments.add(url.href);continue;}
       if(relevant&&(/^(?:drive\.google\.com|acrobat\.adobe\.com)$/.test(url.hostname)||/(?:^|\.)box\.com$/.test(url.hostname)&&!/\.pdf(?:[?#]|$)/i.test(url.href))) {viewers.add(url.href);continue;}
-      const publicDownload=cdsLabel.test(label+' '+accessibleLabel+' '+context)&&linkedYear(url,label,accessibleLabel,context)!==null&&/\/(?:media\/\d+\/)?download\/?$/i.test(url.pathname);
+      const publicDownload=relevant&&year!==null&&/\/(?:media\/\d+\/)?download\/?$/i.test(url.pathname);
       if(/\.pdf(?:[?#]|$)/i.test(url.href)||publicDownload||/\bpdf\b/i.test(label)&&/common.?data|\bcds\b/i.test(context+' '+url.href)) {
-        // Mixed survey pages also link IPEDS feedback, calendars and guides.
-        // Prefer explicitly labeled CDS files when such links exist.
-        if(hasCDSLinks&&!relevant)continue;
-        const year=linkedYear(url,label,accessibleLabel,context);
-        documents.set(url.href,{url:url.href,title:accessibleLabel||label||context||decodeURIComponent(url.pathname.split('/').pop()??'PDF report'),year});
+        const candidate={url:url.href,title:accessibleLabel||label||context||filename||'PDF report',year};
+        if(relevant){documents.set(url.href,candidate);otherDocuments.delete(url.href);}
+        // Ambiguous content links remain recoverable, but never join Select all.
+        else if(!furniture&&!unrelatedLabel.test(label+' '+accessibleLabel)&&!documents.has(url.href))otherDocuments.set(url.href,candidate);
       } else if(follow&&url.href!==base&&cdsLabel.test(label+' '+url.pathname)) {
         if(el.tagName==='OPTION'&&sourceYear(label)!==null)nonPDF++;
         else if(new URL(base).hostname===url.hostname&&!pages.includes(url.href))pages.push(url.href);
@@ -71,6 +88,8 @@ export async function discoverSources(value:string,signal?:AbortSignal):Promise<
   const isSection=(d:SourceDocument)=>/^(?:Section\s+)?[A-J][.\s-]/i.test(d.title)||/\bCDS[-_ ]\d{4}[-_ ]\d{4}[-_ ][A-J](?:[-_ ]updated)?\.pdf(?:[?#]|$)/i.test(d.url);
   const completeYears=new Set([...documents.values()].filter(d=>!isSection(d)&&d.year!==null).map(d=>d.year));
   const all=[...documents.values()].filter(d=>!isSection(d)||d.year===null||!completeYears.has(d.year)).sort((a,b)=>(b.year??0)-(a.year??0));
+  const other=[...otherDocuments.values()].filter(d=>!documents.has(d.url)).sort((a,b)=>(b.year??0)-(a.year??0));
   if(all.length>80)notes.push('Showing the first 80 PDF links. Use a more specific archive page for additional reports.');
-  return {index_url:first.url,title,documents:all.slice(0,80),notes};
+  if(other.length>80)notes.push('Showing the first 80 other PDF links. Use a more specific archive page for additional links.');
+  return {index_url:first.url,title,documents:all.slice(0,80),other_documents:other.slice(0,80),notes};
 }

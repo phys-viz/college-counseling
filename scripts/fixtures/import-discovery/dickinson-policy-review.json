@@ -1,0 +1,10 @@
+{
+  "source_url": "https://www.dickinson.edu/download/downloads/id/11679/non-discrimination_harassment_and_retaliation_policy.pdf",
+  "sha256": "fa7541c272bb3edbe38c37b88bde139a8a2d1b87611627ae37a9e97444398572",
+  "physical_pages": 7,
+  "title_page": 1,
+  "title": "Non-Discrimination, Harassment and Retaliation Policy",
+  "reviewed": "2026-10-24",
+  "expected_screening": "unrecognized",
+  "notes": "The original seven-page policy addresses discrimination and employment policies, not CDS responses. Its title was independently checked on physical page 1; no Section C admissions responses are present. The browser regression deliberately supplies a CDS filename and title to ensure PDF content drives screening. The original is downloaded into ignored cache with --collect, and its pinned hash must match before testing."
+}

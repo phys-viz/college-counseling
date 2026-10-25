@@ -339,6 +339,9 @@ textarea { width:100%; border:1px solid var(--border); border-radius:6px; paddin
 .import-progress { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px; background:#edf5fb; border-radius:8px; font-size:.875rem; margin:16px 0; overflow-wrap:anywhere; }
 .import-error,.import-failure { padding:14px; background:#fff2f1; color:#9d2935; border:1px solid #f1d6d6; border-radius:8px; font-size:.875rem; margin:16px 0; }
 .import-failure p { margin:8px 0; }
+.import-skipped { padding:14px; background:#f3f7fa; color:#354d63; border:1px solid var(--border); border-radius:8px; font-size:.875rem; margin:16px 0; overflow-wrap:anywhere; }
+.import-skipped p { margin:8px 0; }
+.import-skipped a { display:inline-flex; align-items:center; gap:6px; }
 .import-failure a,.import-section-heading a { display:inline-flex; align-items:center; gap:6px; }
 .import-success { padding:14px; background:#e7f6ef; color:#12675d; border-radius:8px; margin:16px 0; }
 .import-section-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
