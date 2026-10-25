@@ -139,6 +139,14 @@ export function normalizePDF(pages:PDFPage[],document:SourceDocument,indexURL:st
       const header=c1.slice(0,index).findLast(l=>/\bin[- ]state\b/i.test(l.text));
       const hasTotalColumn=!!header&&/\bTotal\b/i.test(header.text);
       const totalFirst=!!header&&/\bTotal\b.*\bin[- ]state\b/i.test(header.text);
+      // Some reports use a complete domestic residency breakdown with an
+      // explicit overall Total, without International/Unknown columns. Trust
+      // only a same-page, three-cell row and independently reconcile its sum.
+      const twoResidencies=header?.page===line.page&&hasTotalColumn&&/\bOut[- ](?:of[- ])?State\b/i.test(header.text)&&!/\bInternational\b|\bUnknown\b/i.test(header.text);
+      if(twoResidencies&&values.length===3){
+        candidates.push({value:totalFirst?values[0]:values[2],page:line.page,method:'PDF two-residency table explicit Total column'});
+        candidates.push({value:(totalFirst?values.slice(1):values.slice(0,-1)).reduce((n,v)=>n+v,0),page:line.page,method:'sum of complete two-residency counts'});
+      }
       // Some tables include an explicit Total column before their residency columns.
       // Others contain only the four residency counts, which must be summed.
       if(residencyHeader&&header&&hasTotalColumn&&values.length>1&&values.length<=5)candidates.push({value:totalFirst?values[0]:values.at(-1)!,page:line.page,method:'PDF residency table Total column'});

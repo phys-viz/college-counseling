@@ -14,8 +14,9 @@ import {validateReports} from '@/lib/validate-import';
 import {setReviewedMetric} from '@/lib/review-metrics';
 import {extractPDF,factorNames} from '@/lib/extract-pdf';
 import {UnrecognizedReportError} from '@/lib/pdf-report-screening';
+import {importReadiness,missingHeadlineCounts} from '@/lib/import-readiness';
 
-type Draft={url:string;report:Report;include:boolean;approved:boolean;saved:boolean;existing:boolean;error:string};
+type Draft={url:string;sourceTitle:string;archiveYear:number|null;report:Report;include:boolean;approved:boolean;saved:boolean;existing:boolean;error:string};
 type School={school_id:string;school:string};
 type ImportNotice={url:string;title:string;message:string};
 const cleanName=(s:string)=>s.toLowerCase().replace(/\([^)]*\)/g,'').replace(/[^a-z0-9]/g,'');
@@ -29,12 +30,12 @@ const source=(r:Report,key?:string)=>r.source_url+(r.source_type==='pdf'&&(key?r
 
 export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:boolean;onOpenChange:(v:boolean)=>void;schools:School[];onSaved:()=>void}) {
   const [url,setURL]=useState(''),[discovery,setDiscovery]=useState<SourceDiscovery|null>(null),[selected,setSelected]=useState<string[]>([]),[years,setYears]=useState<Record<string,string>>({});
-  const [schoolName,setSchoolName]=useState(''),[target,setTarget]=useState('new'),[drafts,setDrafts]=useState<Draft[]>([]);
+  const [schoolName,setSchoolName]=useState(''),[target,setTarget]=useState('new'),[drafts,setDrafts]=useState<Draft[]>([]),[expanded,setExpanded]=useState<Record<string,boolean>>({});
   const [busy,setBusy]=useState<'discover'|'extract'|'save'|null>(null),[progress,setProgress]=useState(''),[error,setError]=useState(''),[failures,setFailures]=useState<ImportNotice[]>([]),[skipped,setSkipped]=useState<ImportNotice[]>([]),[allowReplace,setAllowReplace]=useState(false);
   const controller=useRef<AbortController|null>(null);const input=useRef<HTMLInputElement>(null);
   useEffect(()=>{if(!open)controller.current?.abort();return()=>{controller.current?.abort();};},[open]);
   async function discover(event:React.FormEvent) {
-    event.preventDefault();setBusy('discover');setError('');setDrafts([]);setFailures([]);setSkipped([]);setDiscovery(null);setProgress('Opening the school archive…');setAllowReplace(false);
+    event.preventDefault();setBusy('discover');setError('');setDrafts([]);setFailures([]);setSkipped([]);setExpanded({});setDiscovery(null);setProgress('Opening the school archive…');setAllowReplace(false);
     setTarget('new');setSchoolName('');
     const abort=new AbortController();controller.current=abort;
     try {
@@ -45,7 +46,7 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
     }catch(e){if(!abort.signal.aborted)setError(e instanceof Error?e.message:'The school page could not load.');}finally{setBusy(null);setProgress('');}
   }
   async function extract() {
-    if(!discovery)return;setBusy('extract');setError('');setFailures([]);setSkipped([]);setDrafts([]);setAllowReplace(false);
+    if(!discovery)return;setBusy('extract');setError('');setFailures([]);setSkipped([]);setExpanded({});setDrafts([]);setAllowReplace(false);
     const abort=new AbortController();controller.current=abort;let detectedTarget=target;
     let knownYears=new Set<number>(),identified=false;
     try {
@@ -70,7 +71,7 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
             }
             identified=true;
           }
-          setDrafts(v=>[...v,{url:doc.url,report,include:true,approved:false,saved:false,existing:knownYears.has(report.year),error:''}]);
+          setDrafts(v=>[...v,{url:doc.url,sourceTitle:doc.title,archiveYear:doc.year,report,include:true,approved:false,saved:false,existing:knownYears.has(report.year),error:''}]);
         }catch(e){if(!abort.signal.aborted){const notice={url:doc.url,title:doc.title,message:e instanceof Error?e.message:'This PDF could not be extracted.'};if(e instanceof UnrecognizedReportError)setSkipped(v=>[...v,notice]);else setFailures(v=>[...v,notice]);}}
       }
       if(abort.signal.aborted)setError('Extraction canceled. Reports already extracted remain available for review.');
@@ -105,8 +106,8 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
       setProgress(`${records.length} reviewed report${records.length===1?'':'s'} saved to the shared library.`);
     }catch(e){setError(e instanceof Error?e.message:'The reports could not be saved. Reports marked Saved do not need to be retried.');setProgress('');}finally{setBusy(null);}
   }
-  const chosen=drafts.filter(d=>d.include&&!d.saved),replacements=chosen.filter(d=>d.existing).length;
-  const canSave=chosen.length>0&&chosen.every(d=>d.approved&&head.every(k=>typeof d.report.metrics[k]==='number'))&&!!schoolName.trim()&&(!replacements||allowReplace)&&!busy;
+  const readiness=importReadiness(drafts,schoolName,allowReplace),chosen=readiness.selected,replacements=readiness.existing.length;
+  const canSave=readiness.canSave&&!busy;
   function numericField(d:Draft,index:number,key:string,required=false) {
     return <label className={'import-metric '+(required&&d.report.metrics[key]===undefined?'needs-value':'')} key={key}><span>{labels[key]??key}{required?' *':''}</span><Input type="number" min={0} step={['percent','gpa','dollars','units','ratio'].includes(metricUnit(key))?'any':'1'} aria-label={`${labels[key]??key} for ${d.report.year}`} value={d.report.metrics[key]??''} disabled={d.saved||!!busy} placeholder="Not extracted" onChange={e=>changeMetric(index,key,e.target.value)}/><a href={source(d.report,key)} target="_blank" rel="noreferrer">{d.report.evidence[key]?.section??sectionFor(key)}{d.report.evidence[key]?.page?` · page ${d.report.evidence[key].page}`:''}<ExternalLink size={12}/></a></label>;
   }
@@ -130,7 +131,10 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
     {skipped.length>0&&<div className="import-skipped" role="status"><strong>{skipped.length} PDF{skipped.length===1?' was':'s were'} skipped after checking the content</strong>{skipped.map(f=><div key={f.url}><p><b>{f.title}</b>: {f.message}</p><a href={f.url} target="_blank" rel="noreferrer">Open skipped PDF<ExternalLink size={13}/></a></div>)}</div>}
     {failures.map(f=><div className="import-failure" key={f.url}><strong>Could not extract: {f.title}</strong><p>{f.message}</p><a href={f.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink size={13}/></a></div>)}
     {drafts.length>0&&<section className="import-review"><h3>Review before saving</h3><div className="import-identity"><label><span>Save under</span><Select value={target} onValueChange={v=>{setTarget(v);setAllowReplace(false);if(v!=='new')setSchoolName(schools.find(s=>s.school_id===v)?.school??'');setDrafts(d=>d.map(r=>({...r,approved:false,existing:false})));}} disabled={!!busy||drafts.some(d=>d.saved)}><SelectTrigger aria-label="Save under school"><SelectValue/></SelectTrigger><SelectContent><SelectItem value="new">A new school</SelectItem>{schools.map(s=><SelectItem value={s.school_id} key={s.school_id}>{s.school}</SelectItem>)}</SelectContent></Select></label><label><span>School name</span><Input aria-label="School name" value={schoolName} onChange={e=>{setSchoolName(e.target.value);setDrafts(v=>v.map(d=>({...d,approved:false})));}} disabled={target!=='new'||!!busy||drafts.some(d=>d.saved)} placeholder="Name of institution and campus"/></label></div>
-      {drafts.map((d,index)=><details className="import-draft" key={d.url} open={drafts.length===1||undefined}><summary><span><b>Fall {d.report.year||'year needs review'}</b> · {Object.keys(d.report.metrics).length} figures · {d.report.factors.length} factor ratings</span><span className="import-draft-state">{d.saved?'Saved':d.existing?'Already in library':d.approved?'Reviewed':'Needs review'}</span></summary><div className="import-review-toolbar"><label><Checkbox checked={d.include} disabled={d.saved||!!busy} aria-label={`Include report ${d.report.year}`} onCheckedChange={v=>setDrafts(rows=>rows.map((r,i)=>i===index?{...r,include:v===true}:r))}/> Include this report</label><a href={d.report.source_url} target="_blank" rel="noreferrer">Open original PDF<ExternalLink size={14}/></a><label>Fall cohort<Input type="number" min={1900} max={2100} aria-label={`Review fall year ${index+1}`} value={d.report.year||''} disabled={d.saved||!!busy} onChange={e=>update(index,r=>{r.year=Number(e.target.value);})}/></label></div>
+      {readiness.reasons.length>0&&<div className="import-save-requirements" id="import-save-requirements" aria-live="polite"><h4>Before saving</h4><ul>{readiness.reasons.map(reason=><li key={reason}>{reason}</li>)}</ul>{replacements>0&&<Button variant="outline" disabled={!!busy} onClick={()=>{setDrafts(rows=>rows.map(d=>d.existing?{...d,include:false}:d));setAllowReplace(false);}}>Exclude saved reports</Button>}</div>}
+      {drafts.map((d,index)=>{const isExpanded=expanded[d.url]??(drafts.length===1&&!busy);return <details className="import-draft" data-source-url={d.url} key={d.url} open={isExpanded} onToggle={event=>{const open=event.currentTarget.open;if(open!==isExpanded)setExpanded(rows=>({...rows,[d.url]:open}));}}><summary><span><b>Fall {d.report.year||'year needs review'}</b> · {Object.keys(d.report.metrics).length} figures · {d.report.factors.length} factor ratings</span><span className="import-draft-state">{d.saved?'Saved':d.existing?'Already in library':missingHeadlineCounts(d.report).length?'Missing required counts':d.approved?'Reviewed':'Needs review'}</span></summary>{isExpanded&&<div><div className="import-review-toolbar"><label><Checkbox checked={d.include} disabled={d.saved||!!busy} aria-label={`Include report ${d.report.year}`} onCheckedChange={v=>setDrafts(rows=>rows.map((r,i)=>i===index?{...r,include:v===true}:r))}/> Include this report</label><a href={d.report.source_url} target="_blank" rel="noreferrer">Open original PDF<ExternalLink size={14}/></a><label>Fall cohort<Input type="number" min={1900} max={2100} aria-label={`Review fall year ${index+1}`} value={d.report.year||''} disabled={d.saved||!!busy} onChange={e=>update(index,r=>{r.year=Number(e.target.value);})}/></label></div>
+        <p className="fine-print">Source report: <strong>{d.sourceTitle}</strong></p>
+        {d.archiveYear!==null&&d.archiveYear!==d.report.year&&<div className="import-year-warning"><p>The archive identifies this PDF as Fall {d.archiveYear}, while its C1 text says Fall {d.report.year}. Check the source and choose the correct cohort before saving.</p><Button variant="outline" disabled={d.saved||!!busy} onClick={()=>update(index,r=>{r.year=d.archiveYear!;r.warnings.push(`Fall cohort changed to archive year ${d.archiveYear} during review; original C1 year text is preserved.`);})}>Use archive Fall {d.archiveYear}</Button></div>}
         {d.report.school&&<p className="fine-print">PDF identifies the institution as: <strong>{d.report.school}</strong>.</p>}
         <div className="import-headline">{head.map(key=>numericField(d,index,key,true))}</div><p className="fine-print">Admission rate: {format('admit_rate',typeof d.report.metrics.applicants==='number'&&d.report.metrics.applicants>0&&typeof d.report.metrics.admitted==='number'?100*d.report.metrics.admitted/d.report.metrics.applicants:undefined)}. Rates are recalculated from reviewed counts when saved.</p>
         <details className="import-optional"><summary>Test scores, waitlists & other figures</summary><div className="import-metrics-grid">{optional.map(key=>numericField(d,index,key))}{textFields.map(key=><label className="import-metric" key={key}><span>{labels[key]??key}</span><Input aria-label={`${labels[key]??key} for ${d.report.year}`} value={d.report.metrics[key]??''} disabled={d.saved||!!busy} placeholder="Not extracted" onChange={e=>update(index,r=>setReviewedMetric(r,key,e.target.value===''?null:e.target.value))}/><a href={source(d.report,key)} target="_blank" rel="noreferrer">{sectionFor(key)}<ExternalLink size={12}/></a></label>)}</div></details>
@@ -138,10 +142,10 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
         <details className="import-optional"><summary>Admissions factor ratings · C7</summary><div className="import-factor-review">{factorNames.map(name=>{const f=d.report.factors.find(f=>f.label===name);const page=f?.page??d.report.sections.find(s=>/\bC\s*7\b/.test(s.text))?.page??d.report.sections[0].page;return <label key={name}><a href={`${d.report.source_url}#page=${page}`} target="_blank" rel="noreferrer">{name}<ExternalLink size={12}/></a><select aria-label={`${name} rating for ${d.report.year}`} value={f?.rating??''} disabled={d.saved||!!busy} onChange={e=>update(index,r=>{r.factors=r.factors.filter(f=>f.label!==name);if(e.target.value)r.factors.push({label:name,rating:e.target.value,page});})}><option value="">Not extracted</option>{['Very important','Important','Considered','Not considered'].map(r=><option key={r}>{r}</option>)}</select></label>;})}</div></details>
         <details className="import-optional"><summary>Extracted source text & form answers</summary>{[...d.report.sections,...d.report.additional_sections??[]].map(s=><details key={s.page} className="source-page"><summary>PDF page {s.page}<a href={`${d.report.source_url}#page=${s.page}`} target="_blank" rel="noreferrer">Original page</a></summary><pre>{s.text}</pre>{s.form_fields.length>0&&<dl className="form-answers">{s.form_fields.map(f=><div key={f.name}><dt>{f.label||f.name}</dt><dd>{f.value}</dd></div>)}</dl>}</details>)}</details>
         <div className="import-source-notes"><Info size={16}/><div>{d.report.warnings.map(w=><p key={w}>{w}</p>)}</div></div><label className="import-approved"><Checkbox checked={d.approved} disabled={d.saved||!!busy} aria-label={`Reviewed report ${d.report.year}`} onCheckedChange={v=>setDrafts(rows=>rows.map((r,i)=>i===index?{...r,approved:v===true}:r))}/> I checked this report’s figures, school, and fall year against its source.</label>
-      </details>)}
-      {replacements>0&&<p className="import-replacement-note">{replacements} selected report{replacements===1?' already exists':'s already exist'} in the library. Saving will replace those records with the reviewed version.</p>}
+      </div>}</details>;})}
+      {replacements>0&&allowReplace&&<p className="import-replacement-note">{replacements} selected report{replacements===1?' already exists':'s already exist'} in the library. Saving will replace those records with the reviewed version.</p>}
       <label className="import-approved"><Checkbox checked={allowReplace} onCheckedChange={v=>setAllowReplace(v===true)} disabled={!!busy} aria-label="Replace existing reports"/> Replace existing reports for the same school and fall year, if any.</label>
-      <div className="import-save-bar"><span>{chosen.length} report{chosen.length===1?'':'s'} selected for saving</span><Button disabled={!canSave} onClick={save}>Save {chosen.length} reviewed report{chosen.length===1?'':'s'}</Button></div>
+      <div className="import-save-bar"><div className="import-save-status"><span>{chosen.length} report{chosen.length===1?'':'s'} selected for saving</span>{readiness.reasons.length>0&&<button className="text-button" onClick={()=>document.getElementById('import-save-requirements')?.scrollIntoView({block:'start',behavior:'smooth'})}>See what’s needed to save</button>}</div><Button disabled={!canSave} aria-describedby={readiness.reasons.length?'import-save-requirements':undefined} onClick={save}>Save {chosen.length} reviewed report{chosen.length===1?'':'s'}</Button></div>
     </section>}
   </DialogContent></Dialog>;
 }

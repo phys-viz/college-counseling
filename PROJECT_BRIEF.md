@@ -20,6 +20,7 @@ The local reproducible seed contains **526 reports across 31 schools**, spanning
 - Searchable school controls carry library selections into Trends. Trend settings persist across tabs within the current page session.
 - Add school data discovers reports from an archive page or direct PDF URL. The browser extracts text/form answers with PDF.js, presents editable drafts, and saves only after review. Existing school/year records require an explicit replacement choice.
 - Archive discovery uses CDS link evidence and heading hierarchy, with generic/uncertain content links kept under Other PDF links and excluded from Select all. PDF content is screened before drafts are created; unrecognized files are named in skipped notices, while scans/download/layout failures retain errors. See `lib/pdf-report-screening.ts` and `scripts/check-source-screening*.mjs`. Classification is conservative and does not audit numbers or add OCR.
+- Save blockers are explained by `lib/import-readiness.ts`; Exclude saved reports avoids replacement when adding missing years. Cohort mismatches have an explicit archive-year review action that preserves source text. Dickinson 2024's two-residency table is supported by the shared parser; its 2019 report has a stale C1 year requiring review. See `scripts/check-dickinson-save*.mjs` and source fixtures under `scripts/fixtures/dickinson/`. These checks do not import historical Dickinson records into production.
 
 ## Architecture and code map
 

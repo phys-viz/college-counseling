@@ -1,0 +1,225 @@
+{
+  "source_url": "https://www.dickinson.edu/download/downloads/id/17136/cds_2024-25.pdf",
+  "sha256": "efac2893255bdc13acfda7ec121888ae87c57bbcdcee2e71302d3c176b8b5653",
+  "year": 2024,
+  "physical_page": 8,
+  "expected": {
+    "applicants": 7258,
+    "admitted": 3055,
+    "enrolled": 646
+  },
+  "review": "Visually verified physical page 8: overall totals independently match In-State plus Out-of-State. Unfilled gender/status cells remain missing.",
+  "pages": [
+    {
+      "page": 8,
+      "text": "C1-C2: Applications\nC1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students\nwho applied, were admitted, and enrolled (full- or part-time) in Fall 2024.\n• Include early decision, early action, and students who began studies during summer in this\ncohort\n• Applicants should include only those students who fulfilled the requirements for consideration for\nadmission (i.e., who completed actionable applications) and who have been notified of one of the\nfollowing actions: admission, non-admission, placement on waiting list, or application withdrawn\n(by\napplicant or institution).\n• Since the total may include students who did not provide gender data, the detail need not sum to\nthe total.\n• If your institution collects and reports non-binary gender data, please use the \"Another Gender\"\ncategory.\n• Note that recent high school graduates and other students without prior postsecondary\nexperience will still be considered \"first-time students\" for fall enrollment reporting purposes even if\nthey enrolled in the summer prior to fall enrollment.\n• Provide numbers of students for each of the following categories as of the institution’s official fall\nreporting date or as of October 15, 2024.\nFirst-Time, First-Year Student Applicants Total\nTotal first-time, first-year men who applied 3036\nTotal first-time, first-year women who applied 4218\nTotal first-time, first-year another gender who applied 4\nTotal first-time, first-year unknown gender who applied\nFirst-Time, First-Year Student Admits Total\nTotal first-time, first-year men who were admitted 1143\nTotal first-time, first-year women who were admitted 1910\nTotal first-time, first-year another gender who were admitted 2\nTotal first-time, first-year unknown gender who were admitted\nFirst-Time, First-Year Student Enrollees by Status Total\nTotal full-time, first-time, first-year men who enrolled 268\nTotal part-time, first-time, first-year men who enrolled\nTotal full-time, first-time, first-year women who enrolled 378\nTotal part-time, first-time, first-year women who enrolled\nTotal full-time, first-time, first-year another gender who enrolled\nTotal part-time, first-time, first-year another gender who enrolled\nTotal full-time, first-time, first-year unknown gender who enrolled\nTotal part-time, first-time, first-year unknown gender who enrolled\nIf available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2024\nPlease report based on known physical address at time of application.\nFirst-Time, First-Year Student Applicants Total In-State Out-of-State\nTotal first-time, first-year who applied 7258 1391 5867\nTotal first-time, first-year who were admitted 3055 709 2346\nTotal first-time, first-year who enrolled 646 170 476\nC2 First-time, first-year wait-listed students\nStudents who met admission requirements but whose final admission was contingent on space\navailability\nYes No\nDo you have a policy of placing students on a waiting list? X\nIf yes, please answer the questions below for Fall 2024 admission\nCDS-C Page 8",
+      "lines": [
+        {
+          "text": "C1-C2: Applications",
+          "words": []
+        },
+        {
+          "text": "C1 First-time, first-year students: Provide the number of degree-seeking, first-time, first-year students",
+          "words": []
+        },
+        {
+          "text": "who applied, were admitted, and enrolled (full- or part-time) in Fall 2024.",
+          "words": []
+        },
+        {
+          "text": "• Include early decision, early action, and students who began studies during summer in this",
+          "words": []
+        },
+        {
+          "text": "cohort",
+          "words": []
+        },
+        {
+          "text": "• Applicants should include only those students who fulfilled the requirements for consideration for",
+          "words": []
+        },
+        {
+          "text": "admission (i.e., who completed actionable applications) and who have been notified of one of the",
+          "words": []
+        },
+        {
+          "text": "following actions: admission, non-admission, placement on waiting list, or application withdrawn",
+          "words": []
+        },
+        {
+          "text": "(by",
+          "words": []
+        },
+        {
+          "text": "applicant or institution).",
+          "words": []
+        },
+        {
+          "text": "• Since the total may include students who did not provide gender data, the detail need not sum to",
+          "words": []
+        },
+        {
+          "text": "the total.",
+          "words": []
+        },
+        {
+          "text": "• If your institution collects and reports non-binary gender data, please use the \"Another Gender\"",
+          "words": []
+        },
+        {
+          "text": "category.",
+          "words": []
+        },
+        {
+          "text": "• Note that recent high school graduates and other students without prior postsecondary",
+          "words": []
+        },
+        {
+          "text": "experience will still be considered \"first-time students\" for fall enrollment reporting purposes even if",
+          "words": []
+        },
+        {
+          "text": "they enrolled in the summer prior to fall enrollment.",
+          "words": []
+        },
+        {
+          "text": "• Provide numbers of students for each of the following categories as of the institution’s official fall",
+          "words": []
+        },
+        {
+          "text": "reporting date or as of October 15, 2024.",
+          "words": []
+        },
+        {
+          "text": "First-Time, First-Year Student Applicants Total",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year men who applied 3036",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year women who applied 4218",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year another gender who applied 4",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year unknown gender who applied",
+          "words": []
+        },
+        {
+          "text": "First-Time, First-Year Student Admits Total",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year men who were admitted 1143",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year women who were admitted 1910",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year another gender who were admitted 2",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year unknown gender who were admitted",
+          "words": []
+        },
+        {
+          "text": "First-Time, First-Year Student Enrollees by Status Total",
+          "words": []
+        },
+        {
+          "text": "Total full-time, first-time, first-year men who enrolled 268",
+          "words": []
+        },
+        {
+          "text": "Total part-time, first-time, first-year men who enrolled",
+          "words": []
+        },
+        {
+          "text": "Total full-time, first-time, first-year women who enrolled 378",
+          "words": []
+        },
+        {
+          "text": "Total part-time, first-time, first-year women who enrolled",
+          "words": []
+        },
+        {
+          "text": "Total full-time, first-time, first-year another gender who enrolled",
+          "words": []
+        },
+        {
+          "text": "Total part-time, first-time, first-year another gender who enrolled",
+          "words": []
+        },
+        {
+          "text": "Total full-time, first-time, first-year unknown gender who enrolled",
+          "words": []
+        },
+        {
+          "text": "Total part-time, first-time, first-year unknown gender who enrolled",
+          "words": []
+        },
+        {
+          "text": "If available, please provide residency breakdowns for total applicants, admits, and enrolled students: Fall 2024",
+          "words": []
+        },
+        {
+          "text": "Please report based on known physical address at time of application.",
+          "words": []
+        },
+        {
+          "text": "First-Time, First-Year Student Applicants Total In-State Out-of-State",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year who applied 7258 1391 5867",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year who were admitted 3055 709 2346",
+          "words": []
+        },
+        {
+          "text": "Total first-time, first-year who enrolled 646 170 476",
+          "words": []
+        },
+        {
+          "text": "C2 First-time, first-year wait-listed students",
+          "words": []
+        },
+        {
+          "text": "Students who met admission requirements but whose final admission was contingent on space",
+          "words": []
+        },
+        {
+          "text": "availability",
+          "words": []
+        },
+        {
+          "text": "Yes No",
+          "words": []
+        },
+        {
+          "text": "Do you have a policy of placing students on a waiting list? X",
+          "words": []
+        },
+        {
+          "text": "If yes, please answer the questions below for Fall 2024 admission",
+          "words": []
+        },
+        {
+          "text": "CDS-C Page 8",
+          "words": []
+        }
+      ],
+      "form_fields": []
+    }
+  ]
+}

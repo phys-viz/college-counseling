@@ -1,0 +1,258 @@
+{
+  "source_url": "https://www.dickinson.edu/download/downloads/id/11620/cds_2019_2020_tuition_update_051920.pdf",
+  "sha256": "64326e5c68fe62b988fcb6b61b50ac61de5f4acf51d49da68b5d31bdfc05d7ff",
+  "archive_year": 2019,
+  "printed_c1_year": 2018,
+  "physical_page": 7,
+  "expected": {
+    "applicants": 6426,
+    "admitted": 2574,
+    "enrolled": 453
+  },
+  "review": "Cover and archive identify 2019-2020; physical page 7 prints Fall 2018 in C1 and C2. Verified counts sum 2689+3737, 1034+1540, and 205+248. The parser retains the printed cohort with a mismatch warning; changing to the archive cohort is an explicit review action and preserves the original text.",
+  "pages": [
+    {
+      "page": 7,
+      "text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-\nyear students who applied, were admitted, and enrolled (full- or part-time) in Fall 2018. Include\nearly decision, early action, and students who began studies during summer in this cohort.\nApplicants should include only those students who fulfilled the requirements for consideration for\nadmission (i.e., who completed actionable applications) and who have been notified of one of the\nfollowing actions: admission, nonadmission, placement on waiting list, or application withdrawn\n(by applicant or institution). Admitted applicants should include wait-listed students who were\nsubsequently offered admission.\nC1 Total first-time, first-year (freshman) men who applied 2689\nC1 Total first-time, first-year (freshman) women who applied 3737\nC1 Total first-time, first-year (freshman) men who were admitted 1034\nC1 Total first-time, first-year (freshman) women who were admitted 1540\nC1 Total full-time, first-time, first-year (freshman) men who enrolled 205\nC1 Total part-time, first-time, first-year (freshman) men who enrolled 0\nC1 Total full-time, first-time, first-year (freshman) women who enrolled 248\nC1 Total part-time, first-time, first-year (freshman) women who enrolled 0\nC2 1034\nYes No\nC2 Do you have a policy of placing students on a waiting list? X\nC2 If yes, please answer the questions below for Fall 2018 admissions:\nC2 Number of qualified applicants offered a place on waiting list 762\nC2 Number accepting a place on the waiting list 233\nC2 Number of wait-listed students admitted 25\nYes No\nC2 Is your waiting list ranked? X\nC2 If yes, do you release that information to students?\nC2 Do you release that information to school counselors?\nAdmission Requirements\nC3 High school completion requirement\nC3 High school diploma is required and GED is\nX\naccepted\nC3 High school diploma is required and GED is not\naccepted\nC3 High school diploma or equivalent is not required\nC4 Does your institution require or recommend a general college-preparatory program for degree-\nseeking students?\nC4 Require\nC4 Recommend X\nC4 Neither require nor recommend\nC5 Distribution of high school units required and/or recommended. Specify the distribution of academic\nhigh school course units required and/or recommended of all or most degree-seeking students using\nCarnegie units (one unit equals one year of study or its equivalent). If you use a different system for\ncalculating units, please convert.\nC5 Units Units\nRequired Recommended\nC5 Total academic units 16\nC5 English 4\nC5 Mathematics 3\nC5 Science 3\nC5 Of these, units that must be\n2\nlab\nC5 Foreign language 2 3\nC5 Social studies 2\nC5 History\nC5 Academic electives 2\nC5 Computer Science\nCDS-C Page 7",
+      "lines": [
+        {
+          "text": "C1 First-time, first-year, (freshmen) students: Provide the number of degree-seeking, first-time, first-",
+          "words": []
+        },
+        {
+          "text": "year students who applied, were admitted, and enrolled (full- or part-time) in Fall 2018. Include",
+          "words": []
+        },
+        {
+          "text": "early decision, early action, and students who began studies during summer in this cohort.",
+          "words": []
+        },
+        {
+          "text": "Applicants should include only those students who fulfilled the requirements for consideration for",
+          "words": []
+        },
+        {
+          "text": "admission (i.e., who completed actionable applications) and who have been notified of one of the",
+          "words": []
+        },
+        {
+          "text": "following actions: admission, nonadmission, placement on waiting list, or application withdrawn",
+          "words": []
+        },
+        {
+          "text": "(by applicant or institution). Admitted applicants should include wait-listed students who were",
+          "words": []
+        },
+        {
+          "text": "subsequently offered admission.",
+          "words": []
+        },
+        {
+          "text": "C1 Total first-time, first-year (freshman) men who applied 2689",
+          "words": []
+        },
+        {
+          "text": "C1 Total first-time, first-year (freshman) women who applied 3737",
+          "words": []
+        },
+        {
+          "text": "C1 Total first-time, first-year (freshman) men who were admitted 1034",
+          "words": []
+        },
+        {
+          "text": "C1 Total first-time, first-year (freshman) women who were admitted 1540",
+          "words": []
+        },
+        {
+          "text": "C1 Total full-time, first-time, first-year (freshman) men who enrolled 205",
+          "words": []
+        },
+        {
+          "text": "C1 Total part-time, first-time, first-year (freshman) men who enrolled 0",
+          "words": []
+        },
+        {
+          "text": "C1 Total full-time, first-time, first-year (freshman) women who enrolled 248",
+          "words": []
+        },
+        {
+          "text": "C1 Total part-time, first-time, first-year (freshman) women who enrolled 0",
+          "words": []
+        },
+        {
+          "text": "C2 1034",
+          "words": []
+        },
+        {
+          "text": "Yes No",
+          "words": []
+        },
+        {
+          "text": "C2 Do you have a policy of placing students on a waiting list? X",
+          "words": []
+        },
+        {
+          "text": "C2 If yes, please answer the questions below for Fall 2018 admissions:",
+          "words": []
+        },
+        {
+          "text": "C2 Number of qualified applicants offered a place on waiting list 762",
+          "words": []
+        },
+        {
+          "text": "C2 Number accepting a place on the waiting list 233",
+          "words": []
+        },
+        {
+          "text": "C2 Number of wait-listed students admitted 25",
+          "words": []
+        },
+        {
+          "text": "Yes No",
+          "words": []
+        },
+        {
+          "text": "C2 Is your waiting list ranked? X",
+          "words": []
+        },
+        {
+          "text": "C2 If yes, do you release that information to students?",
+          "words": []
+        },
+        {
+          "text": "C2 Do you release that information to school counselors?",
+          "words": []
+        },
+        {
+          "text": "Admission Requirements",
+          "words": []
+        },
+        {
+          "text": "C3 High school completion requirement",
+          "words": []
+        },
+        {
+          "text": "C3 High school diploma is required and GED is",
+          "words": []
+        },
+        {
+          "text": "X",
+          "words": []
+        },
+        {
+          "text": "accepted",
+          "words": []
+        },
+        {
+          "text": "C3 High school diploma is required and GED is not",
+          "words": []
+        },
+        {
+          "text": "accepted",
+          "words": []
+        },
+        {
+          "text": "C3 High school diploma or equivalent is not required",
+          "words": []
+        },
+        {
+          "text": "C4 Does your institution require or recommend a general college-preparatory program for degree-",
+          "words": []
+        },
+        {
+          "text": "seeking students?",
+          "words": []
+        },
+        {
+          "text": "C4 Require",
+          "words": []
+        },
+        {
+          "text": "C4 Recommend X",
+          "words": []
+        },
+        {
+          "text": "C4 Neither require nor recommend",
+          "words": []
+        },
+        {
+          "text": "C5 Distribution of high school units required and/or recommended. Specify the distribution of academic",
+          "words": []
+        },
+        {
+          "text": "high school course units required and/or recommended of all or most degree-seeking students using",
+          "words": []
+        },
+        {
+          "text": "Carnegie units (one unit equals one year of study or its equivalent). If you use a different system for",
+          "words": []
+        },
+        {
+          "text": "calculating units, please convert.",
+          "words": []
+        },
+        {
+          "text": "C5 Units Units",
+          "words": []
+        },
+        {
+          "text": "Required Recommended",
+          "words": []
+        },
+        {
+          "text": "C5 Total academic units 16",
+          "words": []
+        },
+        {
+          "text": "C5 English 4",
+          "words": []
+        },
+        {
+          "text": "C5 Mathematics 3",
+          "words": []
+        },
+        {
+          "text": "C5 Science 3",
+          "words": []
+        },
+        {
+          "text": "C5 Of these, units that must be",
+          "words": []
+        },
+        {
+          "text": "2",
+          "words": []
+        },
+        {
+          "text": "lab",
+          "words": []
+        },
+        {
+          "text": "C5 Foreign language 2 3",
+          "words": []
+        },
+        {
+          "text": "C5 Social studies 2",
+          "words": []
+        },
+        {
+          "text": "C5 History",
+          "words": []
+        },
+        {
+          "text": "C5 Academic electives 2",
+          "words": []
+        },
+        {
+          "text": "C5 Computer Science",
+          "words": []
+        },
+        {
+          "text": "CDS-C Page 7",
+          "words": []
+        }
+      ],
+      "form_fields": []
+    }
+  ]
+}

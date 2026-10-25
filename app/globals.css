@@ -378,6 +378,12 @@ textarea { width:100%; border:1px solid var(--border); border-radius:6px; paddin
 .import-source-notes p+p { margin-top:6px; }
 .import-approved { display:flex; align-items:center; gap:10px; font-size:.875rem; margin:16px 0; }
 .import-approved [data-slot=checkbox] { flex-shrink:0; }
+.import-save-requirements,.import-year-warning { background:#fff8ec; border:1px solid #ead5ad; border-radius:8px; padding:14px; margin:16px 0; font-size:.875rem; overflow-wrap:anywhere; }
+.import-save-requirements h4 { font-weight:700; margin:0 0 8px; }
+.import-save-requirements ul { padding-left:20px; margin:0 0 12px; }
+.import-save-requirements li { margin:6px 0; }
+.import-save-status { display:grid; gap:6px; }
+.import-year-warning p { margin:0 0 12px; }
 .import-replacement-note { color:#855321; font-size:.875rem; margin:16px 0; }
 .import-save-bar { display:flex; align-items:center; justify-content:space-between; gap:14px; position:sticky; bottom:-28px; background:#fff; border-top:1px solid var(--border); padding:18px 0; font-size:.875rem; }
 .import-factor-review>label { display:flex; align-items:center; justify-content:space-between; gap:15px; border-bottom:1px solid var(--border); padding:10px 0; }
