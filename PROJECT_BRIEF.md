@@ -55,7 +55,7 @@ Reads apply source-hash-pinned gender and score enrichment through `lib/saved-ge
 
 ## Limits and known source issues
 
-The website importer supports selectable-text PDFs and filled PDF forms, with a 25-report selection limit, 25 MB download limit, and 200-page limit. OCR, spreadsheets, Word, and historical HTML extraction remain offline adapters. Some official servers block fetching; archived institution-authored originals retain explicit provenance. Not every extracted field has been manually audited.
+The website importer supports selectable-text PDFs, filled PDF forms and .xlsx CDS workbooks, with a 25-report selection limit, 25 MB download limit, and 200-page limit. OCR, Excel 97–2003 (.xls), Word, and historical HTML extraction remain offline adapters. Some official servers block fetching; archived institution-authored originals retain explicit provenance. Not every extracted field has been manually audited.
 
 Examples requiring care: Cornell 2022 uses a companion Section C spreadsheet; Clemson 2021 uses a workbook and 2025 requires OCR/visual review; NYU 2021/2025 and VT 2022/2024/2025 use workbook adapters. VT 2023 and TCNJ 2023 have contradictory breakdowns; Clemson 2016 gender enrollment labels are suspect. Existing documentation flags saved Harvard/Penn State 2025 headline totals for explicit review against source gender totals; their current live state was not verified. See source review manifests and individual report warnings before relying on disputed figures.
 

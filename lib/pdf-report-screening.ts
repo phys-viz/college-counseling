@@ -2,8 +2,8 @@ import type {SourcePage} from './report-types';
 
 type Page=Pick<SourcePage,'text'|'form_fields'>;
 export class UnrecognizedReportError extends Error {
-  constructor() {
-    super('No recognizable CDS content found. Open this PDF to check whether it is an unrelated file or an unsupported report.');
+  constructor(message='No recognizable CDS content found. Open this PDF to check whether it is an unrelated file or an unsupported report.') {
+    super(message);
     this.name='UnrecognizedReportError';
   }
 }

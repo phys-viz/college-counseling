@@ -1,11 +1,15 @@
 import {parseHTML} from 'linkedom/worker';
 import {fetchPublicSource,sourceURL} from './public-source';
 import {sourceYear,type SourceDiscovery,type SourceDocument} from './source-types';
+import {isLegacyWorkbook,isWorkbookArchive} from './xlsx';
 const clean=(s:string)=>s.replace(/\s+/g,' ').trim();
 // A filename underscore is a separator even though it is a regex word character.
 // Also recognize historical CDS+year filenames, without matching names like cdsmith.
 const cdsLabel=/common[\s_-]*data[\s_-]*set|(?:^|[^a-z0-9])cds(?=$|[^a-z0-9]|(?:19|20)\d{2})/i;
-const workbook=/\.(?:xlsx?|xlsm)(?:[?#]|$)/i;
+// .xlsx/.xlsm workbooks are extracted; Excel 97–2003 .xls files are not.
+const workbook=/\.(?:xlsx|xlsm)(?:[?#]|$)/i;
+const legacyWorkbook=/\.xls(?:[?#]|$)/i;
+const filename=(url:string)=>{const name=new URL(url).pathname.split('/').pop()??'';try{return decodeURIComponent(name);}catch{return name;}};
 const wordDocument=/\.docx(?:[?#]|$)/i;
 const pageFurniture='nav,footer,aside,[role="navigation"],[role="contentinfo"],[role="complementary"]';
 const unrelatedLabel=/\b(?:privacy|non[- ]?discrimination|harassment|accessibility|handbook|calendar|IPEDS|feedback|security|crime|meeting|minutes)\b/i;
@@ -18,8 +22,10 @@ function linkedYear(url:URL,label:string,accessibleLabel:string,context:string) 
 }
 export async function discoverSources(value:string,signal?:AbortSignal):Promise<SourceDiscovery> {
   const first=await fetchPublicSource(value,25_000_000,signal);
-  if(new TextDecoder().decode(first.bytes.slice(0,5))==='%PDF-')return {index_url:first.url,title:'Common Data Set PDF',documents:[{url:first.url,title:decodeURIComponent(new URL(first.url).pathname.split('/').pop()??'PDF report'),year:sourceYear(first.url)}],notes:[]};
-  if(workbook.test(first.url))return {index_url:first.url,title:'Common Data Set spreadsheet',documents:[],notes:['This source is an Excel spreadsheet. Automatic extraction currently supports PDFs; use a reviewed source adapter or JSON import for spreadsheet data.']};
+  if(new TextDecoder().decode(first.bytes.slice(0,5))==='%PDF-')return {index_url:first.url,title:'Common Data Set PDF',documents:[{url:first.url,title:filename(first.url)||'PDF report',year:sourceYear(first.url)}],notes:[]};
+  if(isWorkbookArchive(first.bytes))return {index_url:first.url,title:'Common Data Set spreadsheet',documents:[{url:first.url,title:filename(first.url)||'Spreadsheet report',year:sourceYear(first.url),format:'xlsx'}],notes:[]};
+  if(isLegacyWorkbook(first.bytes)||legacyWorkbook.test(first.url))return {index_url:first.url,title:'Common Data Set spreadsheet',documents:[],notes:['This source is an Excel 97–2003 (.xls) workbook. Automatic extraction supports PDFs and .xlsx workbooks; use a reviewed source adapter or JSON import for .xls data.']};
+  if(workbook.test(first.url))return {index_url:first.url,title:'Common Data Set spreadsheet',documents:[],notes:['This link did not return a readable Excel workbook. Open it to check the download, or paste the archive page instead.']};
   if(wordDocument.test(first.url))return {index_url:first.url,title:'Common Data Set Word document',documents:[],notes:['This source is a Word document. Automatic extraction currently supports PDFs; use a reviewed source adapter or JSON import for Word data.']};
   if(first.bytes.length>3_000_000)throw new Error('The webpage is too large. Use the Common Data Set archive page or a direct PDF link.');
   const documents=new Map<string,SourceDocument>(),otherDocuments=new Map<string,SourceDocument>(),pages:string[]=[];
@@ -57,12 +63,12 @@ export async function discoverSources(value:string,signal?:AbortSignal):Promise<
       const year=linkedYear(url,label,accessibleLabel,context)??(inCDSSection&&archiveHeading?sourceYear(nearest):null);
       const relevant=explicit||!furniture&&inCDSSection&&archiveHeading&&year!==null&&!unrelatedLabel.test(label+' '+accessibleLabel);
       if(relevant&&/\bappendix\b/i.test(label+' '+accessibleLabel))continue;
-      if(workbook.test(url.href)) {if(relevant)spreadsheets.add(url.href);continue;}
+      if(legacyWorkbook.test(url.href)) {if(relevant)spreadsheets.add(url.href);continue;}
       if(wordDocument.test(url.href)) {if(relevant)wordDocuments.add(url.href);continue;}
-      if(relevant&&(/^(?:drive\.google\.com|acrobat\.adobe\.com)$/.test(url.hostname)||/(?:^|\.)box\.com$/.test(url.hostname)&&!/\.pdf(?:[?#]|$)/i.test(url.href))) {viewers.add(url.href);continue;}
+      if(relevant&&(/^(?:drive\.google\.com|acrobat\.adobe\.com)$/.test(url.hostname)||/(?:^|\.)box\.com$/.test(url.hostname)&&!/\.(?:pdf|xlsx|xlsm)(?:[?#]|$)/i.test(url.href))) {viewers.add(url.href);continue;}
       const publicDownload=relevant&&year!==null&&/\/(?:media\/\d+\/)?download\/?$/i.test(url.pathname);
-      if(/\.pdf(?:[?#]|$)/i.test(url.href)||publicDownload||/\bpdf\b/i.test(label)&&/common.?data|\bcds\b/i.test(context+' '+url.href)) {
-        const candidate={url:url.href,title:accessibleLabel||label||context||filename||'PDF report',year};
+      if(/\.pdf(?:[?#]|$)/i.test(url.href)||workbook.test(url.href)||publicDownload||/\bpdf\b/i.test(label)&&/common.?data|\bcds\b/i.test(context+' '+url.href)) {
+        const candidate:SourceDocument={url:url.href,title:accessibleLabel||label||context||filename||(workbook.test(url.href)?'Spreadsheet report':'PDF report'),year,...workbook.test(url.href)?{format:'xlsx' as const}:{}};
         if(relevant){documents.set(url.href,candidate);otherDocuments.delete(url.href);}
         // Ambiguous content links remain recoverable, but never join Select all.
         else if(!furniture&&!unrelatedLabel.test(label+' '+accessibleLabel)&&!documents.has(url.href))otherDocuments.set(url.href,candidate);
@@ -81,10 +87,10 @@ export async function discoverSources(value:string,signal?:AbortSignal):Promise<
     }));
     if(results.some(r=>r.status==='rejected'))notes.push('Some archive pages could not be opened. You can try their direct PDF links.');
   }
-  if(spreadsheets.size)notes.push(`${spreadsheets.size} linked report${spreadsheets.size===1?' uses':'s use'} Excel spreadsheets. Automatic extraction currently supports PDFs; spreadsheets require a reviewed source adapter or JSON import.`);
+  if(spreadsheets.size)notes.push(`${spreadsheets.size} linked report${spreadsheets.size===1?' uses an Excel 97–2003 (.xls) workbook':'s use Excel 97–2003 (.xls) workbooks'}. Automatic extraction supports PDFs and .xlsx workbooks; .xls files require a reviewed source adapter or JSON import.`);
   if(wordDocuments.size)notes.push(`${wordDocuments.size} linked report${wordDocuments.size===1?' uses':'s use'} Word documents. Automatic extraction currently supports PDFs; Word documents require a reviewed source adapter or JSON import.`);
   if(viewers.size)notes.push('Some reports are linked through a hosted document viewer or folder. Open the archive to obtain a public PDF download link, then paste that link here.');
-  if(nonPDF)notes.push(`${nonPDF} older archive entries use webpages rather than PDFs. This importer extracts PDF reports.`);
+  if(nonPDF)notes.push(`${nonPDF} older archive entries use webpages rather than PDFs. This importer extracts PDF and .xlsx reports.`);
   const isSection=(d:SourceDocument)=>/^(?:Section\s+)?[A-J][.\s-]/i.test(d.title)||/\bCDS[-_ ]\d{4}[-_ ]\d{4}[-_ ][A-J](?:[-_ ]updated)?\.pdf(?:[?#]|$)/i.test(d.url);
   const completeYears=new Set([...documents.values()].filter(d=>!isSection(d)&&d.year!==null).map(d=>d.year));
   const all=[...documents.values()].filter(d=>!isSection(d)||d.year===null||!completeYears.has(d.year)).sort((a,b)=>(b.year??0)-(a.year??0));

@@ -22,6 +22,12 @@ export function canonicalC1(lines:Line[]):Line[]{
    if(/\bIN-\b|\bIN-\s/i.test(header)&&/\bOUT-/i.test(header)&&/\bSTATE\b/i.test(header))text='In-State Out-of-State International Total';
   }
   text=text.replace(/^subsequently offered admission\.\s+(?=Total first[- ]time, first[- ]year)/i,'');
+  // Publishers can add a bare "Unknown 47" row beneath a men/women pair. It is
+  // that verb's unknown-gender count; omitting it would undercount the total.
+  // Enrolled rows lack a full/part-time status, so their sum stays unconfirmed.
+  const bare=text.match(/^(?:Unknown(?:\s+(?:gender|sex))?|Gender unknown)\s*:?\s+(\d[\d,]*)$/i),above=lines[i-1];
+  const pairVerb=above?.page===l.page?/^Total\b.*\b(?:men|women|males?|females?)\b.*\b(applied|admitted|enrolled)\b/i.exec(above.text)?.[1]:undefined;
+  if(bare&&pairVerb)text=`Total first-time, first-year unknown gender who ${pairVerb.toLowerCase()} ${bare[1]}`;
   if(!/^Total\b/i.test(text)&&/First.Time, First.Year.*\b(?:In-State|Out-of-State|International|Unknown)(?:\s+Total)?\s*$/i.test(text)){
    const regions=text.match(/\b(?:In-State|Out-of-State|International|Unknown)\b/gi)??[];
    region=regions.length===1?regions[0]:'';

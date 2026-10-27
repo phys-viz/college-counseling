@@ -147,7 +147,7 @@ export function enrichMetrics(r:Report,pages:PDFPage[]):Report {
  const aidChoice=fields.get('ACAD_YR');if(aidChoice&&/^\d{4}$/.test(aidChoice.value.trim()))put('aid_year',`${aidChoice.value.trim()} (source form selection)`,aidChoice.page,'PDF form field ACAD_YR','H1');
  // Simple text layouts: use complete labeled rows and explicit totals only.
  for(const row of block('D',2)){const m=row.text.match(/^Total\s+([\d,]+)\s+([\d,]+)\s+([\d,]+)\s*$/i);if(m)for(const [i,key] of ['transfer_applicants','transfer_admitted','transfer_enrolled'].entries())put(key,numeric(m[i+1]),row.page,'PDF total row','D2');}
- for(const row of lines){const m=row.text.match(/Student to Faculty ratio\s*:?\s*(\d+(?:\.\d+)?)\s+to\s+1/i);if(m)put('student_faculty_ratio',Number(m[1]),row.page,'PDF text','I2');}
+ for(const row of lines){const m=row.text.match(/Student to Faculty ratio\s*:?\s*(\d+(?:\.\d+)?)\s+to\s+1(?![\d.])/i);if(m)put('student_faculty_ratio',Number(m[1]),row.page,'PDF text','I2');}
  const i3=block('I',3).map(l=>({...l,text:l.text.replace(/^I[-.]?3\s+/i,'')}));for(let i=0;i<i3.length;i++){const row=i3[i];let data=row.text.replace(/^CLASS SECTIONS\s+/i,'');
   if(/^CLASS$/i.test(row.text)&&i3[i+2]?.text==='SECTIONS')data=i3[i+1].text;
   else if(/^CLASS 2-9\b/i.test(row.text)&&/^SECTIONS\s+\d/i.test(i3[i+1]?.text??''))data=i3[i+1].text.replace(/^SECTIONS\s+/i,'');

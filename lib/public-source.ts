@@ -30,7 +30,7 @@ export async function fetchPublicSource(value:string,maxBytes:number,signal?:Abo
   try {
     for(let redirects=0;redirects<=5;redirects++) {
       await checkDNS(url.hostname,controller.signal);
-      const r=await fetch(url.href,{redirect:'manual',signal:controller.signal,headers:{Accept:'text/html,application/pdf;q=0.9'}});
+      const r=await fetch(url.href,{redirect:'manual',signal:controller.signal,headers:{Accept:'text/html,application/pdf;q=0.9,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;q=0.9'}});
       if([301,302,303,307,308].includes(r.status)) {
         const location=r.headers.get('location');await r.body?.cancel();if(!location)throw new Error('The source redirected without a document link.');
         url=sourceURL(new URL(location,url).href);continue;
