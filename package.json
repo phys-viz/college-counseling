@@ -11,6 +11,9 @@
     "build": "node scripts/run-framework.mjs build",
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "test": "node scripts/run-checks.mjs offline",
+    "test:browser": "node scripts/run-checks.mjs browser",
+    "test:all": "node scripts/run-checks.mjs all",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

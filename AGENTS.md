@@ -10,7 +10,7 @@ The user has explicitly requested that adding school data through the assistant 
 - Use a scoped adapter when a format requires separate handling. Scope exceptional behavior by documented source structure and, where necessary, institution and report version. Keep extraction rules separate from manually reviewed values for a particular report.
 - Carry reusable discoveries from offline adapters into the shared importer when its runtime can support them reliably. Explicitly document remaining gaps, such as scanned PDFs, .xls workbooks, image-only factor marks, or contradictory publisher figures. Do not imply that a corrected database record proves automatic extraction supports that layout.
 - For each substantive parser change, add a regression fixture or check showing the source pattern and independently verified expected results. Cover the ambiguity that caused the failure, not just the new implementation. Preserve source URLs, hashes, and physical page evidence where available.
-- Run the affected checks and representative existing-school extraction checks. A new-school improvement must preserve established Cornell, USC, Clemson, and W&L behavior where supported.
+- Run `npm test` (all offline checks) and, for UI or importer changes, `npm run test:browser`; add new checks as `scripts/check-*.mjs` so the runner includes them. A new-school improvement must preserve established Cornell, USC, Clemson, and W&L behavior where supported.
 - Publish changes that affect the hosted importer through the existing Sites workflow, preserving the current shared audience. Report which improvements now benefit the website importer and which remain source-adapter or manual-review work.
 
 ## Version number
