@@ -77,7 +77,7 @@ node scripts/check-source-fetch.mjs
 node scripts/check-website-import.mjs
 ```
 
-Apply pending local migrations once in order; do not replay already applied migrations. Sites applies production migrations during publication. The first request seeds the initial records idempotently; seeds never overwrite imported edits. Browser checks in `scripts/check-ui.mjs` cover UTF-8 rendering, school browsing, all 27 years, source links, year switching, comparisons, CSV downloads, search states, and mobile overflow. They use Playwright installed under ignored `.sites-runtime/browser` and the local Windows Chrome executable. WebMCP validation still needs a supported browser context.
+Apply pending local migrations once in order; do not replay already applied migrations. Sites applies production migrations during publication. In local development only, the first request seeds a local database from `data/reports.json` idempotently; seeds never overwrite imported edits. Production builds exclude the seed: hosted records live only in the hosted D1, so records prepared offline in `data/reports.json` no longer reach the live site by publishing and must be imported through the website. Browser checks in `scripts/check-ui.mjs` cover UTF-8 rendering, school browsing, all 27 years, source links, year switching, comparisons, CSV downloads, search states, and mobile overflow. They use Playwright installed under ignored `.sites-runtime/browser` and the local Windows Chrome executable. WebMCP validation still needs a supported browser context.
 
 Import USC Columbia from its official archive (five PDFs and 21 Section C webpages):
 

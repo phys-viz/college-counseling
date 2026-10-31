@@ -21,7 +21,7 @@ registerHooks({resolve(specifier,context,next){
  if(specifier==='@/data/seed-payloads.json')return {url:'data:text/javascript,'+encodeURIComponent('export default '+JSON.stringify(packed)),shortCircuit:true};
  return next(specifier,context);
 }});
-const {ensureSeed}=await import('../lib/database.ts');
+const {ensureSeed}=await import('../lib/dev-seed.ts');
 const interrupted=ensureSeed();interrupted.catch(()=>{});
 try{
  await Promise.race([ensureSeed(),new Promise((_,reject)=>setTimeout(()=>reject(Error('A later request waited on canceled request I/O')),100))]);

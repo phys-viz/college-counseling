@@ -1,4 +1,4 @@
-import {database,ensureSeed} from '@/lib/database';
+import {database,ensureLocalSeed} from '@/lib/database';
 import {calculateTrendChanges,type TrendResults,type TrendReport} from '@/lib/trend-types';
 import type {Report} from '@/lib/report-types';
 import {deriveExtraMetrics} from '@/lib/extract-additional';
@@ -13,7 +13,7 @@ export async function GET(request:Request) {
     !params.has('from')||!params.has('to')||!Number.isInteger(from)||!Number.isInteger(to)||from<1900||to>2100||from>to)
     return Response.json({error:'Choose one or two schools and a valid year range between 1900 and 2100.'},{status:400});
   try {
-    await ensureSeed();
+    await ensureLocalSeed();
     const [result,schoolList]=await Promise.all([
       database().prepare(`SELECT payload FROM reports WHERE school_id IN (${schools.map(()=>'?').join(',')}) AND year BETWEEN ? AND ? ORDER BY year,school`).bind(...schools,Math.max(1900,from-4),to).all<{payload:string}>(),
       // Archive links must remain available even when the selected years have no reports.
