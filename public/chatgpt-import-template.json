@@ -1,0 +1,48 @@
+{
+  "atlas_import_version": 1,
+  "reports": [
+    {
+      "school_id": "example-university",
+      "school": "Example University",
+      "year": 2025,
+      "report_label": "2025–26",
+      "source_url": "https://example.edu/common-data-set.pdf",
+      "index_url": "https://example.edu/common-data-set",
+      "source_type": "pdf",
+      "sha256": "",
+      "metrics": {
+        "applicants": 10000,
+        "admitted": 2000,
+        "enrolled": 500
+      },
+      "evidence": {
+        "applicants": {
+          "section": "C1",
+          "page": 5,
+          "method": "Explicit overall total in C1; example only, replace with real source evidence"
+        },
+        "admitted": {
+          "section": "C1",
+          "page": 5,
+          "method": "Explicit overall total in C1; example only, replace with real source evidence"
+        },
+        "enrolled": {
+          "section": "C1",
+          "page": 5,
+          "method": "Explicit overall total in C1; example only, replace with real source evidence"
+        }
+      },
+      "factors": [],
+      "sections": [
+        {
+          "page": 5,
+          "text": "REPLACE with the original Section C source text. TEMPLATE ONLY: counts are examples, never import them.",
+          "form_fields": []
+        }
+      ],
+      "warnings": [
+        "TEMPLATE ONLY: replace every example value and link with the actual report."
+      ]
+    }
+  ]
+}

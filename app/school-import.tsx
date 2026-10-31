@@ -1,12 +1,12 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
-import {ExternalLink,FileSpreadsheet,FileText,Info,Search} from 'lucide-react';
+import {Download,ExternalLink,FileSpreadsheet,FileText,Info,Search,Upload} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Checkbox} from '@/components/ui/checkbox';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
-import type {Report} from '@/lib/report-types';
+import type {Report,SourcePage} from '@/lib/report-types';
 import {labels,format} from '@/lib/report-types';
 import {extraMetrics,metricSection,metricUnit} from '@/lib/metric-definitions';
 import type {SourceDiscovery,SourceDocument} from '@/lib/source-types';
@@ -16,6 +16,7 @@ import {extractPDF,factorNames} from '@/lib/extract-pdf';
 import {extractXLSX} from '@/lib/extract-xlsx';
 import {UnrecognizedReportError} from '@/lib/pdf-report-screening';
 import {importReadiness,missingHeadlineCounts} from '@/lib/import-readiness';
+import {chatGPTImportLimit,parseChatGPTImport} from '@/lib/chatgpt-import';
 
 type Draft={url:string;sourceTitle:string;archiveYear:number|null;report:Report;include:boolean;approved:boolean;saved:boolean;existing:boolean;error:string};
 type School={school_id:string;school:string};
@@ -25,8 +26,11 @@ const kind=(d:{format?:'xlsx'})=>d.format==='xlsx'?'spreadsheet':'PDF';
 const noun=(docs:{format?:'xlsx'}[])=>docs.every(d=>!d.format)?'PDF':docs.every(d=>d.format==='xlsx')?'spreadsheet':'file';
 const plural=(n:number,word:string)=>`${n} ${word}${n===1?'':'s'}`;
 const worksheet=(page:number)=>`CDS-${String.fromCharCode(64+page)}`;
-const pageLink=(r:Report,page:number)=>r.source_url+(r.source_type==='pdf'?`#page=${page}`:'');
-const pageName=(r:Report,page:number)=>r.source_type==='xlsx'?`worksheet ${worksheet(page)}`:`page ${page}`;
+const pageLink=(r:Report,page:number,s?:SourcePage)=>(s?.source_url??r.source_url)+((s?.source_type??r.source_type)==='pdf'?`#page=${page}`:'');
+const pageName=(r:Report,page:number,sourceURL=r.source_url)=>{
+  const s=[...r.sections,...r.additional_sections??[]].find(s=>s.page===page&&(s.source_url??r.source_url)===sourceURL);
+  return (s?.source_type??r.source_type)==='xlsx'?`worksheet ${s?.source_label??worksheet(page)}`:`page ${page}`;
+};
 const cleanName=(s:string)=>s.toLowerCase().replace(/\([^)]*\)/g,'').replace(/[^a-z0-9]/g,'');
 const slug=(s:string)=>s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,80);
 const head=['applicants','admitted','enrolled'];
@@ -34,14 +38,36 @@ const optional=['waitlist_offered','waitlist_accepted','waitlist_admitted','ed_a
 const textFields=['test_policy','rd_deadline','ed_deadline','ed_notification'];
 const sectionFor=metricSection;
 const extraGroups=[...new Set(Object.values(extraMetrics).map(d=>d.group))];
-const source=(r:Report,key?:string)=>r.source_url+(r.source_type==='pdf'&&(key?r.evidence[key]?.page:0)?`#page=${r.evidence[key!].page}`:'');
+const source=(r:Report,key?:string)=>{const e=key?r.evidence[key]:undefined;return (e?.source_url??r.source_url)+((e?.source_type??r.source_type)==='pdf'&&e?.page?`#page=${e.page}`:'');};
 
 export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:boolean;onOpenChange:(v:boolean)=>void;schools:School[];onSaved:()=>void}) {
+  const [method,setMethod]=useState<'website'|'chatgpt'>('website');
   const [url,setURL]=useState(''),[discovery,setDiscovery]=useState<SourceDiscovery|null>(null),[selected,setSelected]=useState<string[]>([]),[years,setYears]=useState<Record<string,string>>({});
   const [schoolName,setSchoolName]=useState(''),[target,setTarget]=useState('new'),[drafts,setDrafts]=useState<Draft[]>([]),[expanded,setExpanded]=useState<Record<string,boolean>>({});
-  const [busy,setBusy]=useState<'discover'|'extract'|'save'|null>(null),[progress,setProgress]=useState(''),[error,setError]=useState(''),[failures,setFailures]=useState<ImportNotice[]>([]),[skipped,setSkipped]=useState<ImportNotice[]>([]),[allowReplace,setAllowReplace]=useState(false);
+  const [busy,setBusy]=useState<'discover'|'extract'|'upload'|'save'|null>(null),[progress,setProgress]=useState(''),[error,setError]=useState(''),[failures,setFailures]=useState<ImportNotice[]>([]),[skipped,setSkipped]=useState<ImportNotice[]>([]),[allowReplace,setAllowReplace]=useState(false);
   const controller=useRef<AbortController|null>(null);const input=useRef<HTMLInputElement>(null);
   useEffect(()=>{if(!open)controller.current?.abort();return()=>{controller.current?.abort();};},[open]);
+  async function uploadJSON(file:File) {
+    setBusy('upload');setError('');setProgress('Checking the import file…');setDrafts([]);setDiscovery(null);setFailures([]);setSkipped([]);setExpanded({});setAllowReplace(false);setTarget('new');setSchoolName('');
+    const abort=new AbortController();controller.current=abort;
+    try {
+      if(file.size>chatGPTImportLimit)throw new Error('Import is too large (maximum 5 MB). Ask ChatGPT to split it into smaller files.');
+      const records=parseChatGPTImport(await file.text());
+      if(abort.signal.aborted)return;
+      const first=records[0],match=schools.find(s=>s.school_id===first.school_id)||schools.find(s=>cleanName(s.school)===cleanName(first.school));
+      const knownYears=new Set<number>();
+      if(match){
+        const res=await fetch('/api/reports?view=schools&school='+encodeURIComponent(match.school_id),{signal:abort.signal});
+        if(!res.ok)throw new Error('Could not check existing reports. Please upload the file again.');
+        const body=await res.json() as {years:{year:number}[]};body.years.forEach(y=>knownYears.add(y.year));
+      }
+      if(abort.signal.aborted)return;
+      setTarget(match?.school_id??'new');setSchoolName(match?.school??first.school);
+      setDrafts(records.map((report,index)=>({url:`json:${index}:${report.year}`,sourceTitle:`${report.school} · ${report.report_label}`,archiveYear:null,report,include:true,approved:false,saved:false,existing:knownYears.has(report.year),error:''})));
+      setProgress(`${records.length} AI-prepared draft${records.length===1?'':'s'} loaded. Check the original source and confirm each report before saving.`);
+    }catch(e){if(!abort.signal.aborted){setError(e instanceof Error?e.message:'The import file could not be read.');setProgress('');}}
+    finally{setBusy(null);}
+  }
   async function discover(event:React.FormEvent) {
     event.preventDefault();setBusy('discover');setError('');setDrafts([]);setFailures([]);setSkipped([]);setExpanded({});setDiscovery(null);setProgress('Opening the school archive…');setAllowReplace(false);
     setTarget('new');setSchoolName('');
@@ -120,7 +146,7 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
   const readiness=importReadiness(drafts,schoolName,allowReplace),chosen=readiness.selected,replacements=readiness.existing.length;
   const canSave=readiness.canSave&&!busy;
   function numericField(d:Draft,index:number,key:string,required=false) {
-    return <label className={'import-metric '+(required&&d.report.metrics[key]===undefined?'needs-value':'')} key={key}><span>{labels[key]??key}{required?' *':''}</span><Input type="number" min={0} step={['percent','gpa','dollars','units','ratio'].includes(metricUnit(key))?'any':'1'} aria-label={`${labels[key]??key} for ${d.report.year}`} value={d.report.metrics[key]??''} disabled={d.saved||!!busy} placeholder="Not extracted" onChange={e=>changeMetric(index,key,e.target.value)}/><a href={source(d.report,key)} target="_blank" rel="noreferrer">{d.report.evidence[key]?.section??sectionFor(key)}{d.report.evidence[key]?.page?` · ${pageName(d.report,d.report.evidence[key].page!)}`:''}<ExternalLink size={12}/></a></label>;
+    return <label className={'import-metric '+(required&&d.report.metrics[key]===undefined?'needs-value':'')} key={key}><span>{labels[key]??key}{required?' *':''}</span><Input type="number" min={0} step={['percent','gpa','dollars','units','ratio'].includes(metricUnit(key))?'any':'1'} aria-label={`${labels[key]??key} for ${d.report.year}`} value={d.report.metrics[key]??''} disabled={d.saved||!!busy} placeholder="Not extracted" onChange={e=>changeMetric(index,key,e.target.value)}/><a href={source(d.report,key)} target="_blank" rel="noreferrer">{d.report.evidence[key]?.section??sectionFor(key)}{d.report.evidence[key]?.page?` · ${pageName(d.report,d.report.evidence[key].page!,d.report.evidence[key].source_url)}`:''}<ExternalLink size={12}/></a></label>;
   }
   function documentRow(doc:SourceDocument) {
     const Icon=doc.format==='xlsx'?FileSpreadsheet:FileText;
@@ -128,9 +154,10 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
   }
   const allDocuments=discovery?[...discovery.documents,...discovery.other_documents??[]]:[];
   const selectedDocuments=allDocuments.filter(d=>selected.includes(d.url));
-  return <Dialog open={open} onOpenChange={v=>{if(busy==='save')return;onOpenChange(v);}}><DialogContent className="school-import-dialog"><DialogTitle>Add school data from a website</DialogTitle><DialogDescription>Find Common Data Set PDFs or Excel workbooks, review the extracted Section C answers, and save them to your shared library.</DialogDescription>
-    <form className="import-link-form" onSubmit={discover}><label><span>School’s Common Data Set webpage, PDF or .xlsx link</span><Input ref={input} type="url" required aria-label="School website or PDF link" value={url} onChange={e=>setURL(e.target.value)} placeholder="https://school.edu/common-data-set" disabled={!!busy}/></label><Button type="submit" disabled={!!busy||!url.trim()}><Search size={16}/> Find reports</Button></form>
-    <p className="fine-print">Use the institution’s Common Data Set archive page rather than its homepage. You can also paste a direct PDF or Excel (.xlsx) link.</p>
+  return <Dialog open={open} onOpenChange={v=>{if(busy==='save')return;onOpenChange(v);}}><DialogContent className="school-import-dialog"><DialogTitle>Add school data</DialogTitle><DialogDescription>Import from a school website or a file prepared in ChatGPT, then review the source and save to your shared library.</DialogDescription>
+    <div className="import-method" aria-label="Choose import method"><Button variant={method==='website'?'default':'outline'} aria-pressed={method==='website'} disabled={!!busy} onClick={()=>setMethod('website')}><Search size={16}/> School website</Button><Button variant={method==='chatgpt'?'default':'outline'} aria-pressed={method==='chatgpt'} disabled={!!busy} onClick={()=>setMethod('chatgpt')}><Upload size={16}/> Import from ChatGPT</Button></div>
+    {method==='website'?<><form className="import-link-form" onSubmit={discover}><label><span>School’s Common Data Set webpage, PDF or .xlsx link</span><Input ref={input} type="url" required aria-label="School website or PDF link" value={url} onChange={e=>setURL(e.target.value)} placeholder="https://school.edu/common-data-set" disabled={!!busy}/></label><Button type="submit" disabled={!!busy||!url.trim()}><Search size={16}/> Find reports</Button></form>
+    <p className="fine-print">Use the institution’s Common Data Set archive page rather than its homepage. You can also paste a direct PDF or Excel (.xlsx) link. For an unusual layout, choose Import from ChatGPT.</p></>:<section className="import-chatgpt" aria-label="ChatGPT import instructions"><h3>Prepare the file in ChatGPT</h3><ol><li>Download the instructions and attach them in a ChatGPT conversation with the original report or its direct link.</li><li>Ask: “Follow the attached Atlas instructions and create a downloadable import file for this report.” If ChatGPT cannot read the link or a scanned table, upload the original file or clear page images.</li><li>Download the resulting .json file, upload it below, and check each draft against the original before saving.</li></ol><div className="import-chatgpt-downloads"><a href="/chatgpt-import-instructions.txt" download><Download size={16}/> Download ChatGPT instructions</a><a href="/chatgpt-import-template.json" download><Download size={16}/> Download example template</a></div><p className="fine-print">Uses your own ChatGPT conversation. AI can make mistakes; check its answers against the original before saving.</p><label className="import-json-upload"><span>Upload the ChatGPT import file (.json)</span><Input type="file" accept=".json,application/json" aria-label="ChatGPT import file" disabled={!!busy} onChange={event=>{const file=event.currentTarget.files?.[0];event.currentTarget.value='';if(file)void uploadJSON(file);}}/><span className="fine-print">One school per file · up to 25 reports · maximum 5 MB. Uploading loads drafts; saving requires your review.</span></label></section>}
     {busy&&<div className="import-progress" role="status"><span>{progress}</span>{busy!=='save'&&<Button variant="outline" onClick={()=>controller.current?.abort()}>Cancel</Button>}</div>}
     {!busy&&progress&&<p className="import-success" role="status">{progress}</p>}
     {error&&<p className="import-error" role="alert">{error}</p>}
@@ -154,7 +181,7 @@ export default function SchoolImport({open,onOpenChange,schools,onSaved}:{open:b
         <details className="import-optional"><summary>Test scores, waitlists & other figures</summary><div className="import-metrics-grid">{optional.map(key=>numericField(d,index,key))}{textFields.map(key=><label className="import-metric" key={key}><span>{labels[key]??key}</span><Input aria-label={`${labels[key]??key} for ${d.report.year}`} value={d.report.metrics[key]??''} disabled={d.saved||!!busy} placeholder="Not extracted" onChange={e=>update(index,r=>setReviewedMetric(r,key,e.target.value===''?null:e.target.value))}/><a href={source(d.report,key)} target="_blank" rel="noreferrer">{sectionFor(key)}<ExternalLink size={12}/></a></label>)}</div></details>
         {extraGroups.map(group=><details className="import-optional" key={group}><summary>{group}</summary><div className="import-metrics-grid">{Object.entries(extraMetrics).filter(([key,def])=>def.group===group&&!key.endsWith('_rate')&&!['ed_share','merit_participation'].includes(key)).map(([key,def])=>def.unit==='text'?<label className="import-metric" key={key}><span>{def.label}</span><Input aria-label={`${def.label} for ${d.report.year}`} value={d.report.metrics[key]??''} disabled={d.saved||!!busy} placeholder="Not extracted" onChange={e=>update(index,r=>setReviewedMetric(r,key,e.target.value===''?null:e.target.value))}/><a href={source(d.report,key)} target="_blank" rel="noreferrer">{def.section}<ExternalLink size={12}/></a></label>:numericField(d,index,key))}</div></details>)}
         <details className="import-optional"><summary>Admissions factor ratings · C7</summary><div className="import-factor-review">{factorNames.map(name=>{const f=d.report.factors.find(f=>f.label===name);const page=f?.page??d.report.sections.find(s=>/\bC\s*7\b/.test(s.text))?.page??d.report.sections[0].page;return <label key={name}><a href={pageLink(d.report,page)} target="_blank" rel="noreferrer">{name}<ExternalLink size={12}/></a><select aria-label={`${name} rating for ${d.report.year}`} value={f?.rating??''} disabled={d.saved||!!busy} onChange={e=>update(index,r=>{r.factors=r.factors.filter(f=>f.label!==name);if(e.target.value)r.factors.push({label:name,rating:e.target.value,page});})}><option value="">Not extracted</option>{['Very important','Important','Considered','Not considered'].map(r=><option key={r}>{r}</option>)}</select></label>;})}</div></details>
-        <details className="import-optional"><summary>Extracted source text & form answers</summary>{[...d.report.sections,...d.report.additional_sections??[]].map(s=><details key={s.page} className="source-page"><summary>{d.report.source_type==='xlsx'?`Worksheet ${worksheet(s.page)}`:`PDF page ${s.page}`}<a href={pageLink(d.report,s.page)} target="_blank" rel="noreferrer">{d.report.source_type==='xlsx'?'Original workbook':'Original page'}</a></summary><pre>{s.text}</pre>{s.form_fields.length>0&&<dl className="form-answers">{s.form_fields.map(f=><div key={f.name}><dt>{f.label||f.name}</dt><dd>{f.value}</dd></div>)}</dl>}</details>)}</details>
+        <details className="import-optional"><summary>Extracted source text & form answers</summary>{[...d.report.sections,...d.report.additional_sections??[]].map((s,i)=><details key={`${s.page}:${i}`} className="source-page"><summary>{d.report.source_type==='xlsx'?`Worksheet ${s.source_label??worksheet(s.page)}`:d.report.source_type==='pdf'?`PDF page ${s.page}`:`Source page ${s.page}`}<a href={pageLink(d.report,s.page,s)} target="_blank" rel="noreferrer">{d.report.source_type==='xlsx'?'Original workbook':'Original page'}</a></summary><pre>{s.text}</pre>{s.form_fields.length>0&&<dl className="form-answers">{s.form_fields.map(f=><div key={f.name}><dt>{f.label||f.name}</dt><dd>{f.value}</dd></div>)}</dl>}</details>)}</details>
         <div className="import-source-notes"><Info size={16}/><div>{d.report.warnings.map(w=><p key={w}>{w}</p>)}</div></div><label className="import-approved"><Checkbox checked={d.approved} disabled={d.saved||!!busy} aria-label={`Reviewed report ${d.report.year}`} onCheckedChange={v=>setDrafts(rows=>rows.map((r,i)=>i===index?{...r,approved:v===true}:r))}/> I checked this report’s figures, school, and fall year against its source.</label>
       </div>}</details>;})}
       {replacements>0&&allowReplace&&<p className="import-replacement-note">{replacements} selected report{replacements===1?' already exists':'s already exist'} in the library. Saving will replace those records with the reviewed version.</p>}

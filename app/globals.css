@@ -333,6 +333,15 @@ textarea { width:100%; border:1px solid var(--border); border-radius:6px; paddin
 .school-import-dialog [data-slot=dialog-title] { font-size:1.4rem; margin-bottom:8px; }
 .school-import-dialog [data-slot=dialog-description] { margin-bottom:22px; color:#536880; }
 .import-link-form { display:flex; align-items:flex-end; gap:14px; }
+.import-method { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 20px; }
+.import-chatgpt { padding:20px; background:#f5f8fb; border:1px solid var(--border); border-radius:10px; margin-bottom:20px; }
+.import-chatgpt h3 { font-weight:600; color:#254d67; }
+.import-chatgpt ol { list-style:decimal; padding-left:22px; margin:12px 0 18px; font-size:.875rem; line-height:1.6; }
+.import-chatgpt li+li { margin-top:8px; }
+.import-chatgpt-downloads { display:flex; flex-wrap:wrap; gap:12px 24px; font-size:.875rem; margin-bottom:12px; }
+.import-chatgpt-downloads a { display:inline-flex; align-items:center; gap:7px; color:#11766b; text-decoration:underline; text-underline-offset:3px; }
+.import-json-upload { display:grid; gap:10px; font-size:.875rem; margin-top:18px; }
+.import-json-upload input { background:#fff; min-width:0; max-width:100%; }
 .import-link-form>label { flex:1; min-width:0; display:grid; gap:8px; font-size:.875rem; }
 .import-link-form input { height:42px; }
 .import-link-form>button { height:42px; }
