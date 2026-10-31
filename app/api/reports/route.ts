@@ -18,9 +18,11 @@ export async function GET(request:Request) {
     if(school){clauses.push('school_id=?');args.push(school);}if(year){clauses.push('year=?');args.push(Number(year));}
     const where=clauses.length?' WHERE '+clauses.join(' AND '):'';
     const schoolView=u.searchParams.get('view')==='schools';
+    // Rank and page on the small columns first, then read payloads for the selected page only;
+    // sorting or windowing over payload would read every stored report on each request.
     const query=schoolView
-      ? 'SELECT payload,matching_years FROM (SELECT payload,school,year,COUNT(*) OVER(PARTITION BY school_id) AS matching_years,ROW_NUMBER() OVER(PARTITION BY school_id ORDER BY year DESC) AS rank FROM reports'+where+') WHERE rank=1 ORDER BY school ASC LIMIT ? OFFSET ?'
-      : 'SELECT payload FROM reports'+where+' ORDER BY year DESC,school ASC LIMIT ? OFFSET ?';
+      ? 'SELECT reports.payload,ranked.matching_years FROM (SELECT id,school,COUNT(*) OVER(PARTITION BY school_id) AS matching_years,ROW_NUMBER() OVER(PARTITION BY school_id ORDER BY year DESC) AS rank FROM reports'+where+') AS ranked JOIN reports ON reports.id=ranked.id WHERE ranked.rank=1 ORDER BY ranked.school ASC,ranked.id LIMIT ? OFFSET ?'
+      : 'SELECT reports.payload FROM (SELECT id,year,school FROM reports'+where+' ORDER BY year DESC,school ASC,id LIMIT ? OFFSET ?) AS page JOIN reports ON reports.id=page.id ORDER BY page.year DESC,page.school ASC,page.id';
     const [result,count,schools,years]=await Promise.all([
       database().prepare(query).bind(...args,limit,offset).all<{payload:string;matching_years?:number}>(),
       database().prepare('SELECT COUNT(*) AS report_count,COUNT(DISTINCT school_id) AS school_count FROM reports'+where).bind(...args).first<{report_count:number;school_count:number}>(),
