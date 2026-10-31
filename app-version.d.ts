@@ -1,3 +1,5 @@
-// Injected by vite.config.ts at build time.
-declare const __APP_VERSION__: string;
-declare const __APP_BUILT__: string;
+// Injected by vite.config.ts.
+interface ImportMetaEnv {
+  readonly APP_VERSION: string;
+  readonly APP_BUILT: string;
+}

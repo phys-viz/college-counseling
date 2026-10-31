@@ -73,7 +73,7 @@ export default function Atlas(){
    {rows.length>0&&<div className="reading-note"><Info size={18}/><p>Test ranges describe enrolled students who submitted scores. Admission rates describe the full applicant pool. Historical policies may apply to a later application cycle. <strong>Click a figure to see its source.</strong></p></div>}
    </>}
    {view!=='trends'&&<footer><span>Official institutional Common Data Set reports</span></footer>}
-   <p className="app-version">Version {__APP_VERSION__} · built {__APP_BUILT__}</p>
+   <p className="app-version">Version {import.meta.env.APP_VERSION} · built {import.meta.env.APP_BUILT} · <a href="/api/reports?export=all" download>Download full library backup</a></p>
   </main>
   {selected.length>0&&<div className="compare-bar"><div><BarChart3 size={19}/><strong>{selected.length} report{selected.length===1?'':'s'} selected</strong><span>{selected.map(r=>r.year).join(' · ')}</span></div><button className="text-button" onClick={()=>setSelected([])}>Clear</button><Button disabled={selected.length<2} onClick={()=>setCompare(true)}>Compare reports</Button></div>}
   <Dialog open={!!activeId} onOpenChange={v=>{if(!v)setActiveId(null);}}><DialogContent className="report-dialog"><DialogTitle>{detail?`${detail.school} · Fall ${detail.year}`:'Admissions report'}</DialogTitle><DialogDescription>Common Data Set {detail?.report_label} · First-year admission</DialogDescription>{detailLoading&&<p role="status">Loading the source record…</p>}{detailError&&<p role="alert">{detailError}</p>}{detail&&<>

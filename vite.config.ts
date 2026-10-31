@@ -57,8 +57,9 @@ export default defineConfig(async ({ command }) => {
 
   return {
     define: {
-      __APP_VERSION__: JSON.stringify(packageJson.version),
-      __APP_BUILT__: JSON.stringify(built),
+      // import.meta.env entries are replaced in development as well as builds.
+      "import.meta.env.APP_VERSION": JSON.stringify(packageJson.version),
+      "import.meta.env.APP_BUILT": JSON.stringify(built),
     },
     json: { stringify: true, namedExports: false },
     server: {

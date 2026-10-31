@@ -15,6 +15,13 @@
       "when": 1791403934679,
       "tag": "0001_full_text_search",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1793451650071,
+      "tag": "0002_report_versions",
+      "breakpoints": true
     }
   ]
 }

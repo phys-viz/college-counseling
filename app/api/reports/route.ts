@@ -1,12 +1,14 @@
-import {database,ensureLocalSeed,statement} from '@/lib/database';
+import {database,ensureLocalSeed,keepPriorVersion,statement} from '@/lib/database';
 import type {Report} from '@/lib/report-types';
 import {validateReports} from '@/lib/validate-import';
 import {savedGenderMetrics as enrichSavedGender} from '@/lib/saved-gender';
 import {savedScoreMetrics} from '@/lib/saved-scores';
 import {deriveExtraMetrics} from '@/lib/extract-additional';
+import {libraryBackup} from '@/lib/library-backup';
 export async function GET(request:Request) {
   try {
     await ensureLocalSeed(); const u=new URL(request.url); const id=u.searchParams.get('id');
+    if(u.searchParams.get('export')==='all')return libraryBackup(import.meta.env?.APP_VERSION??'unbuilt');
     if(id) {const row=await database().prepare('SELECT payload FROM reports WHERE id=?').bind(id).first<{payload:string}>();return row?Response.json(deriveExtraMetrics(savedScoreMetrics(enrichSavedGender(JSON.parse(row.payload))))):Response.json({error:'Report not found'},{status:404});}
     const q=(u.searchParams.get('q')??'').slice(0,200);const school=u.searchParams.get('school');const year=u.searchParams.get('year');
     const offset=Math.max(0,Number(u.searchParams.get('offset'))||0);const limit=100;
@@ -37,7 +39,9 @@ export async function POST(request:Request) {
     let records:Report[];try{records=validateReports(JSON.parse(body));}catch(e){return Response.json({error:e instanceof Error?e.message:'Invalid import'},{status:400});}
     // Strict inserts make a concurrent school/year conflict fail atomically.
     // D1 rolls back the entire batch, retaining every previously saved record.
-    await ensureLocalSeed();await database().batch(records.map(r=>statement(r,replacement==='true'?'replace':'insert')));
+    // A replacement first copies the saved payload into report_versions in the same batch.
+    const replacedAt=new Date().toISOString();
+    await ensureLocalSeed();await database().batch(records.flatMap(r=>replacement==='true'?[keepPriorVersion(r,replacedAt),statement(r,'replace')]:[statement(r,'insert')]));
     return Response.json({imported:records.length});
   }catch(e){
     if(e instanceof Error&&/UNIQUE constraint failed:\s*reports\.(?:id|school_id|year)/i.test(e.message))return Response.json({error:'A report for this school and fall year already exists. Check “Replace existing reports” only if you intend to replace it.',code:'report_exists'},{status:409});
