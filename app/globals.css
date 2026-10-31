@@ -186,6 +186,7 @@ h3 { font-size:1rem; font-weight:650; margin:20px 0 12px; }
 .pagination { padding:18px; display:flex; align-items:center; justify-content:space-between; gap:10px; font-size:.875rem; }
 footer { display:flex; justify-content:space-between; gap:20px; margin-top:20px; padding-top:18px; border-top:1px solid var(--border); font-size:.8125rem; color:#60758a; }
 footer a { display:flex; align-items:center; gap:6px; color:#3b6980; }
+.app-version { margin-top:12px; font-size:.75rem; color:#60758a; }
 .compare-bar { position:fixed; bottom:22px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:24px; padding:14px 20px; border:1px solid #34506d; border-radius:12px; background:#17395b; color:#fff; box-shadow:0 10px 30px #142f5033; z-index:20; max-width:calc(100% - 30px); white-space:nowrap; }
 .compare-bar>div { display:flex; align-items:center; gap:10px; font-size:.875rem; }
 .compare-bar span { color:#bdd1df; }

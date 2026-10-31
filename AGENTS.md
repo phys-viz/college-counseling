@@ -13,6 +13,10 @@ The user has explicitly requested that adding school data through the assistant 
 - Run the affected checks and representative existing-school extraction checks. A new-school improvement must preserve established Cornell, USC, Clemson, and W&L behavior where supported.
 - Publish changes that affect the hosted importer through the existing Sites workflow, preserving the current shared audience. Report which improvements now benefit the website importer and which remain source-adapter or manual-review work.
 
+## Version number
+
+The site footer shows `Version <package.json version> · built <UTC build time>` so the owner can confirm a publish took effect, including changes with no visible effect. Bump the version with `npm version <x.y.z> --no-git-tag-version` in every change set that will be published: minor for features or behavior changes, patch for fixes. Mention the new version when reporting the change.
+
 ## Data integrity
 
 - Verify C1 applicants, admitted, and enrolled against the original source, including all reported gender/status groups. A subgroup is never an overall total. Avoid double counting overall and component rows.

@@ -1,6 +1,7 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
+import packageJson from "./package.json";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
 import { connectorPreview } from "./build/connector-preview-plugin.mjs";
@@ -51,7 +52,14 @@ export default defineConfig(async ({ command }) => {
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
+  // The footer shows these so a publish is visibly distinguishable from the last one.
+  const built = new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC";
+
   return {
+    define: {
+      __APP_VERSION__: JSON.stringify(packageJson.version),
+      __APP_BUILT__: JSON.stringify(built),
+    },
     json: { stringify: true, namedExports: false },
     server: {
       ...(managedLinux
